@@ -1,5 +1,7 @@
 #include "hal_data.h"
 #include <stdio.h>
+#include <sys/stat.h>
+#include <errno.h>
 
 #if (1 == BSP_MULTICORE_PROJECT) && BSP_TZ_SECURE_BUILD
 bsp_ipc_semaphore_handle_t g_core_start_semaphore =
@@ -37,6 +39,53 @@ void uart2_wait_for_rx(void)
 {
     while(!g_uart2_rx_complete);
     g_uart2_rx_complete = 0;
+}
+
+int _write(int file, char *ptr, int len)
+{
+    (void)file;
+    
+    for (int i = 0; i < len; i++) {
+        g_uart2.p_api->write(g_uart2.p_ctrl, (uint8_t const * const)&ptr[i], 1);
+        uart2_wait_for_tx();
+    }
+    
+    return len;
+}
+
+int _read(int file, char *ptr, int len)
+{
+    (void)file;
+    
+    for (int i = 0; i < len; i++) {
+        g_uart2.p_api->read(g_uart2.p_ctrl, (uint8_t *)&ptr[i], 1);
+        uart2_wait_for_rx();
+    }
+    
+    return len;
+}
+
+int _close(int file) {
+    (void)file;
+    errno = EBADF;
+    return -1;
+}
+
+int _lseek(int file, int ptr, int dir) {
+    (void)file;
+    (void)ptr;
+    (void)dir;
+    return 0;
+}
+
+int _fstat(int file, struct stat *st) {
+    (void)file;
+    st->st_mode = S_IFCHR;
+    return 0;
+}
+int _isatty(int file) {
+    (void)file;
+    return 1;
 }
 
 int fputc(int ch, FILE *f)
@@ -78,30 +127,36 @@ void hal_entry(void)
 {
     /* TODO: add your own code here */
     fsp_err_t err;
-    uint8_t c;
+    uint8_t a, b;
     bsp_io_level_t level = 0;
 
     err = g_uart2.p_api->open(g_uart2.p_ctrl, g_uart2.p_cfg);
-    g_uart2.p_api->write(g_uart2.p_ctrl, "100ask\r\n", 8);
+    // g_uart2.p_api->write(g_uart2.p_ctrl, "100ask\r\n", 8);
+    printf("hello world! From lucky\r\n");
     g_ioport.p_api->pinWrite(&g_ioport_ctrl, BSP_IO_PORT_04_PIN_00, level);
 
-    uart2_wait_for_tx();
+    // uart2_wait_for_tx();
     while(1)
     {
-        err = g_uart2.p_api->read(g_uart2.p_ctrl, &c, 1);
+        // err = g_uart2.p_api->read(g_uart2.p_ctrl, &c, 1);
         // g_ioport.p_api->pinWrite(&g_ioport_ctrl, BSP_IO_PORT_04_PIN_00, level);
         // R_IOPORT_PinWrite(&g_ioport_ctrl, BSP_IO_PORT_04_PIN_00, level);
-        if(!err)
-        {
-            uart2_wait_for_rx();
+        //if(!err)
+        // {
+        //    uart2_wait_for_rx();
 
             // c++;
 
-            g_uart2.p_api->write(g_uart2.p_ctrl, &c, 1);
+        //    g_uart2.p_api->write(g_uart2.p_ctrl, &c, 1);
 
-            uart2_wait_for_tx();
-        }
+        //    uart2_wait_for_tx();
+        // }
+        
+        printf("Please enter two number:\r\n");
+        scanf("%d%d", &a, &b);
+        printf("%d+%d=%d\r\n", a, b, a+b);
     }
+
     /* Wake up 2nd core if this is first core and we are inside a multicore project. */
 #if (0 == _RA_CORE) && (1 == BSP_MULTICORE_PROJECT) && !BSP_TZ_NONSECURE_BUILD
 
