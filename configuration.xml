@@ -306,7 +306,7 @@
       <property id="module.driver.spi.txi_ipl" value="board.icu.common.irq.priority12"/>
       <property id="module.driver.spi.tei_ipl" value="board.icu.common.irq.priority12"/>
       <property id="module.driver.spi.eri_ipl" value="board.icu.common.irq.priority12"/>
-      <property id="module.driver.spi.bitrate" value="8000000"/>
+      <property id="module.driver.spi.bitrate" value="524288"/>
       <property id="module.driver.spi.bitrate_modulation" value="module.driver.spi.bitrate_modulation.disabled"/>
     </module>
     <module id="module.driver.transfer_on_dtc.1876459814">
@@ -379,19 +379,19 @@
       <configSetting altId="p300.gpio_mode.gpio_mode_peripheral" configurationId="p300.gpio_mode"/>
       <configSetting altId="p400.output.low" configurationId="p400"/>
       <configSetting altId="p400.gpio_mode.gpio_mode_out.low" configurationId="p400.gpio_mode"/>
-      <configSetting altId="p408.sci3.rxd" configurationId="p408"/>
-      <configSetting altId="p408.gpio_mode.gpio_mode_peripheral" configurationId="p408.gpio_mode"/>
-      <configSetting altId="p409.sci3.txd" configurationId="p409"/>
-      <configSetting altId="p409.gpio_mode.gpio_mode_peripheral" configurationId="p409.gpio_mode"/>
       <configSetting altId="p410.sci3.sck" configurationId="p410"/>
       <configSetting altId="p410.gpio_mode.gpio_mode_peripheral" configurationId="p410.gpio_mode"/>
+      <configSetting altId="p706.sci3.rxd" configurationId="p706"/>
+      <configSetting altId="p706.gpio_mode.gpio_mode_peripheral" configurationId="p706.gpio_mode"/>
+      <configSetting altId="p707.sci3.txd" configurationId="p707"/>
+      <configSetting altId="p707.gpio_mode.gpio_mode_peripheral" configurationId="p707.gpio_mode"/>
       <configSetting altId="sci2.mode.asynchronous.free" configurationId="sci2.mode"/>
       <configSetting altId="sci2.rxd.p113" configurationId="sci2.rxd"/>
       <configSetting altId="sci2.txd.p112" configurationId="sci2.txd"/>
       <configSetting altId="sci3.mode.spi.free" configurationId="sci3.mode"/>
-      <configSetting altId="sci3.rxd.p408" configurationId="sci3.rxd"/>
+      <configSetting altId="sci3.rxd.p706" configurationId="sci3.rxd"/>
       <configSetting altId="sci3.sck.p410" configurationId="sci3.sck"/>
-      <configSetting altId="sci3.txd.p409" configurationId="sci3.txd"/>
+      <configSetting altId="sci3.txd.p707" configurationId="sci3.txd"/>
     </pincfg>
   </raPinConfiguration>
 </raConfiguration>

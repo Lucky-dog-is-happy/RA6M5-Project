@@ -1,5 +1,6 @@
 #include "hal_data.h"
 #include "drv_uart.h"
+#include "drv_sci_spi.h"
 #include <stdint.h>
 #include <stdio.h>
 
@@ -13,7 +14,6 @@ bsp_ipc_semaphore_handle_t g_core_start_semaphore =
 void hal_entry(void)
 {
     fsp_err_t err;
-    int a, b;
     bsp_io_level_t level = 0;
 
     circlebuf_init();
@@ -21,14 +21,9 @@ void hal_entry(void)
     err = g_uart2.p_api->open(g_uart2.p_ctrl, g_uart2.p_cfg);
     printf("hello world! From lucky\r\n");
     g_ioport.p_api->pinWrite(&g_ioport_ctrl, BSP_IO_PORT_04_PIN_00, level);
+    
+    SPIAppTest();
 
-    while(1)
-    {
-        printf("Please enter two number:\r\n");
-        scanf("%d%d", &a, &b);
-        while(getchar() != '\r');
-        printf("%d+%d=%d\r\n", a, b, a+b);
-    }
 
 #if (0 == _RA_CORE) && (1 == BSP_MULTICORE_PROJECT) && !BSP_TZ_NONSECURE_BUILD
 

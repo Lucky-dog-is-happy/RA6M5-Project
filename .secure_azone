@@ -12,9 +12,11 @@
         </peripheral>
         <peripheral name="PORT4.CM33" group="PORT">
             <slot name="P400.CM33" secure="true"/>
-            <slot name="P408.CM33" secure="true"/>
-            <slot name="P409.CM33" secure="true"/>
             <slot name="P410.CM33" secure="true"/>
+        </peripheral>
+        <peripheral name="PORT7.CM33" group="PORT">
+            <slot name="P706.CM33" secure="true"/>
+            <slot name="P707.CM33" secure="true"/>
         </peripheral>
         <peripheral name="SCI2.CM33" group="SCI" security="s"/>
         <peripheral name="SCI3.CM33" group="SCI" security="s"/>
