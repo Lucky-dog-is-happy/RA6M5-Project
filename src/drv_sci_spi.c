@@ -3,6 +3,7 @@
 #include <stdlib.h>
 
 static volatile bool gSPITxCplt = false;
+static volatile uint32_t gLastSPIEvent = 0;
 
 void SPIDrvInit(void)
 {
@@ -15,7 +16,7 @@ void SPIDrvInit(void)
 
 void sci_spi3_callback(spi_callback_args_t *arg)
 { 
-    printf("SPI callback triggered! Event: %d\r\n", arg->event);
+    gLastSPIEvent = arg->event;
     // 如果到完成出发的终端就把flag置1
     if(SPI_EVENT_TRANSFER_COMPLETE == arg->event)
         gSPITxCplt = true;
@@ -24,14 +25,13 @@ void sci_spi3_callback(spi_callback_args_t *arg)
 static void SPIDrvWaitTxCplt(void)
 {
     uint16_t wTimeout = 50;
-    printf("test1\r\n");
     while(!gSPITxCplt && wTimeout)
     {
         printf("%d\r\n",wTimeout);
         R_BSP_SoftwareDelay(1, BSP_DELAY_UNITS_MILLISECONDS);
         wTimeout--;
     }
-    printf("test2\r\n");
+    // printf("SPI Event: %lu\r\n", gLastSPIEvent);
     gSPITxCplt = false;
 }
 
@@ -53,7 +53,6 @@ void SPIAppTest(void)
     uint8_t wBuf[256] = {0};
     uint8_t rBuf[256] = {0};
     
-    printf("%d\r\n", dwCount);
     while(dwCount)
     {
         // 给发送数组随机赋值作输出
@@ -62,11 +61,9 @@ void SPIAppTest(void)
             wBuf[i] = (uint8_t)i;
         }
         
-        printf("AppTest1\r\n");
         SPIDrvWriteReadBuf(wBuf, rBuf, 256);
         uint16_t err = 0;
 
-        printf("AppTest2\r\n");
         // 比较收发数据是否一致 
         for(uint16_t i=0; i<256; i++)
         {

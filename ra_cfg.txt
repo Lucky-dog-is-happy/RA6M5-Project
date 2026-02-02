@@ -402,7 +402,7 @@ FSP Configuration
       Transmit Interrupt Priority: Priority 12
       Transmit End Interrupt Priority: Priority 12
       Error Interrupt Priority: Priority 12
-      Bitrate: 524288
+      Bitrate: 8000000
       Bitrate Modulation: Disabled
       
       Instance "g_transfer0 Transfer (r_dtc) SCI3 TXI (Transmit data empty)"
