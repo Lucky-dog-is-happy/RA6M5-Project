@@ -185,8 +185,8 @@ FSP Configuration
       P203 D11 - - - - Disabled - - "AGT3: AGTOA3; BUS_ASYNCH0: A19; CAN0: CTX0; CTSU0: TS18; ETHERC_MII0: ET0_COL; GPT5: GTIOC5A; ICU0: IRQ02; SCI2: CTSRTS2; SCI9: SDA9; SCI9: TXD9; SDHI0: SD0DAT5; SPI0: MOSIA" - None - - 
       P204 A13 - - - - Disabled - - "AGT1: AGTIO1; BUS_ASYNCH0: A18; CAC0: CACREF; CTSU0: TS00; ETHERC_MII0: ET0_RX_DV; GPT_OPS0: GTIW; GPT4: GTIOC4B; SCI4: SCK4; SCI9: SCK9; SDHI0: SD0DAT4; SPI0: RSPCKA; SSI0: SSIBCK0; USB_FS0: USB_OVRCURB" - None - - 
       P205 E12 - - - - Disabled - - "AGT1: AGTO1; BUS_ASYNCH0: A16; CGC0: CLKOUT; CTSU0: TS01; ETHERC_MII0: ET0_WOL; ETHERC_RMII0: ET0_WOL; GPT_OPS0: GTIV; GPT4: GTIOC4A; ICU0: IRQ01; IIC1: SCL1; SCI4: SDA4; SCI4: TXD4; SCI9: CTSRTS9; SDHI0: SD0DAT3; SPI0: SSLA0; SSI0: SSILRCK0; USB_FS0: USB_OVRCURA" - None - - 
-      P206 D12 - - - - Disabled - - "BUS_ASYNCH0: WAIT; CEC0: CECIO; CTSU0: TS02; ETHERC_MII0: ET0_LINKSTA; ETHERC_RMII0: ET0_LINKSTA; GPT_OPS0: GTIU; ICU0: IRQ00; IIC1: SDA1; SCI4: RXD4; SCI4: SCL4; SCI9: CTS9; SDHI0: SD0DAT2; SPI0: SSLA1; SSI0: SSIDATA0; USB_FS0: USB_VBUSEN" - None - - 
-      P207 C12 - - - - Disabled - - "BUS_ASYNCH0: A17; CTSU0: TSCAP; QSPI0: QSSL; SCI4: SDA4; SCI4: TXD4; SPI0: SSLA2" - None - - 
+      P206 D12 SCI4_SCL4 - Low None "Peripheral mode" "n-ch open drain" None "BUS_ASYNCH0: WAIT; CEC0: CECIO; CTSU0: TS02; ETHERC_MII0: ET0_LINKSTA; ETHERC_RMII0: ET0_LINKSTA; GPT_OPS0: GTIU; ICU0: IRQ00; IIC1: SDA1; SCI4: RXD4; SCI4: SCL4; SCI9: CTS9; SDHI0: SD0DAT2; SPI0: SSLA1; SSI0: SSIDATA0; USB_FS0: USB_VBUSEN" - IO - - 
+      P207 C12 SCI4_SDA4 - Low - "Peripheral mode" "n-ch open drain" None "BUS_ASYNCH0: A17; CTSU0: TSCAP; QSPI0: QSSL; SCI4: SDA4; SCI4: TXD4; SPI0: SSLA2" - IO - - 
       P208 A8 - - - - Disabled - - "BUS_ASYNCH0: CS4; DEBUG_TRACE0: TDATA3; ETHERC_MII0: ET0_LINKSTA; ETHERC_RMII0: ET0_LINKSTA; GPT_OPS0: GTOVLO; QSPI0: QIO3; SDHI0: SD0DAT0" - None - - 
       P209 B9 - - - - Disabled - - "AGT5: AGTEE5; BUS_ASYNCH0: CS5; DEBUG_TRACE0: TDATA2; ETHERC_MII0: ET0_EXOUT; ETHERC_RMII0: ET0_EXOUT; GPT_OPS0: GTOVUP; QSPI0: QIO2; SDHI0: SD0WP" - None - - 
       P210 A9 - - - - Disabled - - "AGT5: AGTOB5; BUS_ASYNCH0: CS6; DEBUG_TRACE0: TDATA1; ETHERC_MII0: ET0_WOL; ETHERC_RMII0: ET0_WOL; GPT_OPS0: GTIW; QSPI0: QIO1; SDHI0: SD0CD" - None - - 
@@ -351,6 +351,11 @@ FSP Configuration
     Parameter Checking: Default (BSP)
     Linker section to keep DTC vector table: .fsp_dtc_vector_table
     
+  Module "I2C Master (r_sci_i2c)"
+    Parameter Checking: Default (BSP)
+    DTC on Transmission and Reception: Disabled
+    10-bit slave addressing: Disabled
+    
   HAL
     Instance "g_ioport I/O Port (r_ioport)"
       Name: g_ioport
@@ -431,3 +436,17 @@ FSP Configuration
         Number of Transfer Descriptors: 1
         Activation Source: SCI3 RXI (Receive data full)
         
+    Instance "g_i2c4 I2C Master (r_sci_i2c)"
+      Name: g_i2c4
+      Channel: 4
+      Slave Address : 0x50
+      Address Mode: 7-Bit
+      Rate: Standard
+      Custom Rate (bps): 0
+      SDA Output Delay (nano seconds): 300
+      Noise filter setting: Use clock signal divided by 1 with noise filter
+      Bit Rate Modulation: Enable
+      Callback: sci_i2c4_master_callback
+      Interrupt Priority Level: Priority 12
+      RX Interrupt Priority Level [Only used when DTC is enabled]: Disabled
+      

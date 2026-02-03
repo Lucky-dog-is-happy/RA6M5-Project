@@ -70,6 +70,10 @@
       <configSetting altId="p108.gpio_mode.gpio_mode_peripheral" configurationId="p108.gpio_mode"/>
       <configSetting altId="p112.gpio_mode.gpio_mode_peripheral" configurationId="p112.gpio_mode"/>
       <configSetting altId="p113.gpio_mode.gpio_mode_peripheral" configurationId="p113.gpio_mode"/>
+      <configSetting altId="p206.gpio_mode.gpio_mode_peripheral" configurationId="p206.gpio_mode"/>
+      <configSetting altId="p206.gpio_otype.gpio_otype_n_ch_od" configurationId="p206.gpio_otype"/>
+      <configSetting altId="p207.gpio_mode.gpio_mode_peripheral" configurationId="p207.gpio_mode"/>
+      <configSetting altId="p207.gpio_otype.gpio_otype_n_ch_od" configurationId="p207.gpio_otype"/>
       <configSetting altId="p300.gpio_mode.gpio_mode_peripheral" configurationId="p300.gpio_mode"/>
       <configSetting altId="p400.output.low" configurationId="p400"/>
       <configSetting altId="p400.gpio_mode.gpio_mode_out.low" configurationId="p400.gpio_mode"/>
@@ -81,6 +85,8 @@
       <configSetting altId="sci3.rxd.p706" configurationId="sci3.rxd" isUsedByDriver="true" peripheral="SCI3"/>
       <configSetting altId="sci3.sck.p410" configurationId="sci3.sck" isUsedByDriver="true" peripheral="SCI3"/>
       <configSetting altId="sci3.txd.p707" configurationId="sci3.txd" isUsedByDriver="true" peripheral="SCI3"/>
+      <configSetting altId="sci4.scl.p206" configurationId="sci4.scl" isUsedByDriver="true" peripheral="SCI4"/>
+      <configSetting altId="sci4.sda.p207" configurationId="sci4.sda" isUsedByDriver="true" peripheral="SCI4"/>
     </pincfg>
   </raPinConfiguration>
 </raConfiguration>

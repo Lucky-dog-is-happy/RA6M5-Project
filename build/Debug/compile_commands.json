@@ -115,6 +115,12 @@
 },
 {
   "directory": "/home/lucky/repo/RA6M5/UART/build/Debug",
+  "command": "/usr/sbin/arm-none-eabi-gcc -D_RA_CORE=CM33 -D_RA_ORDINAL=1 -D_RENESAS_RA_ -I/home/lucky/repo/RA6M5/UART/ra/arm/CMSIS_6/CMSIS/Core/Include -I/home/lucky/repo/RA6M5/UART/ra/fsp/inc -I/home/lucky/repo/RA6M5/UART/ra/fsp/inc/api -I/home/lucky/repo/RA6M5/UART/ra/fsp/inc/instances -I/home/lucky/repo/RA6M5/UART/ra_cfg/fsp_cfg -I/home/lucky/repo/RA6M5/UART/ra_cfg/fsp_cfg/bsp -I/home/lucky/repo/RA6M5/UART/ra_gen -I/home/lucky/repo/RA6M5/UART/src -I/home/lucky/repo/RA6M5/UART -I/home/lucky/repo/RA6M5/UART/build/Debug -g -g -O2 --param=min-pagesize=0 -Wno-format-truncation -Wno-stringop-overflow -mfloat-abi=hard -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -mthumb -std=c99 -MMD -MP -o CMakeFiles/UART.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj -c /home/lucky/repo/RA6M5/UART/ra/fsp/src/r_sci_i2c/r_sci_i2c.c",
+  "file": "/home/lucky/repo/RA6M5/UART/ra/fsp/src/r_sci_i2c/r_sci_i2c.c",
+  "output": "/home/lucky/repo/RA6M5/UART/build/Debug/CMakeFiles/UART.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj"
+},
+{
+  "directory": "/home/lucky/repo/RA6M5/UART/build/Debug",
   "command": "/usr/sbin/arm-none-eabi-gcc -D_RA_CORE=CM33 -D_RA_ORDINAL=1 -D_RENESAS_RA_ -I/home/lucky/repo/RA6M5/UART/ra/arm/CMSIS_6/CMSIS/Core/Include -I/home/lucky/repo/RA6M5/UART/ra/fsp/inc -I/home/lucky/repo/RA6M5/UART/ra/fsp/inc/api -I/home/lucky/repo/RA6M5/UART/ra/fsp/inc/instances -I/home/lucky/repo/RA6M5/UART/ra_cfg/fsp_cfg -I/home/lucky/repo/RA6M5/UART/ra_cfg/fsp_cfg/bsp -I/home/lucky/repo/RA6M5/UART/ra_gen -I/home/lucky/repo/RA6M5/UART/src -I/home/lucky/repo/RA6M5/UART -I/home/lucky/repo/RA6M5/UART/build/Debug -g -g -O2 --param=min-pagesize=0 -Wno-format-truncation -Wno-stringop-overflow -mfloat-abi=hard -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -mthumb -std=c99 -MMD -MP -o CMakeFiles/UART.elf.dir/ra/fsp/src/r_sci_spi/r_sci_spi.c.obj -c /home/lucky/repo/RA6M5/UART/ra/fsp/src/r_sci_spi/r_sci_spi.c",
   "file": "/home/lucky/repo/RA6M5/UART/ra/fsp/src/r_sci_spi/r_sci_spi.c",
   "output": "/home/lucky/repo/RA6M5/UART/build/Debug/CMakeFiles/UART.elf.dir/ra/fsp/src/r_sci_spi/r_sci_spi.c.obj"
@@ -160,6 +166,12 @@
   "command": "/usr/sbin/arm-none-eabi-gcc -D_RA_CORE=CM33 -D_RA_ORDINAL=1 -D_RENESAS_RA_ -I/home/lucky/repo/RA6M5/UART/ra/arm/CMSIS_6/CMSIS/Core/Include -I/home/lucky/repo/RA6M5/UART/ra/fsp/inc -I/home/lucky/repo/RA6M5/UART/ra/fsp/inc/api -I/home/lucky/repo/RA6M5/UART/ra/fsp/inc/instances -I/home/lucky/repo/RA6M5/UART/ra_cfg/fsp_cfg -I/home/lucky/repo/RA6M5/UART/ra_cfg/fsp_cfg/bsp -I/home/lucky/repo/RA6M5/UART/ra_gen -I/home/lucky/repo/RA6M5/UART/src -I/home/lucky/repo/RA6M5/UART -I/home/lucky/repo/RA6M5/UART/build/Debug -g -g -O2 --param=min-pagesize=0 -Wno-format-truncation -Wno-stringop-overflow -mfloat-abi=hard -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -mthumb -std=c99 -MMD -MP -o CMakeFiles/UART.elf.dir/src/circle_buf.c.obj -c /home/lucky/repo/RA6M5/UART/src/circle_buf.c",
   "file": "/home/lucky/repo/RA6M5/UART/src/circle_buf.c",
   "output": "/home/lucky/repo/RA6M5/UART/build/Debug/CMakeFiles/UART.elf.dir/src/circle_buf.c.obj"
+},
+{
+  "directory": "/home/lucky/repo/RA6M5/UART/build/Debug",
+  "command": "/usr/sbin/arm-none-eabi-gcc -D_RA_CORE=CM33 -D_RA_ORDINAL=1 -D_RENESAS_RA_ -I/home/lucky/repo/RA6M5/UART/ra/arm/CMSIS_6/CMSIS/Core/Include -I/home/lucky/repo/RA6M5/UART/ra/fsp/inc -I/home/lucky/repo/RA6M5/UART/ra/fsp/inc/api -I/home/lucky/repo/RA6M5/UART/ra/fsp/inc/instances -I/home/lucky/repo/RA6M5/UART/ra_cfg/fsp_cfg -I/home/lucky/repo/RA6M5/UART/ra_cfg/fsp_cfg/bsp -I/home/lucky/repo/RA6M5/UART/ra_gen -I/home/lucky/repo/RA6M5/UART/src -I/home/lucky/repo/RA6M5/UART -I/home/lucky/repo/RA6M5/UART/build/Debug -g -g -O2 --param=min-pagesize=0 -Wno-format-truncation -Wno-stringop-overflow -mfloat-abi=hard -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -mthumb -std=c99 -MMD -MP -o CMakeFiles/UART.elf.dir/src/drv_eeprom.c.obj -c /home/lucky/repo/RA6M5/UART/src/drv_eeprom.c",
+  "file": "/home/lucky/repo/RA6M5/UART/src/drv_eeprom.c",
+  "output": "/home/lucky/repo/RA6M5/UART/build/Debug/CMakeFiles/UART.elf.dir/src/drv_eeprom.c.obj"
 },
 {
   "directory": "/home/lucky/repo/RA6M5/UART/build/Debug",
