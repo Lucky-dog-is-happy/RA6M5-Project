@@ -40,7 +40,7 @@ endif()
 cmake_minimum_required(VERSION 3.16.4)
 
 # Project configuration
-project(UART
+project(RA6M5-Projct
 	VERSION 1.0.0
 	LANGUAGES C CXX ASM)
 

@@ -1,6 +1,6 @@
-/home/lucky/repo/RA6M5/UART/build/Debug/CMakeFiles/open_rasc_UART.dir
-/home/lucky/repo/RA6M5/UART/build/Debug/CMakeFiles/UART.elf.dir
-/home/lucky/repo/RA6M5/UART/build/Debug/CMakeFiles/generate_content_UART.dir
-/home/lucky/repo/RA6M5/UART/build/Debug/CMakeFiles/generate_sbd_UART.dir
-/home/lucky/repo/RA6M5/UART/build/Debug/CMakeFiles/edit_cache.dir
-/home/lucky/repo/RA6M5/UART/build/Debug/CMakeFiles/rebuild_cache.dir
+/home/lucky/repo/RA6M5/RA6M5-Project/build/Debug/CMakeFiles/open_rasc_RA6M5-Projct.dir
+/home/lucky/repo/RA6M5/RA6M5-Project/build/Debug/CMakeFiles/RA6M5-Projct.elf.dir
+/home/lucky/repo/RA6M5/RA6M5-Project/build/Debug/CMakeFiles/generate_content_RA6M5-Projct.dir
+/home/lucky/repo/RA6M5/RA6M5-Project/build/Debug/CMakeFiles/generate_sbd_RA6M5-Projct.dir
+/home/lucky/repo/RA6M5/RA6M5-Project/build/Debug/CMakeFiles/edit_cache.dir
+/home/lucky/repo/RA6M5/RA6M5-Project/build/Debug/CMakeFiles/rebuild_cache.dir

@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/lucky/repo/RA6M5/UART/build/Debug/cmake_install.cmake"
+		"/home/lucky/repo/RA6M5/RA6M5-Project/build/Debug/cmake_install.cmake"
 	],
 	"Parallel" : false
 }
