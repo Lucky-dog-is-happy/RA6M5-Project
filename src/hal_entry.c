@@ -3,7 +3,9 @@
 #include "drv_sci_spi.h"
 #include "drv_i2c.h"
 #include "drv_eeprom.h"
+#include "hal_systick.h"
 
+void SystickAppTest(void);
 void EEPROMAppTest(void);
 
 #if (1 == BSP_MULTICORE_PROJECT) && BSP_TZ_SECURE_BUILD
@@ -12,6 +14,27 @@ bsp_ipc_semaphore_handle_t g_core_start_semaphore =
     .semaphore_num = 0
 };
 #endif
+
+void SystickAppTest(void)
+{
+    SystickInit();
+    uint32_t ucCount = 5;
+    uint32_t dwLastTick = 0, dwCurtick = 0;
+    bsp_io_level_t nLevel = false;
+
+    while(ucCount--)
+    {
+        printf("Test1\r\n");
+        dwLastTick = HAL_GetTick();
+        HAL_Delay(1000);
+        printf("Test2\r\n");
+        dwCurtick = HAL_GetTick();
+        printf("Test3\r\n");
+        g_ioport.p_api->pinWrite(g_ioport.p_ctrl, BSP_IO_PORT_04_PIN_00, nLevel);
+        nLevel = !nLevel;
+        printf("Before delay tick: %d\tAfter delay tick: %d\r\n", (int)dwLastTick, (int)dwCurtick);
+    }
+}
 
 unsigned int g_seed = 9797;
 static uint32_t rand(void)
@@ -94,7 +117,7 @@ void EEPROMAppTest(void)
 void hal_entry(void)
 {
     fsp_err_t err;
-    bsp_io_level_t level = 0;
+    bsp_io_level_t level = 1;
 
     circlebuf_init();
 
@@ -102,7 +125,8 @@ void hal_entry(void)
     printf("hello world! From lucky\r\n");
     g_ioport.p_api->pinWrite(&g_ioport_ctrl, BSP_IO_PORT_04_PIN_00, level);
     
-    EEPROMAppTest();
+    SystickAppTest();
+    //EEPROMAppTest();
 
 #if (0 == _RA_CORE) && (1 == BSP_MULTICORE_PROJECT) && !BSP_TZ_NONSECURE_BUILD
 

@@ -128,8 +128,6 @@ Discarded input sections
                 0x00000000        0x8 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
  .text.R_BSP_OctaclkUpdate
                 0x00000000      0x108 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
- .text.R_BSP_SourceClockHzGet
-                0x00000000        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
  .text          0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_common.c.obj
  .data          0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_common.c.obj
  .bss           0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_common.c.obj
@@ -285,6 +283,24 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
  .data          0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
  .bss           0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
+ .text.R_SCI_I2C_Abort
+                0x00000000       0x2c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
+ .text.R_SCI_I2C_SlaveAddressSet
+                0x00000000        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
+ .text.R_SCI_I2C_CallbackSet
+                0x00000000       0x10 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
+ .text.R_SCI_I2C_StatusGet
+                0x00000000       0x18 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
+ .text.R_SCI_I2C_Close
+                0x00000000       0x58 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
+ .text.R_SCI_I2C_Read
+                0x00000000       0x94 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
+ .text.R_SCI_I2C_Write
+                0x00000000       0x90 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
+ .text.R_SCI_I2C_Open
+                0x00000000      0x160 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
+ .rodata.g_i2c_master_on_sci
+                0x00000000       0x20 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
  .text          0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_spi/r_sci_spi.c.obj
  .data          0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_spi/r_sci_spi.c.obj
  .bss           0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_spi/r_sci_spi.c.obj
@@ -355,6 +371,14 @@ Discarded input sections
                 0x00000000       0x10 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
  .bss.g_transfer1_ctrl
                 0x00000000        0x8 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
+ .rodata.g_i2c4
+                0x00000000        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
+ .rodata.g_i2c4_cfg
+                0x00000000       0x28 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
+ .rodata.g_i2c4_cfg_extend
+                0x00000000        0x6 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
+ .bss.g_i2c4_ctrl
+                0x00000000       0x40 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
  .text          0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/main.c.obj
  .data          0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/main.c.obj
  .bss           0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/main.c.obj
@@ -370,6 +394,42 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
  .data          0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
  .bss           0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .rodata.EEPROMDrvInit.str1.4
+                0x00000000       0x3e CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .text.EEPROMDrvInit
+                0x00000000       0x40 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .text.EEPROMDrvWritePage.isra.0
+                0x00000000       0x78 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .text.EEPROMDrvWriteBuff
+                0x00000000       0xc0 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .text.EEPROMDrvRead
+                0x00000000       0xac CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .text.EEPROMGetDevice
+                0x00000000        0x8 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .text.sci_i2c4_master_callback
+                0x00000000       0x24 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .bss.gI2CRxCplt
+                0x00000000        0x1 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .bss.gI2CTxCplt
+                0x00000000        0x1 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .rodata.str1.4
+                0x00000000        0x7 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .data.gEepromDev
+                0x00000000       0x10 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .debug_info    0x00000000     0x17a5 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .debug_abbrev  0x00000000      0x3e2 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .debug_loclists
+                0x00000000      0x340 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .debug_aranges
+                0x00000000       0x48 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .debug_rnglists
+                0x00000000       0x78 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .debug_line    0x00000000      0x568 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .debug_str     0x00000000     0x26e3 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .comment       0x00000000       0x1f CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .debug_frame   0x00000000       0xc8 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+ .ARM.attributes
+                0x00000000       0x3a CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
  .text          0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_sci_spi.c.obj
  .data          0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_sci_spi.c.obj
  .bss           0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_sci_spi.c.obj
@@ -413,6 +473,16 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
  .data          0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
  .bss           0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+ .rodata.EEPROMAppTest.str1.4
+                0x00000000      0x10e CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+ .text.EEPROMAppTest
+                0x00000000      0x1e4 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+ .bss.rbuf      0x00000000      0x100 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+ .bss.wbuf      0x00000000      0x100 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+ .data.g_seed   0x00000000        0x4 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+ .text          0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_systick.c.obj
+ .data          0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_systick.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_systick.c.obj
  .text          0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
  .data          0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
  .bss           0x00000000        0x0 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
@@ -868,6 +938,7 @@ LOAD CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
 LOAD CMakeFiles/RA6M5-Projct.elf.dir/src/drv_sci_spi.c.obj
 LOAD CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
 LOAD CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+LOAD CMakeFiles/RA6M5-Projct.elf.dir/src/hal_systick.c.obj
 LOAD CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
 START GROUP
 LOAD /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/libgcc.a
@@ -1109,7 +1180,7 @@ __ospi0_cs0_zero$$
                 0x68000000                        __ddsc_OSPI0_CS0_END = .
 
 __ram_from_flash$$
-                0x20000000       0x74 load address 0x00000068
+                0x20000000       0x60 load address 0x00000068
                 0x20000000                        __ram_from_flash$$Base = .
                 0x00000068                        __ram_from_flash$$Load = LOADADDR (__ram_from_flash$$)
  *(.ram_from_flash)
@@ -1118,593 +1189,536 @@ __ram_from_flash$$
  .data.g_uart2_baud_setting
                 0x20000000        0x4 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
                 0x20000000                g_uart2_baud_setting
- .data.gEepromDev
-                0x20000004       0x10 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
- .data.g_seed   0x20000014        0x4 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
-                0x20000014                g_seed
- .data.__sglue  0x20000018        0xc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
-                0x20000018                __sglue
+ .data.__sglue  0x20000004        0xc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
+                0x20000004                __sglue
  .data._impure_ptr
-                0x20000024        0x4 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-impure.o)
-                0x20000024                _impure_ptr
+                0x20000010        0x4 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-impure.o)
+                0x20000010                _impure_ptr
  .data._impure_data
-                0x20000028       0x4c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-impure.o)
-                0x20000028                _impure_data
+                0x20000014       0x4c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-impure.o)
+                0x20000014                _impure_data
  *(vtable)
-                0x20000074                        __ram_from_flash$$Limit = .
+                0x20000060                        __ram_from_flash$$Limit = .
 
 __ram_noinit_nocache$$
-                0x20000080        0x0 load address 0x000000e0
-                0x20000080                        __ram_noinit_nocache$$Base = .
+                0x20000060        0x0 load address 0x000000e0
+                0x20000060                        __ram_noinit_nocache$$Base = .
  *(.ram_noinit_nocache)
-                0x20000080                        __ram_noinit_nocache$$Limit = .
+                0x20000060                        __ram_noinit_nocache$$Limit = .
 
 __ram_zero_nocache$$
-                0x20000074        0xc load address 0x000000dc
-                0x20000074                        __ram_zero_nocache$$Base = .
+                0x20000060        0x0 load address 0x000000c8
+                0x20000060                        __ram_zero_nocache$$Base = .
  *(.ram_nocache)
-                0x20000080                        . = ALIGN (0x20)
- *fill*         0x20000074        0xc 
-                0x20000080                        __ram_zero_nocache$$Limit = .
+                0x20000060                        . = ALIGN (0x20)
+                0x20000060                        __ram_zero_nocache$$Limit = .
 
-__ram_noinit$$  0x20000080      0x41c load address 0x000000dc
-                0x20000080                        __ram_noinit$$Base = .
+__ram_noinit$$  0x20000060      0x41c load address 0x000000c8
+                0x20000060                        __ram_noinit$$Base = .
  *(.bss.g_heap)
  *(.bss.g_main_stack)
  .bss.g_main_stack
-                0x20000080      0x400 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.c.obj
-                0x20000080                g_main_stack
+                0x20000060      0x400 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.c.obj
+                0x20000060                g_main_stack
  *(.ram_noinit)
- .ram_noinit    0x20000480       0x1c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
+ .ram_noinit    0x20000460       0x1c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
  *(.noinit)
-                0x2000049c                        __ram_noinit$$Limit = .
+                0x2000047c                        __ram_noinit$$Limit = .
 
-__ram_zero$$    0x200004a0      0x4bc load address 0x000000dc
-                0x200004a0                        __ram_zero$$Base = .
+__ram_zero$$    0x20000480      0x27c load address 0x000000c8
+                0x20000480                        __ram_zero$$Base = .
  *(.ram)
  *(.bss*)
  .bss.completed.1
-                0x200004a0        0x1 /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crtbegin.o
- *fill*         0x200004a1        0x3 
- .bss.object.0  0x200004a4       0x18 /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crtbegin.o
+                0x20000480        0x1 /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crtbegin.o
+ *fill*         0x20000481        0x3 
+ .bss.object.0  0x20000484       0x18 /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crtbegin.o
  .bss.SystemCoreClock
-                0x200004bc        0x4 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.c.obj
-                0x200004bc                SystemCoreClock
+                0x2000049c        0x4 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.c.obj
+                0x2000049c                SystemCoreClock
  .bss.g_bsp_group_irq_sources
-                0x200004c0       0x40 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_group_irq.c.obj
-                0x200004c0                g_bsp_group_irq_sources
+                0x200004a0       0x40 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_group_irq.c.obj
+                0x200004a0                g_bsp_group_irq_sources
  .bss.g_protect_pfswe_counter
-                0x20000500        0x4 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_io.c.obj
-                0x20000500                g_protect_pfswe_counter
+                0x200004e0        0x4 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_io.c.obj
+                0x200004e0                g_protect_pfswe_counter
  .bss.gp_renesas_isr_context
-                0x20000504       0x28 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_irq.c.obj
-                0x20000504                gp_renesas_isr_context
+                0x200004e4       0x28 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_irq.c.obj
+                0x200004e4                gp_renesas_isr_context
  .bss.g_protect_counters
-                0x2000052c        0xa CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_register_protection.c.obj
-                0x2000052c                g_protect_counters
- *fill*         0x20000536        0x2 
+                0x2000050c        0xa CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_register_protection.c.obj
+                0x2000050c                g_protect_counters
+ *fill*         0x20000516        0x2 
  .bss.g_ioport_ctrl
-                0x20000538        0x8 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/common_data.c.obj
-                0x20000538                g_ioport_ctrl
+                0x20000518        0x8 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/common_data.c.obj
+                0x20000518                g_ioport_ctrl
  .bss.g_uart2_ctrl
-                0x20000540       0x30 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
-                0x20000540                g_uart2_ctrl
- .bss.g_i2c4_ctrl
-                0x20000570       0x40 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
-                0x20000570                g_i2c4_ctrl
- .bss.g_rx_buf  0x200005b0       0x18 CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
-                0x200005b0                g_rx_buf
- .bss.rx_buf    0x200005c8       0x40 CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
- .bss.gI2CRxCplt
-                0x20000608        0x1 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
- .bss.gI2CTxCplt
-                0x20000609        0x1 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
- *fill*         0x2000060a        0x2 
+                0x20000520       0x30 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
+                0x20000520                g_uart2_ctrl
+ .bss.g_rx_buf  0x20000550       0x18 CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
+                0x20000550                g_rx_buf
+ .bss.rx_buf    0x20000568       0x40 CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
  .bss.g_uart2_tx_complete
-                0x2000060c        0x4 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
- .bss.rbuf      0x20000610      0x100 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
-                0x20000610                rbuf
- .bss.wbuf      0x20000710      0x100 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
-                0x20000710                wbuf
- .bss.__sf      0x20000810      0x138 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
-                0x20000810                __sf
+                0x200005a8        0x4 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
+ .bss.dwTick    0x200005ac        0x4 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_systick.c.obj
+ .bss.__sf      0x200005b0      0x138 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
+                0x200005b0                __sf
  .bss.__stdio_exit_handler
-                0x20000948        0x4 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
-                0x20000948                __stdio_exit_handler
- .bss.errno     0x2000094c        0x4 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-reent.o)
-                0x2000094c                errno
+                0x200006e8        0x4 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
+                0x200006e8                __stdio_exit_handler
+ .bss.errno     0x200006ec        0x4 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-reent.o)
+                0x200006ec                errno
  .bss.__lock___malloc_recursive_mutex
-                0x20000950        0x1 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
-                0x20000950                __lock___malloc_recursive_mutex
+                0x200006f0        0x1 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
+                0x200006f0                __lock___malloc_recursive_mutex
  .bss.__lock___sfp_recursive_mutex
-                0x20000951        0x1 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
-                0x20000951                __lock___sfp_recursive_mutex
- *fill*         0x20000952        0x2 
+                0x200006f1        0x1 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
+                0x200006f1                __lock___sfp_recursive_mutex
+ *fill*         0x200006f2        0x2 
  .bss.__malloc_sbrk_start
-                0x20000954        0x4 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
-                0x20000954                __malloc_sbrk_start
+                0x200006f4        0x4 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
+                0x200006f4                __malloc_sbrk_start
  .bss.__malloc_free_list
-                0x20000958        0x4 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
-                0x20000958                __malloc_free_list
-                0x2000095c                        __ram_zero$$Limit = .
+                0x200006f8        0x4 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
+                0x200006f8                __malloc_free_list
+                0x200006fc                        __ram_zero$$Limit = .
 
 __ram_thread_stack$$
-                0x20000960        0x0 load address 0x000000e0
-                0x20000960                        __ram_thread_stack$$Base = .
+                0x20000700        0x0 load address 0x000000c8
+                0x20000700                        __ram_thread_stack$$Base = .
  *(.stack?*)
-                0x20000960                        __ram_thread_stack$$Limit = .
+                0x20000700                        __ram_thread_stack$$Limit = .
 
-.ram.endof      0x20000a00        0x0
-                0x20000a00                        __ddsc_RAM_END = .
+.ram.endof      0x20000800        0x0
+                0x20000800                        __ddsc_RAM_END = .
 
 __flash_readonly$$
-                0x000000dc     0x3204
-                0x000000dc                        __flash_readonly$$Base = .
+                0x000000c8     0x2a24
+                0x000000c8                        __flash_readonly$$Base = .
  *(.flash)
  *(.flash_code)
  *(.text*)
  .text.__do_global_dtors_aux
-                0x000000dc       0x24 /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crtbegin.o
+                0x000000c8       0x24 /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crtbegin.o
  .text.frame_dummy
-                0x00000100       0x1c /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crtbegin.o
+                0x000000ec       0x1c /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crtbegin.o
  .text.Default_Handler
-                0x0000011c        0x4 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.c.obj
-                0x0000011c                DebugMon_Handler
-                0x0000011c                HardFault_Handler
-                0x0000011c                SysTick_Handler
-                0x0000011c                PendSV_Handler
-                0x0000011c                UsageFault_Handler
-                0x0000011c                SecureFault_Handler
-                0x0000011c                Default_Handler
-                0x0000011c                MemManage_Handler
-                0x0000011c                SVC_Handler
-                0x0000011c                BusFault_Handler
+                0x00000108        0x4 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.c.obj
+                0x00000108                DebugMon_Handler
+                0x00000108                HardFault_Handler
+                0x00000108                PendSV_Handler
+                0x00000108                UsageFault_Handler
+                0x00000108                SecureFault_Handler
+                0x00000108                Default_Handler
+                0x00000108                MemManage_Handler
+                0x00000108                SVC_Handler
+                0x00000108                BusFault_Handler
  .text.Reset_Handler
-                0x00000120        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.c.obj
-                0x00000120                Reset_Handler
+                0x0000010c        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.c.obj
+                0x0000010c                Reset_Handler
  .text.SystemRuntimeInit
-                0x0000012c       0x64 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.c.obj
+                0x00000118       0x64 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.c.obj
  .text.SystemInit
-                0x00000190       0xc0 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.c.obj
-                0x00000190                SystemInit
+                0x0000017c       0xc0 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.c.obj
+                0x0000017c                SystemInit
  .text.SystemCoreClockUpdate
-                0x00000250       0x28 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
-                0x00000250                SystemCoreClockUpdate
+                0x0000023c       0x28 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
+                0x0000023c                SystemCoreClockUpdate
  .text.R_BSP_SubClockStabilizeWaitAfterReset
-                0x00000278        0x4 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
-                0x00000278                R_BSP_SubClockStabilizeWaitAfterReset
+                0x00000264        0x4 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
+                0x00000264                R_BSP_SubClockStabilizeWaitAfterReset
  .text.bsp_clock_init
-                0x0000027c      0x14c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
-                0x0000027c                bsp_clock_init
+                0x00000268      0x14c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
+                0x00000268                bsp_clock_init
+ .text.R_BSP_SourceClockHzGet
+                0x000003b4        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
+                0x000003b4                R_BSP_SourceClockHzGet
  .text.R_BSP_Init_RTC
-                0x000003c8       0xb0 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
-                0x000003c8                R_BSP_Init_RTC
+                0x000003c0       0xb0 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
+                0x000003c0                R_BSP_Init_RTC
  .text.bsp_init_internal
-                0x00000478        0x4 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_common.c.obj
-                0x00000478                bsp_init
-                0x00000478                bsp_init_internal
+                0x00000470        0x4 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_common.c.obj
+                0x00000470                bsp_init
+                0x00000470                bsp_init_internal
  .text.bsp_prv_software_delay_loop
-                0x0000047c        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_delay.c.obj
-                0x0000047c                bsp_prv_software_delay_loop
+                0x00000474        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_delay.c.obj
+                0x00000474                bsp_prv_software_delay_loop
  .text.R_BSP_SoftwareDelay
-                0x00000488       0x8c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_delay.c.obj
-                0x00000488                R_BSP_SoftwareDelay
+                0x00000480       0x8c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_delay.c.obj
+                0x00000480                R_BSP_SoftwareDelay
  .text.NMI_Handler
-                0x00000514       0x3c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_group_irq.c.obj
-                0x00000514                NMI_Handler
+                0x0000050c       0x3c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_group_irq.c.obj
+                0x0000050c                NMI_Handler
  .text.bsp_irq_cfg
-                0x00000550       0x94 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_irq.c.obj
-                0x00000550                bsp_irq_cfg
+                0x00000548       0x94 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_irq.c.obj
+                0x00000548                bsp_irq_cfg
  .text.R_BSP_RegisterProtectEnable
-                0x000005e4       0x60 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_register_protection.c.obj
-                0x000005e4                R_BSP_RegisterProtectEnable
+                0x000005dc       0x60 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_register_protection.c.obj
+                0x000005dc                R_BSP_RegisterProtectEnable
  .text.R_BSP_RegisterProtectDisable
-                0x00000644       0x54 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_register_protection.c.obj
-                0x00000644                R_BSP_RegisterProtectDisable
- .text._sbrk    0x00000698       0x14 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_sbrk.c.obj
-                0x00000698                _sbrk
+                0x0000063c       0x54 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_register_protection.c.obj
+                0x0000063c                R_BSP_RegisterProtectDisable
+ .text._sbrk    0x00000690       0x14 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_sbrk.c.obj
+                0x00000690                _sbrk
  .text.R_IOPORT_Close
-                0x000006ac        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
-                0x000006ac                R_IOPORT_Close
+                0x000006a4        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
+                0x000006a4                R_IOPORT_Close
  .text.R_IOPORT_PinRead
-                0x000006b8       0x24 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
-                0x000006b8                R_IOPORT_PinRead
+                0x000006b0       0x24 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
+                0x000006b0                R_IOPORT_PinRead
  .text.R_IOPORT_PortRead
-                0x000006dc       0x14 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
-                0x000006dc                R_IOPORT_PortRead
+                0x000006d4       0x14 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
+                0x000006d4                R_IOPORT_PortRead
  .text.R_IOPORT_PortWrite
-                0x000006f0       0x1c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
-                0x000006f0                R_IOPORT_PortWrite
+                0x000006e8       0x1c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
+                0x000006e8                R_IOPORT_PortWrite
  .text.R_IOPORT_PinWrite
-                0x0000070c       0x20 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
-                0x0000070c                R_IOPORT_PinWrite
+                0x00000704       0x20 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
+                0x00000704                R_IOPORT_PinWrite
  .text.R_IOPORT_PortDirectionSet
-                0x0000072c       0x2c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
-                0x0000072c                R_IOPORT_PortDirectionSet
+                0x00000724       0x2c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
+                0x00000724                R_IOPORT_PortDirectionSet
  .text.R_IOPORT_PortEventInputRead
-                0x00000758       0x18 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
-                0x00000758                R_IOPORT_PortEventInputRead
+                0x00000750       0x18 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
+                0x00000750                R_IOPORT_PortEventInputRead
  .text.R_IOPORT_PinEventInputRead
-                0x00000770       0x34 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
-                0x00000770                R_IOPORT_PinEventInputRead
+                0x00000768       0x34 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
+                0x00000768                R_IOPORT_PinEventInputRead
  .text.R_IOPORT_PortEventOutputWrite
-                0x000007a4       0x1c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
-                0x000007a4                R_IOPORT_PortEventOutputWrite
+                0x0000079c       0x1c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
+                0x0000079c                R_IOPORT_PortEventOutputWrite
  .text.R_IOPORT_PinEventOutputWrite
-                0x000007c0       0x34 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
-                0x000007c0                R_IOPORT_PinEventOutputWrite
+                0x000007b8       0x34 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
+                0x000007b8                R_IOPORT_PinEventOutputWrite
  .text.bsp_vbatt_init
-                0x000007f4       0xe8 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
+                0x000007ec       0xe8 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
  .text.r_ioport_pins_config
-                0x000008dc       0xac CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
+                0x000008d4       0xac CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
  .text.R_IOPORT_Open
-                0x00000988       0x14 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
-                0x00000988                R_IOPORT_Open
+                0x00000980       0x14 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
+                0x00000980                R_IOPORT_Open
  .text.R_IOPORT_PinsCfg
-                0x0000099c        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
-                0x0000099c                R_IOPORT_PinsCfg
+                0x00000994        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
+                0x00000994                R_IOPORT_PinsCfg
  .text.R_IOPORT_PinCfg
-                0x000009a8       0xa8 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
-                0x000009a8                R_IOPORT_PinCfg
- .text.R_SCI_I2C_Abort
-                0x00000a50       0x2c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
-                0x00000a50                R_SCI_I2C_Abort
- .text.R_SCI_I2C_SlaveAddressSet
-                0x00000a7c        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
-                0x00000a7c                R_SCI_I2C_SlaveAddressSet
- .text.R_SCI_I2C_CallbackSet
-                0x00000a88       0x10 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
-                0x00000a88                R_SCI_I2C_CallbackSet
- .text.R_SCI_I2C_StatusGet
-                0x00000a98       0x18 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
-                0x00000a98                R_SCI_I2C_StatusGet
- .text.R_SCI_I2C_Close
-                0x00000ab0       0x58 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
-                0x00000ab0                R_SCI_I2C_Close
- .text.R_SCI_I2C_Read
-                0x00000b08       0x94 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
-                0x00000b08                R_SCI_I2C_Read
- .text.R_SCI_I2C_Write
-                0x00000b9c       0x90 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
-                0x00000b9c                R_SCI_I2C_Write
- .text.R_SCI_I2C_Open
-                0x00000c2c      0x160 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
-                0x00000c2c                R_SCI_I2C_Open
+                0x000009a0       0xa8 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
+                0x000009a0                R_IOPORT_PinCfg
  .text.sci_i2c_notify
-                0x00000d8c       0x38 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
-                0x00000d8c                sci_i2c_notify
+                0x00000a48       0x38 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
+                0x00000a48                sci_i2c_notify
  .text.sci_i2c_txi_isr
-                0x00000dc4      0x148 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
-                0x00000dc4                sci_i2c_txi_isr
+                0x00000a80      0x148 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
+                0x00000a80                sci_i2c_txi_isr
  .text.sci_i2c_tei_isr
-                0x00000f0c       0xd0 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
-                0x00000f0c                sci_i2c_tei_isr
+                0x00000bc8       0xd0 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
+                0x00000bc8                sci_i2c_tei_isr
  .text.r_sci_spi_call_callback
-                0x00000fdc       0x40 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_spi/r_sci_spi.c.obj
+                0x00000c98       0x40 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_spi/r_sci_spi.c.obj
  .text.sci_spi_txi_isr
-                0x0000101c       0x6c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_spi/r_sci_spi.c.obj
-                0x0000101c                sci_spi_txi_isr
+                0x00000cd8       0x6c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_spi/r_sci_spi.c.obj
+                0x00000cd8                sci_spi_txi_isr
  .text.sci_spi_rxi_isr
-                0x00001088       0x78 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_spi/r_sci_spi.c.obj
-                0x00001088                sci_spi_rxi_isr
+                0x00000d44       0x78 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_spi/r_sci_spi.c.obj
+                0x00000d44                sci_spi_rxi_isr
  .text.sci_spi_tei_isr
-                0x00001100       0x40 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_spi/r_sci_spi.c.obj
-                0x00001100                sci_spi_tei_isr
+                0x00000dbc       0x40 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_spi/r_sci_spi.c.obj
+                0x00000dbc                sci_spi_tei_isr
  .text.sci_spi_eri_isr
-                0x00001140       0x4c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_spi/r_sci_spi.c.obj
-                0x00001140                sci_spi_eri_isr
+                0x00000dfc       0x4c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_spi/r_sci_spi.c.obj
+                0x00000dfc                sci_spi_eri_isr
  .text.R_SCI_UART_Close
-                0x0000118c       0xcc CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
-                0x0000118c                R_SCI_UART_Close
+                0x00000e48       0xcc CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
+                0x00000e48                R_SCI_UART_Close
  .text.R_SCI_UART_Read
-                0x00001258        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
-                0x00001258                R_SCI_UART_Read
+                0x00000f14        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
+                0x00000f14                R_SCI_UART_Read
  .text.R_SCI_UART_Write
-                0x00001264       0x48 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
-                0x00001264                R_SCI_UART_Write
+                0x00000f20       0x48 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
+                0x00000f20                R_SCI_UART_Write
  .text.R_SCI_UART_CallbackSet
-                0x000012ac       0x10 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
-                0x000012ac                R_SCI_UART_CallbackSet
+                0x00000f68       0x10 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
+                0x00000f68                R_SCI_UART_CallbackSet
  .text.R_SCI_UART_BaudSet
-                0x000012bc       0x5c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
-                0x000012bc                R_SCI_UART_BaudSet
+                0x00000f78       0x5c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
+                0x00000f78                R_SCI_UART_BaudSet
  .text.R_SCI_UART_InfoGet
-                0x00001318        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
-                0x00001318                R_SCI_UART_InfoGet
+                0x00000fd4        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
+                0x00000fd4                R_SCI_UART_InfoGet
  .text.R_SCI_UART_Abort
-                0x00001324       0x3c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
-                0x00001324                R_SCI_UART_Abort
+                0x00000fe0       0x3c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
+                0x00000fe0                R_SCI_UART_Abort
  .text.R_SCI_UART_ReadStop
-                0x00001360       0x14 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
-                0x00001360                R_SCI_UART_ReadStop
+                0x0000101c       0x14 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
+                0x0000101c                R_SCI_UART_ReadStop
  .text.R_SCI_UART_ReceiveSuspend
-                0x00001374        0x4 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
-                0x00001374                R_SCI_UART_ReceiveSuspend
+                0x00001030        0x4 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
+                0x00001030                R_SCI_UART_ReceiveSuspend
  .text.r_sci_uart_call_callback
-                0x00001378       0x44 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
+                0x00001034       0x44 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
  .text.R_SCI_UART_ReceiveResume
-                0x000013bc        0x4 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
-                0x000013bc                R_SCI_UART_ReceiveResume
+                0x00001078        0x4 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
+                0x00001078                R_SCI_UART_ReceiveResume
  .text.R_SCI_UART_Open
-                0x000013c0      0x398 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
-                0x000013c0                R_SCI_UART_Open
+                0x0000107c      0x398 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
+                0x0000107c                R_SCI_UART_Open
  .text.sci_uart_txi_isr
-                0x00001758       0x98 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
-                0x00001758                sci_uart_txi_isr
+                0x00001414       0x98 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
+                0x00001414                sci_uart_txi_isr
  .text.sci_uart_rxi_isr
-                0x000017f0       0x90 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
-                0x000017f0                sci_uart_rxi_isr
+                0x000014ac       0x90 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
+                0x000014ac                sci_uart_rxi_isr
  .text.sci_uart_tei_isr
-                0x00001880       0x48 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
-                0x00001880                sci_uart_tei_isr
+                0x0000153c       0x48 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
+                0x0000153c                sci_uart_tei_isr
  .text.sci_uart_eri_isr
-                0x000018c8       0x78 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
-                0x000018c8                sci_uart_eri_isr
+                0x00001584       0x78 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
+                0x00001584                sci_uart_eri_isr
  .text.startup.main
-                0x00001940        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/main.c.obj
-                0x00001940                main
+                0x000015fc        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/main.c.obj
+                0x000015fc                main
  .text.circlebuf_put
-                0x0000194c       0x2c CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
+                0x00001608       0x2c CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
  .text.circlebuf_get
-                0x00001978       0x28 CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
+                0x00001634       0x28 CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
  .text.circlebuf_init
-                0x000019a0       0x34 CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
-                0x000019a0                circlebuf_init
- .text.EEPROMDrvInit
-                0x000019d4       0x40 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
- .text.EEPROMDrvWritePage.isra.0
-                0x00001a14       0x78 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
- .text.EEPROMDrvWriteBuff
-                0x00001a8c       0xc0 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
- .text.EEPROMDrvRead
-                0x00001b4c       0xac CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
- .text.EEPROMGetDevice
-                0x00001bf8        0x8 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
-                0x00001bf8                EEPROMGetDevice
- .text.sci_i2c4_master_callback
-                0x00001c00       0x24 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
-                0x00001c00                sci_i2c4_master_callback
+                0x0000165c       0x34 CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
+                0x0000165c                circlebuf_init
  .text.uart2_callback
-                0x00001c24       0x28 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
-                0x00001c24                uart2_callback
- .text._write   0x00001c4c       0x48 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
-                0x00001c4c                _write
- .text._read    0x00001c94       0x90 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
-                0x00001c94                _read
- .text._close   0x00001d24       0x14 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
-                0x00001d24                _close
- .text._lseek   0x00001d38        0x4 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
-                0x00001d38                _lseek
- .text._fstat   0x00001d3c        0xc CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
-                0x00001d3c                _fstat
- .text._isatty  0x00001d48        0x4 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
-                0x00001d48                _isatty
- .text.EEPROMAppTest
-                0x00001d4c      0x1e4 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
-                0x00001d4c                EEPROMAppTest
+                0x00001690       0x28 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
+                0x00001690                uart2_callback
+ .text._write   0x000016b8       0x48 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
+                0x000016b8                _write
+ .text._read    0x00001700       0x90 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
+                0x00001700                _read
+ .text._close   0x00001790       0x14 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
+                0x00001790                _close
+ .text._lseek   0x000017a4        0x4 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
+                0x000017a4                _lseek
+ .text._fstat   0x000017a8        0xc CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
+                0x000017a8                _fstat
+ .text._isatty  0x000017b4        0x4 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
+                0x000017b4                _isatty
+ .text.SystickAppTest
+                0x000017b8       0x78 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+                0x000017b8                SystickAppTest
  .text.hal_entry
-                0x00001f30       0x40 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
-                0x00001f30                hal_entry
+                0x00001830       0x40 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+                0x00001830                hal_entry
+ .text.SystickInit
+                0x00001870       0x40 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_systick.c.obj
+                0x00001870                SystickInit
+ .text.SysTick_Handler
+                0x000018b0       0x10 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_systick.c.obj
+                0x000018b0                SysTick_Handler
+ .text.HAL_Delay
+                0x000018c0       0x1c CMakeFiles/RA6M5-Projct.elf.dir/src/hal_systick.c.obj
+                0x000018c0                HAL_Delay
+ .text.HAL_GetTick
+                0x000018dc        0xc CMakeFiles/RA6M5-Projct.elf.dir/src/hal_systick.c.obj
+                0x000018dc                HAL_GetTick
  .text.R_BSP_WarmStart
-                0x00001f70       0x18 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
-                0x00001f70                R_BSP_WarmStart
- .text.std      0x00001f88       0x6c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
+                0x000018e8       0x18 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
+                0x000018e8                R_BSP_WarmStart
+ .text.std      0x00001900       0x6c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
  .text.stdio_exit_handler
-                0x00001ff4       0x18 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
+                0x0000196c       0x18 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
  .text.cleanup_stdio
-                0x0000200c       0x40 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
+                0x00001984       0x40 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
  .text.global_stdio_init.part.0
-                0x0000204c       0x40 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
+                0x000019c4       0x40 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
  .text.__sfp_lock_acquire
-                0x0000208c        0xc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
-                0x0000208c                __sfp_lock_acquire
+                0x00001a04        0xc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
+                0x00001a04                __sfp_lock_acquire
  .text.__sfp_lock_release
-                0x00002098        0xc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
-                0x00002098                __sfp_lock_release
- .text.__sinit  0x000020a4       0x30 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
-                0x000020a4                __sinit
+                0x00001a10        0xc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
+                0x00001a10                __sfp_lock_release
+ .text.__sinit  0x00001a1c       0x30 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
+                0x00001a1c                __sinit
  .text._fwalk_sglue
-                0x000020d4       0x3c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fwalk.o)
-                0x000020d4                _fwalk_sglue
- .text.printf   0x00002110       0x24 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-printf.o)
-                0x00002110                printf
-                0x00002110                iprintf
- .text._puts_r  0x00002134       0xaa /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
-                0x00002134                _puts_r
- *fill*         0x000021de        0x2 
- .text.puts     0x000021e0       0x10 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
-                0x000021e0                puts
- .text.__sread  0x000021f0       0x22 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
-                0x000021f0                __sread
+                0x00001a4c       0x3c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fwalk.o)
+                0x00001a4c                _fwalk_sglue
+ .text.printf   0x00001a88       0x24 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-printf.o)
+                0x00001a88                printf
+                0x00001a88                iprintf
+ .text._puts_r  0x00001aac       0xaa /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
+                0x00001aac                _puts_r
+ *fill*         0x00001b56        0x2 
+ .text.puts     0x00001b58       0x10 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
+                0x00001b58                puts
+ .text.__sread  0x00001b68       0x22 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
+                0x00001b68                __sread
  .text.__swrite
-                0x00002212       0x38 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
-                0x00002212                __swrite
- .text.__sseek  0x0000224a       0x26 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
-                0x0000224a                __sseek
+                0x00001b8a       0x38 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
+                0x00001b8a                __swrite
+ .text.__sseek  0x00001bc2       0x26 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
+                0x00001bc2                __sseek
  .text.__sclose
-                0x00002270        0x8 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
-                0x00002270                __sclose
+                0x00001be8        0x8 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
+                0x00001be8                __sclose
  .text.__swbuf_r
-                0x00002278       0x7c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wbuf.o)
-                0x00002278                __swbuf_r
+                0x00001bf0       0x7c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wbuf.o)
+                0x00001bf0                __swbuf_r
  .text.__swsetup_r
-                0x000022f4       0xa8 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wsetup.o)
-                0x000022f4                __swsetup_r
- .text.memset   0x0000239c       0x10 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memset.o)
-                0x0000239c                memset
+                0x00001c6c       0xa8 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wsetup.o)
+                0x00001c6c                __swsetup_r
+ .text.memset   0x00001d14       0x10 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memset.o)
+                0x00001d14                memset
  .text._close_r
-                0x000023ac       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-closer.o)
-                0x000023ac                _close_r
+                0x00001d24       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-closer.o)
+                0x00001d24                _close_r
  .text._lseek_r
-                0x000023cc       0x24 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lseekr.o)
-                0x000023cc                _lseek_r
- .text._read_r  0x000023f0       0x24 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-readr.o)
-                0x000023f0                _read_r
+                0x00001d44       0x24 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lseekr.o)
+                0x00001d44                _lseek_r
+ .text._read_r  0x00001d68       0x24 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-readr.o)
+                0x00001d68                _read_r
  .text._write_r
-                0x00002414       0x24 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-writer.o)
-                0x00002414                _write_r
- .text.__errno  0x00002438        0xc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-errno.o)
-                0x00002438                __errno
+                0x00001d8c       0x24 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-writer.o)
+                0x00001d8c                _write_r
+ .text.__errno  0x00001db0        0xc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-errno.o)
+                0x00001db0                __errno
  .text.__retarget_lock_init_recursive
-                0x00002444        0x2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
-                0x00002444                __retarget_lock_init_recursive
+                0x00001dbc        0x2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
+                0x00001dbc                __retarget_lock_init_recursive
  .text.__retarget_lock_acquire_recursive
-                0x00002446        0x2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
-                0x00002446                __retarget_lock_acquire_recursive
+                0x00001dbe        0x2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
+                0x00001dbe                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x00002448        0x2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
-                0x00002448                __retarget_lock_release_recursive
- .text.memcpy   0x0000244a       0x1a /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
-                0x0000244a                memcpy
- .text._free_r  0x00002464       0x94 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-freer.o)
-                0x00002464                _free_r
+                0x00001dc0        0x2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
+                0x00001dc0                __retarget_lock_release_recursive
+ .text.memcpy   0x00001dc2       0x1a /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
+                0x00001dc2                memcpy
+ .text._free_r  0x00001ddc       0x94 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-freer.o)
+                0x00001ddc                _free_r
  .text.sbrk_aligned
-                0x000024f8       0x44 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
+                0x00001e70       0x44 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
  .text._malloc_r
-                0x0000253c      0x100 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
-                0x0000253c                _malloc_r
+                0x00001eb4      0x100 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
+                0x00001eb4                _malloc_r
  .text.__malloc_lock
-                0x0000263c        0xc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
-                0x0000263c                __malloc_lock
+                0x00001fb4        0xc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
+                0x00001fb4                __malloc_lock
  .text.__malloc_unlock
-                0x00002648        0xc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
-                0x00002648                __malloc_unlock
+                0x00001fc0        0xc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
+                0x00001fc0                __malloc_unlock
  .text.__sfputc_r
-                0x00002654       0x2e /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
+                0x00001fcc       0x2e /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
  .text.__sfputs_r
-                0x00002682       0x24 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
-                0x00002682                __sfputs_r
- *fill*         0x000026a6        0x2 
+                0x00001ffa       0x24 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
+                0x00001ffa                __sfputs_r
+ *fill*         0x0000201e        0x2 
  .text._vfprintf_r
-                0x000026a8      0x230 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
-                0x000026a8                _vfiprintf_r
-                0x000026a8                _vfprintf_r
+                0x00002020      0x230 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
+                0x00002020                _vfiprintf_r
+                0x00002020                _vfprintf_r
  .text._printf_common
-                0x000028d8       0xe4 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
-                0x000028d8                _printf_common
+                0x00002250       0xe4 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x00002250                _printf_common
  .text._printf_i
-                0x000029bc      0x240 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
-                0x000029bc                _printf_i
+                0x00002334      0x240 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x00002334                _printf_i
  .text.__sflush_r
-                0x00002bfc      0x100 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
-                0x00002bfc                __sflush_r
+                0x00002574      0x100 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
+                0x00002574                __sflush_r
  .text._fflush_r
-                0x00002cfc       0x50 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
-                0x00002cfc                _fflush_r
+                0x00002674       0x50 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
+                0x00002674                _fflush_r
  .text.__swhatbuf_r
-                0x00002d4c       0x48 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
-                0x00002d4c                __swhatbuf_r
+                0x000026c4       0x48 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
+                0x000026c4                __swhatbuf_r
  .text.__smakebuf_r
-                0x00002d94       0x72 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
-                0x00002d94                __smakebuf_r
- *fill*         0x00002e06        0x2 
+                0x0000270c       0x72 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
+                0x0000270c                __smakebuf_r
+ *fill*         0x0000277e        0x2 
  .text._fstat_r
-                0x00002e08       0x24 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fstatr.o)
-                0x00002e08                _fstat_r
+                0x00002780       0x24 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fstatr.o)
+                0x00002780                _fstat_r
  .text._isatty_r
-                0x00002e2c       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-isattyr.o)
-                0x00002e2c                _isatty_r
- .text._sbrk_r  0x00002e4c       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-sbrkr.o)
-                0x00002e4c                _sbrk_r
- .text.memchr   0x00002e6c       0x1c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memchr-stub.o)
-                0x00002e6c                memchr
+                0x000027a4       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-isattyr.o)
+                0x000027a4                _isatty_r
+ .text._sbrk_r  0x000027c4       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-sbrkr.o)
+                0x000027c4                _sbrk_r
+ .text.memchr   0x000027e4       0x1c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memchr-stub.o)
+                0x000027e4                memchr
  *(.rodata*)
  .rodata.g_prcr_masks
-                0x00002e88        0xa CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_register_protection.c.obj
- *fill*         0x00002e92        0x2 
+                0x00002800        0xa CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_register_protection.c.obj
+ *fill*         0x0000280a        0x2 
  .rodata.g_init_info
-                0x00002e94       0x18 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/ra6m5/bsp_linker.c.obj
-                0x00002e94                g_init_info
+                0x0000280c       0x18 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/ra6m5/bsp_linker.c.obj
+                0x0000280c                g_init_info
  .rodata.nocache_list
-                0x00002eac       0x10 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/ra6m5/bsp_linker.c.obj
+                0x00002824       0x10 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/ra6m5/bsp_linker.c.obj
  .rodata.copy_list
-                0x00002ebc       0x80 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/ra6m5/bsp_linker.c.obj
+                0x00002834       0x80 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/ra6m5/bsp_linker.c.obj
  .rodata.zero_list
-                0x00002f3c       0x30 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/ra6m5/bsp_linker.c.obj
+                0x000028b4       0x30 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/ra6m5/bsp_linker.c.obj
  .rodata.g_vbatt_pins_input
-                0x00002f6c        0x6 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
- *fill*         0x00002f72        0x2 
+                0x000028e4        0x6 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
+ *fill*         0x000028ea        0x2 
  .rodata.g_ioport_on_ioport
-                0x00002f74       0x34 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
-                0x00002f74                g_ioport_on_ioport
- .rodata.g_i2c_master_on_sci
-                0x00002fa8       0x20 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
-                0x00002fa8                g_i2c_master_on_sci
+                0x000028ec       0x34 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
+                0x000028ec                g_ioport_on_ioport
  .rodata.g_uart_on_sci
-                0x00002fc8       0x2c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
-                0x00002fc8                g_uart_on_sci
+                0x00002920       0x2c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
+                0x00002920                g_uart_on_sci
  .rodata.g_ioport
-                0x00002ff4        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/common_data.c.obj
-                0x00002ff4                g_ioport
+                0x0000294c        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/common_data.c.obj
+                0x0000294c                g_ioport
  .rodata.g_uart2
-                0x00003000        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
-                0x00003000                g_uart2
+                0x00002958        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
+                0x00002958                g_uart2
  .rodata.g_uart2_cfg
-                0x0000300c       0x20 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
-                0x0000300c                g_uart2_cfg
+                0x00002964       0x20 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
+                0x00002964                g_uart2_cfg
  .rodata.g_uart2_cfg_extend
-                0x0000302c       0x14 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
-                0x0000302c                g_uart2_cfg_extend
- .rodata.g_i2c4
-                0x00003040        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
-                0x00003040                g_i2c4
- .rodata.g_i2c4_cfg
-                0x0000304c       0x28 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
-                0x0000304c                g_i2c4_cfg
- .rodata.g_i2c4_cfg_extend
-                0x00003074        0x6 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
-                0x00003074                g_i2c4_cfg_extend
- *fill*         0x0000307a        0x2 
+                0x00002984       0x14 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
+                0x00002984                g_uart2_cfg_extend
  .rodata.g_bsp_pin_cfg
-                0x0000307c        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/pin_data.c.obj
-                0x0000307c                g_bsp_pin_cfg
+                0x00002998        0xc CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/pin_data.c.obj
+                0x00002998                g_bsp_pin_cfg
  .rodata.g_bsp_pin_cfg_data
-                0x00003088       0x50 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/pin_data.c.obj
-                0x00003088                g_bsp_pin_cfg_data
+                0x000029a4       0x50 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/pin_data.c.obj
+                0x000029a4                g_bsp_pin_cfg_data
  .rodata.g_interrupt_event_link_select
-                0x000030d8       0x14 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/vector_data.c.obj
-                0x000030d8                g_interrupt_event_link_select
- .rodata.EEPROMDrvInit.str1.4
-                0x000030ec      0x171 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
-                                 0x3e (size before relaxing)
- .rodata.str1.4
-                0x0000325d        0x7 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
- .rodata.EEPROMAppTest.str1.4
-                0x0000325d      0x10e CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+                0x000029f4       0x14 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/vector_data.c.obj
+                0x000029f4                g_interrupt_event_link_select
+ .rodata.SystickAppTest.str1.4
+                0x00002a08       0x61 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+                                 0x45 (size before relaxing)
  .rodata.hal_entry.str1.4
-                0x0000325d       0x19 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+                0x00002a69       0x19 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
  .rodata._vfprintf_r.str1.1
-                0x0000325d       0x33 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
+                0x00002a69       0x33 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
                                  0x11 (size before relaxing)
  .rodata._printf_i.str1.1
-                0x00003290       0x22 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x00002a9c       0x22 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
  *(.mcuboot_sce9_key)
  *(.version)
- .version       0x00003290       0x50 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_common.c.obj
-                0x000032e0                        __flash_readonly$$Limit = .
+ .version       0x00002a9c       0x50 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_common.c.obj
+                0x00002aec                        __flash_readonly$$Limit = .
 
-.glue_7         0x000032e0        0x0
- .glue_7        0x000032e0        0x0 linker stubs
+.glue_7         0x00002aec        0x0
+ .glue_7        0x00002aec        0x0 linker stubs
 
-.glue_7t        0x000032e0        0x0
- .glue_7t       0x000032e0        0x0 linker stubs
+.glue_7t        0x00002aec        0x0
+ .glue_7t       0x00002aec        0x0 linker stubs
 
-.vfp11_veneer   0x000032e0        0x0
- .vfp11_veneer  0x000032e0        0x0 linker stubs
+.vfp11_veneer   0x00002aec        0x0
+ .vfp11_veneer  0x00002aec        0x0 linker stubs
 
-.v4_bx          0x000032e0        0x0
- .v4_bx         0x000032e0        0x0 linker stubs
+.v4_bx          0x00002aec        0x0
+ .v4_bx         0x00002aec        0x0 linker stubs
 
-.init           0x000032e0        0x4
- .init          0x000032e0        0x4 /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crti.o
-                0x000032e0                _init
+.init           0x00002aec        0x4
+ .init          0x00002aec        0x4 /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crti.o
+                0x00002aec                _init
 
-.fini           0x000032e4        0x4
- .fini          0x000032e4        0x4 /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crti.o
-                0x000032e4                _fini
+.fini           0x00002af0        0x4
+ .fini          0x00002af0        0x4 /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crti.o
+                0x00002af0                _fini
 
-.iplt           0x000032e8        0x0
- .iplt          0x000032e8        0x0 /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crtbegin.o
+.iplt           0x00002af4        0x0
+ .iplt          0x00002af4        0x0 /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crtbegin.o
 
 __flash_ctor$$
  *crtbegin.o(.ctors)
@@ -1719,47 +1733,47 @@ __flash_ctor$$
  *(.dtors)
 
 __flash_preinit_array$$
-                0x000032e8        0x0
-                0x000032e8                        __preinit_array_start = .
+                0x00002af4        0x0
+                0x00002af4                        __preinit_array_start = .
  *(.preinit_array)
-                0x000032e8                        __preinit_array_end = .
+                0x00002af4                        __preinit_array_end = .
 
 __flash_.got$$
  *(.got.plt)
  *(.got)
 
 __flash_init_array$$
-                0x000032e8        0x4
-                0x000032e8                        __init_array_start = .
+                0x00002af4        0x4
+                0x00002af4                        __init_array_start = .
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
- .init_array    0x000032e8        0x4 /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crtbegin.o
-                0x000032ec                        __init_array_end = .
+ .init_array    0x00002af4        0x4 /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crtbegin.o
+                0x00002af8                        __init_array_end = .
 
 __flash_fini_array$$
-                0x000032ec        0x4
-                0x000032ec                        __fini_array_start = .
+                0x00002af8        0x4
+                0x00002af8                        __fini_array_start = .
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array)
- .fini_array    0x000032ec        0x4 /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crtbegin.o
-                0x000032f0                        __fini_array_end = .
+ .fini_array    0x00002af8        0x4 /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crtbegin.o
+                0x00002afc                        __fini_array_end = .
 
-.igot.plt       0x000032f0        0x0
- .igot.plt      0x000032f0        0x0 /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crtbegin.o
+.igot.plt       0x00002afc        0x0
+ .igot.plt      0x00002afc        0x0 /usr/lib/gcc/arm-none-eabi/14.2.0/thumb/v8-m.main+fp/hard/crtbegin.o
 
 __flash_arm.extab$$
  *(.ARM.extab*)
  *(.gnu.linkonce.armextab.*)
 
 __flash_arm.exidx$$
-                0x000032f0        0x0
-                0x000032f0                        __exidx_start = .
+                0x00002afc        0x0
+                0x00002afc                        __exidx_start = .
  *(.ARM.exidx*)
  *(.gnu.linkonce.armexidx.*)
-                0x000032f0                        __exidx_end = .
+                0x00002afc                        __exidx_end = .
 
-.flash.endof    0x00003400        0x0
-                0x00003400                        __ddsc_FLASH_END = .
+.flash.endof    0x00002c00        0x0
+                0x00002c00                        __ddsc_FLASH_END = .
 
 .option_setting_ofs0.startof
                 0x0100a100        0x0
@@ -2006,11 +2020,11 @@ LOAD linker stubs
  .ARM.attributes
                 0x000004e6       0x3a CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
  .ARM.attributes
-                0x00000520       0x3a CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+                0x00000520       0x3a CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
  .ARM.attributes
-                0x0000055a       0x3a CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
+                0x0000055a       0x3a CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
  .ARM.attributes
-                0x00000594       0x3a CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+                0x00000594       0x3a CMakeFiles/RA6M5-Projct.elf.dir/src/hal_systick.c.obj
  .ARM.attributes
                 0x000005ce       0x3a CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
  .ARM.attributes
@@ -2093,9 +2107,9 @@ LOAD linker stubs
  .comment       0x0000001e       0x1f CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/pin_data.c.obj
  .comment       0x0000001e       0x1f CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/vector_data.c.obj
  .comment       0x0000001e       0x1f CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
- .comment       0x0000001e       0x1f CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
  .comment       0x0000001e       0x1f CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
  .comment       0x0000001e       0x1f CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+ .comment       0x0000001e       0x1f CMakeFiles/RA6M5-Projct.elf.dir/src/hal_systick.c.obj
  .comment       0x0000001e       0x1f CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
  .comment       0x0000001e       0x1f /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
  .comment       0x0000001e       0x1f /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fwalk.o)
@@ -2126,7 +2140,7 @@ LOAD linker stubs
  .comment       0x0000001e       0x1f /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-sbrkr.o)
  .comment       0x0000001e       0x1f /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memchr-stub.o)
 
-.debug_info     0x00000000    0x4aa16
+.debug_info     0x00000000    0x4a258
  .debug_info    0x00000000      0x187 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.c.obj
  .debug_info    0x00000187     0x1203 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.c.obj
  .debug_info    0x0000138a     0x64d5 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
@@ -2148,40 +2162,40 @@ LOAD linker stubs
  .debug_info    0x00034eb0      0xa31 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/pin_data.c.obj
  .debug_info    0x000358e1      0x8de CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/vector_data.c.obj
  .debug_info    0x000361bf      0x21c CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
- .debug_info    0x000363db     0x17a5 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
- .debug_info    0x00037b80     0x18cc CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
- .debug_info    0x0003944c     0x2248 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
- .debug_info    0x0003b694      0xff6 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
- .debug_info    0x0003c68a      0xfb2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
- .debug_info    0x0003d63c      0x7d2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fwalk.o)
- .debug_info    0x0003de0e      0x841 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-printf.o)
- .debug_info    0x0003e64f      0x950 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
- .debug_info    0x0003ef9f      0xa90 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
- .debug_info    0x0003fa2f      0x874 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wbuf.o)
- .debug_info    0x000402a3      0x7bb /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wsetup.o)
- .debug_info    0x00040a5e       0xe0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memset.o)
- .debug_info    0x00040b3e      0x75d /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-closer.o)
- .debug_info    0x0004129b      0x8a1 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-reent.o)
- .debug_info    0x00041b3c      0x715 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-impure.o)
- .debug_info    0x00042251      0x7a8 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lseekr.o)
- .debug_info    0x000429f9      0x7bf /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-readr.o)
- .debug_info    0x000431b8      0x7c5 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-writer.o)
- .debug_info    0x0004397d      0x6fb /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-errno.o)
- .debug_info    0x00044078      0x218 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
- .debug_info    0x00044290      0x121 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
- .debug_info    0x000443b1      0x851 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-freer.o)
- .debug_info    0x00044c02      0x9bc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
- .debug_info    0x000455be      0x76b /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
- .debug_info    0x00045d29     0x1094 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
- .debug_info    0x00046dbd      0xde2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_info    0x00047b9f      0x9f2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
- .debug_info    0x00048591      0xb15 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
- .debug_info    0x000490a6      0x981 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fstatr.o)
- .debug_info    0x00049a27      0x75d /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-isattyr.o)
- .debug_info    0x0004a184      0x782 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-sbrkr.o)
- .debug_info    0x0004a906      0x110 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memchr-stub.o)
+ .debug_info    0x000363db     0x18cc CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
+ .debug_info    0x00037ca7     0x2382 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+ .debug_info    0x0003a029      0xead CMakeFiles/RA6M5-Projct.elf.dir/src/hal_systick.c.obj
+ .debug_info    0x0003aed6      0xff6 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
+ .debug_info    0x0003becc      0xfb2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
+ .debug_info    0x0003ce7e      0x7d2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fwalk.o)
+ .debug_info    0x0003d650      0x841 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-printf.o)
+ .debug_info    0x0003de91      0x950 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
+ .debug_info    0x0003e7e1      0xa90 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
+ .debug_info    0x0003f271      0x874 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wbuf.o)
+ .debug_info    0x0003fae5      0x7bb /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wsetup.o)
+ .debug_info    0x000402a0       0xe0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memset.o)
+ .debug_info    0x00040380      0x75d /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-closer.o)
+ .debug_info    0x00040add      0x8a1 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-reent.o)
+ .debug_info    0x0004137e      0x715 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-impure.o)
+ .debug_info    0x00041a93      0x7a8 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lseekr.o)
+ .debug_info    0x0004223b      0x7bf /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-readr.o)
+ .debug_info    0x000429fa      0x7c5 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-writer.o)
+ .debug_info    0x000431bf      0x6fb /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-errno.o)
+ .debug_info    0x000438ba      0x218 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
+ .debug_info    0x00043ad2      0x121 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
+ .debug_info    0x00043bf3      0x851 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-freer.o)
+ .debug_info    0x00044444      0x9bc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
+ .debug_info    0x00044e00      0x76b /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
+ .debug_info    0x0004556b     0x1094 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
+ .debug_info    0x000465ff      0xde2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_info    0x000473e1      0x9f2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
+ .debug_info    0x00047dd3      0xb15 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
+ .debug_info    0x000488e8      0x981 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fstatr.o)
+ .debug_info    0x00049269      0x75d /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-isattyr.o)
+ .debug_info    0x000499c6      0x782 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-sbrkr.o)
+ .debug_info    0x0004a148      0x110 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memchr-stub.o)
 
-.debug_abbrev   0x00000000     0x753b
+.debug_abbrev   0x00000000     0x73c8
  .debug_abbrev  0x00000000      0x102 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.c.obj
  .debug_abbrev  0x00000102      0x37b CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.c.obj
  .debug_abbrev  0x0000047d      0x43a CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
@@ -2203,40 +2217,40 @@ LOAD linker stubs
  .debug_abbrev  0x0000302c       0xff CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/pin_data.c.obj
  .debug_abbrev  0x0000312b       0xbe CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/vector_data.c.obj
  .debug_abbrev  0x000031e9      0x142 CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
- .debug_abbrev  0x0000332b      0x3e2 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
- .debug_abbrev  0x0000370d      0x3a3 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
- .debug_abbrev  0x00003ab0      0x375 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
- .debug_abbrev  0x00003e25      0x158 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
- .debug_abbrev  0x00003f7d      0x424 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
- .debug_abbrev  0x000043a1      0x19b /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fwalk.o)
- .debug_abbrev  0x0000453c      0x21a /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-printf.o)
- .debug_abbrev  0x00004756      0x2a7 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
- .debug_abbrev  0x000049fd      0x221 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
- .debug_abbrev  0x00004c1e      0x22d /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wbuf.o)
- .debug_abbrev  0x00004e4b      0x1e2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wsetup.o)
- .debug_abbrev  0x0000502d       0x9e /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memset.o)
- .debug_abbrev  0x000050cb      0x1b0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-closer.o)
- .debug_abbrev  0x0000527b      0x1f7 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-reent.o)
- .debug_abbrev  0x00005472      0x149 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-impure.o)
- .debug_abbrev  0x000055bb      0x1c4 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lseekr.o)
- .debug_abbrev  0x0000577f      0x1b0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-readr.o)
- .debug_abbrev  0x0000592f      0x1b5 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-writer.o)
- .debug_abbrev  0x00005ae4      0x15e /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-errno.o)
- .debug_abbrev  0x00005c42      0x115 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
- .debug_abbrev  0x00005d57       0xc1 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
- .debug_abbrev  0x00005e18      0x236 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-freer.o)
- .debug_abbrev  0x0000604e      0x24a /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
- .debug_abbrev  0x00006298      0x1bf /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
- .debug_abbrev  0x00006457      0x316 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
- .debug_abbrev  0x0000676d      0x28e /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_abbrev  0x000069fb      0x2b2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
- .debug_abbrev  0x00006cad      0x290 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
- .debug_abbrev  0x00006f3d      0x1c3 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fstatr.o)
- .debug_abbrev  0x00007100      0x1b0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-isattyr.o)
- .debug_abbrev  0x000072b0      0x1da /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-sbrkr.o)
- .debug_abbrev  0x0000748a       0xb1 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memchr-stub.o)
+ .debug_abbrev  0x0000332b      0x3a3 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
+ .debug_abbrev  0x000036ce      0x377 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+ .debug_abbrev  0x00003a45      0x26d CMakeFiles/RA6M5-Projct.elf.dir/src/hal_systick.c.obj
+ .debug_abbrev  0x00003cb2      0x158 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
+ .debug_abbrev  0x00003e0a      0x424 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
+ .debug_abbrev  0x0000422e      0x19b /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fwalk.o)
+ .debug_abbrev  0x000043c9      0x21a /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-printf.o)
+ .debug_abbrev  0x000045e3      0x2a7 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
+ .debug_abbrev  0x0000488a      0x221 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
+ .debug_abbrev  0x00004aab      0x22d /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wbuf.o)
+ .debug_abbrev  0x00004cd8      0x1e2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wsetup.o)
+ .debug_abbrev  0x00004eba       0x9e /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memset.o)
+ .debug_abbrev  0x00004f58      0x1b0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-closer.o)
+ .debug_abbrev  0x00005108      0x1f7 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-reent.o)
+ .debug_abbrev  0x000052ff      0x149 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-impure.o)
+ .debug_abbrev  0x00005448      0x1c4 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lseekr.o)
+ .debug_abbrev  0x0000560c      0x1b0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-readr.o)
+ .debug_abbrev  0x000057bc      0x1b5 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-writer.o)
+ .debug_abbrev  0x00005971      0x15e /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-errno.o)
+ .debug_abbrev  0x00005acf      0x115 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
+ .debug_abbrev  0x00005be4       0xc1 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
+ .debug_abbrev  0x00005ca5      0x236 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-freer.o)
+ .debug_abbrev  0x00005edb      0x24a /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
+ .debug_abbrev  0x00006125      0x1bf /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
+ .debug_abbrev  0x000062e4      0x316 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
+ .debug_abbrev  0x000065fa      0x28e /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_abbrev  0x00006888      0x2b2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
+ .debug_abbrev  0x00006b3a      0x290 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
+ .debug_abbrev  0x00006dca      0x1c3 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fstatr.o)
+ .debug_abbrev  0x00006f8d      0x1b0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-isattyr.o)
+ .debug_abbrev  0x0000713d      0x1da /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-sbrkr.o)
+ .debug_abbrev  0x00007317       0xb1 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memchr-stub.o)
 
-.debug_aranges  0x00000000      0xa48
+.debug_aranges  0x00000000      0xa40
  .debug_aranges
                 0x00000000       0x28 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.c.obj
  .debug_aranges
@@ -2280,72 +2294,72 @@ LOAD linker stubs
  .debug_aranges
                 0x00000490       0x30 CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
  .debug_aranges
-                0x000004c0       0x48 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+                0x000004c0       0x58 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
  .debug_aranges
-                0x00000508       0x58 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
+                0x00000518       0x30 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
  .debug_aranges
-                0x00000560       0x28 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+                0x00000548       0x38 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_systick.c.obj
  .debug_aranges
-                0x00000588       0x20 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
+                0x00000580       0x20 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
  .debug_aranges
-                0x000005a8       0x78 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
+                0x000005a0       0x78 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
  .debug_aranges
-                0x00000620       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fwalk.o)
+                0x00000618       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fwalk.o)
  .debug_aranges
-                0x00000640       0x28 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-printf.o)
+                0x00000638       0x28 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-printf.o)
  .debug_aranges
-                0x00000668       0x28 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
+                0x00000660       0x28 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
  .debug_aranges
-                0x00000690       0x40 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
+                0x00000688       0x40 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
  .debug_aranges
-                0x000006d0       0x28 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wbuf.o)
+                0x000006c8       0x28 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wbuf.o)
  .debug_aranges
-                0x000006f8       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wsetup.o)
+                0x000006f0       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wsetup.o)
  .debug_aranges
-                0x00000718       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memset.o)
+                0x00000710       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memset.o)
  .debug_aranges
-                0x00000738       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-closer.o)
+                0x00000730       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-closer.o)
  .debug_aranges
-                0x00000758       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-reent.o)
+                0x00000750       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-reent.o)
  .debug_aranges
-                0x00000778       0x18 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-impure.o)
+                0x00000770       0x18 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-impure.o)
  .debug_aranges
-                0x00000790       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lseekr.o)
+                0x00000788       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lseekr.o)
  .debug_aranges
-                0x000007b0       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-readr.o)
+                0x000007a8       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-readr.o)
  .debug_aranges
-                0x000007d0       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-writer.o)
+                0x000007c8       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-writer.o)
  .debug_aranges
-                0x000007f0       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-errno.o)
+                0x000007e8       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-errno.o)
  .debug_aranges
-                0x00000810       0x68 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
+                0x00000808       0x68 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
  .debug_aranges
-                0x00000878       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
+                0x00000870       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
  .debug_aranges
-                0x00000898       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-freer.o)
+                0x00000890       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-freer.o)
  .debug_aranges
-                0x000008b8       0x28 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
+                0x000008b0       0x28 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
  .debug_aranges
-                0x000008e0       0x28 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
+                0x000008d8       0x28 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
  .debug_aranges
-                0x00000908       0x40 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
+                0x00000900       0x40 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
  .debug_aranges
-                0x00000948       0x28 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x00000940       0x28 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
  .debug_aranges
-                0x00000970       0x30 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
+                0x00000968       0x30 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
  .debug_aranges
-                0x000009a0       0x28 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
+                0x00000998       0x28 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
  .debug_aranges
-                0x000009c8       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fstatr.o)
+                0x000009c0       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fstatr.o)
  .debug_aranges
-                0x000009e8       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-isattyr.o)
+                0x000009e0       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-isattyr.o)
  .debug_aranges
-                0x00000a08       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-sbrkr.o)
+                0x00000a00       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-sbrkr.o)
  .debug_aranges
-                0x00000a28       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memchr-stub.o)
+                0x00000a20       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memchr-stub.o)
 
 .debug_rnglists
-                0x00000000     0x117c
+                0x00000000     0x114d
  .debug_rnglists
                 0x00000000       0x19 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.c.obj
  .debug_rnglists
@@ -2381,69 +2395,69 @@ LOAD linker stubs
  .debug_rnglists
                 0x00000ba2       0x1f CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
  .debug_rnglists
-                0x00000bc1       0x78 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+                0x00000bc1       0xb5 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
  .debug_rnglists
-                0x00000c39       0xb5 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
+                0x00000c76       0x82 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
  .debug_rnglists
-                0x00000cee       0x7c CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+                0x00000cf8       0x43 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_systick.c.obj
  .debug_rnglists
-                0x00000d6a       0x13 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
+                0x00000d3b       0x13 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
  .debug_rnglists
-                0x00000d7d       0x7d /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
+                0x00000d4e       0x7d /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
  .debug_rnglists
-                0x00000dfa       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fwalk.o)
+                0x00000dcb       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fwalk.o)
  .debug_rnglists
-                0x00000e0d       0x19 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-printf.o)
+                0x00000dde       0x19 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-printf.o)
  .debug_rnglists
-                0x00000e26       0x44 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
+                0x00000df7       0x44 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
  .debug_rnglists
-                0x00000e6a       0x2b /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
+                0x00000e3b       0x2b /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
  .debug_rnglists
-                0x00000e95       0x25 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wbuf.o)
+                0x00000e66       0x25 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wbuf.o)
  .debug_rnglists
-                0x00000eba       0x23 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wsetup.o)
+                0x00000e8b       0x23 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wsetup.o)
  .debug_rnglists
-                0x00000edd       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memset.o)
+                0x00000eae       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memset.o)
  .debug_rnglists
-                0x00000ef0       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-closer.o)
+                0x00000ec1       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-closer.o)
  .debug_rnglists
-                0x00000f03       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-reent.o)
+                0x00000ed4       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-reent.o)
  .debug_rnglists
-                0x00000f2f       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lseekr.o)
+                0x00000f00       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lseekr.o)
  .debug_rnglists
-                0x00000f42       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-readr.o)
+                0x00000f13       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-readr.o)
  .debug_rnglists
-                0x00000f55       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-writer.o)
+                0x00000f26       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-writer.o)
  .debug_rnglists
-                0x00000f68       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-errno.o)
+                0x00000f39       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-errno.o)
  .debug_rnglists
-                0x00000f7b       0x49 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
+                0x00000f4c       0x49 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
  .debug_rnglists
-                0x00000fc4       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
+                0x00000f95       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
  .debug_rnglists
-                0x00000fd7       0x14 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-freer.o)
+                0x00000fa8       0x14 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-freer.o)
  .debug_rnglists
-                0x00000feb       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
+                0x00000fbc       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
  .debug_rnglists
-                0x00001017       0x19 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
+                0x00000fe8       0x19 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
  .debug_rnglists
-                0x00001030       0x38 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
+                0x00001001       0x38 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
  .debug_rnglists
-                0x00001068       0x68 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x00001039       0x68 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
  .debug_rnglists
-                0x000010d0       0x3b /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
+                0x000010a1       0x3b /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
  .debug_rnglists
-                0x0000110b       0x25 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
+                0x000010dc       0x25 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
  .debug_rnglists
-                0x00001130       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fstatr.o)
+                0x00001101       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fstatr.o)
  .debug_rnglists
-                0x00001143       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-isattyr.o)
+                0x00001114       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-isattyr.o)
  .debug_rnglists
-                0x00001156       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-sbrkr.o)
+                0x00001127       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-sbrkr.o)
  .debug_rnglists
-                0x00001169       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memchr-stub.o)
+                0x0000113a       0x13 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memchr-stub.o)
 
-.debug_line     0x00000000     0xced0
+.debug_line     0x00000000     0xccd6
  .debug_line    0x00000000      0x18a CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.c.obj
  .debug_line    0x0000018a      0x596 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.c.obj
  .debug_line    0x00000720      0xc72 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
@@ -2465,96 +2479,96 @@ LOAD linker stubs
  .debug_line    0x000070fd      0x19e CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/pin_data.c.obj
  .debug_line    0x0000729b      0x134 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/vector_data.c.obj
  .debug_line    0x000073cf      0x1a9 CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
- .debug_line    0x00007578      0x568 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
- .debug_line    0x00007ae0      0x4b9 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
- .debug_line    0x00007f99      0x4e4 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
- .debug_line    0x0000847d      0x275 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
- .debug_line    0x000086f2      0x580 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
- .debug_line    0x00008c72      0x1da /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fwalk.o)
- .debug_line    0x00008e4c      0x1f6 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-printf.o)
- .debug_line    0x00009042      0x2ef /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
- .debug_line    0x00009331      0x290 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
- .debug_line    0x000095c1      0x270 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wbuf.o)
- .debug_line    0x00009831      0x282 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wsetup.o)
- .debug_line    0x00009ab3      0x123 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memset.o)
- .debug_line    0x00009bd6      0x1bc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-closer.o)
- .debug_line    0x00009d92      0x292 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-reent.o)
- .debug_line    0x0000a024      0x108 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-impure.o)
- .debug_line    0x0000a12c      0x1bc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lseekr.o)
- .debug_line    0x0000a2e8      0x1bb /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-readr.o)
- .debug_line    0x0000a4a3      0x1bc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-writer.o)
- .debug_line    0x0000a65f      0x12a /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-errno.o)
- .debug_line    0x0000a789      0x17d /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
- .debug_line    0x0000a906      0x196 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
- .debug_line    0x0000aa9c      0x2a9 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-freer.o)
- .debug_line    0x0000ad45      0x47c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
- .debug_line    0x0000b1c1      0x18a /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
- .debug_line    0x0000b34b      0x646 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
- .debug_line    0x0000b991      0x6b4 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_line    0x0000c045      0x3f8 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
- .debug_line    0x0000c43d      0x341 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
- .debug_line    0x0000c77e      0x248 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fstatr.o)
- .debug_line    0x0000c9c6      0x1bd /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-isattyr.o)
- .debug_line    0x0000cb83      0x1bc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-sbrkr.o)
- .debug_line    0x0000cd3f      0x191 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memchr-stub.o)
+ .debug_line    0x00007578      0x4b9 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
+ .debug_line    0x00007a31      0x562 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+ .debug_line    0x00007f93      0x2f0 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_systick.c.obj
+ .debug_line    0x00008283      0x275 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
+ .debug_line    0x000084f8      0x580 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
+ .debug_line    0x00008a78      0x1da /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fwalk.o)
+ .debug_line    0x00008c52      0x1f6 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-printf.o)
+ .debug_line    0x00008e48      0x2ef /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
+ .debug_line    0x00009137      0x290 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
+ .debug_line    0x000093c7      0x270 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wbuf.o)
+ .debug_line    0x00009637      0x282 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wsetup.o)
+ .debug_line    0x000098b9      0x123 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memset.o)
+ .debug_line    0x000099dc      0x1bc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-closer.o)
+ .debug_line    0x00009b98      0x292 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-reent.o)
+ .debug_line    0x00009e2a      0x108 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-impure.o)
+ .debug_line    0x00009f32      0x1bc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lseekr.o)
+ .debug_line    0x0000a0ee      0x1bb /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-readr.o)
+ .debug_line    0x0000a2a9      0x1bc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-writer.o)
+ .debug_line    0x0000a465      0x12a /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-errno.o)
+ .debug_line    0x0000a58f      0x17d /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
+ .debug_line    0x0000a70c      0x196 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
+ .debug_line    0x0000a8a2      0x2a9 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-freer.o)
+ .debug_line    0x0000ab4b      0x47c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
+ .debug_line    0x0000afc7      0x18a /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
+ .debug_line    0x0000b151      0x646 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
+ .debug_line    0x0000b797      0x6b4 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_line    0x0000be4b      0x3f8 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
+ .debug_line    0x0000c243      0x341 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
+ .debug_line    0x0000c584      0x248 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fstatr.o)
+ .debug_line    0x0000c7cc      0x1bd /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-isattyr.o)
+ .debug_line    0x0000c989      0x1bc /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-sbrkr.o)
+ .debug_line    0x0000cb45      0x191 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memchr-stub.o)
 
-.debug_str      0x00000000     0xe695
- .debug_str     0x00000000     0xe695 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.c.obj
+.debug_str      0x00000000     0xe69a
+ .debug_str     0x00000000     0xe69a CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.c.obj
                                 0x27c (size before relaxing)
- .debug_str     0x0000e695      0xad7 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.c.obj
- .debug_str     0x0000e695     0x2d1f CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
- .debug_str     0x0000e695     0x1cc6 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_common.c.obj
- .debug_str     0x0000e695      0x32e CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_delay.c.obj
- .debug_str     0x0000e695     0x222d CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_group_irq.c.obj
- .debug_str     0x0000e695      0x20d CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_io.c.obj
- .debug_str     0x0000e695     0x2810 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_irq.c.obj
- .debug_str     0x0000e695     0x1b86 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_register_protection.c.obj
- .debug_str     0x0000e695      0x1fe CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_sbrk.c.obj
- .debug_str     0x0000e695      0x8b9 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/ra6m5/bsp_linker.c.obj
- .debug_str     0x0000e695     0x5d41 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
- .debug_str     0x0000e695     0x3a8c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
- .debug_str     0x0000e695     0x541d CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_spi/r_sci_spi.c.obj
- .debug_str     0x0000e695     0x6e6c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
- .debug_str     0x0000e695     0x33d1 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/common_data.c.obj
- .debug_str     0x0000e695     0x5491 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
- .debug_str     0x0000e695      0x1e4 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/main.c.obj
- .debug_str     0x0000e695     0x1db4 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/pin_data.c.obj
- .debug_str     0x0000e695     0x1e56 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/vector_data.c.obj
- .debug_str     0x0000e695      0x261 CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
- .debug_str     0x0000e695     0x26e3 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
- .debug_str     0x0000e695     0x27ab CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
- .debug_str     0x0000e695     0x3e98 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
- .debug_str     0x0000e695     0x320c CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
- .debug_str     0x0000e695      0x76a /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
- .debug_str     0x0000e695      0x4f7 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fwalk.o)
- .debug_str     0x0000e695      0x522 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-printf.o)
- .debug_str     0x0000e695      0x572 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
- .debug_str     0x0000e695      0x554 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
- .debug_str     0x0000e695      0x51d /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wbuf.o)
- .debug_str     0x0000e695      0x518 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wsetup.o)
- .debug_str     0x0000e695      0x1c7 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memset.o)
- .debug_str     0x0000e695      0x4dd /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-closer.o)
- .debug_str     0x0000e695      0x506 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-reent.o)
- .debug_str     0x0000e695      0x4e7 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-impure.o)
- .debug_str     0x0000e695      0x4eb /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lseekr.o)
- .debug_str     0x0000e695      0x4eb /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-readr.o)
- .debug_str     0x0000e695      0x4ed /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-writer.o)
- .debug_str     0x0000e695      0x4e1 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-errno.o)
- .debug_str     0x0000e695      0x35e /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
- .debug_str     0x0000e695      0x1e5 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
- .debug_str     0x0000e695      0x567 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-freer.o)
- .debug_str     0x0000e695      0x5c8 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
- .debug_str     0x0000e695      0x569 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
- .debug_str     0x0000e695      0x898 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
- .debug_str     0x0000e695      0x7c6 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_str     0x0000e695      0x5b2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
- .debug_str     0x0000e695      0x67a /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
- .debug_str     0x0000e695      0x62f /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fstatr.o)
- .debug_str     0x0000e695      0x4e7 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-isattyr.o)
- .debug_str     0x0000e695      0x4f0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-sbrkr.o)
- .debug_str     0x0000e695      0x1e1 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memchr-stub.o)
+ .debug_str     0x0000e69a      0xad7 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.c.obj
+ .debug_str     0x0000e69a     0x2d1f CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
+ .debug_str     0x0000e69a     0x1cc6 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_common.c.obj
+ .debug_str     0x0000e69a      0x32e CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_delay.c.obj
+ .debug_str     0x0000e69a     0x222d CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_group_irq.c.obj
+ .debug_str     0x0000e69a      0x20d CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_io.c.obj
+ .debug_str     0x0000e69a     0x2810 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_irq.c.obj
+ .debug_str     0x0000e69a     0x1b86 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_register_protection.c.obj
+ .debug_str     0x0000e69a      0x1fe CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_sbrk.c.obj
+ .debug_str     0x0000e69a      0x8b9 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/ra6m5/bsp_linker.c.obj
+ .debug_str     0x0000e69a     0x5d41 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
+ .debug_str     0x0000e69a     0x3a8c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_i2c/r_sci_i2c.c.obj
+ .debug_str     0x0000e69a     0x541d CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_spi/r_sci_spi.c.obj
+ .debug_str     0x0000e69a     0x6e6c CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
+ .debug_str     0x0000e69a     0x33d1 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/common_data.c.obj
+ .debug_str     0x0000e69a     0x5491 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
+ .debug_str     0x0000e69a      0x1e4 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/main.c.obj
+ .debug_str     0x0000e69a     0x1db4 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/pin_data.c.obj
+ .debug_str     0x0000e69a     0x1e56 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/vector_data.c.obj
+ .debug_str     0x0000e69a      0x261 CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
+ .debug_str     0x0000e69a     0x27ab CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
+ .debug_str     0x0000e69a     0x3ee5 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+ .debug_str     0x0000e69a     0x1ffb CMakeFiles/RA6M5-Projct.elf.dir/src/hal_systick.c.obj
+ .debug_str     0x0000e69a     0x320c CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
+ .debug_str     0x0000e69a      0x76a /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
+ .debug_str     0x0000e69a      0x4f7 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fwalk.o)
+ .debug_str     0x0000e69a      0x522 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-printf.o)
+ .debug_str     0x0000e69a      0x572 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
+ .debug_str     0x0000e69a      0x554 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
+ .debug_str     0x0000e69a      0x51d /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wbuf.o)
+ .debug_str     0x0000e69a      0x518 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wsetup.o)
+ .debug_str     0x0000e69a      0x1c7 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memset.o)
+ .debug_str     0x0000e69a      0x4dd /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-closer.o)
+ .debug_str     0x0000e69a      0x506 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-reent.o)
+ .debug_str     0x0000e69a      0x4e7 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-impure.o)
+ .debug_str     0x0000e69a      0x4eb /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lseekr.o)
+ .debug_str     0x0000e69a      0x4eb /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-readr.o)
+ .debug_str     0x0000e69a      0x4ed /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-writer.o)
+ .debug_str     0x0000e69a      0x4e1 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-errno.o)
+ .debug_str     0x0000e69a      0x35e /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
+ .debug_str     0x0000e69a      0x1e5 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
+ .debug_str     0x0000e69a      0x567 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-freer.o)
+ .debug_str     0x0000e69a      0x5c8 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
+ .debug_str     0x0000e69a      0x569 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
+ .debug_str     0x0000e69a      0x898 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
+ .debug_str     0x0000e69a      0x7c6 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_str     0x0000e69a      0x5b2 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
+ .debug_str     0x0000e69a      0x67a /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
+ .debug_str     0x0000e69a      0x62f /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fstatr.o)
+ .debug_str     0x0000e69a      0x4e7 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-isattyr.o)
+ .debug_str     0x0000e69a      0x4f0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-sbrkr.o)
+ .debug_str     0x0000e69a      0x1e1 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memchr-stub.o)
 
-.debug_frame    0x00000000     0x13fc
+.debug_frame    0x00000000     0x13b0
  .debug_frame   0x00000000       0x38 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.c.obj
  .debug_frame   0x00000038       0x64 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.c.obj
  .debug_frame   0x0000009c      0x108 CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_clocks.c.obj
@@ -2572,40 +2586,40 @@ LOAD linker stubs
  .debug_frame   0x00000914       0x20 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/hal_data.c.obj
  .debug_frame   0x00000934       0x28 CMakeFiles/RA6M5-Projct.elf.dir/ra_gen/main.c.obj
  .debug_frame   0x0000095c       0x58 CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
- .debug_frame   0x000009b4       0xc8 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
- .debug_frame   0x00000a7c       0xcc CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
- .debug_frame   0x00000b48       0x60 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
- .debug_frame   0x00000ba8       0x20 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
- .debug_frame   0x00000bc8      0x144 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
- .debug_frame   0x00000d0c       0x34 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fwalk.o)
- .debug_frame   0x00000d40       0x6c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-printf.o)
- .debug_frame   0x00000dac       0x3c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
- .debug_frame   0x00000de8       0x88 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
- .debug_frame   0x00000e70       0x40 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wbuf.o)
- .debug_frame   0x00000eb0       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wsetup.o)
- .debug_frame   0x00000edc       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memset.o)
- .debug_frame   0x00000efc       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-closer.o)
- .debug_frame   0x00000f28       0x38 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-reent.o)
- .debug_frame   0x00000f60       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lseekr.o)
- .debug_frame   0x00000f8c       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-readr.o)
- .debug_frame   0x00000fb8       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-writer.o)
- .debug_frame   0x00000fe4       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-errno.o)
- .debug_frame   0x00001004       0xb0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
- .debug_frame   0x000010b4       0x28 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
- .debug_frame   0x000010dc       0x38 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-freer.o)
- .debug_frame   0x00001114       0x50 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
- .debug_frame   0x00001164       0x30 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
- .debug_frame   0x00001194       0xa8 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
- .debug_frame   0x0000123c       0x60 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_frame   0x0000129c       0x5c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
- .debug_frame   0x000012f8       0x58 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
- .debug_frame   0x00001350       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fstatr.o)
- .debug_frame   0x0000137c       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-isattyr.o)
- .debug_frame   0x000013a8       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-sbrkr.o)
- .debug_frame   0x000013d4       0x28 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memchr-stub.o)
+ .debug_frame   0x000009b4       0xcc CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
+ .debug_frame   0x00000a80       0x84 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+ .debug_frame   0x00000b04       0x58 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_systick.c.obj
+ .debug_frame   0x00000b5c       0x20 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
+ .debug_frame   0x00000b7c      0x144 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
+ .debug_frame   0x00000cc0       0x34 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fwalk.o)
+ .debug_frame   0x00000cf4       0x6c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-printf.o)
+ .debug_frame   0x00000d60       0x3c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
+ .debug_frame   0x00000d9c       0x88 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
+ .debug_frame   0x00000e24       0x40 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wbuf.o)
+ .debug_frame   0x00000e64       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wsetup.o)
+ .debug_frame   0x00000e90       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memset.o)
+ .debug_frame   0x00000eb0       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-closer.o)
+ .debug_frame   0x00000edc       0x38 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-reent.o)
+ .debug_frame   0x00000f14       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lseekr.o)
+ .debug_frame   0x00000f40       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-readr.o)
+ .debug_frame   0x00000f6c       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-writer.o)
+ .debug_frame   0x00000f98       0x20 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-errno.o)
+ .debug_frame   0x00000fb8       0xb0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
+ .debug_frame   0x00001068       0x28 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
+ .debug_frame   0x00001090       0x38 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-freer.o)
+ .debug_frame   0x000010c8       0x50 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
+ .debug_frame   0x00001118       0x30 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
+ .debug_frame   0x00001148       0xa8 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
+ .debug_frame   0x000011f0       0x60 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_frame   0x00001250       0x5c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
+ .debug_frame   0x000012ac       0x58 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
+ .debug_frame   0x00001304       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fstatr.o)
+ .debug_frame   0x00001330       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-isattyr.o)
+ .debug_frame   0x0000135c       0x2c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-sbrkr.o)
+ .debug_frame   0x00001388       0x28 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memchr-stub.o)
 
 .debug_loclists
-                0x00000000     0x5ca9
+                0x00000000     0x5a56
  .debug_loclists
                 0x00000000       0x9d CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.c.obj
  .debug_loclists
@@ -2633,62 +2647,62 @@ LOAD linker stubs
  .debug_loclists
                 0x00003714       0x5f CMakeFiles/RA6M5-Projct.elf.dir/src/circle_buf.c.obj
  .debug_loclists
-                0x00003773      0x340 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_eeprom.c.obj
+                0x00003773      0x210 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
  .debug_loclists
-                0x00003ab3      0x210 CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj
+                0x00003983      0x1ad CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
  .debug_loclists
-                0x00003cc3      0x158 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_entry.c.obj
+                0x00003b30       0x98 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_systick.c.obj
  .debug_loclists
-                0x00003e1b       0x29 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
+                0x00003bc8       0x29 CMakeFiles/RA6M5-Projct.elf.dir/src/hal_warmstart.c.obj
  .debug_loclists
-                0x00003e44      0x2b6 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
+                0x00003bf1      0x2b6 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-findfp.o)
  .debug_loclists
-                0x000040fa       0x91 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fwalk.o)
+                0x00003ea7       0x91 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fwalk.o)
  .debug_loclists
-                0x0000418b       0x4a /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-printf.o)
+                0x00003f38       0x4a /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-printf.o)
  .debug_loclists
-                0x000041d5      0x1f9 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
+                0x00003f82      0x1f9 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-puts.o)
  .debug_loclists
-                0x000043ce      0x25d /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
+                0x0000417b      0x25d /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-stdio.o)
  .debug_loclists
-                0x0000462b       0xf5 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wbuf.o)
+                0x000043d8       0xf5 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wbuf.o)
  .debug_loclists
-                0x00004720       0x41 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wsetup.o)
+                0x000044cd       0x41 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-wsetup.o)
  .debug_loclists
-                0x00004761       0x4d /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memset.o)
+                0x0000450e       0x4d /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memset.o)
  .debug_loclists
-                0x000047ae       0x58 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-closer.o)
+                0x0000455b       0x58 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-closer.o)
  .debug_loclists
-                0x00004806       0x9c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-reent.o)
+                0x000045b3       0x9c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-reent.o)
  .debug_loclists
-                0x000048a2       0xa0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lseekr.o)
+                0x0000464f       0xa0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lseekr.o)
  .debug_loclists
-                0x00004942       0xa0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-readr.o)
+                0x000046ef       0xa0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-readr.o)
  .debug_loclists
-                0x000049e2       0xa0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-writer.o)
+                0x0000478f       0xa0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-writer.o)
  .debug_loclists
-                0x00004a82       0x29 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
+                0x0000482f       0x29 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-lock.o)
  .debug_loclists
-                0x00004aab       0xad /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
+                0x00004858       0xad /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memcpy-stub.o)
  .debug_loclists
-                0x00004b58       0xe0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-freer.o)
+                0x00004905       0xe0 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-freer.o)
  .debug_loclists
-                0x00004c38      0x23a /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
+                0x000049e5      0x23a /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mallocr.o)
  .debug_loclists
-                0x00004e72       0x46 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
+                0x00004c1f       0x46 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-mlock.o)
  .debug_loclists
-                0x00004eb8      0x41d /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
+                0x00004c65      0x41d /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf.o)
  .debug_loclists
-                0x000052d5      0x459 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x00005082      0x459 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-nano-vfprintf_i.o)
  .debug_loclists
-                0x0000572e      0x209 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
+                0x000054db      0x209 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fflush.o)
  .debug_loclists
-                0x00005937      0x13f /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
+                0x000056e4      0x13f /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-makebuf.o)
  .debug_loclists
-                0x00005a76       0x7c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fstatr.o)
+                0x00005823       0x7c /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-fstatr.o)
  .debug_loclists
-                0x00005af2       0x58 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-isattyr.o)
+                0x0000589f       0x58 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-isattyr.o)
  .debug_loclists
-                0x00005b4a       0x58 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-sbrkr.o)
+                0x000058f7       0x58 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-sbrkr.o)
  .debug_loclists
-                0x00005ba2      0x107 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memchr-stub.o)
+                0x0000594f      0x107 /usr/lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard/libg_nano.a(libc_a-memchr-stub.o)
