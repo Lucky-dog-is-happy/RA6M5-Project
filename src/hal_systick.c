@@ -14,6 +14,8 @@ fsp_err_t SystickInit(void)
 void SysTick_Handler(void)
 {
     dwTick++;
+    extern void KeyProcessJitter(uint32_t tick);
+    KeyProcessJitter(dwTick);
 }
 
 void HAL_Delay(uint32_t dwTime)
