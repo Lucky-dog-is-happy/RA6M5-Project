@@ -4,6 +4,7 @@
 #include <stdint.h>
 #include "bsp_api.h"
 #include "common_data.h"
+#include "r_spi.h"
 #include "r_sci_i2c.h"
 #include "r_i2c_master_api.h"
 #include "r_dtc.h"
@@ -13,6 +14,31 @@
 #include "r_sci_uart.h"
             #include "r_uart_api.h"
 FSP_HEADER
+/** SPI on SPI Instance. */
+extern const spi_instance_t g_spi0;
+
+/** Access the SPI instance using these structures when calling API functions directly (::p_api is not used). */
+extern spi_instance_ctrl_t g_spi0_ctrl;
+extern const spi_cfg_t g_spi0_cfg;
+
+/** Callback used by SPI Instance. */
+#ifndef spi0_callback
+void spi0_callback(spi_callback_args_t * p_args);
+#endif
+
+
+#define RA_NOT_DEFINED (1)
+#if (RA_NOT_DEFINED == RA_NOT_DEFINED)
+    #define g_spi0_P_TRANSFER_TX (NULL)
+#else
+    #define g_spi0_P_TRANSFER_TX (&RA_NOT_DEFINED)
+#endif
+#if (RA_NOT_DEFINED == RA_NOT_DEFINED)
+    #define g_spi0_P_TRANSFER_RX (NULL)
+#else
+    #define g_spi0_P_TRANSFER_RX (&RA_NOT_DEFINED)
+#endif
+#undef RA_NOT_DEFINED
 extern const i2c_master_cfg_t g_i2c4_cfg;
 /* I2C on SCI Instance. */
 extern const i2c_master_instance_t g_i2c4;

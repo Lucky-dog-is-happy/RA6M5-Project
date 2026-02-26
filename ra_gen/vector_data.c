@@ -15,6 +15,10 @@
             [8] = sci_i2c_txi_isr, /* SCI4 TXI (Transmit data empty) */
             [9] = sci_i2c_tei_isr, /* SCI4 TEI (Transmit end) */
             [10] = r_icu_isr, /* ICU IRQ6 (External pin interrupt 6) */
+            [11] = spi_rxi_isr, /* SPI0 RXI (Receive buffer full) */
+            [12] = spi_txi_isr, /* SPI0 TXI (Transmit buffer empty) */
+            [13] = spi_tei_isr, /* SPI0 TEI (Transmission complete event) */
+            [14] = spi_eri_isr, /* SPI0 ERI (Error) */
         };
         #if BSP_FEATURE_ICU_HAS_IELSR
         const bsp_interrupt_event_t g_interrupt_event_link_select[BSP_ICU_VECTOR_NUM_ENTRIES] =
@@ -30,6 +34,10 @@
             [8] = BSP_PRV_VECT_ENUM(EVENT_SCI4_TXI,GROUP0), /* SCI4 TXI (Transmit data empty) */
             [9] = BSP_PRV_VECT_ENUM(EVENT_SCI4_TEI,GROUP1), /* SCI4 TEI (Transmit end) */
             [10] = BSP_PRV_VECT_ENUM(EVENT_ICU_IRQ6,GROUP2), /* ICU IRQ6 (External pin interrupt 6) */
+            [11] = BSP_PRV_VECT_ENUM(EVENT_SPI0_RXI,GROUP3), /* SPI0 RXI (Receive buffer full) */
+            [12] = BSP_PRV_VECT_ENUM(EVENT_SPI0_TXI,GROUP4), /* SPI0 TXI (Transmit buffer empty) */
+            [13] = BSP_PRV_VECT_ENUM(EVENT_SPI0_TEI,GROUP5), /* SPI0 TEI (Transmission complete event) */
+            [14] = BSP_PRV_VECT_ENUM(EVENT_SPI0_ERI,GROUP6), /* SPI0 ERI (Error) */
         };
         #endif
         #endif

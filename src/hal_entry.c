@@ -5,6 +5,7 @@
 #include "drv_eeprom.h"
 #include "hal_systick.h"
 #include "drv_gpio.h"
+#include "drv_disp.h"
 #include <stdio.h>
 
 #if (1 == BSP_MULTICORE_PROJECT) && BSP_TZ_SECURE_BUILD
@@ -13,6 +14,29 @@ bsp_ipc_semaphore_handle_t g_core_start_semaphore =
     .semaphore_num = 0
 };
 #endif
+
+void DispAppTest(void)
+{
+    DisplayDevice *ptDispDev = OLEDGetDevice();
+    if(ptDispDev == NULL)
+    {
+        printf("Failed to get OLED Display Device!\r\n");
+        return;
+    }
+
+    ptDispDev->Init(ptDispDev);
+    uint8_t *pBuf = (uint8_t*)ptDispDev->FBBase;
+    while(1)
+    {
+        for(uint16_t i=0; i<ptDispDev->dwSize; i++)
+            pBuf[i] = 0x55;
+        ptDispDev->Flush(ptDispDev);
+
+        for(uint16_t i=0; i<ptDispDev->dwSize; i++)
+            pBuf[i] = 0xFF;
+        ptDispDev->Flush(ptDispDev);
+    }
+}
 
 void hal_entry(void)
 {
@@ -26,6 +50,7 @@ void hal_entry(void)
     g_ioport.p_api->pinWrite(&g_ioport_ctrl, BSP_IO_PORT_04_PIN_00, level);
     
     SystickInit();
+    DispAppTest();
 
     IODev *ptKeyDev = IOGetDevice("UserKey");
     if(NULL == ptKeyDev)
