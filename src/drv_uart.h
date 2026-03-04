@@ -10,6 +10,9 @@
 
 void uart2_callback(uart_callback_args_t *p_args);
 void uart2_wait_for_tx(void);
+void uart6_callback(uart_callback_args_t *p_args);
+void uart6_wait_for_tx(void);
+void uart6_send_bytes(const uint8_t *data, uint32_t len);
 
 int _write(int file, char *ptr, int len);
 int _read(int file, char *ptr, int len);

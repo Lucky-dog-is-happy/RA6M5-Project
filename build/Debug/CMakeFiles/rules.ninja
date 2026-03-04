@@ -26,7 +26,7 @@ rule C_COMPILER__RA6M5-Projct.2eelf_unscanned_Debug
 
 rule C_EXECUTABLE_LINKER__RA6M5-Projct.2eelf_Debug
   command = $PRE_LINK && /usr/sbin/arm-none-eabi-gcc $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
-  description = Linking C executable $TARGET_FILE; Creating S-record file in /home/lucky/repo/RA6M5-Project/build/Debug
+  description = Linking C executable $TARGET_FILE; Creating S-record file in /home/lucky/RA6M5-Project/build/Debug
   restat = $RESTAT
 
 
@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/sbin/cmake --regenerate-during-build -S/home/lucky/repo/RA6M5-Project -B/home/lucky/repo/RA6M5-Project/build/Debug
+  command = /usr/bin/cmake --regenerate-during-build -S/home/lucky/RA6M5-Project -B/home/lucky/RA6M5-Project/build/Debug
   description = Re-running CMake...
   generator = 1
 
@@ -51,7 +51,7 @@ rule RERUN_CMAKE
 # Rule for cleaning all built files.
 
 rule CLEAN
-  command = /usr/sbin/ninja $FILE_ARG -t clean $TARGETS
+  command = /usr/bin/ninja $FILE_ARG -t clean $TARGETS
   description = Cleaning all built files...
 
 
@@ -59,6 +59,6 @@ rule CLEAN
 # Rule for printing all primary targets available.
 
 rule HELP
-  command = /usr/sbin/ninja -t targets
+  command = /usr/bin/ninja -t targets
   description = All primary targets available:
 
