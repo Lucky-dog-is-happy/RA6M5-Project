@@ -152,10 +152,12 @@ static int W800_ConnectWiFi(W800Dev *ptDev, const char *ssid, const char *passwo
         
         for (volatile int i = 0; i < 500000; i++);
         
-        while (g_rx_buf.get(&g_rx_buf, &ch) == 0) {
+        uint32_t timeout = 0;
+        while (timeout < 100000 && g_rx_buf.get(&g_rx_buf, &ch) == 0) {
             if (ch >= '0' && ch <= '9' && idx < 15) {
                 ptDev->ip_addr[idx++] = (char)ch;
             }
+            timeout++;
         }
     }
     
@@ -242,42 +244,18 @@ static int W800_SendData(W800Dev *ptDev, const uint8_t *data, uint16_t len)
     }
     
     W800_FlushRx();
+    for (volatile int i = 0; i < 1000000; i++);
     
-    for (volatile int i = 0; i < 3000000; i++);
+    printf("[W800] Sending data %d bytes using socket %d...\r\n", len, ptDev->socket_fd);
     
-    W800_FlushRx();
-    printf("[W800] Checking socket status...\r\n");
-    W800_SendCommand("LKSTT");
+    char cmd[32];
+    snprintf(cmd, sizeof(cmd), "SKSND=%d,%d", ptDev->socket_fd, len);
+    W800_SendCommand(cmd);
     
     uint8_t ch;
     uint8_t buf[128];
     int idx = 0;
     volatile int timeout = 0;
-    
-    while (timeout < 2000) {
-        if (g_rx_buf.get(&g_rx_buf, &ch) == 0) {
-            if (idx < 127) buf[idx++] = ch;
-            buf[idx] = '\0';
-            timeout = 0;
-        } else {
-            for (volatile int i = 0; i < 500; i++);
-            timeout++;
-        }
-    }
-    printf("[W800] Socket status: %s\r\n", buf);
-    
-    W800_FlushRx();
-    for (volatile int i = 0; i < 1000000; i++);
-    
-    printf("[W800] Sending data %d bytes using socket %d...\r\n", len, ptDev->socket_fd);
-    if (ptDev->socket_fd == 0) {
-        W800_SendCommand("SKSND=0,17");
-    } else {
-        W800_SendCommand("SKSND=1,17");
-    }
-    
-    idx = 0;
-    timeout = 0;
     
     while (timeout < 2000) {
         if (g_rx_buf.get(&g_rx_buf, &ch) == 0) {
@@ -293,9 +271,7 @@ static int W800_SendData(W800Dev *ptDev, const uint8_t *data, uint16_t len)
         }
     }
     
-    for (uint16_t i = 0; i < len; i++) {
-        uart6_send_bytes(&data[i], 1);
-    }
+    uart6_send_bytes(data, len);
     
     idx = 0;
     timeout = 0;

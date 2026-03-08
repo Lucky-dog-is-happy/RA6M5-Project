@@ -1,7 +1,8 @@
 #include "drv_uart.h"
 
-static volatile int g_uart2_tx_complete = 0;
-static volatile int g_uart6_tx_complete = 0;
+// UART2 TX 完成标志 - 用于轮询等待
+static volatile uint8_t g_uart2_tx_complete = 0;
+static volatile uint8_t g_uart6_tx_complete = 0;
 
 // P112(TX) P113(RX) - Debug UART
 void uart2_callback(uart_callback_args_t *p_args)
@@ -49,10 +50,8 @@ void uart2_wait_for_tx(void)
 
 void uart6_send_bytes(const uint8_t *data, uint32_t len)
 {
-    for (uint32_t i = 0; i < len; i++) {
-        g_uart6.p_api->write(g_uart6.p_ctrl, &data[i], 1);
-        uart6_wait_for_tx();
-    }
+    g_uart6.p_api->write(g_uart6.p_ctrl, data, len);
+    uart6_wait_for_tx();
 }
 
 int _write(int file, char *ptr, int len)

@@ -8,8 +8,6 @@
 #include "drv_w800.h"
 #include "drv_dispenser.h"
 #include <stdio.h>
-#include <time.h>
-#include <time.h>
 
 #if (1 == BSP_MULTICORE_PROJECT) && BSP_TZ_SECURE_BUILD
 bsp_ipc_semaphore_handle_t g_core_start_semaphore =
