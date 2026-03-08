@@ -184,7 +184,7 @@ static int W800_ConnectTCP(W800Dev *ptDev, const char *ip, uint16_t port)
     int idx = 0;
     volatile int timeout = 0;
     
-    while (timeout < 10000) {
+    while (timeout < 20000) {
         if (g_rx_buf.get(&g_rx_buf, &ch) == 0) {
             if (idx < 127) {
                 buf[idx++] = ch;

@@ -59,10 +59,10 @@ int _write(int file, char *ptr, int len)
 {
     (void)file;
     
-    for (int i = 0; i < len; i++) {
-        g_uart2.p_api->write(g_uart2.p_ctrl, (uint8_t const * const)&ptr[i], 1);
-        uart2_wait_for_tx();
-    }
+    g_uart2.p_api->write(g_uart2.p_ctrl, (uint8_t const *)ptr, len);
+    
+    while(!g_uart2_tx_complete);
+    g_uart2_tx_complete = 0;
     
     return len;
 }

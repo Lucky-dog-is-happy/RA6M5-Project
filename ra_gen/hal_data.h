@@ -82,6 +82,12 @@ extern const spi_cfg_t g_spi3_cfg;
 #ifndef sci_spi3_callback
 void sci_spi3_callback(spi_callback_args_t * p_args);
 #endif
+/* Transfer on DTC Instance. */
+extern const transfer_instance_t g_transfer2;
+
+/** Access the DTC instance using these structures when calling API functions directly (::p_api is not used). */
+extern dtc_instance_ctrl_t g_transfer2_ctrl;
+extern const transfer_cfg_t g_transfer2_cfg;
 /** UART on SCI Instance. */
             extern const uart_instance_t      g_uart2;
 

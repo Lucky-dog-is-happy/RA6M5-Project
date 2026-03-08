@@ -144,7 +144,7 @@ extern "C" {
 #ifndef BSP_TZ_CFG_MSSAR
 #define BSP_TZ_CFG_MSSAR (\
             (((RA_NOT_DEFINED > 0) ? 0U : 1U) << 0) /* ELC */ | \
-            (((2 > 0) ? 0U : 1U) << 1) /* DTC_DMAC */ | \
+            (((3 > 0) ? 0U : 1U) << 1) /* DTC_DMAC */ | \
             0xfffffffc) /* Unused */
 #endif
 
@@ -252,7 +252,7 @@ extern "C" {
 #endif
 
             /* Set DTCSTSAR if the Secure program uses the DTC. */
-#if 2 == RA_NOT_DEFINED
+#if 3 == RA_NOT_DEFINED
  #define BSP_TZ_CFG_DTC_USED (0U)
 #else
  #define BSP_TZ_CFG_DTC_USED (1U)
