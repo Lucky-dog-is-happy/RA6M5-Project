@@ -63,7 +63,7 @@ void W800AppTest(void)
     printf("[W800] WiFi connected! IP: %s\r\n", ptW800->ip_addr);
     
     printf("[W800] Connecting to TCP server...\r\n");
-    if (ptW800->ConnectTCP(ptW800, "192.168.201.175", 8080) != 0) {
+    if (ptW800->ConnectTCP(ptW800, "10.136.172.174", 8080) != 0) {
         printf("[W800] TCP connection failed!\r\n");
         return;
     }

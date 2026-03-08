@@ -10,11 +10,9 @@ static W800Dev g_w800_dev;
 
 static void W800_SendCommand(const char *cmd)
 {
-    printf("[W800] TX: %s\r\n", cmd);
     uart6_send_bytes((const uint8_t *)"AT+", 3);
     uart6_send_bytes((const uint8_t *)cmd, strlen(cmd));
     uart6_send_bytes((const uint8_t *)"\r\n", 2);
-    printf("[W800] TX done\r\n");
 }
 
 static void W800_FlushRx(void)
@@ -176,32 +174,37 @@ static int W800_ConnectTCP(W800Dev *ptDev, const char *ip, uint16_t port)
     for (volatile int i = 0; i < 500000; i++);
     W800_FlushRx();
     
+    char cmd[64];
+    snprintf(cmd, sizeof(cmd), "SKCT=0,0,%s,%d,%d", ip, port, port);
     printf("[W800] Sending TCP connect command...\r\n");
-    W800_SendCommand("SKCT=0,0,192.168.201.175,8080,1024");
+    W800_SendCommand(cmd);
     
     uint8_t ch;
     uint8_t buf[128];
     int idx = 0;
     volatile int timeout = 0;
-    int socket_num = 0;
     
-    while (timeout < 5000) {
+    while (timeout < 10000) {
         if (g_rx_buf.get(&g_rx_buf, &ch) == 0) {
             if (idx < 127) {
                 buf[idx++] = ch;
             }
             buf[idx] = '\0';
             
-            if (idx > 3 && buf[idx-4] == '+' && buf[idx-3] == 'O' && buf[idx-2] == 'K' && buf[idx-1] == '=') {
-                printf("\r\n[W800] TCP connected, socket found\r\n");
-                for (int j = idx; j < idx+10 && j < 127; j++) {
-                    if (g_rx_buf.get(&g_rx_buf, &ch) == 0) {
-                        buf[idx++] = ch;
-                        buf[idx] = '\0';
-                    } else {
-                        break;
+            if (idx > 3 && buf[idx-4] == '+' && buf[idx-3] == 'O' && buf[idx-2] == 'K') {
+                printf("\r\n[W800] TCP response: %s\r\n", buf);
+                
+                if (buf[idx-1] == '=') {
+                    for (int j = idx; j < idx+10 && j < 127; j++) {
+                        if (g_rx_buf.get(&g_rx_buf, &ch) == 0) {
+                            buf[idx++] = ch;
+                            buf[idx] = '\0';
+                        } else {
+                            break;
+                        }
                     }
                 }
+                
                 printf("[W800] Full response: %s\r\n", buf);
                 
                 for (int k = 0; k < idx; k++) {

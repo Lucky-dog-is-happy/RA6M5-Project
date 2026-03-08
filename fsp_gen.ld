@@ -329,9 +329,14 @@ SECTIONS
   KEEP(*(.stack?*))
       __ram_thread_stack$$Limit = . ;
   }  > RAM
-  .ram.endof ALIGN(.,512) : 
+  .ram.endof ALIGN(.,1024) : 
   {
        __ddsc_RAM_END = . ;
+      
+  }  > RAM
+  .ram.flat_nsc ALIGN(.,1024) : 
+  {
+       __ddsc_RAM_NSC = . ;
       
   }  > RAM
 
@@ -406,9 +411,14 @@ SECTIONS
   *(.gnu.linkonce.armexidx.*)
        __exidx_end = . ;
   }  > FLASH
-  .flash.endof ALIGN(.,512) (READONLY) : 
+  .flash.endof ALIGN(.,1024) (READONLY) : 
   {
        __ddsc_FLASH_END = . ;
+      
+  }  > FLASH
+  .flash.flat_nsc ALIGN(.,1024) (READONLY) : 
+  {
+       __ddsc_FLASH_NSC = . ;
       
   }  > FLASH
 

@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2020 - 2025 Renesas Electronics Corporation and/or its affiliates
+* Copyright (c) 2020 - 2026 Renesas Electronics Corporation and/or its affiliates
 *
 * SPDX-License-Identifier: BSD-3-Clause
 */
@@ -189,6 +189,7 @@ fsp_err_t R_DTC_Open (transfer_ctrl_t * const p_api_ctrl, transfer_cfg_t const *
  * @retval FSP_ERR_NOT_OPEN         Handle is not initialized.  Call R_DTC_Open to initialize the control block.
  * @retval FSP_ERR_NOT_ENABLED      Transfer source address is NULL or is not aligned correctly.
  *                                  Transfer destination address is NULL or is not aligned correctly.
+ * @retval FSP_ERR_UNSUPPORTED      Transfer 8 byte is not supported.
  *
  * @note p_info must persist until all transfers are completed.
  **********************************************************************************************************************/
@@ -201,6 +202,13 @@ fsp_err_t R_DTC_Reconfigure (transfer_ctrl_t * const p_api_ctrl, transfer_info_t
     FSP_ERROR_RETURN(p_ctrl->open == DTC_OPEN, FSP_ERR_NOT_OPEN);
     FSP_ASSERT(NULL != p_info);
     FSP_ASSERT(FSP_SUCCESS == r_dtc_length_assert(p_info));
+
+ #if !BSP_FEATURE_DTC_SUPPORT_TRANSFER_8_BYTE
+    if (TRANSFER_SIZE_8_BYTE == p_info->transfer_settings_word_b.size)
+    {
+        return FSP_ERR_UNSUPPORTED;
+    }
+ #endif
 #endif
 
     /* Disable transfers on this activation source. */

@@ -274,6 +274,9 @@ RA6M5-Projct_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 RA6M5-Projct_SOURCE_DIR:STATIC=/home/lucky/RA6M5-Project
 
+//No help, variable specified on the command line.
+RENESAS_IDE:UNINITIALIZED=e2studio
+
 
 ########################
 # INTERNAL cache entries
