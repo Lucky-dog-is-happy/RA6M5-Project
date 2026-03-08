@@ -2,6 +2,9 @@
 
 static __IO uint32_t dwTick;
 
+// 心跳包定时器变量
+static uint32_t last_heartbeat_tick = 0;
+
 fsp_err_t SystickInit(void)
 {
     uint32_t uwSysclk = R_BSP_SourceClockHzGet(FSP_PRIV_CLOCK_PLL);
@@ -14,6 +17,14 @@ fsp_err_t SystickInit(void)
 void SysTick_Handler(void)
 {
     dwTick++;
+
+    // 每 5 秒发送心跳包
+    if (dwTick - last_heartbeat_tick >= 5000) {
+        last_heartbeat_tick = dwTick;
+        extern int Dispenser_SendHeartbeat(void);
+        Dispenser_SendHeartbeat();
+    }
+
     extern void KeyProcessJitter(uint32_t tick);
     KeyProcessJitter(dwTick);
 }

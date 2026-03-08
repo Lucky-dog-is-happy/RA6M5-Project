@@ -6,8 +6,10 @@
 #include "hal_systick.h"
 #include "drv_gpio.h"
 #include "drv_w800.h"
-#include "drv_disp.h"
+#include "drv_dispenser.h"
 #include <stdio.h>
+#include <time.h>
+#include <time.h>
 
 #if (1 == BSP_MULTICORE_PROJECT) && BSP_TZ_SECURE_BUILD
 bsp_ipc_semaphore_handle_t g_core_start_semaphore =
@@ -16,6 +18,7 @@ bsp_ipc_semaphore_handle_t g_core_start_semaphore =
 };
 #endif
 
+/* DispAppTest commented out - old OLED display code removed
 void DispAppTest(void)
 {
     DisplayDevice *ptDispDev = OLEDGetDevice();
@@ -30,14 +33,23 @@ void DispAppTest(void)
     while(1)
     {
         for(uint16_t i=0; i<ptDispDev->dwSize; i++)
-            pBuf[i] = 0x55;
+            pBuf[i] = 0x00;
+
         ptDispDev->Flush(ptDispDev);
 
+        // Simple test animation
         for(uint16_t i=0; i<ptDispDev->dwSize; i++)
-            pBuf[i] = 0xFF;
+            pBuf[i] = (i % 2) ? 0xFF : 0x00;
         ptDispDev->Flush(ptDispDev);
+        HAL_Delay(500);
+
+        for(uint16_t i=0; i<ptDispDev->dwSize; i++)
+            pBuf[i] = (i % 2) ? 0x00 : 0xFF;
+        ptDispDev->Flush(ptDispDev);
+        HAL_Delay(500);
     }
 }
+*/
 
 void W800AppTest(void)
 {
@@ -61,14 +73,31 @@ void W800AppTest(void)
         return;
     }
     printf("[W800] WiFi connected! IP: %s\r\n", ptW800->ip_addr);
+
+    // 初始化水机系统
+    printf("[System] Initializing Dispenser System...\r\n");
+    if (Dispenser_Init() != 0) {
+        printf("[System] Dispenser init failed!\r\n");
+        return;
+    }
     
+    // 设置 W800 设备指针
+    Dispenser_SetW800Device(ptW800);
+
     printf("[W800] Connecting to TCP server...\r\n");
     if (ptW800->ConnectTCP(ptW800, "10.136.172.174", 8080) != 0) {
         printf("[W800] TCP connection failed!\r\n");
         return;
     }
     printf("[W800] TCP connected!\r\n");
-    
+
+    // 切换到正式运行模式
+    printf("[System] Switching to Normal Mode...\r\n");
+    if (Dispenser_EnterNormalMode() != 0) {
+        printf("[System] Failed to enter normal mode!\r\n");
+        return;
+    }
+
     uint8_t sendData[] = "Hello from RA6M5!";
     int sent = ptW800->Send(ptW800, sendData, sizeof(sendData) - 1);
     printf("[W800] Sent %d bytes\r\n", sent);

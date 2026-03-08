@@ -256,8 +256,8 @@ CMAKE_STRIP:FILEPATH=/usr/sbin/arm-none-eabi-strip
 //Path to a program.
 CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 
-//The CMake toolchain file
-CMAKE_TOOLCHAIN_FILE:FILEPATH=/home/lucky/RA6M5-Project/cmake/gcc.cmake
+//No help, variable specified on the command line.
+CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=cmake/gcc.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -273,9 +273,6 @@ RA6M5-Projct_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 RA6M5-Projct_SOURCE_DIR:STATIC=/home/lucky/RA6M5-Project
-
-//No help, variable specified on the command line.
-RENESAS_IDE:UNINITIALIZED=e2studio
 
 
 ########################
