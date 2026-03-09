@@ -1,0 +1,28 @@
+Type,Channel,Name,Status,Baud Rate/Bitrate,Pin Config,Callback,Usage
+UART,2,g_uart2,Used,115200,TX=P112 RX=P113,uart2_callback,Debug/PC Communication
+UART,6,g_uart6,Used,115200,TX=P506 RX=P505,uart6_callback,W800 WiFi Module
+UART,0,g_uart0,Available,N/A,N/A,N/A,-
+UART,1,g_uart1,Available,N/A,N/A,N/A,-
+UART,3,g_uart3,Available,N/A,N/A,N/A,-
+UART,4,g_uart4,Available,N/A,N/A,N/A,-
+UART,5,g_uart5,Available,N/A,N/A,N/A,-
+UART,7,g_uart7,Available,N/A,N/A,N/A,-
+UART,8,g_uart8,Available,N/A,N/A,N/A,-
+UART,9,g_uart9,Available,N/A,N/A,N/A,-
+UART,10,g_uart10,Available,N/A,N/A,N/A,-
+UART,11,g_uart11,Available,N/A,N/A,N/A,-
+SPI,0,g_spi0,Used,50000000,MISO=P202 MOSI=P203 SCK=P204,spi0_callback,OLED Display
+SPI,3,g_spi3,Used,8000000,SCK=P410 RX=P706 TX=P707,sci_spi3_callback,EEPROM
+SPI,1,g_spi1,Available,N/A,N/A,N/A,-
+SPI,2,g_spi2,Available,N/A,N/A,N/A,-
+SPI,4,g_spi4,Available,N/A,N/A,N/A,-
+I2C,4,g_i2c4,Used,100kHz,SCL=P206 SDA=P207,sci_i2c4_master_callback,External I2C Devices
+I2C,0,g_i2c0,Available,N/A,N/A,N/A,-
+I2C,1,g_i2c1,Available,N/A,N/A,N/A,-
+I2C,2,g_i2c2,Available,N/A,N/A,N/A,-
+I2C,3,g_i2c3,Available,N/A,N/A,N/A,-
+I2C,5,g_i2c5,Available,N/A,N/A,N/A,-
+I2C,6,g_i2c6,Available,N/A,N/A,N/A,-
+I2C,7,g_i2c7,Available,N/A,N/A,N/A,-
+I2C,8,g_i2c8,Available,N/A,N/A,N/A,-
+I2C,9,g_i2c9,Available,N/A,N/A,N/A,-

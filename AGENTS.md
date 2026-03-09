@@ -8,13 +8,14 @@ This document provides guidelines for agentic coding agents working on this code
 - **Architecture**: ARM Cortex-M33
 - **RTOS Sub-project**: Located in `/RTOS/` directory
 - **Build System**: CMake with Ninja
+- **Hardware**: Bare-metal embedded (no OS)
 
 ---
 
 ## Build Commands
 
 ### Prerequisites
-- ARM GCC Toolchain installed
+- ARM GCC Toolchain installed (`arm-none-eabi-gcc`)
 - Ninja build system
 - Set `ARM_TOOLCHAIN_PATH` environment variable
 
@@ -33,8 +34,9 @@ cmake --build build/Release/
 
 ### Single File Rebuild
 ```bash
-cmake --build build/Debug/ --target UART
+cmake --build build/Debug/ --target <target_name>
 ```
+To list available targets: `cmake --build build/Debug/ --target help`
 
 ### Flash to Device
 ```bash
@@ -52,18 +54,13 @@ picocom /dev/ttyUSB0 -b 115200
 
 **No unit tests exist in this project.** This is a bare-metal embedded application.
 
-If tests are added in the future, use Ceedling or Unity test framework for embedded C.
+If tests are added, use Ceedling or Unity test framework. Run tests with: `ceedling test:all` or `ctest`
 
 ---
 
 ## Linting and Formatting
 
-**No linting or formatting tools are configured.**
-
-If adding tools:
-- Use `.clang-format` for C code formatting
-- Use clang-tidy for static analysis
-- Configure via `.vscode/settings.json` with clangd
+**No linting or formatting tools are currently configured.** Recommended: clang-format with LLVM style, 4-space indent, 120 char column limit.
 
 ---
 
@@ -76,33 +73,43 @@ If adding tools:
 | Functions | snake_case | `uart2_callback`, `circlebuf_init` |
 | Variables | snake_case | `g_uart2_tx_complete`, `ptDispDev` |
 | Types/Structs | PascalCase | `IODev`, `W800Dev`, `circle_buf_t` |
-| Enums | PascalCase or UPPER_SNAKE_CASE | `W800_STATE_IDLE`, `LowLevel` |
+| Enums | PascalCase or UPPER_SNAKE_CASE | `W800_STATE_IDLE` |
 | Defines/Macros | UPPER_SNAKE_CASE | `BSP_MULTICORE_PROJECT` |
 | Pointers | p/pt prefix | `p_args`, `ptDev` |
+| Global variables | g_ prefix | `g_uart2_handle` |
 
 ### Code Structure
 
-- **Header guards**: Use `#ifndef NAME_H` / `#define NAME_H` / `#endif`
+- **Header guards**: `#ifndef NAME_H` / `#define NAME_H` / `#endif`
 - **Braces**: K&R style (opening brace on same line)
 - **Indentation**: 4 spaces (no tabs)
-- **Line length**: Keep under 120 characters when practical
-- **Comments**: Use `/* */` for block comments, `//` for line comments
+- **Line length**: Under 120 characters
+- **Comments**: `/* */` for blocks, `//` for lines
+
+### Include Order
+1. Configuration header (e.g., `project_config.h`)
+2. This module's header (e.g., `drv_uart.h`)
+3. Other local headers
+4. Third-party headers (FSP, FreeRTOS)
+5. C standard library headers
+6. C++ standard library headers
 
 ### Functions
-
-- Name with `_callback` suffix for callback handlers
-- Return error codes: 0 for success, negative for error
-- Keep functions focused and under 100 lines
+- Use `_callback` suffix for callback handlers, `_init` for initialization
+- Return 0 for success, negative for error
+- Keep under 100 lines, put static functions near usage
 
 ### Error Handling
+```c
+int device_init(void) {
+    int err = 0;
+    err = hal_uart_open(&handle, &config);
+    if (err != 0) { return err; }
+    return 0;
+}
+```
 
-- Return integer error codes (-1 for failure, 0 for success)
-- Check return values from HAL/driver functions
-- Use descriptive variable names for error states
-
-### Device Abstraction Patterns
-
-This codebase uses function pointers in structs for OOP-like device abstraction:
+### Device Abstraction
 ```c
 typedef struct {
     int (*open)(void *device, void *params);
@@ -112,14 +119,9 @@ typedef struct {
 } DeviceOps;
 ```
 
-### Header File Organization
-
-1. Header guard
-2. Includes (system headers first, then local headers)
-3. Macros/Defines
-4. Type definitions (structs, enums, typedefs)
-5. Function declarations
-6. Inline functions if needed
+### Memory Management
+- Avoid `malloc`/`new` - use static buffers
+- Use `circle_buf_t` for UART buffering
 
 ---
 
@@ -129,38 +131,32 @@ typedef struct {
 /home/lucky/RA6M5-Project/
 ├── src/              # Application source code
 ├── ra/               # Renesas FSP libraries
-├── ra_gen/           # RASC-generated code
+├── ra_gen/           # RASC-generated code (DO NOT EDIT)
 ├── ra_cfg/           # FSP configuration
 ├── cmake/            # CMake build configuration
 ├── script/           # Linker scripts
 ├── doc/              # Hardware datasheets
 ├── .vscode/          # VSCode configuration
-├── RTOS/             # FreeRTOS sub-project
-└── README.md         # Build instructions
+└── RTOS/             # FreeRTOS sub-project
 ```
 
 ---
 
-## VSCode Configuration
+## RTOS Sub-project
 
-The project uses clangd for IDE features. Key settings in `.vscode/settings.json`:
-- `clangd.arguments`: Includes `--query-driver` for ARM GCC
-- `clangd.compileFlags`: Uses `cmake` build information
+```bash
+cd RTOS
+mkdir -p build
+cmake -DCMAKE_TOOLCHAIN_FILE=../cmake/gcc.cmake -DCMAKE_BUILD_TYPE=Debug -G Ninja -B build
+cmake --build build/
+```
 
 ---
 
 ## Important Notes
 
-1. **Bare-metal embedded**: No OS, no dynamic memory allocation preferred
+1. **Bare-metal embedded**: No OS, avoid dynamic memory allocation
 2. **Hardware-specific**: Code targets specific MCU peripherals
-3. **Generated code**: Files in `ra_gen/` are auto-generated by Renesas IDE
+3. **Generated code**: Files in `ra_gen/` are auto-generated - do NOT edit
 4. **FSP dependencies**: Uses Renesas Flexible Software Package
-
----
-
-## Adding New Features
-
-1. Create source files in `src/` directory
-2. Add new source files to CMakeLists.txt
-3. Update build and verify on hardware
-4. Document any new dependencies or toolchain requirements
+5. **Modularity**: Each driver in `src/drv_*.c` should have corresponding header
