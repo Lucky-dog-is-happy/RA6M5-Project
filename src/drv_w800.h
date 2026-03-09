@@ -21,6 +21,7 @@ typedef struct W800Dev {
     int            (*ConnectTCP)(struct W800Dev *ptDev, const char *ip, uint16_t port);
     int            (*Send)(struct W800Dev *ptDev, const uint8_t *data, uint16_t len);
     int            (*Receive)(struct W800Dev *ptDev, uint8_t *data, uint16_t maxLen);
+    int            (*CloseSocket)(struct W800Dev *ptDev);
     W800State_t    state;
     char           ip_addr[16];
     int            socket_fd;

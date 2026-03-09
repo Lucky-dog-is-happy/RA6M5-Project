@@ -150,16 +150,27 @@ static int W800_ConnectWiFi(W800Dev *ptDev, const char *ssid, const char *passwo
         uint32_t idx = 0;
         memset(ptDev->ip_addr, 0, sizeof(ptDev->ip_addr));
         
-        for (volatile int i = 0; i < 500000; i++);
+        for (volatile int i = 0; i < 1000000; i++);
         
-        uint32_t timeout = 0;
-        while (timeout < 100000 && g_rx_buf.get(&g_rx_buf, &ch) == 0) {
-            if (ch >= '0' && ch <= '9' && idx < 15) {
-                ptDev->ip_addr[idx++] = (char)ch;
+        while (g_rx_buf.get(&g_rx_buf, &ch) == 0) {
+            if (ch == '+' || idx > 0) {
+                if ((ch >= '0' && ch <= '9') || ch == '.') {
+                    if (idx < 15) {
+                        ptDev->ip_addr[idx++] = (char)ch;
+                    }
+                }
             }
-            timeout++;
+            if (idx > 0 && (ch == '\r' || ch == '\n')) {
+                break;
+            }
+        }
+        
+        if (idx > 0 && ptDev->ip_addr[idx-1] == '.') {
+            ptDev->ip_addr[idx-1] = '\0';
         }
     }
+    
+    printf("[W800] IP: %s\r\n", ptDev->ip_addr);
     
     ptDev->state = W800_STATE_WIFI_CONNECTED;
     return 0;
@@ -171,6 +182,12 @@ static int W800_ConnectTCP(W800Dev *ptDev, const char *ip, uint16_t port)
     (void)port;
     
     ptDev->state = W800_STATE_TCP_CONNECTING;
+    
+    if (ptDev->socket_fd >= 0) {
+        printf("[W800] Closing existing socket %d\r\n", ptDev->socket_fd);
+        ptDev->CloseSocket(ptDev);
+        for (volatile int i = 0; i < 2000000; i++);
+    }
     
     W800_FlushRx();
     for (volatile int i = 0; i < 500000; i++);
@@ -311,6 +328,19 @@ static int W800_ReceiveData(W800Dev *ptDev, uint8_t *data, uint16_t maxLen)
     return idx;
 }
 
+static int W800_CloseSocket(W800Dev *ptDev)
+{
+    if (ptDev->socket_fd >= 0) {
+        char cmd[32];
+        snprintf(cmd, sizeof(cmd), "SKCLS=%d", ptDev->socket_fd);
+        W800_SendCommand(cmd);
+        W800_WaitResponse("+OK", 1000);
+        ptDev->socket_fd = -1;
+        printf("[W800] Socket closed\r\n");
+    }
+    return 0;
+}
+
 struct W800Dev *W800GetDevice(void)
 {
     g_w800_dev.name = "W800";
@@ -319,8 +349,9 @@ struct W800Dev *W800GetDevice(void)
     g_w800_dev.ConnectTCP = W800_ConnectTCP;
     g_w800_dev.Send = W800_SendData;
     g_w800_dev.Receive = W800_ReceiveData;
+    g_w800_dev.CloseSocket = W800_CloseSocket;
     g_w800_dev.state = W800_STATE_IDLE;
-    g_w800_dev.socket_fd = 0;
+    g_w800_dev.socket_fd = -1;
     memset(g_w800_dev.ip_addr, 0, sizeof(g_w800_dev.ip_addr));
     
     return &g_w800_dev;

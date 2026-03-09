@@ -87,7 +87,7 @@ int Dispenser_SendHeartbeat(void)
     if (g_dispenser_state.w800_device && g_dispenser_state.tcp_connected) {
         W800Dev *ptW800 = (W800Dev *)g_dispenser_state.w800_device;
         if (ptW800 && ptW800->Send) {
-            int ret = ptW800->Send(ptW800, (uint8_t *)heartbeat, strlen(heartbeat));
+            int ret = ptW800->Send(ptW800, (uint8_t *)heartbeat, (uint16_t)strlen(heartbeat));
             if (ret >= 0) {
                 printf("[Heartbeat] Sent %d bytes: %s\r\n", ret, heartbeat);
                 g_dispenser_state.last_heartbeat_time = HAL_GetTick() / 1000;
