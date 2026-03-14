@@ -1,0 +1,12 @@
+../VL53L0X/Src/vl53l0x_platform.c:57:15:VL53L0X_LockSequenceAccess	1
+../VL53L0X/Src/vl53l0x_platform.c:62:15:VL53L0X_UnlockSequenceAccess	1
+../VL53L0X/Src/vl53l0x_platform.c:67:15:VL53L0X_WriteMulti	3
+../VL53L0X/Src/vl53l0x_platform.c:86:15:VL53L0X_ReadMulti	3
+../VL53L0X/Src/vl53l0x_platform.c:106:15:VL53L0X_WrByte	2
+../VL53L0X/Src/vl53l0x_platform.c:121:15:VL53L0X_WrWord	2
+../VL53L0X/Src/vl53l0x_platform.c:136:15:VL53L0X_WrDWord	2
+../VL53L0X/Src/vl53l0x_platform.c:151:15:VL53L0X_UpdateByte	4
+../VL53L0X/Src/vl53l0x_platform.c:175:15:VL53L0X_RdByte	2
+../VL53L0X/Src/vl53l0x_platform.c:190:15:VL53L0X_RdWord	2
+../VL53L0X/Src/vl53l0x_platform.c:205:16:VL53L0X_RdDWord	2
+../VL53L0X/Src/vl53l0x_platform.c:221:15:VL53L0X_PollingDelay	2

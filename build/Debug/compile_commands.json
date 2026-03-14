@@ -103,6 +103,12 @@
 },
 {
   "directory": "/home/lucky/RA6M5-Project/build/Debug",
+  "command": "/usr/sbin/arm-none-eabi-gcc -D_RA_CORE=CM33 -D_RA_ORDINAL=1 -D_RENESAS_RA_ -I/home/lucky/RA6M5-Project/ra/arm/CMSIS_6/CMSIS/Core/Include -I/home/lucky/RA6M5-Project/ra/fsp/inc -I/home/lucky/RA6M5-Project/ra/fsp/inc/api -I/home/lucky/RA6M5-Project/ra/fsp/inc/instances -I/home/lucky/RA6M5-Project/ra_cfg/fsp_cfg -I/home/lucky/RA6M5-Project/ra_cfg/fsp_cfg/bsp -I/home/lucky/RA6M5-Project/ra_gen -I/home/lucky/RA6M5-Project/src -I/home/lucky/RA6M5-Project -I/home/lucky/RA6M5-Project/build/Debug -g -g -O2 --param=min-pagesize=0 -Wno-format-truncation -Wno-stringop-overflow -mfloat-abi=hard -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -mthumb -std=c99 -MMD -MP -o CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_adc/r_adc.c.obj -c /home/lucky/RA6M5-Project/ra/fsp/src/r_adc/r_adc.c",
+  "file": "/home/lucky/RA6M5-Project/ra/fsp/src/r_adc/r_adc.c",
+  "output": "/home/lucky/RA6M5-Project/build/Debug/CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_adc/r_adc.c.obj"
+},
+{
+  "directory": "/home/lucky/RA6M5-Project/build/Debug",
   "command": "/usr/sbin/arm-none-eabi-gcc -D_RA_CORE=CM33 -D_RA_ORDINAL=1 -D_RENESAS_RA_ -I/home/lucky/RA6M5-Project/ra/arm/CMSIS_6/CMSIS/Core/Include -I/home/lucky/RA6M5-Project/ra/fsp/inc -I/home/lucky/RA6M5-Project/ra/fsp/inc/api -I/home/lucky/RA6M5-Project/ra/fsp/inc/instances -I/home/lucky/RA6M5-Project/ra_cfg/fsp_cfg -I/home/lucky/RA6M5-Project/ra_cfg/fsp_cfg/bsp -I/home/lucky/RA6M5-Project/ra_gen -I/home/lucky/RA6M5-Project/src -I/home/lucky/RA6M5-Project -I/home/lucky/RA6M5-Project/build/Debug -g -g -O2 --param=min-pagesize=0 -Wno-format-truncation -Wno-stringop-overflow -mfloat-abi=hard -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -mthumb -std=c99 -MMD -MP -o CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_dtc/r_dtc.c.obj -c /home/lucky/RA6M5-Project/ra/fsp/src/r_dtc/r_dtc.c",
   "file": "/home/lucky/RA6M5-Project/ra/fsp/src/r_dtc/r_dtc.c",
   "output": "/home/lucky/RA6M5-Project/build/Debug/CMakeFiles/RA6M5-Projct.elf.dir/ra/fsp/src/r_dtc/r_dtc.c.obj"
@@ -214,6 +220,12 @@
   "command": "/usr/sbin/arm-none-eabi-gcc -D_RA_CORE=CM33 -D_RA_ORDINAL=1 -D_RENESAS_RA_ -I/home/lucky/RA6M5-Project/ra/arm/CMSIS_6/CMSIS/Core/Include -I/home/lucky/RA6M5-Project/ra/fsp/inc -I/home/lucky/RA6M5-Project/ra/fsp/inc/api -I/home/lucky/RA6M5-Project/ra/fsp/inc/instances -I/home/lucky/RA6M5-Project/ra_cfg/fsp_cfg -I/home/lucky/RA6M5-Project/ra_cfg/fsp_cfg/bsp -I/home/lucky/RA6M5-Project/ra_gen -I/home/lucky/RA6M5-Project/src -I/home/lucky/RA6M5-Project -I/home/lucky/RA6M5-Project/build/Debug -g -g -O2 --param=min-pagesize=0 -Wno-format-truncation -Wno-stringop-overflow -mfloat-abi=hard -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -mthumb -std=c99 -MMD -MP -o CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj -c /home/lucky/RA6M5-Project/src/drv_uart.c",
   "file": "/home/lucky/RA6M5-Project/src/drv_uart.c",
   "output": "/home/lucky/RA6M5-Project/build/Debug/CMakeFiles/RA6M5-Projct.elf.dir/src/drv_uart.c.obj"
+},
+{
+  "directory": "/home/lucky/RA6M5-Project/build/Debug",
+  "command": "/usr/sbin/arm-none-eabi-gcc -D_RA_CORE=CM33 -D_RA_ORDINAL=1 -D_RENESAS_RA_ -I/home/lucky/RA6M5-Project/ra/arm/CMSIS_6/CMSIS/Core/Include -I/home/lucky/RA6M5-Project/ra/fsp/inc -I/home/lucky/RA6M5-Project/ra/fsp/inc/api -I/home/lucky/RA6M5-Project/ra/fsp/inc/instances -I/home/lucky/RA6M5-Project/ra_cfg/fsp_cfg -I/home/lucky/RA6M5-Project/ra_cfg/fsp_cfg/bsp -I/home/lucky/RA6M5-Project/ra_gen -I/home/lucky/RA6M5-Project/src -I/home/lucky/RA6M5-Project -I/home/lucky/RA6M5-Project/build/Debug -g -g -O2 --param=min-pagesize=0 -Wno-format-truncation -Wno-stringop-overflow -mfloat-abi=hard -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -mthumb -std=c99 -MMD -MP -o CMakeFiles/RA6M5-Projct.elf.dir/src/drv_vl53l0x.c.obj -c /home/lucky/RA6M5-Project/src/drv_vl53l0x.c",
+  "file": "/home/lucky/RA6M5-Project/src/drv_vl53l0x.c",
+  "output": "/home/lucky/RA6M5-Project/build/Debug/CMakeFiles/RA6M5-Projct.elf.dir/src/drv_vl53l0x.c.obj"
 },
 {
   "directory": "/home/lucky/RA6M5-Project/build/Debug",

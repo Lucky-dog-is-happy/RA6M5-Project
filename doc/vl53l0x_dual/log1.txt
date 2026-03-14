@@ -1,0 +1,94 @@
+
+[2026-03-13 20:35:00.511]# RECV ASCII>
+
+=== Measurement #67 ===
+RangeStatus: 0 (Range Valid)
+RangeMilliMeter: 40 mm
+SignalRateRtnMegaCps: 1183232 (0x120E00)
+AmbientRateRtnMegaCps: 9728 (0x2600)
+EffectiveSpadRtnCount: 49156 (0xC004)
+========================
+
+
+[2026-03-13 20:35:01.968]# RECV ASCII>
+
+=== Measurement #68 ===
+RangeStatus: 0 (Range Valid)
+RangeMilliMeter: 87 mm
+SignalRateRtnMegaCps: 290304 (0x46E00)
+AmbientRateRtnMegaCps: 16896 (0x4200)
+EffectiveSpadRtnCount: 49156 (0xC004)
+========================
+
+
+[2026-03-13 20:35:03.224]# RECV ASCII>
+
+=== Measurement #69 ===
+RangeStatus: 0 (Range Valid)
+RangeMilli
+
+[2026-03-13 20:35:03.423]# RECV ASCII>
+Meter: 105 mm
+SignalRateRtnMegaCps: 1546240 (0x179800)
+AmbientRateRtnMegaCps: 5632 (0x1600)
+EffectiveSpadRtnCount: 11268 (0x2C04)
+========================
+
+
+[2026-03-13 20:35:04.875]# RECV ASCII>
+
+=== Measurement #70 ===
+RangeStatus: 0 (Range Valid)
+RangeMilliMeter: 62 mm
+SignalRateRtnMegaCps: 1960448 (0x1DEA00)
+AmbientRateRtnMegaCps: 4096 (0x1000)
+EffectiveSpadRtnCount: 3588 (0xE04)
+========================
+
+
+[2026-03-13 20:35:06.210]# RECV ASCII>
+
+=== Measurement #71 ===
+RangeStatus: 0 (Range Valid)
+RangeMilliMeter: 117 mm
+SignalRateRtnMegaCps: 1300480 (0x13D800)
+AmbientRa
+
+[2026-03-13 20:35:06.332]# RECV ASCII>
+teRtnMegaCps: 5120 (0x1400)
+EffectiveSpadRtnCount: 10756 (0x2A04)
+========================
+
+
+[2026-03-13 20:35:07.776]# RECV ASCII>
+
+=== Measurement #72 ===
+RangeStatus: 0 (Range Valid)
+RangeMilliMeter: 130 mm
+SignalRateRtnMegaCps: 1216000 (0x128E00)
+AmbientRateRtnMegaCps: 6656 (0x1A00)
+EffectiveSpadRtnCount: 15620 (0x3D04)
+========================
+
+
+[2026-03-13 20:35:09.242]# RECV ASCII>
+
+=== Measurement #73 ===
+RangeStatus: 0 (Range Valid)
+RangeMilliMeter: 172 mm
+SignalRateRtnMegaCps: 905728 (0xDD200)
+AmbientRateRtnMegaCps: 18432 (0x4800)
+EffectiveSpadRtnCount: 49156 (0xC004)
+========================
+
+
+[2026-03-13 20:35:10.698]# RECV ASCII>
+
+=== Measurement #74 ===
+RangeStatus: 2 (Signal Fail)
+RangeMilliMeter: 8191 mm
+SignalRateRtnMegaCps: 7680 (0x1E00)
+AmbientRateRtnMegaCps: 18944 (0x4A00)
+EffectiveSpadRtnCount: 49156 (0xC004)
+========================
+

@@ -1,0 +1,12 @@
+../VL53L0X/Src/vl53l0x_platform.c:57:15:VL53L0X_LockSequenceAccess	24	static
+../VL53L0X/Src/vl53l0x_platform.c:62:15:VL53L0X_UnlockSequenceAccess	24	static
+../VL53L0X/Src/vl53l0x_platform.c:67:15:VL53L0X_WriteMulti	40	static
+../VL53L0X/Src/vl53l0x_platform.c:86:15:VL53L0X_ReadMulti	32	static
+../VL53L0X/Src/vl53l0x_platform.c:106:15:VL53L0X_WrByte	24	static
+../VL53L0X/Src/vl53l0x_platform.c:121:15:VL53L0X_WrWord	24	static
+../VL53L0X/Src/vl53l0x_platform.c:136:15:VL53L0X_WrDWord	32	static
+../VL53L0X/Src/vl53l0x_platform.c:151:15:VL53L0X_UpdateByte	32	static
+../VL53L0X/Src/vl53l0x_platform.c:175:15:VL53L0X_RdByte	32	static
+../VL53L0X/Src/vl53l0x_platform.c:190:15:VL53L0X_RdWord	32	static
+../VL53L0X/Src/vl53l0x_platform.c:205:16:VL53L0X_RdDWord	32	static
+../VL53L0X/Src/vl53l0x_platform.c:221:15:VL53L0X_PollingDelay	24	static,ignoring_inline_asm

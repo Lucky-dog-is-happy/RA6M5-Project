@@ -1,0 +1,14 @@
+../VL53L0X/Src/vl53l0x.c:23:6:VL53L0X_setAddress	1
+../VL53L0X/Src/vl53l0x.c:28:6:VL53L0X_reset_sensor	3
+../VL53L0X/Src/vl53l0x.c:43:6:VL53L0X_shutdown_sensor	3
+../VL53L0X/Src/vl53l0x.c:52:6:VL53L0X_wakeup_sensor	3
+../VL53L0X/Src/vl53l0x.c:61:13:get_range_status_string	9
+../VL53L0X/Src/vl53l0x.c:75:6:print_pal_error	1
+../VL53L0X/Src/vl53l0x.c:82:6:print_range_status	1
+../VL53L0X/Src/vl53l0x.c:90:15:vl53l0x_start_single_test	2
+../VL53L0X/Src/vl53l0x.c:106:10:vl53l0x_read_distance	4
+../VL53L0X/Src/vl53l0x.c:126:15:vl53l0x_measure_init	11
+../VL53L0X/Src/vl53l0x.c:200:10:vl53l0x_read_distance_simple	4
+../VL53L0X/Src/vl53l0x.c:237:15:vl53l0x_init_single	4
+../VL53L0X/Src/vl53l0x.c:267:15:vl53l0x_init_dual	3
+../VL53L0X/Src/vl53l0x.c:315:15:vl53l0x_init	8

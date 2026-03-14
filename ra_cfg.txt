@@ -152,7 +152,7 @@ FSP Configuration
       AVSSUSBHS G14 USB_HS0_AVSS_USBHS - - - - - - - - IO "Read only" - 
       P000 R12 ICU0_IRQ06 - - IRQ06 "IRQ mode" - None "ADC0: AN000; ADC1: AN100; ICU0: IRQ06" - IO - - 
       P001 N11 - - - - Disabled - - "ADC0: AN001; ADC1: AN101; ICU0: IRQ07" - None - - 
-      P002 R11 - - - - Disabled - - "ADC0: AN002; ADC1: AN102; ICU0: IRQ08" - None - - 
+      P002 R11 ADC1_AN102 - - - "Analog mode" - None "ADC0: AN002; ADC1: AN102; ICU0: IRQ08" - IO - - 
       P003 M5 - - - - Disabled - - "ADC0: AN003" - None - - 
       P004 P11 - - - - Disabled - - "ADC0: AN004; ICU0: IRQ09" - None - - 
       P005 R10 - - - - Disabled - - "ADC0: AN005; ICU0: IRQ10" - None - - 
@@ -167,8 +167,8 @@ FSP Configuration
       P101 N2 - - - - Disabled - - "AGT0: AGTEE0; BUS_ASYNCH0: D01; GPT_POEG1: GTETRGB; GPT5: GTIOC5A; ICU0: IRQ01; OSPI0: OMSIO7; QSPI0: QIO1; SCI0: SDA0; SCI0: TXD0; SCI1: CTSRTS1; SPI1: MOSIB" - None - - 
       P102 M3 - - - - Disabled - - "ADC0: ADTRG0; AGT0: AGTO0; BUS_ASYNCH0: D02; CAN0: CRX0; GPT_OPS0: GTOWLO; GPT2: GTIOC2B; OSPI0: OMSIO1; QSPI0: QIO0; SCI0: SCK0; SPI1: RSPCKB" - None - - 
       P103 N1 - - - - Disabled - - "AGT2: AGTIO2; BUS_ASYNCH0: D03; CAN0: CTX0; GPT_OPS0: GTOWUP; GPT2: GTIOC2A; OSPI0: OMSIO6; QSPI0: QIO3; SCI0: CTSRTS0; SPI1: SSLB0" - None - - 
-      P104 M2 - - - - Disabled - - "AGT2: AGTEE2; BUS_ASYNCH0: D04; GPT_POEG1: GTETRGB; GPT1: GTIOC1B; ICU0: IRQ01; OSPI0: OMDQS; QSPI0: QIO2; SCI8: RXD8; SCI8: SCL8; SPI1: SSLB1" - None - - 
-      P105 L3 - - - - Disabled - - "AGT2: AGTO2; BUS_ASYNCH0: D05; GPT_POEG0: GTETRGA; GPT1: GTIOC1A; ICU0: IRQ00; OSPI0: OMSIO5; SCI8: SDA8; SCI8: TXD8; SPI1: SSLB2" - None - - 
+      P104 M2 SCI8_SCL8 - Low None "Peripheral mode" "n-ch open drain" None "AGT2: AGTEE2; BUS_ASYNCH0: D04; GPT_POEG1: GTETRGB; GPT1: GTIOC1B; ICU0: IRQ01; OSPI0: OMDQS; QSPI0: QIO2; SCI8: RXD8; SCI8: SCL8; SPI1: SSLB1" - IO - - 
+      P105 L3 SCI8_SDA8 - Low None "Peripheral mode" "n-ch open drain" None "AGT2: AGTO2; BUS_ASYNCH0: D05; GPT_POEG0: GTETRGA; GPT1: GTIOC1A; ICU0: IRQ00; OSPI0: OMSIO5; SCI8: SDA8; SCI8: TXD8; SPI1: SSLB2" - IO - - 
       P106 M1 - - - - Disabled - - "AGT0: AGTOB0; BUS_ASYNCH0: D06; GPT8: GTIOC8B; OSPI0: OMSIO0; SCI8: SCK8; SPI1: SSLB3" - None - - 
       P107 L2 - - - - Disabled - - "AGT0: AGTOA0; BUS_ASYNCH0: D07; GPT8: GTIOC8A; OSPI0: OMSIO3; SCI8: CTSRTS8" - None - - 
       P108 C3 DEBUG0_SWDIO - Low - "Peripheral mode" CMOS None "AGT3: AGTOA3; DEBUG0: SWDIO; DEBUG0: TMS; GPT_OPS0: GTOULO; GPT0: GTIOC0B; SCI9: CTSRTS9; SPI0: SSLA0" - IO - - 
@@ -226,9 +226,9 @@ FSP Configuration
       P413 E13 - - - - Disabled - - "AGT3: AGTEE3; CTSU0: TS09; ETHERC_MII0: ET0_ETXD1; ETHERC_RMII0: RMII_TXD0; GPT_OPS0: GTOUUP; SCI0: CTSRTS0; SDHI0: SD0CLK; SPI1: SSLB0" - None - - 
       P414 D15 - - - - Disabled - - "AGT5: AGTIO5; CTSU0: TS10; ETHERC_MII0: ET0_RX_ER; ETHERC_RMII0: RMII_TXD1; GPT0: GTIOC0B; ICU0: IRQ09; IIC2: SDA2; SCI0: CTS0; SDHI0: SD0WP; SPI1: SSLB1" - None - - 
       P415 E14 - - - - Disabled - - "AGT4: AGTIO4; CTSU0: TS11; ETHERC_MII0: ET0_TX_EN; ETHERC_RMII0: RMII_TXD_EN; GPT0: GTIOC0A; ICU0: IRQ08; IIC2: SCL2; SDHI0: SD0CD; SPI1: SSLB2; USB_FS0: USB_VBUSEN" - None - - 
-      P500 R3 - - - - Disabled - - "ADC1: AN116; AGT0: AGTOA0; CAC0: CACREF; GPT_OPS0: GTIU; QSPI0: QSPCLK; SCI5: CTS5; USB_FS0: USB_VBUSEN" - None - - 
-      P501 P4 - - - - Disabled - - "ADC1: AN117; AGT0: AGTOB0; GPT_OPS0: GTIV; ICU0: IRQ11; QSPI0: QSSL; SCI5: SDA5; SCI5: TXD5; USB_FS0: USB_OVRCURA" - None - - 
-      P502 R4 - - - - Disabled - - "ADC1: AN118; AGT2: AGTOA2; GPT_OPS0: GTIW; ICU0: IRQ12; QSPI0: QIO0; SCI5: RXD5; SCI5: SCL5; SCI6: CTS6; USB_FS0: USB_OVRCURB" - None - - 
+      P500 R3 GPIO - Low - "Output mode (Initial High)" CMOS - "ADC1: AN116; AGT0: AGTOA0; CAC0: CACREF; GPT_OPS0: GTIU; QSPI0: QSPCLK; SCI5: CTS5; USB_FS0: USB_VBUSEN" - IO - - 
+      P501 P4 SCI5_SDA5 - Low None "Peripheral mode" "n-ch open drain" None "ADC1: AN117; AGT0: AGTOB0; GPT_OPS0: GTIV; ICU0: IRQ11; QSPI0: QSSL; SCI5: SDA5; SCI5: TXD5; USB_FS0: USB_OVRCURA" - IO - - 
+      P502 R4 SCI5_SCL5 - Low None "Peripheral mode" "n-ch open drain" None "ADC1: AN118; AGT2: AGTOA2; GPT_OPS0: GTIW; ICU0: IRQ12; QSPI0: QIO0; SCI5: RXD5; SCI5: SCL5; SCI6: CTS6; USB_FS0: USB_OVRCURB" - IO - - 
       P503 N5 - - - - Disabled - - "ADC1: AN119; AGT2: AGTOB2; GPT_POEG2: GTETRGC; QSPI0: QIO1; SCI5: SCK5; SCI6: CTSRTS6; USB_FS0: USB_EXICEN" - None - - 
       P504 P5 - - - - Disabled - - "ADC1: AN120; AGT3: AGTOA3; BUS_ASYNCH0: ALE; GPT_POEG3: GTETRGD; QSPI0: QIO2; SCI5: CTSRTS5; SCI6: SCK6; USB_FS0: USB_ID" - None - - 
       P505 P6 SCI6_RXD6 - Low None "Peripheral mode" CMOS None "ADC1: AN121; AGT3: AGTOB3; ICU0: IRQ14; QSPI0: QIO3; SCI6: RXD6; SCI6: SCL6" - IO - - 
@@ -353,7 +353,7 @@ FSP Configuration
     
   Module "I2C Master (r_sci_i2c)"
     Parameter Checking: Default (BSP)
-    DTC on Transmission and Reception: Disabled
+    DTC on Transmission and Reception: Enabled
     10-bit slave addressing: Disabled
     
   Module "External IRQ (r_icu)"
@@ -363,6 +363,9 @@ FSP Configuration
     Parameter Checking: Default (BSP)
     Enable Support for using a transfer API: Enabled
     Enable Transmitting from RXI Interrupt: Disabled
+    
+  Module "ADC (r_adc)"
+    Parameter Checking: Default (BSP)
     
   HAL
     Instance "g_ioport I/O Port (r_ioport)"
@@ -471,6 +474,19 @@ FSP Configuration
       Interrupt Priority Level: Priority 12
       RX Interrupt Priority Level [Only used when DTC is enabled]: Disabled
       
+      Instance "g_transfer4 Transfer (r_dtc) SCI4 TXI (Transmit data empty)"
+        Name: g_transfer4
+        Mode: Normal
+        Transfer Size: 1 Byte
+        Destination Address Mode: Fixed
+        Source Address Mode: Incremented
+        Repeat Area (Unused in Normal Mode): Source
+        Interrupt Frequency: After all transfers have completed
+        Number of Transfers: 0
+        Number of Blocks (Valid only in Block Mode): 0
+        Number of Transfer Descriptors: 1
+        Activation Source: SCI4 TXI (Transmit data empty)
+        
     Instance "g_external_irq6 External IRQ (r_icu)"
       Name: g_external_irq6
       Channel: 6
@@ -535,4 +551,68 @@ FSP Configuration
       Interrupts: Transmit Data Empty Interrupt Priority: Priority 12
       Interrupts: Transmit End Interrupt Priority: Priority 12
       Interrupts: Error Interrupt Priority: Priority 12
+      
+    Instance "g_i2c5 I2C Master (r_sci_i2c)"
+      Name: g_i2c5
+      Channel: 5
+      Slave Address : 0x52
+      Address Mode: 7-Bit
+      Rate: Standard
+      Custom Rate (bps): 0
+      SDA Output Delay (nano seconds): 300
+      Noise filter setting: Use clock signal divided by 1 with noise filter
+      Bit Rate Modulation: Enable
+      Callback: sci_i2c5_master_callback
+      Interrupt Priority Level: Priority 12
+      RX Interrupt Priority Level [Only used when DTC is enabled]: Disabled
+      
+      Instance "g_transfer3 Transfer (r_dtc) SCI5 TXI (Transmit data empty)"
+        Name: g_transfer3
+        Mode: Normal
+        Transfer Size: 1 Byte
+        Destination Address Mode: Fixed
+        Source Address Mode: Incremented
+        Repeat Area (Unused in Normal Mode): Source
+        Interrupt Frequency: After all transfers have completed
+        Number of Transfers: 0
+        Number of Blocks (Valid only in Block Mode): 0
+        Number of Transfer Descriptors: 1
+        Activation Source: SCI5 TXI (Transmit data empty)
+        
+    Instance "g_adc1 ADC (r_adc)"
+      General: Name: g_adc1
+      General: Unit: 1
+      General: Resolution: 12-Bit
+      General: Alignment: Right
+      General: Clear after read: On
+      General: Mode: Single Scan
+      General: Double-trigger: Disabled
+      Input: Channel Scan Mask (channel availability varies by MCU): Channel 2
+      Input: Group B Scan Mask (channel availability varies by MCU): 
+      Interrupts: Normal/Group A Trigger: Software
+      Interrupts: Group B Trigger: Disabled
+      Interrupts: Group Priority (Valid only in Group Scan Mode): Group A cannot interrupt Group B
+      Input: Add/Average Count: Disabled
+      Input: Reference Voltage control: VREFH0/VREFH
+      Input: Addition/Averaging Mask (channel availability varies by MCU and unit): 
+      Input: Sample and Hold: Sample and Hold Channels (Available only on selected MCUs): 
+      Input: Sample and Hold: Sample Hold States (Applies only to channels 0, 1, 2): 24
+      Input: Window Compare: Window Mode: Disabled
+      Input: Window Compare: Event Output: OR
+      Input: Window Compare: Window A: Enable: Disabled
+      Input: Window Compare: Window A: Channels to compare (channel availability varies by MCU and unit): 
+      Input: Window Compare: Window A: Channel comparison mode (channel availability varies by MCU and unit): 
+      Input: Window Compare: Window A: Lower Reference: 0
+      Input: Window Compare: Window A: Upper Reference: 0
+      Input: Window Compare: Window B: Enable: Disabled
+      Input: Window Compare: Window B: Channel to compare (channel availability varies by MCU and unit): Channel 0
+      Input: Window Compare: Window B: Comparison mode: Less Than or Outside Window
+      Input: Window Compare: Window B: Lower Reference: 0
+      Input: Window Compare: Window B: Upper Reference: 0
+      Interrupts: Callback: NULL
+      Interrupts: Scan End Interrupt Priority: Disabled
+      Interrupts: Scan End Group B Interrupt Priority: Disabled
+      Interrupts: Window Compare A Interrupt Priority: Disabled
+      Interrupts: Window Compare B Interrupt Priority: Disabled
+      Extra: ADC Ring Buffer: Disabled
       

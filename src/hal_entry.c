@@ -7,7 +7,9 @@
 #include "drv_gpio.h"
 #include "drv_w800.h"
 #include "drv_dispenser.h"
+#include "drv_vl53l0x.h"
 #include <stdio.h>
+#include "r_adc.h"
 
 #if (1 == BSP_MULTICORE_PROJECT) && BSP_TZ_SECURE_BUILD
 bsp_ipc_semaphore_handle_t g_core_start_semaphore =
@@ -124,8 +126,32 @@ void hal_entry(void)
     g_ioport.p_api->pinWrite(&g_ioport_ctrl, BSP_IO_PORT_04_PIN_00, level);
     
     SystickInit();
-    //DispAppTest();
-    W800AppTest();
+    
+    err = g_adc1.p_api->open(g_adc1.p_ctrl, g_adc1.p_cfg);
+    printf("ADC1 open: %d\r\n", err);
+    err = g_adc1.p_api->scanCfg(g_adc1.p_ctrl, g_adc1.p_channel_cfg);
+    printf("ADC1 scanCfg: %d\r\n", err);
+    
+    printf("Starting ADC microphone reading...\r\n");
+    while(1)
+    {
+        g_adc1.p_api->scanStart(g_adc1.p_ctrl);
+        
+        while(1)
+        {
+            adc_status_t status;
+            g_adc1.p_api->scanStatusGet(g_adc1.p_ctrl, &status);
+            if(status.state == ADC_STATE_IDLE)
+                break;
+        }
+        
+        uint16_t adc_value = 0;
+        g_adc1.p_api->read(g_adc1.p_ctrl, ADC_CHANNEL_2, &adc_value);
+        
+        printf("ADC: %u\r\n", adc_value);
+        
+        for(volatile int i = 0; i < 100000; i++);
+    }
 
     IODev *ptKeyDev = IOGetDevice("UserKey");
     if(NULL == ptKeyDev)

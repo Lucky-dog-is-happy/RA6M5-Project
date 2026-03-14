@@ -6,7 +6,7 @@ extern "C" {
 #endif
 
 #define SCI_I2C_CFG_PARAM_CHECKING_ENABLE (BSP_CFG_PARAM_CHECKING_ENABLE)
-#define SCI_I2C_CFG_DTC_ENABLE (0)
+#define SCI_I2C_CFG_DTC_ENABLE (1)
 #define SCI_I2C_CFG_ADDR_MODE_10_BIT_ENABLE (0)
 
 #ifdef __cplusplus
