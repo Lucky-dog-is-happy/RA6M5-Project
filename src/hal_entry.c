@@ -8,8 +8,8 @@
 #include "drv_w800.h"
 #include "drv_dispenser.h"
 #include "drv_vl53l0x.h"
+#include "drv_adc.h"
 #include <stdio.h>
-#include "r_adc.h"
 
 #if (1 == BSP_MULTICORE_PROJECT) && BSP_TZ_SECURE_BUILD
 bsp_ipc_semaphore_handle_t g_core_start_semaphore =
@@ -127,30 +127,34 @@ void hal_entry(void)
     
     SystickInit();
     
-    err = g_adc1.p_api->open(g_adc1.p_ctrl, g_adc1.p_cfg);
-    printf("ADC1 open: %d\r\n", err);
-    err = g_adc1.p_api->scanCfg(g_adc1.p_ctrl, g_adc1.p_channel_cfg);
-    printf("ADC1 scanCfg: %d\r\n", err);
+    ADCDevTypeDef *ptWaterDev = ADCGetDevice(ADC_CHANNEL_WATER);
+    ADCDevTypeDef *ptMicDev = ADCGetDevice(ADC_CHANNEL_MIC);
     
-    printf("Starting ADC microphone reading...\r\n");
+    if (ptWaterDev == NULL || ptMicDev == NULL) {
+        printf("Failed to get ADC devices!\r\n");
+        return;
+    }
+    
+    ptWaterDev->Init(ptWaterDev);
+    ptMicDev->Init(ptMicDev);
+    
+    printf("ADC initialized: Water(ADC0), Mic(ADC1)\r\n");
+    
     while(1)
     {
-        g_adc1.p_api->scanStart(g_adc1.p_ctrl);
+        uint16_t water_val = 0;
+        uint16_t mic_val = 0;
         
-        while(1)
-        {
-            adc_status_t status;
-            g_adc1.p_api->scanStatusGet(g_adc1.p_ctrl, &status);
-            if(status.state == ADC_STATE_IDLE)
-                break;
-        }
+        ptWaterDev->Read(ptWaterDev, &water_val, 1);
+        ptMicDev->Read(ptMicDev, &mic_val, 1);
         
-        uint16_t adc_value = 0;
-        g_adc1.p_api->read(g_adc1.p_ctrl, ADC_CHANNEL_2, &adc_value);
+        uint32_t water_mv = ptWaterDev->ToVoltageMv(water_val);
+        uint32_t mic_mv = ptMicDev->ToVoltageMv(mic_val);
         
-        printf("ADC: %u\r\n", adc_value);
+        printf("Water[ADC0]: %u (%umV) | Mic[ADC1]: %u (%umV)\r\n", 
+               water_val, water_mv, mic_val, mic_mv);
         
-        for(volatile int i = 0; i < 100000; i++);
+        for(volatile int i = 0; i < 500000; i++);
     }
 
     IODev *ptKeyDev = IOGetDevice("UserKey");

@@ -11,6 +11,8 @@
   ],
   "excludedFilePaths": [],
   "includePaths": [
+    "ra/arm/CMSIS-DSP/Include",
+    "ra/arm/CMSIS-DSP/PrivateInclude",
     "ra/arm/CMSIS_6/CMSIS/Core/Include",
     "ra/fsp/inc",
     "ra/fsp/inc/api",

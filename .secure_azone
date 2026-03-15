@@ -4,6 +4,7 @@
     <partition>
         <peripheral name="PORT0.CM33" group="PORT">
             <slot name="P000.CM33" secure="true"/>
+            <slot name="P001.CM33" secure="true"/>
             <slot name="P002.CM33" secure="true"/>
         </peripheral>
         <peripheral name="PORT1.CM33" group="PORT">
@@ -48,6 +49,7 @@
         <peripheral name="SCI6.CM33" group="SCI" security="s"/>
         <peripheral name="SCI5.CM33" group="SCI" security="s"/>
         <peripheral name="ADC1.CM33" group="ADC" security="s"/>
+        <peripheral name="ADC0.CM33" group="ADC" security="s"/>
         <peripheral name="ICU.CM33">
             <slot name="IRQ0.CM33" secure="true"/>
             <slot name="IRQ1.CM33" secure="true"/>
