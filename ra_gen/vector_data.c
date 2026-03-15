@@ -25,6 +25,7 @@
             [18] = sci_uart_eri_isr, /* SCI6 ERI (Receive error) */
             [19] = sci_i2c_txi_isr, /* SCI5 TXI (Transmit data empty) */
             [20] = sci_i2c_tei_isr, /* SCI5 TEI (Transmit end) */
+            [21] = gpt_counter_overflow_isr, /* GPT0 COUNTER OVERFLOW (Overflow) */
         };
         #if BSP_FEATURE_ICU_HAS_IELSR
         const bsp_interrupt_event_t g_interrupt_event_link_select[BSP_ICU_VECTOR_NUM_ENTRIES] =
@@ -50,6 +51,7 @@
             [18] = BSP_PRV_VECT_ENUM(EVENT_SCI6_ERI,GROUP2), /* SCI6 ERI (Receive error) */
             [19] = BSP_PRV_VECT_ENUM(EVENT_SCI5_TXI,GROUP3), /* SCI5 TXI (Transmit data empty) */
             [20] = BSP_PRV_VECT_ENUM(EVENT_SCI5_TEI,GROUP4), /* SCI5 TEI (Transmit end) */
+            [21] = BSP_PRV_VECT_ENUM(EVENT_GPT0_COUNTER_OVERFLOW,GROUP5), /* GPT0 COUNTER OVERFLOW (Overflow) */
         };
         #endif
         #endif

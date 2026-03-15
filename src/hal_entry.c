@@ -10,7 +10,10 @@
 #include "drv_vl53l0x.h"
 #include "drv_adc.h"
 #include "drv_audio.h"
+#include "r_gpt.h"
 #include <stdio.h>
+
+static ADCDevTypeDef *g_ptMicDev = NULL;
 
 #if (1 == BSP_MULTICORE_PROJECT) && BSP_TZ_SECURE_BUILD
 bsp_ipc_semaphore_handle_t g_core_start_semaphore =
@@ -112,6 +115,16 @@ void W800AppTest(void)
     printf("[W800] Test completed!\r\n");
 }
 
+void gpt_callback(timer_callback_args_t *p_args)
+{
+    (void)p_args;
+    if (g_ptMicDev != NULL) {
+        uint16_t mic_val = 0;
+        g_ptMicDev->Read(g_ptMicDev, &mic_val, 1);
+        audio_fft_sample_isr(mic_val);
+    }
+}
+
 void hal_entry(void)
 {
     fsp_err_t err;
@@ -130,6 +143,7 @@ void hal_entry(void)
     
     ADCDevTypeDef *ptWaterDev = ADCGetDevice(ADC_CHANNEL_WATER);
     ADCDevTypeDef *ptMicDev = ADCGetDevice(ADC_CHANNEL_MIC);
+    g_ptMicDev = ptMicDev;
     
     if (ptWaterDev == NULL || ptMicDev == NULL) {
         printf("Failed to get ADC devices!\r\n");
@@ -144,18 +158,16 @@ void hal_entry(void)
     audio_fft_init();
     printf("Audio FFT initialized (256 points, 8kHz sample rate)\r\n");
     
-    uint32_t sample_count = 0;
+    err = g_timer0.p_api->open(g_timer0.p_ctrl, g_timer0.p_cfg);
+    printf("GPT timer open: %d\r\n", err);
+    err = g_timer0.p_api->start(g_timer0.p_ctrl);
+    printf("GPT timer start: %d\r\n", err);
     
     while(1)
     {
         uint16_t water_val = 0;
-        uint16_t mic_val = 0;
         
         ptWaterDev->Read(ptWaterDev, &water_val, 1);
-        ptMicDev->Read(ptMicDev, &mic_val, 1);
-        
-        audio_fft_sample_isr(mic_val);
-        sample_count++;
         
         if (audio_fft_is_ready()) {
             audio_fft_process();
@@ -163,20 +175,15 @@ void hal_entry(void)
             float peak_mag = audio_fft_get_peak_magnitude();
             uint32_t freq_int = (uint32_t)(peak_freq * 10);
             uint32_t mag_int = (uint32_t)(peak_mag * 100);
-            printf("[FFT] S:%u F:%u.%uHz M:%u.%02u\r\n", 
-                   sample_count, freq_int / 10, freq_int % 10, mag_int / 100, mag_int % 100);
+            printf("[FFT] F:%u.%uHz M:%u.%02u\r\n", 
+                   freq_int / 10, freq_int % 10, mag_int / 100, mag_int % 100);
             audio_fft_reset();
-            sample_count = 0;
         }
         
-        if (sample_count % 1000 == 0) {
-            uint32_t water_mv = ptWaterDev->ToVoltageMv(water_val);
-            uint32_t mic_mv = ptMicDev->ToVoltageMv(mic_val);
-            printf("Water[ADC0]: %u (%umV) | Mic[ADC1]: %u (%umV)\r\n", 
-                   water_val, water_mv, mic_val, mic_mv);
-        }
+        uint32_t water_mv = ptWaterDev->ToVoltageMv(water_val);
+        printf("Water[ADC0]: %u (%umV)\r\n", water_val, water_mv);
         
-        for(volatile int i = 0; i < 1000; i++);
+        for(volatile int i = 0; i < 500000; i++);
     }
 
     IODev *ptKeyDev = IOGetDevice("UserKey");

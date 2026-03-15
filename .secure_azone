@@ -50,6 +50,7 @@
         <peripheral name="SCI5.CM33" group="SCI" security="s"/>
         <peripheral name="ADC1.CM33" group="ADC" security="s"/>
         <peripheral name="ADC0.CM33" group="ADC" security="s"/>
+        <peripheral name="GPT0.CM33" group="GPT" security="s"/>
         <peripheral name="ICU.CM33">
             <slot name="IRQ0.CM33" secure="true"/>
             <slot name="IRQ1.CM33" secure="true"/>
@@ -72,6 +73,7 @@
             <slot name="IRQ18.CM33" secure="true"/>
             <slot name="IRQ19.CM33" secure="true"/>
             <slot name="IRQ20.CM33" secure="true"/>
+            <slot name="IRQ21.CM33" secure="true"/>
         </peripheral>
     </partition>
 </azone>
