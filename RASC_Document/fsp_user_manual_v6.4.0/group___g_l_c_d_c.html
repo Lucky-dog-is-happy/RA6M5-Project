@@ -1,0 +1,2049 @@
+<!-- HTML header for doxygen 1.8.7-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<title>RA Flexible Software Package Documentation: Graphics LCD (r_glcdc)</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+    <script type="text/javascript" src="search/lunr.js"></script>
+    <link href="search/lunrsearch.css" rel="stylesheet" type="text/css">
+    <script src="search/lunr_index.js"></script>
+    <script src="search/lunrclient.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="fsp_customdoxygen.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("tr.tree_lvl_1").nextUntil("tr.tree_lvl_1,tr.tree_none").hide();
+		$("tr.tree_lvl_1").data("expanded","0");
+		$("tr.tree_lvl_2").data("expanded","0");
+		$("tr.tree_lvl_3").data("expanded","0");
+		$("tr.tree_lvl_4").data("expanded","0");
+		$("tr.tree_lvl_5").data("expanded","0");
+        $("tr.tree_lvl_1").click(function() {
+		    var lvl_1_is_open = $(this).data("expanded");
+		    if (lvl_1_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_2, tr.tree_lvl_1_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_1,tr.tree_none").hide();
+                $(this).nextUntil("tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_2,tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_2,tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_2").click(function() {
+		    var lvl_2_is_open = $(this).data("expanded");
+		    if (lvl_2_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_3, tr.tree_lvl_2_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+				$(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_3").click(function() {
+		    var lvl_3_is_open = $(this).data("expanded");
+		    if (lvl_3_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_4, tr.tree_lvl_3_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+                $(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_4, tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_4, tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_4").click(function() {
+		    var lvl_4_is_open = $(this).data("expanded");
+		    if (lvl_4_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3,tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5, tr.tree_lvl_4_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+                $(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_5").click(function() {
+		    var lvl_5_is_open = $(this).data("expanded");
+		    if (lvl_5_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_5,tr.tree_lvl_4,tr.tree_lvl_3,tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_5,tr.tree_lvl_4_item,tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+     });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo_scaled.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RA Flexible Software Package Documentation
+   &#160;<span id="projectnumber">Release v6.4.0</span>
+   </div>
+  </td>
+   <td>        <br /><div id="MSearchBox" class="MSearchBoxInactive">
+
+    <form id="lunrSearchForm" name="lunrSearchForm">
+      <span class="left" >
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               alt=""/>
+         <input class="search-input" id="MSearchField" name="q" placeholder="Search" type="text">
+      </span>
+      <span class="right">
+          &nbsp;
+      </span>
+        <!--<input type="submit" value="Search">-->
+    </form>
+</div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('group___g_l_c_d_c.html','');});
+</script>
+
+<script src="search/mark.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    var options = {         // allows highlighting across element boundaries.
+      "acrossElements": true
+    };
+    var bodyText = $("div.contents").text(); // try contents instead of body.
+    // If using body: Problem may be that text inside <script> tags is included in .text() - but not in cheerio?
+    // If using div.contents - works
+    var fullURL = $(location).attr('href');
+    var splitURL = fullURL.split("?");  // Get param string: content after "?" in URL
+    if (splitURL.length > 1) {          // If any content after "?"
+      var paramStr = splitURL[1];
+      var params = paramStr.split("&"); // Split params on "&"
+      for (i = 0; i < params.length; i++) {
+        var paramPair = params[i].split("=");
+        if (paramPair[0] == "pos") {     // If any param starts "pos", get the content after "="
+          posStr = paramPair[1];
+          var splitPos = posStr.split(",");
+          var termArray = [];
+        // termArray will have the search terms
+            for (i=0; i < splitPos.length; i += 2) {
+            start = splitPos[i];
+            len = splitPos[i+1]; // Needs error detection! Vulnerable if non-even # of pos entries
+            term = bodyText.substr(start,len);
+            if (termArray.includes(term) == false) {     // List all unique terms
+                termArray.push(bodyText.substr(start,len));
+            }
+          }
+    //      console.log(termArray);
+          var context = document.querySelector("div.contents");
+          var instance = new Mark(context);
+          for(i=0;i<termArray.length; i+=1) {
+            instance.mark(termArray[i],options);  // Use Mark.js to mark all terms in termArray
+            }
+          var firstMark = document.querySelector("mark");
+          firstMark.scrollIntoView(true);
+          //      console.log($("mark").first().text()); // Trying to scroll to first Mark element.
+        }
+            }
+    }
+  });
+</script>
+
+<link href="fsp_customdoxygen.css" rel="stylesheet" type="text/css" />
+
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+<!-- Lunr search results -->
+<div id="lunrResultBox" style="
+        position: fixed;
+        border: 1px solid black;
+        background-color: WhiteSmoke;
+        padding: 10px;
+        width: 500px;
+        height: 500px;
+        top: 30;
+        right: 0;
+        overflow: auto;
+        display: none">
+    <button onclick="closeLunrResults()" style="float: right;">X</button>
+    <div class="resultCount" id="resultCount"></div>
+    <div id="searchResults"></div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
+  <div class="headertitle">
+<div class="title">Graphics LCD (r_glcdc)<div class="ingroups"><a class="el" href="group___r_e_n_e_s_a_s___m_o_d_u_l_e_s.html">Modules</a> &raquo; <a class="el" href="group___r_e_n_e_s_a_s___g_r_a_p_h_i_c_s___m_o_d_u_l_e_s.html">Graphics</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga61603db8684d31ac86b2960096c91f58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#ga61603db8684d31ac86b2960096c91f58">R_GLCDC_Open</a> (<a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> *const p_api_ctrl, <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__cfg__t">display_cfg_t</a> const *const p_cfg)</td></tr>
+<tr class="separator:ga61603db8684d31ac86b2960096c91f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga77bc7980b821bebed7cc20dbb427dfd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#ga77bc7980b821bebed7cc20dbb427dfd9">R_GLCDC_Close</a> (<a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> *const p_api_ctrl)</td></tr>
+<tr class="separator:ga77bc7980b821bebed7cc20dbb427dfd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0e8a7d17184b405e6caae3ba21857baa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#ga0e8a7d17184b405e6caae3ba21857baa">R_GLCDC_Start</a> (<a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> *const p_api_ctrl)</td></tr>
+<tr class="separator:ga0e8a7d17184b405e6caae3ba21857baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga769f53407aca261a4d68eefca3406436"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#ga769f53407aca261a4d68eefca3406436">R_GLCDC_Stop</a> (<a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> *const p_api_ctrl)</td></tr>
+<tr class="separator:ga769f53407aca261a4d68eefca3406436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga661142a24277860146762914af644242"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#ga661142a24277860146762914af644242">R_GLCDC_LayerChange</a> (<a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> const *const p_api_ctrl, <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__runtime__cfg__t">display_runtime_cfg_t</a> const *const p_cfg, <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#ga364ba16397d9d24efb92170246c024ab">display_frame_layer_t</a> layer)</td></tr>
+<tr class="separator:ga661142a24277860146762914af644242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0d020f73e547ae005c666638a0dff427"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#ga0d020f73e547ae005c666638a0dff427">R_GLCDC_BufferChange</a> (<a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> const *const p_api_ctrl, uint8_t *const framebuffer, <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#ga364ba16397d9d24efb92170246c024ab">display_frame_layer_t</a> layer)</td></tr>
+<tr class="separator:ga0d020f73e547ae005c666638a0dff427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9d0754a6820a3a189c270f8da8677b72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#ga9d0754a6820a3a189c270f8da8677b72">R_GLCDC_ColorCorrection</a> (<a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> const *const p_api_ctrl, <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__correction__t">display_correction_t</a> const *const p_correction)</td></tr>
+<tr class="separator:ga9d0754a6820a3a189c270f8da8677b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaabcf5b43ea6cb821c0cddee78172cc5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#gaaabcf5b43ea6cb821c0cddee78172cc5">R_GLCDC_ClutUpdate</a> (<a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> const *const p_api_ctrl, <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__clut__cfg__t">display_clut_cfg_t</a> const *const p_clut_cfg, <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#ga364ba16397d9d24efb92170246c024ab">display_frame_layer_t</a> layer)</td></tr>
+<tr class="separator:gaaabcf5b43ea6cb821c0cddee78172cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadae3a06f170b361c175a49a9961298e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#gadae3a06f170b361c175a49a9961298e9">R_GLCDC_ClutEdit</a> (<a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> const *const p_api_ctrl, <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#ga364ba16397d9d24efb92170246c024ab">display_frame_layer_t</a> layer, uint8_t index, uint32_t color)</td></tr>
+<tr class="separator:gadae3a06f170b361c175a49a9961298e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga90e788cd13261f633af7a67bc551f82a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#ga90e788cd13261f633af7a67bc551f82a">R_GLCDC_ColorKeySet</a> (<a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> const *const p_api_ctrl, <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__colorkeying__layer__t">display_colorkeying_layer_t</a> key_cfg, <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#ga364ba16397d9d24efb92170246c024ab">display_frame_layer_t</a> layer)</td></tr>
+<tr class="separator:ga90e788cd13261f633af7a67bc551f82a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ba1f4b003e8045aefaa604f4eb5954f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#ga1ba1f4b003e8045aefaa604f4eb5954f">R_GLCDC_StatusGet</a> (<a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> const *const p_api_ctrl, <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__status__t">display_status_t</a> *const p_status)</td></tr>
+<tr class="separator:ga1ba1f4b003e8045aefaa604f4eb5954f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Driver for the GLCDC peripheral on RA MCUs. This module implements the <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html">Display Interface</a>. </p>
+<h1><a class="anchor" id="r-glcdc-overview"></a>
+Overview</h1>
+<p>The GLCDC is a multi-stage graphics output peripheral designed to automatically generate timing and data signals for LCD panels. As part of its internal pipeline the two internal graphics layers can be repositioned, alpha blended, color corrected, dithered and converted to and from a wide variety of pixel formats.</p>
+<h2><a class="anchor" id="r-glcdc-features"></a>
+Features</h2>
+<p>The following features are available:</p>
+<p><a class="anchor" id="um_glcdc_rgb565_color_format_support"></a><a class="anchor" id="um_glcdc_argb888_color_format_support"></a><a class="anchor" id="um_glcdc_argb8888_support"></a><a class="anchor" id="um_glcdc_argb1555_color_format_support"></a><a class="anchor" id="um_glcdc_argb4444_color_format_support"></a><a class="anchor" id="um_glcdc_clut8_support"></a><a class="anchor" id="um_glcdc_clut4_support"></a><a class="anchor" id="um_glcdc_clut1_support"></a><a class="anchor" id="um_glcdc_rgb888_support"></a><a class="anchor" id="um_glcdc_rgb666_support"></a><a class="anchor" id="um_glcdc_rgb565_support"></a><a class="anchor" id="um_glcdc_serial_rgb_signal_support"></a> <a class="anchor" id="um_glcdc_hardware_accelerated_fade_inout_blending"></a><a class="anchor" id="um_glcdc_alpha_blending"></a><a class="anchor" id="um_glcdc_rectangle_blending"></a><a class="anchor" id="um_glcdc_superimpose_graphic_data"></a><a class="anchor" id="um_glcdc_two_graphic_layers_with_different_pixel_size"></a><a class="anchor" id="um_glcdc_generate_data_enable_signal_to_lcd_panel"></a><a class="anchor" id="um_glcdc_clut_entries_load_or_change"></a><a class="anchor" id="um_glcdc_clut_entries_change_single"></a><a class="anchor" id="um_glcdc_clut_memory"></a><a class="anchor" id="um_glcdc_dither_effect"></a><a class="anchor" id="um_glcdc_brightness_and_contrast_adjustment"></a><a class="anchor" id="um_glcdc_gamma_correction"></a><a class="anchor" id="um_glcdc_color_correction_order"></a> <a class="anchor" id="um_glcdc_generate_vsynchsync_to_lcd_panel"></a><a class="anchor" id="um_glcdc_tcon_edge_selection"></a> <a class="anchor" id="um_glcdc_max_line_number"></a><a class="anchor" id="um_glcdc_max_pixel_size"></a> <a class="anchor" id="um_glcdc_control_events"></a> <a class="anchor" id="um_glcdc_line_repeat_function"></a><a class="anchor" id="um_glcdc_data_order_swapping"></a> <a class="anchor" id="um_glcdc_max_res"></a> </p><table class="doxtable">
+<tr>
+<th>Feature </th><th>Options  </th></tr>
+<tr>
+<td>Input color formats </td><td>ARGB8888, ARGB4444, ARGB1555, RGB888 (32-bit), RGB565, CLUT 8bpp, CLUT 4bpp, CLUT 1bpp </td></tr>
+<tr>
+<td>Output color formats </td><td>RGB888, RGB666, RGB565, Serial RGB888 (8-bit parallel) </td></tr>
+<tr>
+<td>Correction processes </td><td>Alpha blending, positioning, brightness and contrast, gamma correction, dithering </td></tr>
+<tr>
+<td>Timing signals </td><td>Dot clock, Vsync, Hsync, Vertical and horizontal data enable (DE) </td></tr>
+<tr>
+<td>Maximum resolution </td><td>Up to 2038 x 2043 pixels (dependent on sync signal width) </td></tr>
+<tr>
+<td>Maximum dot clock </td><td>60MHz for serial RGB mode, 54MHz otherwise </td></tr>
+<tr>
+<td>Internal clock divisors </td><td>1-9, 12, 16, 24, 32 </td></tr>
+<tr>
+<td>Interrupts </td><td>Line detect (Vblank), Layer 1 underflow, Layer 2 underflow </td></tr>
+<tr>
+<td>Other functions </td><td>Byte-order and endianness control, line repeat function </td></tr>
+</table>
+<h2><a class="anchor" id="r-glcdc-supported-devices"></a>
+Supported Devices</h2>
+<p><table class="doxtable">
+<tr>
+<th>Device Group</th><th>Devices </th></tr>
+<tr>
+<td>RA6</td><td>RA6M3 </td></tr>
+<tr>
+<td>RA8</td><td>RA8D1, RA8D2, RA8E2, RA8P1 </td></tr>
+</table>
+</p>
+<h1><a class="anchor" id="r-glcdc-configuration"></a>
+Configuration</h1>
+<p><h2>Build Time Configurations for r_glcdc</h2>
+The following build time configurations are defined in fsp_cfg/r_glcdc_cfg.h:<br />
+</p><table class="doxtable">
+<tr>
+<th>Configuration</th><th>Options</th><th>Default</th><th>Description </th></tr>
+<tr class="tree_none">
+<td>Parameter Checking</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Default (BSP)</li>
+<li>
+Enabled</li>
+<li>
+Disabled</li>
+</ul>
+</td><td>Default (BSP) </td><td>If selected, code for parameter checking is included in the build. </td></tr>
+<tr class="tree_none">
+<td>Color Correction</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+On</li>
+<li>
+Off</li>
+</ul>
+</td><td>Off </td><td>If selected, code to adjust brightness, contrast and gamma settings is included in the build. When disabled all color correction configuration options are ignored. </td></tr>
+</table>
+</p>
+<p><h2>Configurations for Graphics &gt; Graphics LCD (r_glcdc)</h2>
+This module can be added to the Stacks tab via New Stack &gt; Graphics &gt; Graphics LCD (r_glcdc).<br />
+</p><table class="doxtable">
+<tr>
+<th>Configuration</th><th>Options</th><th>Default</th><th>Description </th></tr>
+<tr class="tree_lvl_1">
+<td class="tree_lvl_1" colspan="4"><span class="chevron-collapsed"></span> General  </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Name</td><td>Name must be a valid C symbol</td><td>g_display0 </td><td>Module name. </td></tr>
+<tr class="tree_lvl_1">
+<td class="tree_lvl_1" colspan="4"><span class="chevron-collapsed"></span> Interrupts  </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Callback Function</td><td>Name must be a valid C symbol</td><td>NULL </td><td>A user callback function can be defined here. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Line Detect Interrupt Priority</td><td>MCU Specific Options</td><td></td><td>Select the line detect (Vsync) interrupt priority. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Underflow 1 Interrupt Priority</td><td>MCU Specific Options</td><td></td><td>Select the underflow interrupt priority for layer 1. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Underflow 2 Interrupt Priority</td><td>MCU Specific Options</td><td></td><td>Select the underflow interrupt priority for layer 2. </td></tr>
+<tr class="tree_lvl_1">
+<td class="tree_lvl_1" colspan="4"><span class="chevron-collapsed"></span> Input  </td></tr>
+<tr class="tree_lvl_2">
+<td class="tree_lvl_2" colspan="4"><span class="chevron-collapsed"></span> Input &gt; Graphics Layer 1  </td></tr>
+<tr class="tree_lvl_3">
+<td class="tree_lvl_3" colspan="4"><span class="chevron-collapsed"></span> Input &gt; Graphics Layer 1 &gt; General  </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Enabled</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Yes</li>
+<li>
+No</li>
+</ul>
+</td><td>Yes </td><td>Specify Used if the graphics layer 1 is used. If so a framebuffer will be automatically generated based on the specified height and horizontal stride. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Horizontal size</td><td>Value must be an integer from 16 to 2040</td><td>480 </td><td>Specify the number of horizontal pixels. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Vertical size</td><td>Value must be an integer from 16 to 2043</td><td>854 </td><td>Specify the number of vertical pixels. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Horizontal position</td><td>Must be a valid non-negative integer with a maximum configurable value of 4091</td><td>0 </td><td>Specify the horizontal offset in pixels of the graphics layer from the background layer. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Vertical position</td><td>Must be a valid non-negative integer with a maximum configurable value of 4094</td><td>0 </td><td>Specify the vertical offset in pixels of the graphics layer from the background layer. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Color format</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+ARGB8888 (32-bit)</li>
+<li>
+RGB888 (32-bit)</li>
+<li>
+RGB565 (16-bit)</li>
+<li>
+ARGB1555 (16-bit)</li>
+<li>
+ARGB4444 (16-bit)</li>
+<li>
+CLUT8 (8-bit)</li>
+<li>
+CLUT4 (4-bit)</li>
+<li>
+CLUT1 (1-bit)</li>
+</ul>
+</td><td>RGB565 (16-bit) </td><td>Specify the graphics layer Input format. If selecting CLUT formats, you must write the CLUT table data before starting output. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Line descending mode</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Enabled</li>
+<li>
+Disabled</li>
+</ul>
+</td><td>Disabled </td><td>Select Used if the framebuffer starts from the bottom of the line. </td></tr>
+<tr class="tree_lvl_3">
+<td class="tree_lvl_3" colspan="4"><span class="chevron-collapsed"></span> Input &gt; Graphics Layer 1 &gt; Framebuffer  </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Framebuffer name</td><td>This property must be a valid C symbol</td><td>fb_background </td><td>Specify the name for the framebuffer for Layer 1. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Number of framebuffers</td><td>Must be a valid non-negative integer</td><td>2 </td><td>Number of framebuffers allocated for Graphics Layer 1. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Section for framebuffer allocation</td><td>Manual Entry</td><td>.sdram_noinit </td><td>Specify the section in which to allocate the framebuffer. </td></tr>
+<tr class="tree_lvl_3">
+<td class="tree_lvl_3" colspan="4"><span class="chevron-collapsed"></span> Input &gt; Graphics Layer 1 &gt; Line Repeat  </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Enable</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+On</li>
+<li>
+Off</li>
+</ul>
+</td><td>Off </td><td>Select On if the display will be repeated from a smaller section of the framebuffer. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Repeat count</td><td>Must be a valid non-negative integer with a maximum configurable value of 65535 i.e (vertical size) x (lines repeat times) must be equal to the panel vertical size</td><td>0 </td><td>Specify the number of times the image is repeated. </td></tr>
+<tr class="tree_lvl_3">
+<td class="tree_lvl_3" colspan="4"><span class="chevron-collapsed"></span> Input &gt; Graphics Layer 1 &gt; Fading  </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Mode</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+None</li>
+<li>
+Fade-in</li>
+<li>
+Fade-out</li>
+</ul>
+</td><td>None </td><td>Select the fade method. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Speed</td><td>Value must be an integer from 0 to 255</td><td>0 </td><td>Specify the number of frames for the fading transition to complete. </td></tr>
+<tr class="tree_lvl_2">
+<td class="tree_lvl_2" colspan="4"><span class="chevron-collapsed"></span> Input &gt; Graphics Layer 2  </td></tr>
+<tr class="tree_lvl_3">
+<td class="tree_lvl_3" colspan="4"><span class="chevron-collapsed"></span> Input &gt; Graphics Layer 2 &gt; General  </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Enabled</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Yes</li>
+<li>
+No</li>
+</ul>
+</td><td>No </td><td>Specify Used if the graphics layer 2 is used. If so a framebuffer will be automatically generated based on the specified height and horizontal stride. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Horizontal size</td><td>Value must be be an integer from 16 to 2040</td><td>480 </td><td>Specify the number of horizontal pixels. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Vertical size</td><td>Value must be be an integer from 16 to 2043</td><td>854 </td><td>Specify the number of vertical pixels. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Horizontal position</td><td>Must be a valid non-negative integer with a maximum configurable value of 4091</td><td>0 </td><td>Specify the horizontal offset in pixels of the graphics layer from the background layer. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Vertical position</td><td>Must be a valid non-negative integer with a maximum configurable value of 4094</td><td>0 </td><td>Specify the vertical offset in pixels of the graphics layer from the background layer. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Color format</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+ARGB8888 (32-bit)</li>
+<li>
+RGB888 (32-bit)</li>
+<li>
+RGB565 (16-bit)</li>
+<li>
+ARGB1555 (16-bit)</li>
+<li>
+ARGB4444 (16-bit)</li>
+<li>
+CLUT8 (8-bit)</li>
+<li>
+CLUT4 (4-bit)</li>
+<li>
+CLUT1 (1-bit)</li>
+</ul>
+</td><td>RGB565 (16-bit) </td><td>Specify the graphics layer Input format. If selecting CLUT formats, you must write the CLUT table data before starting output. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Line descending mode</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Enabled</li>
+<li>
+Disabled</li>
+</ul>
+</td><td>Disabled </td><td>Select Used if the framebuffer starts from the bottom of the line. </td></tr>
+<tr class="tree_lvl_3">
+<td class="tree_lvl_3" colspan="4"><span class="chevron-collapsed"></span> Input &gt; Graphics Layer 2 &gt; Framebuffer  </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Framebuffer name</td><td>This property must be a valid C symbol</td><td>fb_foreground </td><td>Specify the name for the framebuffer for Layer 2. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Number of framebuffers</td><td>Must be a valid non-negative integer</td><td>2 </td><td>Number of framebuffers allocated for Graphics Layer 2. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Section for framebuffer allocation</td><td>Manual Entry</td><td>.sdram_noinit </td><td>Specify the section in which to allocate the framebuffer. </td></tr>
+<tr class="tree_lvl_3">
+<td class="tree_lvl_3" colspan="4"><span class="chevron-collapsed"></span> Input &gt; Graphics Layer 2 &gt; Line Repeat  </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Enable</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+On</li>
+<li>
+Off</li>
+</ul>
+</td><td>Off </td><td>Select On if the display will be repeated from a smaller section of the framebuffer. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Repeat count</td><td>Must be a valid non-negative integer with a maximum configurable value of 65535 i.e (vertical size) x (lines repeat times) must be equal to the panel vertical size</td><td>0 </td><td>Specify the number of times the image is repeated. </td></tr>
+<tr class="tree_lvl_3">
+<td class="tree_lvl_3" colspan="4"><span class="chevron-collapsed"></span> Input &gt; Graphics Layer 2 &gt; Fading  </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Mode</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+None</li>
+<li>
+Fade-in</li>
+<li>
+Fade-out</li>
+</ul>
+</td><td>None </td><td>Select the fade method. </td></tr>
+<tr class="tree_lvl_3_item">
+<td class="tree_lvl_3_cell">Speed</td><td>Value must be an integer from 0 to 255</td><td>0 </td><td>Specify the number of frames for the fading transition to complete. </td></tr>
+<tr class="tree_lvl_1">
+<td class="tree_lvl_1" colspan="4"><span class="chevron-collapsed"></span> Output  </td></tr>
+<tr class="tree_lvl_2">
+<td class="tree_lvl_2" colspan="4"><span class="chevron-collapsed"></span> Output &gt; Timing  </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Horizontal total cycles</td><td>Value must be an integer from 24 to 2047</td><td>559 </td><td>Specify the total cycles in a horizontal line. Set to the number of cycles defined in the data sheet of LCD panel sheet in your system </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Horizontal active video cycles</td><td>Value must be an integer from 16 to 2040</td><td>480 </td><td>Specify the number of active video cycles in a horizontal line (including front and back porch). Set to the number of cycles defined in the data sheet of LCD panel sheet in your system. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Horizontal back porch cycles</td><td>Value must be an integer from 5 to 2029</td><td>5 </td><td>Specify the number of back porch cycles in a horizontal line. Back porch starts from the beginning of Hsync cycles, which means back porch cycles contain Hsync cycles. Set to the number of cycles defined in the data sheet of LCD panel sheet in your system. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Horizontal sync signal cycles</td><td>Value must be an integer from 0 to 2046</td><td>2 </td><td>Specify the number of Hsync signal assertion cycles. Set to the number of cycles defined in the data sheet of LCD panel sheet in your system. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Horizontal sync signal polarity</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Low active</li>
+<li>
+High active</li>
+</ul>
+</td><td>Low active </td><td>Select the polarity of Hsync signal to match your system. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Vertical total lines</td><td>Value must be an integer from 20 to 2047</td><td>894 </td><td>Specify number of total lines in a frame (including front and back porch). </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Vertical active video lines</td><td>Value must be an integer from 16 to 2043</td><td>854 </td><td>Specify the number of active video lines in a frame. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Vertical back porch lines</td><td>Value must be an integer from 3 to 2030</td><td>20 </td><td>Specify the number of back porch lines in a frame. Back porch starts from the beginning of Vsync lines, which means back porch lines contain Vsync lines. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Vertical sync signal lines</td><td>Value must be an integer from 0 to 2046</td><td>3 </td><td>Specify the Vsync signal assertion lines in a frame. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Vertical sync signal polarity</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Low active</li>
+<li>
+High active</li>
+</ul>
+</td><td>Low active </td><td>Select the polarity of Vsync signal to match to your system. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Data Enable Signal Polarity</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Low active</li>
+<li>
+High active</li>
+</ul>
+</td><td>High active </td><td>Select the polarity of Data Enable signal to match to your system. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Sync edge</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Rising edge</li>
+<li>
+Falling edge</li>
+</ul>
+</td><td>Falling edge </td><td>Select the polarity of Sync signals to match to your system. </td></tr>
+<tr class="tree_lvl_2">
+<td class="tree_lvl_2" colspan="4"><span class="chevron-collapsed"></span> Output &gt; Format  </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Color format</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+24bits RGB888</li>
+<li>
+18bits RGB666</li>
+<li>
+16bits RGB565</li>
+<li>
+8bits serial</li>
+</ul>
+</td><td>24bits RGB888 </td><td>Specify the graphics layer output format to match to your LCD panel. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Color order</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+RGB</li>
+<li>
+BGR</li>
+</ul>
+</td><td>RGB </td><td>Select data order for output signal to LCD panel. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Endian</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Little endian</li>
+<li>
+Big endian</li>
+</ul>
+</td><td>Little endian </td><td>Select data endianness for output signal to LCD panel. </td></tr>
+<tr class="tree_lvl_2">
+<td class="tree_lvl_2" colspan="4"><span class="chevron-collapsed"></span> Output &gt; Background  </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Alpha</td><td>Value must be an integer from 0 to 255</td><td>255 </td><td>Alpha component of the background color. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Red</td><td>Value must be an integer from 0 to 255</td><td>0 </td><td>Red component of the background color. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Green</td><td>Value must be an integer from 0 to 255</td><td>0 </td><td>Green component of the background color. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Blue</td><td>Value must be an integer from 0 to 255</td><td>0 </td><td>Blue component of the background color. </td></tr>
+<tr class="tree_lvl_1">
+<td class="tree_lvl_1" colspan="4"><span class="chevron-collapsed"></span> CLUT  </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Enabled</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Yes</li>
+<li>
+No</li>
+</ul>
+</td><td>No </td><td>Specify Used if selecting CLUT formats for a graphics layer input format. If used, a buffer (CLUT_buffer) will be automatically generated based on the selected pixel width. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Size</td><td>Must be a valid non-negative integer with a maximum configurable value of 256</td><td>256 </td><td>Specify the number of entries for the CLUT source data buffer. Each entry consumes 4 bytes (1 word). </td></tr>
+<tr class="tree_lvl_1">
+<td class="tree_lvl_1" colspan="4"><span class="chevron-collapsed"></span> TCON  </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Hsync pin select</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Not used</li>
+<li>
+LCD_TCON0</li>
+<li>
+LCD_TCON1</li>
+<li>
+LCD_TCON2</li>
+<li>
+LCD_TCON3</li>
+</ul>
+</td><td>LCD_TCON1 </td><td>Select the TCON pin used for the Hsync signal to match to your system. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Vsync pin select</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Not used</li>
+<li>
+LCD_TCON0</li>
+<li>
+LCD_TCON1</li>
+<li>
+LCD_TCON2</li>
+<li>
+LCD_TCON3</li>
+</ul>
+</td><td>LCD_TCON0 </td><td>Select TCON pin used for Vsync signal to match to your system. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Data enable (DE) pin select</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Not used</li>
+<li>
+LCD_TCON0</li>
+<li>
+LCD_TCON1</li>
+<li>
+LCD_TCON2</li>
+<li>
+LCD_TCON3</li>
+</ul>
+</td><td>LCD_TCON2 </td><td>Select TCON pin used for DataEnable signal to match to your system. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Panel clock source</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Internal clock (GLCDCLK)</li>
+<li>
+External clock (LCD_EXTCLK)</li>
+</ul>
+</td><td>Internal clock (GLCDCLK) </td><td>Choose between an internal GLCDCLK generated from PCLKA or an external clock provided to the LCD_EXTCLK pin. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Panel clock division ratio</td><td>Refer to the RA Configuration tool for available options.</td><td>1/8 </td><td>Select the clock source divider value. </td></tr>
+<tr class="tree_lvl_1">
+<td class="tree_lvl_1" colspan="4"><span class="chevron-collapsed"></span> Color Correction  </td></tr>
+<tr class="tree_lvl_2">
+<td class="tree_lvl_2" colspan="4"><span class="chevron-collapsed"></span> Color Correction &gt; Brightness  </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Enabled</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Yes</li>
+<li>
+No</li>
+</ul>
+</td><td>No </td><td>Enable brightness color correction. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Red channel</td><td>Value must be an integer from 0 to 1023</td><td>512 </td><td>Red component of the brightness calibration. This value is divided by 512 to determine gain. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Green channel</td><td>Value must be an integer from 0 to 1023</td><td>512 </td><td>Green component of the brightness calibration. This value is divided by 512 to determine gain. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Blue channel</td><td>Value must be an integer from 0 to 1023</td><td>512 </td><td>Blue component of the brightness calibration. This value is divided by 512 to determine gain. </td></tr>
+<tr class="tree_lvl_2">
+<td class="tree_lvl_2" colspan="4"><span class="chevron-collapsed"></span> Color Correction &gt; Contrast  </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Enabled</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Yes</li>
+<li>
+No</li>
+</ul>
+</td><td>No </td><td>Enable contrast color correction. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Red channel gain</td><td>Value must be an integer from 0 to 255</td><td>128 </td><td>Red component of the contrast calibration. This value is divided by 128 to determine gain. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Green channel gain</td><td>Value must be an integer from 0 to 255</td><td>128 </td><td>Green component of the contrast calibration. This value is divided by 128 to determine gain. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Blue channel gain</td><td>Value must be an integer from 0 to 255</td><td>128 </td><td>Blue component of the contrast calibration. This value is divided by 128 to determine gain. </td></tr>
+<tr class="tree_lvl_2">
+<td class="tree_lvl_2" colspan="4"><span class="chevron-collapsed"></span> Color Correction &gt; Gamma  </td></tr>
+<tr class="tree_lvl_3">
+<td class="tree_lvl_3" colspan="4"><span class="chevron-collapsed"></span> Color Correction &gt; Gamma &gt; Tables  </td></tr>
+<tr class="tree_lvl_4">
+<td class="tree_lvl_4" colspan="4"><span class="chevron-collapsed"></span> Color Correction &gt; Gamma &gt; Tables &gt; Red  </td></tr>
+<tr class="tree_lvl_5">
+<td class="tree_lvl_5" colspan="4"><span class="chevron-collapsed"></span> Color Correction &gt; Gamma &gt; Tables &gt; Red &gt; Gain  </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">0</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">1</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">2</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">3</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">4</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">5</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">6</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">7</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">8</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">9</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">10</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">11</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">12</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">13</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">14</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">15</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5">
+<td class="tree_lvl_5" colspan="4"><span class="chevron-collapsed"></span> Color Correction &gt; Gamma &gt; Tables &gt; Red &gt; Threshold  </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">1</td><td>Value must be an integer from 0 to 1023</td><td>64 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">2</td><td>Value must be an integer from 0 to 1023</td><td>128 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">3</td><td>Value must be an integer from 0 to 1023</td><td>192 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">4</td><td>Value must be an integer from 0 to 1023</td><td>256 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">5</td><td>Value must be an integer from 0 to 1023</td><td>320 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">6</td><td>Value must be an integer from 0 to 1023</td><td>384 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">7</td><td>Value must be an integer from 0 to 1023</td><td>448 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">8</td><td>Value must be an integer from 0 to 1023</td><td>512 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">9</td><td>Value must be an integer from 0 to 1023</td><td>576 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">10</td><td>Value must be an integer from 0 to 1023</td><td>640 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">11</td><td>Value must be an integer from 0 to 1023</td><td>704 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">12</td><td>Value must be an integer from 0 to 1023</td><td>768 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">13</td><td>Value must be an integer from 0 to 1023</td><td>832 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">14</td><td>Value must be an integer from 0 to 1023</td><td>896 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">15</td><td>Value must be an integer from 0 to 1023</td><td>960 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_4">
+<td class="tree_lvl_4" colspan="4"><span class="chevron-collapsed"></span> Color Correction &gt; Gamma &gt; Tables &gt; Green  </td></tr>
+<tr class="tree_lvl_5">
+<td class="tree_lvl_5" colspan="4"><span class="chevron-collapsed"></span> Color Correction &gt; Gamma &gt; Tables &gt; Green &gt; Gain  </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">0</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">1</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">2</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">3</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">4</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">5</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">6</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">7</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">8</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">9</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">10</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">11</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">12</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">13</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">14</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">15</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5">
+<td class="tree_lvl_5" colspan="4"><span class="chevron-collapsed"></span> Color Correction &gt; Gamma &gt; Tables &gt; Green &gt; Threshold  </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">1</td><td>Value must be an integer from 0 to 1023</td><td>64 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">2</td><td>Value must be an integer from 0 to 1023</td><td>128 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">3</td><td>Value must be an integer from 0 to 1023</td><td>192 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">4</td><td>Value must be an integer from 0 to 1023</td><td>256 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">5</td><td>Value must be an integer from 0 to 1023</td><td>320 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">6</td><td>Value must be an integer from 0 to 1023</td><td>384 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">7</td><td>Value must be an integer from 0 to 1023</td><td>448 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">8</td><td>Value must be an integer from 0 to 1023</td><td>512 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">9</td><td>Value must be an integer from 0 to 1023</td><td>576 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">10</td><td>Value must be an integer from 0 to 1023</td><td>640 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">11</td><td>Value must be an integer from 0 to 1023</td><td>704 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">12</td><td>Value must be an integer from 0 to 1023</td><td>768 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">13</td><td>Value must be an integer from 0 to 1023</td><td>832 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">14</td><td>Value must be an integer from 0 to 1023</td><td>896 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">15</td><td>Value must be an integer from 0 to 1023</td><td>960 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_4">
+<td class="tree_lvl_4" colspan="4"><span class="chevron-collapsed"></span> Color Correction &gt; Gamma &gt; Tables &gt; Blue  </td></tr>
+<tr class="tree_lvl_5">
+<td class="tree_lvl_5" colspan="4"><span class="chevron-collapsed"></span> Color Correction &gt; Gamma &gt; Tables &gt; Blue &gt; Gain  </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">0</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">1</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">2</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">3</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">4</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">5</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">6</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">7</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">8</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">9</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">10</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">11</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">12</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">13</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">14</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">15</td><td>Value must be an integer from 0 to 2047</td><td>1024 </td><td>Enter a gain value from 0 to 2047 (corresponding to gain of 0 and 1.999, respectively). </td></tr>
+<tr class="tree_lvl_5">
+<td class="tree_lvl_5" colspan="4"><span class="chevron-collapsed"></span> Color Correction &gt; Gamma &gt; Tables &gt; Blue &gt; Threshold  </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">1</td><td>Value must be an integer from 0 to 1023</td><td>64 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">2</td><td>Value must be an integer from 0 to 1023</td><td>128 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">3</td><td>Value must be an integer from 0 to 1023</td><td>192 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">4</td><td>Value must be an integer from 0 to 1023</td><td>256 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">5</td><td>Value must be an integer from 0 to 1023</td><td>320 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">6</td><td>Value must be an integer from 0 to 1023</td><td>384 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">7</td><td>Value must be an integer from 0 to 1023</td><td>448 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">8</td><td>Value must be an integer from 0 to 1023</td><td>512 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">9</td><td>Value must be an integer from 0 to 1023</td><td>576 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">10</td><td>Value must be an integer from 0 to 1023</td><td>640 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">11</td><td>Value must be an integer from 0 to 1023</td><td>704 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">12</td><td>Value must be an integer from 0 to 1023</td><td>768 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">13</td><td>Value must be an integer from 0 to 1023</td><td>832 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">14</td><td>Value must be an integer from 0 to 1023</td><td>896 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_5_item">
+<td class="tree_lvl_5_cell">15</td><td>Value must be an integer from 0 to 1023</td><td>960 </td><td>Enter a threshold value between the surrounding values less than or equal to 1023. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Red</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+On</li>
+<li>
+Off</li>
+</ul>
+</td><td>Off </td><td>Enable gamma color correction for the red channel. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Green</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+On</li>
+<li>
+Off</li>
+</ul>
+</td><td>Off </td><td>Enable gamma color correction for the green channel. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Blue</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+On</li>
+<li>
+Off</li>
+</ul>
+</td><td>Off </td><td>Enable gamma color correction for the blue channel. </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Table Mode</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Constant</li>
+<li>
+Variable</li>
+</ul>
+</td><td>Variable </td><td>Set to Constant to override the automatically-generated RAM gamma tables with a constant declaration using the provided values. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Process order</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Brightness/contrast first</li>
+<li>
+Gamma first</li>
+</ul>
+</td><td>Brightness/contrast first </td><td>Select the color correction processing order. </td></tr>
+<tr class="tree_lvl_1">
+<td class="tree_lvl_1" colspan="4"><span class="chevron-collapsed"></span> Dithering  </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Enabled</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Yes</li>
+<li>
+No</li>
+</ul>
+</td><td>No </td><td>Enable dithering to reduce the effect of color banding. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Mode</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Truncate</li>
+<li>
+Round off</li>
+<li>
+2x2 Pattern</li>
+</ul>
+</td><td>Truncate </td><td>Select the dithering mode. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Pattern A</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Pattern 00</li>
+<li>
+Pattern 01</li>
+<li>
+Pattern 10</li>
+<li>
+Pattern 11</li>
+</ul>
+</td><td>Pattern 11 </td><td>Select the dithering pattern. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Pattern B</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Pattern 00</li>
+<li>
+Pattern 01</li>
+<li>
+Pattern 10</li>
+<li>
+Pattern 11</li>
+</ul>
+</td><td>Pattern 11 </td><td>Select the dithering pattern. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Pattern C</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Pattern 00</li>
+<li>
+Pattern 01</li>
+<li>
+Pattern 10</li>
+<li>
+Pattern 11</li>
+</ul>
+</td><td>Pattern 11 </td><td>Select the dithering pattern. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Pattern D</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Pattern 00</li>
+<li>
+Pattern 01</li>
+<li>
+Pattern 10</li>
+<li>
+Pattern 11</li>
+</ul>
+</td><td>Pattern 11 </td><td>Select the dithering pattern. </td></tr>
+</table>
+</p>
+<h2><a class="anchor" id="r-glcdc-clock-configuration"></a>
+Clock Configuration</h2>
+<p><a class="anchor" id="um_glcdc_clock_source_select"></a><a class="anchor" id="um_glcdc_generate_dot_clock_to_lcd_panel"></a> The peripheral clock for this module is PCLKA.</p>
+<p>The dot clock is typically generated from the PLL with a maximum output frequency of 54 MHz in most pixel formats (60 MHz for serial RGB). Optionally, a clock signal can be provided to the LCD_EXTCLK pin for finer framerate control (60 MHz maximum input). With either clock source dividers of 1-9, 12, 16, 24 and 32 may be used. Clocks must be initialized and settled prior to starting this module.</p>
+<h2><a class="anchor" id="r-glcdc-pin-configuration"></a>
+Pin Configuration</h2>
+<p>This module controls a variety of pins necessary for LCD data and timing signal output:</p>
+<table class="doxtable">
+<tr>
+<th>Pin Name </th><th>Function </th><th>Notes  </th></tr>
+<tr>
+<td>LCD_EXTCLK </td><td>External clock signal input </td><td>The maximum input clock frequency is 60MHz. </td></tr>
+<tr>
+<td>LCD_CLK </td><td>Dot clock output </td><td>The maximum output frequency is 54MHz (60MHz in serial RGB mode). </td></tr>
+<tr>
+<td>LCD_DATAn </td><td>Pixel data output lines </td><td>Pin assignment and color order is based on the output block configuration. See "Output Control for Data Format" in the GLCDC section of the relevant hardware manual for details. </td></tr>
+<tr>
+<td>LCD_TCONn </td><td>Panel timing signal output </td><td>These pins can be configured to output vertical and horizontal synchronization and data valid signals. </td></tr>
+</table>
+<dl class="section note"><dt>Note</dt><dd>There are two banks of pins listed for the GLCDC in the RA6M3 User's Manual (_A and _B). In most cases the _B bank will be used as _A conflicts with SDRAM pins. In either case, it is generally recommended to only use pins from only one bank at a time as this allows for superior signal routing both inside and outside the package. If _A and _B pins must be mixed be sure to note the timing precision penalty detailed in Table 60.33 in in the RA6M3 User's Manual.</dd></dl>
+<h1><a class="anchor" id="r-glcdc-usage_notes"></a>
+Usage Notes</h1>
+<h2><a class="anchor" id="r-glcdc-usage_overview"></a>
+Overview</h2>
+<p>The GLCDC peripheral is a combination of several sub-peripherals that form a pixel data processing pipeline. Each block passes pixel data to the next but otherwise they are disconnected from one another - in other words, changing timing block parameters does not affect the output generation block configuration and vice versa.</p>
+<h2><a class="anchor" id="r-glcdc-initialization"></a>
+Initial Configuration</h2>
+<p>During R_GLCDC_Open all configured parameters are set in the GLCDC peripheral fully preparing it for operation. Once opened, calling R_GLCDC_Start is typically all that is needed for basic operation. Background generation, timing and output parameters are not configurable at runtime, though layer control and color correction options can be altered.</p>
+<h3><a class="anchor" id="r-glcdc-framebuffers"></a>
+Framebuffer Allocation</h3>
+<p><a class="anchor" id="um_glcdc_memory_stride_size_aligned_to_64bytes"></a> The framebuffer should be allocated in the highest-speed region available without displacing the stack, heap and other program-critical structures. Regardless of the placement two rules must be followed to ensure correct operation of the GLCDC:</p>
+<ul>
+<li>The framebuffer must be aligned on a 64-byte boundary</li>
+<li>The horizontal stride of the buffer must be a multiple of 64 bytes</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Framebuffers allocated through the RA Configuration tool automatically follow the alignment and size requirements.</dd></dl>
+<p>If your framebuffer will be placed in internal memory it is recommended to avoid any high-speed RAM regions as there is typically no speed advantage for doing so. In particular, it is important to ensure the framebuffer does not push the stack or any heaps outside of high-speed RAM areas to preserve CPU performance.</p>
+<h3><a class="anchor" id="r-glcdc-layers"></a>
+Graphics Layers and Timing Parameters</h3>
+<p><a class="anchor" id="um_glcdc_background_screen_with_selected_background_color"></a><a class="anchor" id="um_glcdc_generate_back_porch_front_porch"></a> The GLCDC synthesizes graphics data through two configurable graphics layers onto a background layer. The background is used as a solid-color canvas upon which to composite data from the graphics layers. The two graphics layers are blended on top of each other (Layer 2 above Layer 1) and overlaid on the background layer based on their individual configuration. The placement of the layers (as well as LCD timing parameters) are detailed in Figure 1. The colors of the dimensions indicate which element of the <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__cfg__t">display_cfg_t</a> struct is being referenced - for example, the width of the background layer would be [display_cfg].output.htiming.display_cyc as shown in the figure below.</p>
+<div class="image">
+<object type="image/svg+xml" data="r_glcdc_timing.svg">r_glcdc_timing.svg</object>
+<div class="caption">
+GLCDC layers and timing</div></div>
+<dl class="section note"><dt>Note</dt><dd>The data enable signal (if configured) is the logical AND of the horizontal and vertical data valid signals.</dd>
+<dd>
+In the GLCDC layers and timing figure, only one graphics layer is shown for simplicity. Additionally, in most applications the graphics layer(s) will be the same dimensions as the background layer.</dd></dl>
+<p><br />
+</p>
+<h2><a class="anchor" id="r-glcdc-runtime_options"></a>
+Runtime Configuration Options</h2>
+<dl class="section note"><dt>Note</dt><dd>All runtime configurations detailed below are also automatically configured during <a class="el" href="group___g_l_c_d_c.html#ga61603db8684d31ac86b2960096c91f58">R_GLCDC_Open</a> based on the options selected in the RA Configuration editor.</dd></dl>
+<h3><a class="anchor" id="r-glcdc-layer_processing"></a>
+Blend processing</h3>
+<p><a class="anchor" id="um_glcdc_configure_layer_blending_settings_at_runtime"></a> Control of layer positioning, alpha blending and fading is possible at runtime via <a class="el" href="group___g_l_c_d_c.html#ga661142a24277860146762914af644242">R_GLCDC_LayerChange</a>. This function takes a <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__runtime__cfg__t">display_runtime_cfg_t</a> parameter which contains the same input and layer elements as the <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__cfg__t">display_cfg_t</a> control block. Refer to the documentation for <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__runtime__cfg__t">display_runtime_cfg_t</a> as well as the <a class="el" href="group___g_l_c_d_c.html#r-glcdc-examples">Examples</a> below to see what options are configurable.</p>
+<h3><a class="anchor" id="r-glcdc-brightness_contrast"></a>
+Brightness and contrast</h3>
+<p>Brightness and contrast correction can be controlled through <a class="el" href="group___g_l_c_d_c.html#ga9d0754a6820a3a189c270f8da8677b72">R_GLCDC_ColorCorrection</a>. The <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__correction__t">display_correction_t</a> parameter is used to control enabling, disabling and gain values for both corrections as shown below:</p>
+<div class="fragment"><div class="line"></div><div class="line">    <a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__correction__t">display_correction_t</a> correction;</div><div class="line"></div><div class="line">    <span class="comment">/* Brightness values are 0-1023 with +512 offset being neutral */</span></div><div class="line">    correction.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#af246d4a08a822622f1b8ba8918912bee">brightness</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a8168c31ac7718920935704271b41a455">r</a> = 512;</div><div class="line">    correction.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#af246d4a08a822622f1b8ba8918912bee">brightness</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a1204de3d634d238b2e55e47fcece5f6f">g</a> = 512;</div><div class="line">    correction.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#af246d4a08a822622f1b8ba8918912bee">brightness</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a18963f23b836aeb122db5f5f7a371677">b</a> = 512;</div><div class="line"></div><div class="line">    <span class="comment">/* Contrast values are 0-255 representing gain of 0-2 (128 is gain of 1) */</span></div><div class="line">    correction.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a2baa6b14a0bde0a5024053a3fd4bf5c9">contrast</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a98e4bca1c0960e92d8ff591fd451f4d7">r</a> = 128;</div><div class="line">    correction.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a2baa6b14a0bde0a5024053a3fd4bf5c9">contrast</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a17df68c0dd89b50b244b249f6229647d">g</a> = 128;</div><div class="line">    correction.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a2baa6b14a0bde0a5024053a3fd4bf5c9">contrast</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a0412acd091891419015275780cfd438d">b</a> = 128;</div><div class="line"></div><div class="line">    <span class="comment">/* Brightness and contrast correction can be enabled or disabled independent of one another */</span></div><div class="line">    correction.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#af246d4a08a822622f1b8ba8918912bee">brightness</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#aa026f2746e05320374de068291a3e2d4">enable</a> = <span class="keyword">true</span>;</div><div class="line">    correction.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a2baa6b14a0bde0a5024053a3fd4bf5c9">contrast</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a4ce3dc5ac5d85d1f1b6ab1bc57c8978a">enable</a>   = <span class="keyword">true</span>;</div><div class="line"></div><div class="line">    <span class="comment">/* Enable correction */</span></div><div class="line">    <a class="code" href="group___g_l_c_d_c.html#ga9d0754a6820a3a189c270f8da8677b72">R_GLCDC_ColorCorrection</a>(&amp;g_disp_ctrl, &amp;correction);</div><div class="line"></div></div><!-- fragment --><h3><a class="anchor" id="r-glcdc-clut"></a>
+Color Look-Up Table (CLUT) Modes</h3>
+<p>The GLCDC supports 1-, 4- and 8-bit color look-up table (CLUT) formats for input pixel data. By using these modes the framebuffer size in memory can be reduced significantly, allowing even high-resolution displays to be buffered in on-chip SRAM. To enable CLUT modes for a layer the color format must be set to a CLUT mode (either at startup or through <a class="el" href="group___g_l_c_d_c.html#ga661142a24277860146762914af644242">R_GLCDC_LayerChange</a>) in addition to filling the CLUT as appropriate via <a class="el" href="group___g_l_c_d_c.html#gaaabcf5b43ea6cb821c0cddee78172cc5">R_GLCDC_ClutUpdate</a> as shown below:</p>
+<div class="fragment"><div class="line"></div><div class="line">    <span class="comment">/* Basic 4-bit (16-color) CLUT definition */</span></div><div class="line">    uint32_t clut_4[16] =</div><div class="line">    {</div><div class="line">        0xFF000000,                    <span class="comment">// Black</span></div><div class="line">        0xFFFFFFFF,                    <span class="comment">// White</span></div><div class="line">        0xFF0000FF,                    <span class="comment">// Blue</span></div><div class="line">        0xFF0080FF,                    <span class="comment">// Turquoise</span></div><div class="line">        0xFF00FFFF,                    <span class="comment">// Cyan</span></div><div class="line">        0xFF00FF80,                    <span class="comment">// Mint Green</span></div><div class="line">        0xFF00FF00,                    <span class="comment">// Green</span></div><div class="line">        0xFF80FF00,                    <span class="comment">// Lime Green</span></div><div class="line">        0xFFFFFF00,                    <span class="comment">// Yellow</span></div><div class="line">        0xFFFF8000,                    <span class="comment">// Orange</span></div><div class="line">        0xFFFF0000,                    <span class="comment">// Red</span></div><div class="line">        0xFFFF0080,                    <span class="comment">// Pink</span></div><div class="line">        0xFFFF00FF,                    <span class="comment">// Magenta</span></div><div class="line">        0xFF8000FF,                    <span class="comment">// Purple</span></div><div class="line">        0xFF808080,                    <span class="comment">// Gray</span></div><div class="line">        0x00000000                     <span class="comment">// Transparent</span></div><div class="line">    };</div><div class="line"></div><div class="line">    <span class="comment">/* Define the CLUT configuration */</span></div><div class="line">    <a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__clut__cfg__t">display_clut_cfg_t</a> clut_cfg =</div><div class="line">    {</div><div class="line">        .<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a039dd90ebbe34ecb4075628ee3dc2bcd">start</a>  = 0,</div><div class="line">        .size   = 16,</div><div class="line">        .p_base = clut_4</div><div class="line">    };</div><div class="line"></div><div class="line">    <span class="comment">/* Update the CLUT in the GLCDC */</span></div><div class="line">    <a class="code" href="group___g_l_c_d_c.html#gaaabcf5b43ea6cb821c0cddee78172cc5">R_GLCDC_ClutUpdate</a>(&amp;g_disp_ctrl, &amp;clut_cfg, <a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#gga364ba16397d9d24efb92170246c024aba51c83734d0c0b788dda73e597e534095">DISPLAY_FRAME_LAYER_1</a>);</div><div class="line"></div></div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>If individual elements of the CLUT must be changed or if elements must be changed one at a time (for instance, when using emWin) it is recommended to use R_GLCDC_ClutEdit to avoid repeated memcpy operations.</dd></dl>
+<h2><a class="anchor" id="r-glcdc-other_options"></a>
+Other Configuration Options</h2>
+<h3><a class="anchor" id="r-glcdc-gamma"></a>
+Gamma correction</h3>
+<p>Gamma correction is performed based on a gain curved defined in the RA Configuration editor. Each point on the curve is defined by a threshold and a gain value - each gain value represents a multiplier from 0x-2x (set as 0-2047) that sets the Y-value of the slope of the gain curve, while each threshold interval sets the X-value respectively. For a more detailed explanation refer to Figure "Calculation of gamma correction value" and the related description above it in the GLCDC section of the relevant hardware manual.</p>
+<p>When setting threshold values three rules must be followed:</p><ul>
+<li>Each threshold value must be greater than the previous value</li>
+<li>Threshold values must be greater than zero and less than 1024</li>
+<li>Threshold values can equal the previous value only if they are 1023 (maximum)</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Gamma correction can only be applied via <a class="el" href="group___g_l_c_d_c.html#ga61603db8684d31ac86b2960096c91f58">R_GLCDC_Open</a>.</dd></dl>
+<h3><a class="anchor" id="r-glcdc-dithering"></a>
+Dithering</h3>
+<p>Dithering is a method of pixel blending that allows for smoother transitions between colors when using a limited palette. A full description of dithering is outside the scope of this document. For more information on the pattern settings and how to configure them refer to the Figures "Configuration of dither correction block" and "Addition value selection method for 2x2 pattern dither" in the GLCDC section of the relevant hardware manual.</p>
+<h2><a class="anchor" id="r-glcdc-max-res"></a>
+Maximum Resolution</h2>
+<p>Though the GLCDC is capable of outputting resolutions in excess of HD, maximum clockspeeds and bus throughput limit what can be realistically achieved. Below is a table of maximum recommended widescreen resolutions at various input color depths <b>based on clock and bus limits at 60 FPS.</b></p>
+<table class="doxtable">
+<tr>
+<th>Device </th><th>8bpp </th><th>16bpp </th><th>24/32bpp  </th></tr>
+<tr>
+<td>RA6M3 </td><td>960x540 (qHD) </td><td>800x480 (WVGA) </td><td>640x360 (nHD) </td></tr>
+<tr>
+<td>RA8 </td><td>1920x1200 (WUXGA) </td><td>1280x800 (WXGA) </td><td>960x540 (qHD) </td></tr>
+</table>
+<dl class="section note"><dt>Note</dt><dd>The above values are estimated conservatively based on effective SDRAM bus throughput at a standard framerate. To calculate estimated maximum values for other situations the following equations can be used:</dd>
+<dd>
+<code>bytes per frame = (SDCLK speed (Hz) * SDRAM bus width / 8) / framerate</code> </dd>
+<dd>
+<code>width = sqrt(16/9 * (bytes per frame) / (pixel bit depth / 8))</code> </dd>
+<dd>
+<code>height = 9/16 * width</code></dd>
+<dd>
+These equations provide values that are theoretically possible but may or may not be attainable depending on a number of other factors. It is the responsibility of the developer to test and confirm performance on each system to determine a suitable panel size for the application.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The maximum resolution for GLCDC may exceed the limits for single texture or primitive rending operations with the DRW peripheral (D/AVE 2D). See the <a class="el" href="group___d_r_w.html#r-drw-limitations">Limitations</a> section in the DRW Usage Notes for details.</dd></dl>
+<h2><a class="anchor" id="r-glcdc-limitations"></a>
+Limitations</h2>
+<p>Developers should be aware of the following limitations when using the GLCDC API:</p>
+<ul>
+<li>Due to a limitation of the GLCDC hardware, if the horizontal back porch is less than the number of pixels in a graphics burst read (64 bytes) for a layer and the layer is positioned at a negative X-value then the layer X-position will be locked to the nearest 64-byte boundary, rounded toward zero.</li>
+<li>The GLCDC peripheral offers a chroma-key function that can be used to perform a green-screen-like color replacement. This functionality is not exposed through the GLCDC API. See the descriptions for GR1_AB7/GR2_AB7 through GR1_AB9/GR2_AB9 in the device's User's Manual for further details.</li>
+<li>Use of R_GLCDC_ClutUpdate and R_GLCDC_ClutEdit may not be mixed on the same frame.</li>
+</ul>
+<h1><a class="anchor" id="r-glcdc-examples"></a>
+Examples</h1>
+<h2><a class="anchor" id="r-glcdc-examples-minimal"></a>
+Basic Example</h2>
+<p>This is a basic example showing the minimum code required to initialize and start the GLCDC module. If the entire display can be drawn within the vertical blanking period no further code may be necessary.</p>
+<div class="fragment"><div class="line"></div><div class="line"><span class="keywordtype">void</span> glcdc_init (<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">    <a class="code" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> err;</div><div class="line"></div><div class="line">    <span class="comment">// Open the GLCDC driver</span></div><div class="line">    err = <a class="code" href="group___g_l_c_d_c.html#ga61603db8684d31ac86b2960096c91f58">R_GLCDC_Open</a>(&amp;g_disp_ctrl, &amp;g_disp_cfg);</div><div class="line"></div><div class="line">    <span class="comment">/* Handle any errors. This function should be defined by the user. */</span></div><div class="line">    assert(FSP_SUCCESS == err);</div><div class="line"></div><div class="line">    <span class="comment">// Start display output</span></div><div class="line">    err = <a class="code" href="group___g_l_c_d_c.html#ga0e8a7d17184b405e6caae3ba21857baa">R_GLCDC_Start</a>(&amp;g_disp_ctrl);</div><div class="line">    assert(FSP_SUCCESS == err);</div><div class="line">}</div><div class="line"></div></div><!-- fragment --><h2><a class="anchor" id="r-glcdc-examples-transitions"></a>
+Layer Transitions</h2>
+<p>This example demonstrates how to set up and execute both a sliding and fading layer transition. This is most useful in static image transition scenarios as switching between two actively-drawing graphics layers may require up to four framebuffers to eliminate tearing.</p>
+<div class="fragment"><div class="line"></div><div class="line"><span class="keyword">volatile</span> uint32_t g_vsync_count = 0;</div><div class="line"></div><div class="line"><span class="comment">/* Callback function for GLCDC interrupts */</span></div><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> glcdc_callback (<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__callback__args__t">display_callback_args_t</a> * p_args)</div><div class="line">{</div><div class="line">    <span class="keywordflow">if</span> (p_args-&gt;<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#abe45960d623a2871a797db6c27907511">event</a> == <a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#ggad57d6b7a15167958412454bc06bd95a8a58d8e2c4cb6839e1ed549e9d7d680c74">DISPLAY_EVENT_LINE_DETECTION</a>)</div><div class="line">    {</div><div class="line">        g_vsync_count++;</div><div class="line">    }</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">/* Simple wait that returns 1 if no Vsync happened within the timeout period */</span></div><div class="line">uint8_t vsync_wait (<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">    uint32_t timeout_timer = GLCDC_VSYNC_TIMEOUT;</div><div class="line"></div><div class="line">    g_vsync_count = 0;</div><div class="line"></div><div class="line">    <span class="keywordflow">while</span> (!g_vsync_count &amp;&amp; --timeout_timer)</div><div class="line">    {</div><div class="line">        <span class="comment">/* Spin here until DISPLAY_EVENT_LINE_DETECTION callback or timeout */</span></div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keywordflow">return</span> timeout_timer ? 0 : 1;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">/* Initiate a fade on Layer 2</span></div><div class="line"><span class="comment"> *</span></div><div class="line"><span class="comment"> * Parameters:</span></div><div class="line"><span class="comment"> *  direction  True for fade in, false for fade out</span></div><div class="line"><span class="comment"> *  speed      number of frames over which to fade</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keywordtype">void</span> glcdc_layer_transition_fade (<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__runtime__cfg__t">display_runtime_cfg_t</a> * disp_rt_cfg, <span class="keywordtype">bool</span> direction, uint16_t speed)</div><div class="line">{</div><div class="line">    <a class="code" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> err;</div><div class="line"></div><div class="line">    <span class="keywordflow">if</span> (direction)</div><div class="line">    {</div><div class="line">        <span class="comment">/* Set the runtime struct to the desired buffer */</span></div><div class="line">        disp_rt_cfg-&gt;<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a3788baae818e1ef16792c63b74ab04b6">input</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#aefcd17b220f4a92f92f5bd63d3eaa457">p_base</a>       = (uint32_t *) g_framebuffer_1;</div><div class="line">        disp_rt_cfg-&gt;<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#abd363f5bea0685cb767a6002c3d5afe3">layer</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#ae2d05372eaec2ff92a29bd5de4aa485e">fade_control</a> = <a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#ggadddaa0376991530684bf3d138868305ba05e44e44f46dfb211481fedd8df46843">DISPLAY_FADE_CONTROL_FADEIN</a>;</div><div class="line">    }</div><div class="line">    <span class="keywordflow">else</span></div><div class="line">    {</div><div class="line">        disp_rt_cfg-&gt;<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#abd363f5bea0685cb767a6002c3d5afe3">layer</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#ae2d05372eaec2ff92a29bd5de4aa485e">fade_control</a> = <a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#ggadddaa0376991530684bf3d138868305bac5021ecdf87fac83f4ce468570b1a312">DISPLAY_FADE_CONTROL_FADEOUT</a>;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="comment">/* Ensure speed is at least 1 frame */</span></div><div class="line">    <span class="keywordflow">if</span> (!speed)</div><div class="line">    {</div><div class="line">        speed = 1;</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="comment">/* Set the fade speed to the desired change in alpha per frame */</span></div><div class="line">    disp_rt_cfg-&gt;<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#abd363f5bea0685cb767a6002c3d5afe3">layer</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a2ce0f93d96358e0d0e2c045635daedf0">fade_speed</a> = UINT8_MAX / speed;</div><div class="line"></div><div class="line">    <span class="comment">/* Initiate the fade (will start on the next Vsync) */</span></div><div class="line">    err = <a class="code" href="group___g_l_c_d_c.html#ga661142a24277860146762914af644242">R_GLCDC_LayerChange</a>(&amp;g_disp_ctrl, disp_rt_cfg, <a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#gga364ba16397d9d24efb92170246c024abaa8909f0860fc041b67bc8df8ceba4143">DISPLAY_FRAME_LAYER_2</a>);</div><div class="line">    assert(FSP_SUCCESS == err);</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">/* Slide Layer 1 out to the left while sliding Layer 2 in from the right */</span></div><div class="line"><span class="keywordtype">void</span> glcdc_layer_transition_sliding (<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__runtime__cfg__t">display_runtime_cfg_t</a> * disp_rt_cfg_in, <a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__runtime__cfg__t">display_runtime_cfg_t</a> * disp_rt_cfg_out)</div><div class="line">{</div><div class="line">    <a class="code" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> err;</div><div class="line"></div><div class="line">    <span class="comment">/* Set the config for the incoming layer to be just out of bounds on the right side */</span></div><div class="line">    disp_rt_cfg_in-&gt;<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a3788baae818e1ef16792c63b74ab04b6">input</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#aefcd17b220f4a92f92f5bd63d3eaa457">p_base</a>       = (uint32_t *) g_framebuffer_1;</div><div class="line">    disp_rt_cfg_in-&gt;<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#abd363f5bea0685cb767a6002c3d5afe3">layer</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a5c410e7acd4bdf0c7e0f3a681fb1a127">coordinate</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a339bbe221a09feba4ac389d8e9fc06ad">x</a> = DISPLAY_WIDTH;</div><div class="line"></div><div class="line">    <span class="comment">/* Move layer 1 out and layer 2 in at a fixed rate of 4 pixels per frame */</span></div><div class="line">    <span class="keywordflow">for</span> (int32_t x = disp_rt_cfg_in-&gt;<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#abd363f5bea0685cb767a6002c3d5afe3">layer</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a5c410e7acd4bdf0c7e0f3a681fb1a127">coordinate</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a339bbe221a09feba4ac389d8e9fc06ad">x</a>; x &gt;= 0; x -= 4)</div><div class="line">    {</div><div class="line">        <span class="comment">/* Wait for a Vsync before starting */</span></div><div class="line">        vsync_wait();</div><div class="line"></div><div class="line">        <span class="comment">/* Set the X-coordinate of both layers then update them */</span></div><div class="line">        disp_rt_cfg_out-&gt;<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#abd363f5bea0685cb767a6002c3d5afe3">layer</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a5c410e7acd4bdf0c7e0f3a681fb1a127">coordinate</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a339bbe221a09feba4ac389d8e9fc06ad">x</a> = (int16_t) (x - DISPLAY_WIDTH);</div><div class="line">        disp_rt_cfg_in-&gt;<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#abd363f5bea0685cb767a6002c3d5afe3">layer</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a5c410e7acd4bdf0c7e0f3a681fb1a127">coordinate</a>.<a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#a339bbe221a09feba4ac389d8e9fc06ad">x</a>  = (int16_t) x;</div><div class="line">        err = <a class="code" href="group___g_l_c_d_c.html#ga661142a24277860146762914af644242">R_GLCDC_LayerChange</a>(&amp;g_disp_ctrl, disp_rt_cfg_out, <a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#gga364ba16397d9d24efb92170246c024aba51c83734d0c0b788dda73e597e534095">DISPLAY_FRAME_LAYER_1</a>);</div><div class="line">        assert(FSP_SUCCESS == err);</div><div class="line">        err = <a class="code" href="group___g_l_c_d_c.html#ga661142a24277860146762914af644242">R_GLCDC_LayerChange</a>(&amp;g_disp_ctrl, disp_rt_cfg_in, <a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#gga364ba16397d9d24efb92170246c024abaa8909f0860fc041b67bc8df8ceba4143">DISPLAY_FRAME_LAYER_2</a>);</div><div class="line">        assert(FSP_SUCCESS == err);</div><div class="line">    }</div><div class="line">}</div><div class="line"></div></div><!-- fragment --><h2><a class="anchor" id="r-glcdc-examples-doublebuffer"></a>
+Double-Buffering</h2>
+<p>Using a double-buffer allows one to be output to the LCD while the other is being drawn to memory, eliminating tearing and in some cases reducing bus load. The following is a basic example showing integration of the line detect (Vsync) interrupt to set the timing for buffer swapping and drawing.</p>
+<div class="fragment"><div class="line"></div><div class="line"><span class="comment">/* User-defined function to draw the current display to a framebuffer */</span></div><div class="line"><span class="keywordtype">void</span> display_draw (uint8_t * framebuffer)</div><div class="line">{</div><div class="line">    <a class="code" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gaf0afcbc9a110ac9366a811d96ee06029">FSP_PARAMETER_NOT_USED</a>(framebuffer);</div><div class="line"></div><div class="line">    <span class="comment">/* Draw buffer here */</span></div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">/* This function is an example of a basic double-buffered display thread */</span></div><div class="line"><span class="keywordtype">void</span> display_thread (<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">    uint8_t * p_framebuffer = NULL;</div><div class="line">    <a class="code" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> err;</div><div class="line"></div><div class="line">    <span class="comment">/* Initialize and start the R_GLCDC module */</span></div><div class="line">    glcdc_init();</div><div class="line"></div><div class="line">    <span class="keywordflow">while</span> (1)</div><div class="line">    {</div><div class="line">        <span class="comment">/* Swap the active framebuffer */</span></div><div class="line">        p_framebuffer = (p_framebuffer == g_framebuffer_0) ? g_framebuffer_1 : g_framebuffer_0;</div><div class="line"></div><div class="line">        <span class="comment">/* Draw the new framebuffer now */</span></div><div class="line">        display_draw(p_framebuffer);</div><div class="line"></div><div class="line">        <span class="comment">/* Now that the framebuffer is ready, update the GLCDC buffer pointer on the next Vsync */</span></div><div class="line">        err = <a class="code" href="group___g_l_c_d_c.html#ga0d020f73e547ae005c666638a0dff427">R_GLCDC_BufferChange</a>(&amp;g_disp_ctrl, p_framebuffer, <a class="code" href="group___d_i_s_p_l_a_y___a_p_i.html#gga364ba16397d9d24efb92170246c024aba51c83734d0c0b788dda73e597e534095">DISPLAY_FRAME_LAYER_1</a>);</div><div class="line">        assert(FSP_SUCCESS == err);</div><div class="line"></div><div class="line">        <span class="comment">/* Wait for a Vsync event */</span></div><div class="line">        vsync_wait();</div><div class="line">    }</div><div class="line">}</div><div class="line"></div></div><!-- fragment --><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:structglcdc__instance__ctrl__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#structglcdc__instance__ctrl__t">glcdc_instance_ctrl_t</a></td></tr>
+<tr class="separator:structglcdc__instance__ctrl__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structglcdc__extended__cfg__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#structglcdc__extended__cfg__t">glcdc_extended_cfg_t</a></td></tr>
+<tr class="separator:structglcdc__extended__cfg__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga43acd93eeb35746824c49342b74f85a5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#ga43acd93eeb35746824c49342b74f85a5">glcdc_clk_src_t</a> </td></tr>
+<tr class="separator:ga43acd93eeb35746824c49342b74f85a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4fddd2d014e000b5d1a805e49122c9d9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#ga4fddd2d014e000b5d1a805e49122c9d9">glcdc_panel_clk_div_t</a> </td></tr>
+<tr class="separator:ga4fddd2d014e000b5d1a805e49122c9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9358532763760e20e3fd6f795f614344"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#ga9358532763760e20e3fd6f795f614344">glcdc_tcon_pin_t</a> </td></tr>
+<tr class="separator:ga9358532763760e20e3fd6f795f614344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa952bd3aaf0163159dd33abf65329187"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#gaa952bd3aaf0163159dd33abf65329187">glcdc_bus_arbitration_t</a> </td></tr>
+<tr class="separator:gaa952bd3aaf0163159dd33abf65329187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9b3d3001779773040de1e749c420c2a1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#ga9b3d3001779773040de1e749c420c2a1">glcdc_correction_proc_order_t</a> </td></tr>
+<tr class="separator:ga9b3d3001779773040de1e749c420c2a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga69083bd9f631cc2259c5fd30f32a54ba"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#ga69083bd9f631cc2259c5fd30f32a54ba">glcdc_tcon_signal_select_t</a> </td></tr>
+<tr class="separator:ga69083bd9f631cc2259c5fd30f32a54ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf7dd81a8bcf4d7df1eded66faa9eaf6b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#gaf7dd81a8bcf4d7df1eded66faa9eaf6b">glcdc_clut_plane_t</a> </td></tr>
+<tr class="separator:gaf7dd81a8bcf4d7df1eded66faa9eaf6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4e1755bfb6ac67734784bf1d9584fe0b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#ga4e1755bfb6ac67734784bf1d9584fe0b">glcdc_dithering_mode_t</a> </td></tr>
+<tr class="separator:ga4e1755bfb6ac67734784bf1d9584fe0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacf44debe1897bea667d2440541ebb50e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#gacf44debe1897bea667d2440541ebb50e">glcdc_dithering_pattern_t</a> </td></tr>
+<tr class="separator:gacf44debe1897bea667d2440541ebb50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf4c632aa5e2e15803a911e4349ff6500"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#gaf4c632aa5e2e15803a911e4349ff6500">glcdc_input_interface_format_t</a> </td></tr>
+<tr class="separator:gaf4c632aa5e2e15803a911e4349ff6500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf5de59ac20bb09418e8ad37af7e4d661"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#gaf5de59ac20bb09418e8ad37af7e4d661">glcdc_output_interface_format_t</a> </td></tr>
+<tr class="separator:gaf5de59ac20bb09418e8ad37af7e4d661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadb4e7eab53d957d1f8b5368e0bbb0662"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___g_l_c_d_c.html#gadb4e7eab53d957d1f8b5368e0bbb0662">glcdc_dithering_output_format_t</a> </td></tr>
+<tr class="separator:gadb4e7eab53d957d1f8b5368e0bbb0662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/><h2 class="groupheader">Data Structure Documentation</h2>
+<a name="structglcdc__instance__ctrl__t" id="structglcdc__instance__ctrl__t"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structglcdc__instance__ctrl__t">&#9670;&nbsp;</a></span>glcdc_instance_ctrl_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct glcdc_instance_ctrl_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Display control block. DO NOT INITIALIZE. </p>
+</div>
+</div>
+</div>
+<a name="structglcdc__extended__cfg__t" id="structglcdc__extended__cfg__t"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structglcdc__extended__cfg__t">&#9670;&nbsp;</a></span>glcdc_extended_cfg_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct glcdc_extended_cfg_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>GLCDC hardware specific configuration </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="ad25fcdd7bd02ac3aaed31e62c30f4d3b"></a><a class="el" href="group___g_l_c_d_c.html#ga9358532763760e20e3fd6f795f614344">glcdc_tcon_pin_t</a></td>
+<td class="fieldname">
+tcon_hsync</td>
+<td class="fielddoc">
+GLCDC TCON output pin select. </td></tr>
+<tr><td class="fieldtype">
+<a id="a3382091c2cab7622f4a815773dd2d9db"></a><a class="el" href="group___g_l_c_d_c.html#ga9358532763760e20e3fd6f795f614344">glcdc_tcon_pin_t</a></td>
+<td class="fieldname">
+tcon_vsync</td>
+<td class="fielddoc">
+GLCDC TCON output pin select. </td></tr>
+<tr><td class="fieldtype">
+<a id="a8a2194cc7f4843eb41efffc3821538b4"></a><a class="el" href="group___g_l_c_d_c.html#ga9358532763760e20e3fd6f795f614344">glcdc_tcon_pin_t</a></td>
+<td class="fieldname">
+tcon_de</td>
+<td class="fielddoc">
+GLCDC TCON output pin select. </td></tr>
+<tr><td class="fieldtype">
+<a id="a52a112fe1e54aeafa078c9912f173e7d"></a><a class="el" href="group___g_l_c_d_c.html#ga9b3d3001779773040de1e749c420c2a1">glcdc_correction_proc_order_t</a></td>
+<td class="fieldname">
+correction_proc_order</td>
+<td class="fielddoc">
+Correction control route select. </td></tr>
+<tr><td class="fieldtype">
+<a id="acfb726d932a81205261ae596c6838e97"></a><a class="el" href="group___g_l_c_d_c.html#ga43acd93eeb35746824c49342b74f85a5">glcdc_clk_src_t</a></td>
+<td class="fieldname">
+clksrc</td>
+<td class="fielddoc">
+Clock Source selection. </td></tr>
+<tr><td class="fieldtype">
+<a id="a2c122302f8db7852c7159d9b60dc4b1e"></a><a class="el" href="group___g_l_c_d_c.html#ga4fddd2d014e000b5d1a805e49122c9d9">glcdc_panel_clk_div_t</a></td>
+<td class="fieldname">
+clock_div_ratio</td>
+<td class="fielddoc">
+Clock divide ratio for dot clock. </td></tr>
+<tr><td class="fieldtype">
+<a id="a62ebf558c5b2b956e6cb681313bd8ec6"></a><a class="el" href="group___g_l_c_d_c.html#ga4e1755bfb6ac67734784bf1d9584fe0b">glcdc_dithering_mode_t</a></td>
+<td class="fieldname">
+dithering_mode</td>
+<td class="fielddoc">
+Dithering mode. </td></tr>
+<tr><td class="fieldtype">
+<a id="ab79b1cad25e34e7b47420e1448667276"></a><a class="el" href="group___g_l_c_d_c.html#gacf44debe1897bea667d2440541ebb50e">glcdc_dithering_pattern_t</a></td>
+<td class="fieldname">
+dithering_pattern_A</td>
+<td class="fielddoc">
+Dithering pattern A. </td></tr>
+<tr><td class="fieldtype">
+<a id="a6eb480ff0892cf412793666a8173460b"></a><a class="el" href="group___g_l_c_d_c.html#gacf44debe1897bea667d2440541ebb50e">glcdc_dithering_pattern_t</a></td>
+<td class="fieldname">
+dithering_pattern_B</td>
+<td class="fielddoc">
+Dithering pattern B. </td></tr>
+<tr><td class="fieldtype">
+<a id="a09d3ac7b7b8aee905b4a1082e5dc960e"></a><a class="el" href="group___g_l_c_d_c.html#gacf44debe1897bea667d2440541ebb50e">glcdc_dithering_pattern_t</a></td>
+<td class="fieldname">
+dithering_pattern_C</td>
+<td class="fielddoc">
+Dithering pattern C. </td></tr>
+<tr><td class="fieldtype">
+<a id="a328c2b20548a36cacf4ecdb1475f40c6"></a><a class="el" href="group___g_l_c_d_c.html#gacf44debe1897bea667d2440541ebb50e">glcdc_dithering_pattern_t</a></td>
+<td class="fieldname">
+dithering_pattern_D</td>
+<td class="fielddoc">
+Dithering pattern D. </td></tr>
+<tr><td class="fieldtype">
+<a id="a5813558b14a81da403c551509b6e3072"></a>void *</td>
+<td class="fieldname">
+phy_layer</td>
+<td class="fielddoc">
+Alternate PHY layer, such as MIPI DSI. </td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga43acd93eeb35746824c49342b74f85a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga43acd93eeb35746824c49342b74f85a5">&#9670;&nbsp;</a></span>glcdc_clk_src_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___g_l_c_d_c.html#ga43acd93eeb35746824c49342b74f85a5">glcdc_clk_src_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Clock source select </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga43acd93eeb35746824c49342b74f85a5a7eb6ad419d6034781e0a955081f12260"></a>GLCDC_CLK_SRC_INTERNAL&#160;</td><td class="fielddoc"><p>Internal. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga43acd93eeb35746824c49342b74f85a5aa422a1cfc378a8ab5706037f5062b555"></a>GLCDC_CLK_SRC_EXTERNAL&#160;</td><td class="fielddoc"><p>External. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga4fddd2d014e000b5d1a805e49122c9d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4fddd2d014e000b5d1a805e49122c9d9">&#9670;&nbsp;</a></span>glcdc_panel_clk_div_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___g_l_c_d_c.html#ga4fddd2d014e000b5d1a805e49122c9d9">glcdc_panel_clk_div_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Clock frequency division ratio </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga4fddd2d014e000b5d1a805e49122c9d9a205ec0a2aee7e44033b0784aa742775b"></a>GLCDC_PANEL_CLK_DIVISOR_1&#160;</td><td class="fielddoc"><p>Division Ratio 1/1. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4fddd2d014e000b5d1a805e49122c9d9a9a3be2a3066f58e7f5929e56c0299a0f"></a>GLCDC_PANEL_CLK_DIVISOR_2&#160;</td><td class="fielddoc"><p>Division Ratio 1/2. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4fddd2d014e000b5d1a805e49122c9d9a321b0ec7464752bd7b2e1aad6e99b716"></a>GLCDC_PANEL_CLK_DIVISOR_3&#160;</td><td class="fielddoc"><p>Division Ratio 1/3. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4fddd2d014e000b5d1a805e49122c9d9ac2e5c25a1833965711de2612a5c6f387"></a>GLCDC_PANEL_CLK_DIVISOR_4&#160;</td><td class="fielddoc"><p>Division Ratio 1/4. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4fddd2d014e000b5d1a805e49122c9d9acb59c0e612496c68ec0abffa9f00cbcd"></a>GLCDC_PANEL_CLK_DIVISOR_5&#160;</td><td class="fielddoc"><p>Division Ratio 1/5. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4fddd2d014e000b5d1a805e49122c9d9aff816c1fe2156cdc7b8fc3c206da3038"></a>GLCDC_PANEL_CLK_DIVISOR_6&#160;</td><td class="fielddoc"><p>Division Ratio 1/6. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4fddd2d014e000b5d1a805e49122c9d9a95804bff5a20dc3966f9fd17baf0f876"></a>GLCDC_PANEL_CLK_DIVISOR_7&#160;</td><td class="fielddoc"><p>Division Ratio 1/7. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4fddd2d014e000b5d1a805e49122c9d9adb7fc452676efc615d0d65b0caf6b8a0"></a>GLCDC_PANEL_CLK_DIVISOR_8&#160;</td><td class="fielddoc"><p>Division Ratio 1/8. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4fddd2d014e000b5d1a805e49122c9d9aa2685b2be4f8b9cfada256a96c3c236f"></a>GLCDC_PANEL_CLK_DIVISOR_9&#160;</td><td class="fielddoc"><p>Division Ratio 1/9. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4fddd2d014e000b5d1a805e49122c9d9ac76b517c3b6cd39214783f6b63e84ac8"></a>GLCDC_PANEL_CLK_DIVISOR_12&#160;</td><td class="fielddoc"><p>Division Ratio 1/12. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4fddd2d014e000b5d1a805e49122c9d9a026f0915aeed2f126c0337c35978fc2c"></a>GLCDC_PANEL_CLK_DIVISOR_16&#160;</td><td class="fielddoc"><p>Division Ratio 1/16. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4fddd2d014e000b5d1a805e49122c9d9af0baa867119e27e27d25fa5f077527f1"></a>GLCDC_PANEL_CLK_DIVISOR_24&#160;</td><td class="fielddoc"><p>Division Ratio 1/24. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4fddd2d014e000b5d1a805e49122c9d9a7da636fe6d5397abac7dc87ceaba4d70"></a>GLCDC_PANEL_CLK_DIVISOR_32&#160;</td><td class="fielddoc"><p>Division Ratio 1/32. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga9358532763760e20e3fd6f795f614344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9358532763760e20e3fd6f795f614344">&#9670;&nbsp;</a></span>glcdc_tcon_pin_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___g_l_c_d_c.html#ga9358532763760e20e3fd6f795f614344">glcdc_tcon_pin_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>LCD TCON output pin select </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga9358532763760e20e3fd6f795f614344aff6727bd794f10403e8c8a7ec5f7b154"></a>GLCDC_TCON_PIN_NONE&#160;</td><td class="fielddoc"><p>No output. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9358532763760e20e3fd6f795f614344af42f33722194fd26316f53ac02280763"></a>GLCDC_TCON_PIN_0&#160;</td><td class="fielddoc"><p>LCD_TCON0. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9358532763760e20e3fd6f795f614344a70d8626698ca2fbce8815db59866ce67"></a>GLCDC_TCON_PIN_1&#160;</td><td class="fielddoc"><p>LCD_TCON1. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9358532763760e20e3fd6f795f614344af38c1e6ddda29d4312338916016aeff9"></a>GLCDC_TCON_PIN_2&#160;</td><td class="fielddoc"><p>LCD_TCON2. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9358532763760e20e3fd6f795f614344ad9ba99c88ede6396d62f379a9b455754"></a>GLCDC_TCON_PIN_3&#160;</td><td class="fielddoc"><p>LCD_TCON3. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gaa952bd3aaf0163159dd33abf65329187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa952bd3aaf0163159dd33abf65329187">&#9670;&nbsp;</a></span>glcdc_bus_arbitration_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___g_l_c_d_c.html#gaa952bd3aaf0163159dd33abf65329187">glcdc_bus_arbitration_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Bus Arbitration setting </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaa952bd3aaf0163159dd33abf65329187af2429753469b72527fcfe7ec1f9363aa"></a>GLCDC_BUS_ARBITRATION_ROUNDROBIN&#160;</td><td class="fielddoc"><p>Round robin. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa952bd3aaf0163159dd33abf65329187a7539781eadd4b151ab21025821bdbdf1"></a>GLCDC_BUS_ARBITRATION_FIX_PRIORITY&#160;</td><td class="fielddoc"><p>Fixed. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga9b3d3001779773040de1e749c420c2a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9b3d3001779773040de1e749c420c2a1">&#9670;&nbsp;</a></span>glcdc_correction_proc_order_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___g_l_c_d_c.html#ga9b3d3001779773040de1e749c420c2a1">glcdc_correction_proc_order_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Correction circuit sequence control </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga9b3d3001779773040de1e749c420c2a1a792a9bf532a5be86f51e0d59cd1dd9d2"></a>GLCDC_CORRECTION_PROC_ORDER_BRIGHTNESS_CONTRAST2GAMMA&#160;</td><td class="fielddoc"><p>Brightness -&gt; contrast -&gt; gamma correction. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9b3d3001779773040de1e749c420c2a1a69a81031d18ab3266c74fb8b880fba9b"></a>GLCDC_CORRECTION_PROC_ORDER_GAMMA2BRIGHTNESS_CONTRAST&#160;</td><td class="fielddoc"><p>Gamma correction -&gt; brightness -&gt; contrast. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga69083bd9f631cc2259c5fd30f32a54ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga69083bd9f631cc2259c5fd30f32a54ba">&#9670;&nbsp;</a></span>glcdc_tcon_signal_select_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___g_l_c_d_c.html#ga69083bd9f631cc2259c5fd30f32a54ba">glcdc_tcon_signal_select_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Timing signals for driving the LCD panel </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga69083bd9f631cc2259c5fd30f32a54baafab08a779e058c1aaacd02cc15f23ffc"></a>GLCDC_TCON_SIGNAL_SELECT_STVA_VS&#160;</td><td class="fielddoc"><p>STVA/VS. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga69083bd9f631cc2259c5fd30f32a54baadac258f649f33abe66fbb574c6e315e0"></a>GLCDC_TCON_SIGNAL_SELECT_STVB_VE&#160;</td><td class="fielddoc"><p>STVB/VE. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga69083bd9f631cc2259c5fd30f32a54baa9fc4e138d783fd150648f03486f14a91"></a>GLCDC_TCON_SIGNAL_SELECT_STHA_HS&#160;</td><td class="fielddoc"><p>STH/SP/HS. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga69083bd9f631cc2259c5fd30f32a54baa1a33aaaa257a93e2641e78d9c035e9e4"></a>GLCDC_TCON_SIGNAL_SELECT_STHB_HE&#160;</td><td class="fielddoc"><p>STB/LP/HE. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga69083bd9f631cc2259c5fd30f32a54baa0284821e97ca20bf9a578932e5089fad"></a>GLCDC_TCON_SIGNAL_SELECT_DE&#160;</td><td class="fielddoc"><p>DE. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gaf7dd81a8bcf4d7df1eded66faa9eaf6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf7dd81a8bcf4d7df1eded66faa9eaf6b">&#9670;&nbsp;</a></span>glcdc_clut_plane_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___g_l_c_d_c.html#gaf7dd81a8bcf4d7df1eded66faa9eaf6b">glcdc_clut_plane_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Clock phase adjustment for serial RGB output </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaf7dd81a8bcf4d7df1eded66faa9eaf6ba36c4419d3ae2d028bbdf23ff2b46708d"></a>GLCDC_CLUT_PLANE_0&#160;</td><td class="fielddoc"><p>GLCDC CLUT plane 0. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf7dd81a8bcf4d7df1eded66faa9eaf6ba86d09caccc525b534a9c61e1627acc33"></a>GLCDC_CLUT_PLANE_1&#160;</td><td class="fielddoc"><p>GLCDC CLUT plane 1. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga4e1755bfb6ac67734784bf1d9584fe0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e1755bfb6ac67734784bf1d9584fe0b">&#9670;&nbsp;</a></span>glcdc_dithering_mode_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___g_l_c_d_c.html#ga4e1755bfb6ac67734784bf1d9584fe0b">glcdc_dithering_mode_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dithering mode </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga4e1755bfb6ac67734784bf1d9584fe0ba46847e44e580f8bd97ec75c9703684d0"></a>GLCDC_DITHERING_MODE_TRUNCATE&#160;</td><td class="fielddoc"><p>No dithering (truncate) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4e1755bfb6ac67734784bf1d9584fe0ba20ed12d9354f2edaaeadd2ebf70c7f16"></a>GLCDC_DITHERING_MODE_ROUND_OFF&#160;</td><td class="fielddoc"><p>Dithering with round off. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4e1755bfb6ac67734784bf1d9584fe0bae93abfe8f3969b2a50256d7e9df256c1"></a>GLCDC_DITHERING_MODE_2X2PATTERN&#160;</td><td class="fielddoc"><p>Dithering with 2x2 pattern. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gacf44debe1897bea667d2440541ebb50e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacf44debe1897bea667d2440541ebb50e">&#9670;&nbsp;</a></span>glcdc_dithering_pattern_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___g_l_c_d_c.html#gacf44debe1897bea667d2440541ebb50e">glcdc_dithering_pattern_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dithering mode </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggacf44debe1897bea667d2440541ebb50ea20aeb69704a9806cc77cf8ee0ab0b750"></a>GLCDC_DITHERING_PATTERN_00&#160;</td><td class="fielddoc"><p>2x2 pattern '00' </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacf44debe1897bea667d2440541ebb50eaccfc177c8f04c65d5a63ccf7696c522c"></a>GLCDC_DITHERING_PATTERN_01&#160;</td><td class="fielddoc"><p>2x2 pattern '01' </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacf44debe1897bea667d2440541ebb50ea3a190e1b79a8552c7c70005a8906b714"></a>GLCDC_DITHERING_PATTERN_10&#160;</td><td class="fielddoc"><p>2x2 pattern '10' </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacf44debe1897bea667d2440541ebb50eaba434b2f9605e5ee42b83ad0c4d97a4f"></a>GLCDC_DITHERING_PATTERN_11&#160;</td><td class="fielddoc"><p>2x2 pattern '11' </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gaf4c632aa5e2e15803a911e4349ff6500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf4c632aa5e2e15803a911e4349ff6500">&#9670;&nbsp;</a></span>glcdc_input_interface_format_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___g_l_c_d_c.html#gaf4c632aa5e2e15803a911e4349ff6500">glcdc_input_interface_format_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Output interface format </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaf4c632aa5e2e15803a911e4349ff6500a92ebefc07736ac1af2b995a094eaf68c"></a>GLCDC_INPUT_INTERFACE_FORMAT_RGB565&#160;</td><td class="fielddoc"><p>Input interface format RGB565. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf4c632aa5e2e15803a911e4349ff6500a57c7d75018cf1492eb326763881aa070"></a>GLCDC_INPUT_INTERFACE_FORMAT_RGB888&#160;</td><td class="fielddoc"><p>Input interface format RGB888. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf4c632aa5e2e15803a911e4349ff6500ac91226635f8a074fd244b48473e42e0e"></a>GLCDC_INPUT_INTERFACE_FORMAT_ARGB1555&#160;</td><td class="fielddoc"><p>Input interface format ARGB1555. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf4c632aa5e2e15803a911e4349ff6500ab523387dd1c2c5131e79a2c44358e142"></a>GLCDC_INPUT_INTERFACE_FORMAT_ARGB4444&#160;</td><td class="fielddoc"><p>Input interface format ARGB4444. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf4c632aa5e2e15803a911e4349ff6500adabba8f6ce97da121ce66257e59e866e"></a>GLCDC_INPUT_INTERFACE_FORMAT_ARGB8888&#160;</td><td class="fielddoc"><p>Input interface format ARGB8888. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf4c632aa5e2e15803a911e4349ff6500a6a5b186661b29f90454e76a2d4b02887"></a>GLCDC_INPUT_INTERFACE_FORMAT_CLUT8&#160;</td><td class="fielddoc"><p>Input interface format CLUT8. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf4c632aa5e2e15803a911e4349ff6500aa7a03e532492d2855c34f3fa9294acc7"></a>GLCDC_INPUT_INTERFACE_FORMAT_CLUT4&#160;</td><td class="fielddoc"><p>Input interface format CLUT4. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf4c632aa5e2e15803a911e4349ff6500a166e2dd5caf7aa39e49fe35c603ba1d0"></a>GLCDC_INPUT_INTERFACE_FORMAT_CLUT1&#160;</td><td class="fielddoc"><p>Input interface format CLUT1. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gaf5de59ac20bb09418e8ad37af7e4d661"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf5de59ac20bb09418e8ad37af7e4d661">&#9670;&nbsp;</a></span>glcdc_output_interface_format_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___g_l_c_d_c.html#gaf5de59ac20bb09418e8ad37af7e4d661">glcdc_output_interface_format_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Output interface format </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaf5de59ac20bb09418e8ad37af7e4d661a500a1677a0b2412e2779025135cd9d29"></a>GLCDC_OUTPUT_INTERFACE_FORMAT_RGB888&#160;</td><td class="fielddoc"><p>Output interface format RGB888. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf5de59ac20bb09418e8ad37af7e4d661a49223837b350976646aa2f251c972af0"></a>GLCDC_OUTPUT_INTERFACE_FORMAT_RGB666&#160;</td><td class="fielddoc"><p>Output interface format RGB666. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf5de59ac20bb09418e8ad37af7e4d661a665a20451b5e87f9da7325fd63a44bbd"></a>GLCDC_OUTPUT_INTERFACE_FORMAT_RGB565&#160;</td><td class="fielddoc"><p>Output interface format RGB565. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf5de59ac20bb09418e8ad37af7e4d661a88c57776f7601924338b09c6935300e5"></a>GLCDC_OUTPUT_INTERFACE_FORMAT_SERIAL_RGB&#160;</td><td class="fielddoc"><p>Output interface format Serial RGB. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gadb4e7eab53d957d1f8b5368e0bbb0662"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadb4e7eab53d957d1f8b5368e0bbb0662">&#9670;&nbsp;</a></span>glcdc_dithering_output_format_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___g_l_c_d_c.html#gadb4e7eab53d957d1f8b5368e0bbb0662">glcdc_dithering_output_format_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dithering output format </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggadb4e7eab53d957d1f8b5368e0bbb0662a721a568d68eb6a50fca65e0bcf10339a"></a>GLCDC_DITHERING_OUTPUT_FORMAT_RGB888&#160;</td><td class="fielddoc"><p>Dithering output format RGB888. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadb4e7eab53d957d1f8b5368e0bbb0662a332b7de3dfc8cb463789e1faccb2b82a"></a>GLCDC_DITHERING_OUTPUT_FORMAT_RGB666&#160;</td><td class="fielddoc"><p>Dithering output format RGB666. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadb4e7eab53d957d1f8b5368e0bbb0662aa298c0027f2c10f3d9b1e3c2274a9a98"></a>GLCDC_DITHERING_OUTPUT_FORMAT_RGB565&#160;</td><td class="fielddoc"><p>Dithering output format RGB565. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga61603db8684d31ac86b2960096c91f58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga61603db8684d31ac86b2960096c91f58">&#9670;&nbsp;</a></span>R_GLCDC_Open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> R_GLCDC_Open </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> *const&#160;</td>
+          <td class="paramname"><em>p_api_ctrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__cfg__t">display_cfg_t</a> const *const&#160;</td>
+          <td class="paramname"><em>p_cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Open GLCDC module. Implements <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#af8ce6bc891272717179b56585a4cc0ea">display_api_t::open</a>.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Device was opened successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ALREADY_OPEN</td><td>Device was already open. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>Pointer to the control block or the configuration structure is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_CLOCK_GENERATION</td><td>Dot clock cannot be generated from clock source. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_TIMING_SETTING</td><td>Invalid panel timing parameter. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_LAYER_SETTING</td><td>Invalid layer setting found. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_ALIGNMENT</td><td>Input buffer alignment invalid. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_GAMMA_SETTING</td><td>Invalid gamma correction setting found </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_BRIGHTNESS_SETTING</td><td>Invalid brightness correction setting found </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>PCLKA must be supplied to Graphics LCD Controller (GLCDC) and GLCDC pins must be set in IOPORT before calling this API. </dd></dl>
+
+</div>
+</div>
+<a id="ga77bc7980b821bebed7cc20dbb427dfd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga77bc7980b821bebed7cc20dbb427dfd9">&#9670;&nbsp;</a></span>R_GLCDC_Close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> R_GLCDC_Close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> *const&#160;</td>
+          <td class="paramname"><em>p_api_ctrl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Close GLCDC module. Implements <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#aa281796ae7bfbb1d00a1b933ce133f84">display_api_t::close</a>.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Device was closed successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>Pointer to the control block is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>The function call is performed when the driver state is not equal to DISPLAY_STATE_CLOSED. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_UPDATE_TIMING</td><td>A function call is performed when the GLCDC is updating register values internally. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This API can be called when the driver is not in DISPLAY_STATE_CLOSED state. It returns an error if the register update operation for the background screen generation block is being held. </dd></dl>
+
+</div>
+</div>
+<a id="ga0e8a7d17184b405e6caae3ba21857baa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0e8a7d17184b405e6caae3ba21857baa">&#9670;&nbsp;</a></span>R_GLCDC_Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> R_GLCDC_Start </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> *const&#160;</td>
+          <td class="paramname"><em>p_api_ctrl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Start GLCDC module. Implements <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#aaa947aabb12b342b84b5f801de4ad7b2">display_api_t::start</a>.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Device was started successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>GLCDC module has not been opened. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>Pointer to the control block is NULL. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This API can be called when the driver is not in DISPLAY_STATE_OPENED status. </dd></dl>
+
+</div>
+</div>
+<a id="ga769f53407aca261a4d68eefca3406436"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga769f53407aca261a4d68eefca3406436">&#9670;&nbsp;</a></span>R_GLCDC_Stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> R_GLCDC_Stop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> *const&#160;</td>
+          <td class="paramname"><em>p_api_ctrl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stop GLCDC module. Implements <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#abc61ac909f456d4f2606b6a4bc4644fe">display_api_t::stop</a>.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Device was stopped successfully </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>Pointer to the control block is NULL </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_MODE</td><td>Function call is performed when the driver state is not DISPLAY_STATE_DISPLAYING. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_UPDATE_TIMING</td><td>The function call is performed while the GLCDC is updating register values internally. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This API can be called when the driver is in the DISPLAY_STATE_DISPLAYING state. It returns an error if the register update operation for the background screen generation blocks, the graphics data I/F blocks, or the output control block is being held. </dd></dl>
+
+</div>
+</div>
+<a id="ga661142a24277860146762914af644242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga661142a24277860146762914af644242">&#9670;&nbsp;</a></span>R_GLCDC_LayerChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> R_GLCDC_LayerChange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> const *const&#160;</td>
+          <td class="paramname"><em>p_api_ctrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__runtime__cfg__t">display_runtime_cfg_t</a> const *const&#160;</td>
+          <td class="paramname"><em>p_cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#ga364ba16397d9d24efb92170246c024ab">display_frame_layer_t</a>&#160;</td>
+          <td class="paramname"><em>layer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Change layer parameters of GLCDC module at runtime. Implements <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#ac012f204038e500efa90632c7c8ce5a8">display_api_t::layerChange</a>.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Changed layer parameters of GLCDC module successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>Pointer to the control block or the configuration structure is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_MODE</td><td>A function call is performed when the driver state is not DISPLAY_STATE_DISPLAYING. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_UPDATE_TIMING</td><td>A function call is performed while the GLCDC is updating register values internally. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This API can be called when the driver is in DISPLAY_STATE_DISPLAYING state. It returns an error if the register update operation for the background screen generation blocks or the graphics data I/F block is being held. </dd></dl>
+
+</div>
+</div>
+<a id="ga0d020f73e547ae005c666638a0dff427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0d020f73e547ae005c666638a0dff427">&#9670;&nbsp;</a></span>R_GLCDC_BufferChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> R_GLCDC_BufferChange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> const *const&#160;</td>
+          <td class="paramname"><em>p_api_ctrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *const&#160;</td>
+          <td class="paramname"><em>framebuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#ga364ba16397d9d24efb92170246c024ab">display_frame_layer_t</a>&#160;</td>
+          <td class="paramname"><em>layer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Change the framebuffer pointer for a layer. Implements <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#a6551b58832a32c7767f078ee7bce31ac">display_api_t::bufferChange</a>.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Changed layer parameters of GLCDC module successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>Pointer to the control block is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_MODE</td><td>A function call is performed when the driver state is not DISPLAY_STATE_DISPLAYING. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_ALIGNMENT</td><td>The framebuffer pointer is not 64-byte aligned. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_UPDATE_TIMING</td><td>A function call is performed while the GLCDC is updating register values internally. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This API can be called when the driver is in DISPLAY_STATE_OPENED state or higher. It returns an error if the register update operation for the background screen generation blocks or the graphics data I/F block is being held. </dd></dl>
+
+</div>
+</div>
+<a id="ga9d0754a6820a3a189c270f8da8677b72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9d0754a6820a3a189c270f8da8677b72">&#9670;&nbsp;</a></span>R_GLCDC_ColorCorrection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> R_GLCDC_ColorCorrection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> const *const&#160;</td>
+          <td class="paramname"><em>p_api_ctrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__correction__t">display_correction_t</a> const *const&#160;</td>
+          <td class="paramname"><em>p_correction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Perform color correction through the GLCDC module. Implements <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#a33e37feda5af926e37370700569d0450">display_api_t::correction</a>.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Color correction by GLCDC module was performed successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>Pointer to the control block or the display correction structure is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_MODE</td><td>Function call is performed when the driver state is not DISPLAY_STATE_DISPLAYING. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_UPDATE_TIMING</td><td>A function call is performed while the GLCDC is updating registers internally. </td></tr>
+    <tr><td class="paramname">FSP_ERR_UNSUPPORTED</td><td>Feature not supported with the current configuration.</td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_BRIGHTNESS_SETTING</td><td>Invalid brightness correction setting found </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This API can be called when the driver is in the DISPLAY_STATE_DISPLAYING state. It returns an error if the register update operation for the background screen generation blocks or the output control block is being held. </dd></dl>
+
+</div>
+</div>
+<a id="gaaabcf5b43ea6cb821c0cddee78172cc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaabcf5b43ea6cb821c0cddee78172cc5">&#9670;&nbsp;</a></span>R_GLCDC_ClutUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> R_GLCDC_ClutUpdate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> const *const&#160;</td>
+          <td class="paramname"><em>p_api_ctrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__clut__cfg__t">display_clut_cfg_t</a> const *const&#160;</td>
+          <td class="paramname"><em>p_clut_cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#ga364ba16397d9d24efb92170246c024ab">display_frame_layer_t</a>&#160;</td>
+          <td class="paramname"><em>layer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Write an entire color look-up table (CLUT) in the GLCDC module. Implements <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#a5a2c9cd2bae48a2a69da0bbc45cb340f">display_api_t::clut</a>.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>CLUT written successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>Pointer to the control block or CLUT source data is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_UPDATE_TIMING</td><td>R_GLCDC_ClutEdit was already used to edit the specified CLUT this frame. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_CLUT_ACCESS</td><td>Illegal CLUT entry or size is specified. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This API can be called any time. The written data will be used after the next vertical sync event. </dd></dl>
+
+</div>
+</div>
+<a id="gadae3a06f170b361c175a49a9961298e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadae3a06f170b361c175a49a9961298e9">&#9670;&nbsp;</a></span>R_GLCDC_ClutEdit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> R_GLCDC_ClutEdit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> const *const&#160;</td>
+          <td class="paramname"><em>p_api_ctrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#ga364ba16397d9d24efb92170246c024ab">display_frame_layer_t</a>&#160;</td>
+          <td class="paramname"><em>layer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Update an element of a color look-up table (CLUT) in the GLCDC module. Implements <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#adf095eb456db9e413a39ce5cb6042ced">display_api_t::clutEdit</a>.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>CLUT element updated successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>Pointer to the control block is NULL. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This API can be called any time. The written data will be used after the next vertical sync event. </dd></dl>
+
+</div>
+</div>
+<a id="ga90e788cd13261f633af7a67bc551f82a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga90e788cd13261f633af7a67bc551f82a">&#9670;&nbsp;</a></span>R_GLCDC_ColorKeySet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> R_GLCDC_ColorKeySet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> const *const&#160;</td>
+          <td class="paramname"><em>p_api_ctrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__colorkeying__layer__t">display_colorkeying_layer_t</a>&#160;</td>
+          <td class="paramname"><em>key_cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#ga364ba16397d9d24efb92170246c024ab">display_frame_layer_t</a>&#160;</td>
+          <td class="paramname"><em>layer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Configuring color key is not supported for GLCDC.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_ERR_UNSUPPORTED</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga1ba1f4b003e8045aefaa604f4eb5954f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ba1f4b003e8045aefaa604f4eb5954f">&#9670;&nbsp;</a></span>R_GLCDC_StatusGet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> R_GLCDC_StatusGet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#gafff5c06483fd448fc33c2e2302602d5f">display_ctrl_t</a> const *const&#160;</td>
+          <td class="paramname"><em>p_api_ctrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#structdisplay__status__t">display_status_t</a> *const&#160;</td>
+          <td class="paramname"><em>p_status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get status of GLCDC module. Implements <a class="el" href="group___d_i_s_p_l_a_y___a_p_i.html#a58901881db804c805aa9dbe363200393">display_api_t::statusGet</a>.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Got status successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>Pointer to the control block or the status structure is NULL. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The GLCDC hardware starts the fading processing at the first Vsync after the previous LayerChange() call is held. Due to this behavior of the hardware, this API may not return DISPLAY_FADE_STATUS_FADING_UNDERWAY as the fading status, if it is called before the first Vsync after LayerChange() is called. In this case, the API returns DISPLAY_FADE_STATUS_PENDING, instead of DISPLAY_FADE_STATUS_NOT_UNDERWAY. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.7-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+        <li class="footer">FSP Release v6.4.0 User's Manual Copyright © (2026) Renesas Electronics Corporation. All Rights Reserved.</li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!-- HTML header for doxygen 1.8.7-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<title>RA Flexible Software Package Documentation: BLE Driver (r_ble_compact)</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+    <script type="text/javascript" src="search/lunr.js"></script>
+    <link href="search/lunrsearch.css" rel="stylesheet" type="text/css">
+    <script src="search/lunr_index.js"></script>
+    <script src="search/lunrclient.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="fsp_customdoxygen.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("tr.tree_lvl_1").nextUntil("tr.tree_lvl_1,tr.tree_none").hide();
+		$("tr.tree_lvl_1").data("expanded","0");
+		$("tr.tree_lvl_2").data("expanded","0");
+		$("tr.tree_lvl_3").data("expanded","0");
+		$("tr.tree_lvl_4").data("expanded","0");
+		$("tr.tree_lvl_5").data("expanded","0");
+        $("tr.tree_lvl_1").click(function() {
+		    var lvl_1_is_open = $(this).data("expanded");
+		    if (lvl_1_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_2, tr.tree_lvl_1_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_1,tr.tree_none").hide();
+                $(this).nextUntil("tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_2,tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_2,tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_2").click(function() {
+		    var lvl_2_is_open = $(this).data("expanded");
+		    if (lvl_2_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_3, tr.tree_lvl_2_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+				$(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_3").click(function() {
+		    var lvl_3_is_open = $(this).data("expanded");
+		    if (lvl_3_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_4, tr.tree_lvl_3_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+                $(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_4, tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_4, tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_4").click(function() {
+		    var lvl_4_is_open = $(this).data("expanded");
+		    if (lvl_4_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3,tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5, tr.tree_lvl_4_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+                $(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_5").click(function() {
+		    var lvl_5_is_open = $(this).data("expanded");
+		    if (lvl_5_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_5,tr.tree_lvl_4,tr.tree_lvl_3,tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_5,tr.tree_lvl_4_item,tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+     });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo_scaled.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RA Flexible Software Package Documentation
+   &#160;<span id="projectnumber">Release v6.4.0</span>
+   </div>
+  </td>
+   <td>        <br /><div id="MSearchBox" class="MSearchBoxInactive">
+
+    <form id="lunrSearchForm" name="lunrSearchForm">
+      <span class="left" >
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               alt=""/>
+         <input class="search-input" id="MSearchField" name="q" placeholder="Search" type="text">
+      </span>
+      <span class="right">
+          &nbsp;
+      </span>
+        <!--<input type="submit" value="Search">-->
+    </form>
+</div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('group___b_l_e___c_o_m_p_a_c_t.html','');});
+</script>
+
+<script src="search/mark.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    var options = {         // allows highlighting across element boundaries.
+      "acrossElements": true
+    };
+    var bodyText = $("div.contents").text(); // try contents instead of body.
+    // If using body: Problem may be that text inside <script> tags is included in .text() - but not in cheerio?
+    // If using div.contents - works
+    var fullURL = $(location).attr('href');
+    var splitURL = fullURL.split("?");  // Get param string: content after "?" in URL
+    if (splitURL.length > 1) {          // If any content after "?"
+      var paramStr = splitURL[1];
+      var params = paramStr.split("&"); // Split params on "&"
+      for (i = 0; i < params.length; i++) {
+        var paramPair = params[i].split("=");
+        if (paramPair[0] == "pos") {     // If any param starts "pos", get the content after "="
+          posStr = paramPair[1];
+          var splitPos = posStr.split(",");
+          var termArray = [];
+        // termArray will have the search terms
+            for (i=0; i < splitPos.length; i += 2) {
+            start = splitPos[i];
+            len = splitPos[i+1]; // Needs error detection! Vulnerable if non-even # of pos entries
+            term = bodyText.substr(start,len);
+            if (termArray.includes(term) == false) {     // List all unique terms
+                termArray.push(bodyText.substr(start,len));
+            }
+          }
+    //      console.log(termArray);
+          var context = document.querySelector("div.contents");
+          var instance = new Mark(context);
+          for(i=0;i<termArray.length; i+=1) {
+            instance.mark(termArray[i],options);  // Use Mark.js to mark all terms in termArray
+            }
+          var firstMark = document.querySelector("mark");
+          firstMark.scrollIntoView(true);
+          //      console.log($("mark").first().text()); // Trying to scroll to first Mark element.
+        }
+            }
+    }
+  });
+</script>
+
+<link href="fsp_customdoxygen.css" rel="stylesheet" type="text/css" />
+
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+<!-- Lunr search results -->
+<div id="lunrResultBox" style="
+        position: fixed;
+        border: 1px solid black;
+        background-color: WhiteSmoke;
+        padding: 10px;
+        width: 500px;
+        height: 500px;
+        top: 30;
+        right: 0;
+        overflow: auto;
+        display: none">
+    <button onclick="closeLunrResults()" style="float: right;">X</button>
+    <div class="resultCount" id="resultCount"></div>
+    <div id="searchResults"></div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">BLE Driver (r_ble_compact)<div class="ingroups"><a class="el" href="group___r_e_n_e_s_a_s___m_o_d_u_l_e_s.html">Modules</a> &raquo; <a class="el" href="group___r_e_n_e_s_a_s___n_e_t_w_o_r_k_i_n_g___m_o_d_u_l_e_s.html">Networking</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<p>Driver for the Radio peripheral on RA MCUs. This module implements the <a class="el" href="group___b_l_e___a_p_i.html">BLE Interface</a>. </p>
+<h1><a class="anchor" id="r-ble-compact-overview"></a>
+Overview</h1>
+<p>The Bluetooth Low Energy (BLE) library in Compact configuration (r_ble) provides an API to control the Radio peripheral. This module is configured via the <a href="https://www.renesas.com/qe-ble">QE for BLE</a>. QE for BLE provides standard services defined by standardization organization and custom services defined by user. <a href="https://www.renesas.com/us/en/document/apn/ra4w1-group-bluetooth-le-profile-api-document-users-manual">Bluetooth LE Profile API Document User's Manual</a> describes the APIs for standard services.</p>
+<h2><a class="anchor" id="r-ble-compact-features"></a>
+Features</h2>
+<ul>
+<li>Common<ul>
+<li>Open/Close the BLE protocol stack.</li>
+<li>Execute the BLE job.</li>
+<li>Add an event in the BLE protocol stack internal queue.</li>
+</ul>
+</li>
+<li><a class="el" href="group___g_a_p___a_p_i.html">GAP</a><ul>
+<li>Initialization of the Host stack.</li>
+<li>Start/Stop Advertising.</li>
+<li>Initiate/Respond a pairing request.</li>
+</ul>
+</li>
+<li><a class="el" href="group___g_a_t_t___c_o_m_m_o_n___a_p_i.html">GATT Common</a><ul>
+<li>Get MTU size.</li>
+</ul>
+</li>
+<li><a class="el" href="group___g_a_t_t___s_e_r_v_e_r___a_p_i.html">GATT Server</a><ul>
+<li>Initialization of GATT Server.</li>
+<li>Notification/Indication.</li>
+</ul>
+</li>
+<li><a class="el" href="group___g_a_t_t___c_l_i_e_n_t___a_p_i.html">GATT Client</a><ul>
+<li>Discovery services, characteristics.</li>
+<li>Read/Write characteristic.</li>
+</ul>
+</li>
+<li><a class="el" href="group___v_s___a_p_i.html">Vendor Specific</a><ul>
+<li>DTM.</li>
+<li>Set/Get transmit power.</li>
+<li>Set/Get BD_ADDR.</li>
+</ul>
+</li>
+</ul>
+<h2><a class="anchor" id="r-ble-compact-supported-functions"></a>
+Supported functions</h2>
+<p>The supported functions are listed in the table below. Choose the configuration that best suits the functions that target system requires.</p>
+<table class="doxtable">
+<tr>
+<th>BLE library feature </th><th>Extended </th><th>Balance </th><th>Compact  </th></tr>
+<tr>
+<td>Common API </td><td>Supported </td><td>Supported </td><td style="color:orange"><b>Supported</b>  </td></tr>
+<tr>
+<td><a class="el" href="group___g_a_t_t___c_o_m_m_o_n___a_p_i.html">GATT Common API</a> </td><td>Supported </td><td>*1 Limited </td><td style="color:orange"><b>*1 *2 Limited</b>  </td></tr>
+<tr>
+<td><a class="el" href="group___g_a_t_t___c_o_m_m_o_n___a_p_i.html">GATT Common API</a> </td><td>Supported </td><td>Supported </td><td style="color:orange"><b>Supported</b>  </td></tr>
+<tr>
+<td><a class="el" href="group___g_a_t_t___s_e_r_v_e_r___a_p_i.html">GATT Server API</a> </td><td>Supported </td><td>Supported </td><td style="color:orange"><b>Supported</b>  </td></tr>
+<tr>
+<td><a class="el" href="group___g_a_t_t___c_l_i_e_n_t___a_p_i.html">GATT Client API</a> </td><td>Supported </td><td>Supported </td><td style="color:orange"><b>Supported</b>  </td></tr>
+<tr>
+<td><a class="el" href="group___l2_c_a_p___a_p_i.html">L2CAP API</a> </td><td>Supported </td><td>Not supported </td><td style="color:orange"><b>Not supported</b>  </td></tr>
+<tr>
+<td><a class="el" href="group___v_s___a_p_i.html">Vendor Specific API</a> </td><td>*3 Limited </td><td>*3 Limited </td><td style="color:orange"><b>*3 Limited</b>  </td></tr>
+</table>
+<dl class="section note"><dt>Note</dt><dd>1. This configuration dose not support LE Advertising Extensions functionality APIs. </dd>
+<dd>
+2. This configuration dose not support Central and Observer functionality APIs. </dd>
+<dd>
+3. This configuration dose not support vender specific firmware update functionality APIs.</dd></dl>
+<h2>Supported Devices</h2>
+<p>The Renesas BLE Library supports the following devices.</p><ul>
+<li>RA4W1</li>
+</ul>
+<h2><a class="anchor" id="r-ble-compact-supported-devices"></a>
+Supported Devices</h2>
+<p><table class="doxtable">
+<tr>
+<th>Device Group</th><th>Devices </th></tr>
+<tr>
+<td>RA4</td><td>RA4W1 </td></tr>
+</table>
+</p>
+<h1><a class="anchor" id="r-ble-compact-configuration"></a>
+Configuration</h1>
+<h2><a class="anchor" id="r-ble-compact-clock-configuration"></a>
+Clock Configuration</h2>
+<dl class="section note"><dt>Note</dt><dd>System clock (ICLK): 8 MHz or more </dd>
+<dd>
+Peripheral module clock A (PCLKA): 8MHz or more </dd>
+<dd>
+The BLE Protocol Stack is optimized for ICLK and PCLKA frequencies of 32 MHz. </dd>
+<dd>
+It is recommended that the clock be set so that the ICLK and PCLKA frequencies are 32MHz in order to get the best performance from the BLE.</dd></dl>
+<h2><a class="anchor" id="r-ble-compact-pin-configuration"></a>
+Pin Configuration</h2>
+<p>This module does not use I/O pins.</p>
+<h1><a class="anchor" id="r-ble-compact-usage_notes"></a>
+Usage Notes</h1>
+<p>Figure shows the software structure of the BLE FSP module. </p><div class="image">
+<object type="image/svg+xml" data="r_ble_fsp_ble_software_structure.svg">r_ble_fsp_ble_software_structure.svg</object>
+<div class="caption">
+BLE software structure</div></div>
+<p> The BLE FSP module consists of the BLE library.<br />
+The BLE Application uses the BLE functions via the <a class="el" href="group___b_l_e___a_p_i.html">R_BLE API</a> provided by the BLE Library.<br />
+The QE for BLE generates the source codes (BLE base skeleton program) as a base for the BLE Application and the BLE Profile codes including the Profile API.</p>
+<h2>Initialize the BLE protocol stack</h2>
+<dl class="section note"><dt>Note</dt><dd>It takes around 250msec to initialize BLE protocol stack. </dd>
+<dd>
+<a class="el" href="group___b_l_e___a_p_i.html#ga96e018e46221096ede90c56659b4be86">R_BLE_Open</a> API will be occupied MCU resources during the initialization.</dd></dl>
+<h2><a class="anchor" id="r-ble-compact-limitations"></a>
+Limitations</h2>
+<p>Developers should be aware of the following limitations when using the ble:</p>
+<dl class="section note"><dt>Note</dt><dd>- This configuration dose not supports LE Advertising Extensions functionality APIs. </dd>
+<dd>
+If those functionalities need your system, select <a class="el" href="group___b_l_e___e_x_t_e_n_d_e_d.html">BLE Driver (r_ble_extended)</a> configuration. </dd>
+<dd>
+- This configuration dose not supports Central and Observer functionality APIs. </dd>
+<dd>
+If those functionalities need your system, select <a class="el" href="group___b_l_e___e_x_t_e_n_d_e_d.html">BLE Driver (r_ble_extended)</a> or <a class="el" href="group___b_l_e___b_a_l_a_n_c_e.html">BLE Driver (r_ble_balance)</a> configuration. </dd>
+<dd>
+- This configuration dose not supports L2CAP functionality APIs. </dd>
+<dd>
+If those functionalities need your system, select <a class="el" href="group___b_l_e___e_x_t_e_n_d_e_d.html">BLE Driver (r_ble_extended)</a> configuration. </dd>
+<dd>
+- This configuration dose not supports vender specific firmware update functionality APIs. </dd>
+<dd>
+Those APIs are only supported by <a class="el" href="group___b_l_e___a_b_s___s_p_p.html">SPP BLE Abstraction (rm_ble_abs_spp)</a> module.</dd></dl>
+<h3><a class="anchor" id="r-ble-compact-limitations-on-freertos"></a>
+Limitations on FreeRTOS environment</h3>
+<p>Developers should be aware of the following limitations when using the ble on FreeRTOS environment: When use deep sleep, sleep mode or standby mode, there is following two wake up option from RF module.</p><ul>
+<li>Using Semaphore</li>
+<li>Using Event Groups</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Event Groups is processing as a delay handler by timer task. </dd>
+<dd>
+Therefore, if blocked by interrupts or if the timer task is blocked by another high-priority task, </dd>
+<dd>
+the existing connection will be broken.</dd></dl>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.7-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+        <li class="footer">FSP Release v6.4.0 User's Manual Copyright © (2026) Renesas Electronics Corporation. All Rights Reserved.</li>
+  </ul>
+</div>
+</body>
+</html>

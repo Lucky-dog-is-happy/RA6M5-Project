@@ -1,0 +1,816 @@
+<!-- HTML header for doxygen 1.8.7-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<title>RA Flexible Software Package Documentation: BLE Mesh Model Server Interface</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+    <script type="text/javascript" src="search/lunr.js"></script>
+    <link href="search/lunrsearch.css" rel="stylesheet" type="text/css">
+    <script src="search/lunr_index.js"></script>
+    <script src="search/lunrclient.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="fsp_customdoxygen.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("tr.tree_lvl_1").nextUntil("tr.tree_lvl_1,tr.tree_none").hide();
+		$("tr.tree_lvl_1").data("expanded","0");
+		$("tr.tree_lvl_2").data("expanded","0");
+		$("tr.tree_lvl_3").data("expanded","0");
+		$("tr.tree_lvl_4").data("expanded","0");
+		$("tr.tree_lvl_5").data("expanded","0");
+        $("tr.tree_lvl_1").click(function() {
+		    var lvl_1_is_open = $(this).data("expanded");
+		    if (lvl_1_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_2, tr.tree_lvl_1_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_1,tr.tree_none").hide();
+                $(this).nextUntil("tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_2,tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_2,tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_2").click(function() {
+		    var lvl_2_is_open = $(this).data("expanded");
+		    if (lvl_2_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_3, tr.tree_lvl_2_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+				$(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_3").click(function() {
+		    var lvl_3_is_open = $(this).data("expanded");
+		    if (lvl_3_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_4, tr.tree_lvl_3_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+                $(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_4, tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_4, tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_4").click(function() {
+		    var lvl_4_is_open = $(this).data("expanded");
+		    if (lvl_4_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3,tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5, tr.tree_lvl_4_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+                $(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_5").click(function() {
+		    var lvl_5_is_open = $(this).data("expanded");
+		    if (lvl_5_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_5,tr.tree_lvl_4,tr.tree_lvl_3,tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_5,tr.tree_lvl_4_item,tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+     });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo_scaled.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RA Flexible Software Package Documentation
+   &#160;<span id="projectnumber">Release v6.4.0</span>
+   </div>
+  </td>
+   <td>        <br /><div id="MSearchBox" class="MSearchBoxInactive">
+
+    <form id="lunrSearchForm" name="lunrSearchForm">
+      <span class="left" >
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               alt=""/>
+         <input class="search-input" id="MSearchField" name="q" placeholder="Search" type="text">
+      </span>
+      <span class="right">
+          &nbsp;
+      </span>
+        <!--<input type="submit" value="Search">-->
+    </form>
+</div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html','');});
+</script>
+
+<script src="search/mark.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    var options = {         // allows highlighting across element boundaries.
+      "acrossElements": true
+    };
+    var bodyText = $("div.contents").text(); // try contents instead of body.
+    // If using body: Problem may be that text inside <script> tags is included in .text() - but not in cheerio?
+    // If using div.contents - works
+    var fullURL = $(location).attr('href');
+    var splitURL = fullURL.split("?");  // Get param string: content after "?" in URL
+    if (splitURL.length > 1) {          // If any content after "?"
+      var paramStr = splitURL[1];
+      var params = paramStr.split("&"); // Split params on "&"
+      for (i = 0; i < params.length; i++) {
+        var paramPair = params[i].split("=");
+        if (paramPair[0] == "pos") {     // If any param starts "pos", get the content after "="
+          posStr = paramPair[1];
+          var splitPos = posStr.split(",");
+          var termArray = [];
+        // termArray will have the search terms
+            for (i=0; i < splitPos.length; i += 2) {
+            start = splitPos[i];
+            len = splitPos[i+1]; // Needs error detection! Vulnerable if non-even # of pos entries
+            term = bodyText.substr(start,len);
+            if (termArray.includes(term) == false) {     // List all unique terms
+                termArray.push(bodyText.substr(start,len));
+            }
+          }
+    //      console.log(termArray);
+          var context = document.querySelector("div.contents");
+          var instance = new Mark(context);
+          for(i=0;i<termArray.length; i+=1) {
+            instance.mark(termArray[i],options);  // Use Mark.js to mark all terms in termArray
+            }
+          var firstMark = document.querySelector("mark");
+          firstMark.scrollIntoView(true);
+          //      console.log($("mark").first().text()); // Trying to scroll to first Mark element.
+        }
+            }
+    }
+  });
+</script>
+
+<link href="fsp_customdoxygen.css" rel="stylesheet" type="text/css" />
+
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+<!-- Lunr search results -->
+<div id="lunrResultBox" style="
+        position: fixed;
+        border: 1px solid black;
+        background-color: WhiteSmoke;
+        padding: 10px;
+        width: 500px;
+        height: 500px;
+        top: 30;
+        right: 0;
+        overflow: auto;
+        display: none">
+    <button onclick="closeLunrResults()" style="float: right;">X</button>
+    <div class="resultCount" id="resultCount"></div>
+    <div id="searchResults"></div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
+  <div class="headertitle">
+<div class="title">BLE Mesh Model Server Interface<div class="ingroups"><a class="el" href="group___r_e_n_e_s_a_s___i_n_t_e_r_f_a_c_e_s.html">Interfaces</a> &raquo; <a class="el" href="group___r_e_n_e_s_a_s___n_e_t_w_o_r_k_i_n_g___i_n_t_e_r_f_a_c_e_s.html">Networking</a> &raquo; <a class="el" href="group___r_e_n_e_s_a_s___b_l_e___m_e_s_h___i_n_t_e_r_f_a_c_e_s.html">BLE Mesh Network Interfaces</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Interface for BLE Mesh Model Server functions. </p>
+<h1><a class="anchor" id="RM_BLE_MESH_MODEL_SERVER_API_Summary"></a>
+Summary</h1>
+<p>The BLE Mesh interface for the BLE Mesh Model Server (BLE MESH MODEL SERVER) middleware provides BLE Mesh Model Server functionality. </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:structrm__ble__mesh__model__server__generic__prop__srv__state__info__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#structrm__ble__mesh__model__server__generic__prop__srv__state__info__t">rm_ble_mesh_model_server_generic_prop_srv_state_info_t</a></td></tr>
+<tr class="separator:structrm__ble__mesh__model__server__generic__prop__srv__state__info__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structrm__ble__mesh__model__server__generic__prop__srv__id__info__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#structrm__ble__mesh__model__server__generic__prop__srv__id__info__t">rm_ble_mesh_model_server_generic_prop_srv_id_info_t</a></td></tr>
+<tr class="separator:structrm__ble__mesh__model__server__generic__prop__srv__id__info__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structrm__ble__mesh__model__server__generic__prop__srv__ids__info__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#structrm__ble__mesh__model__server__generic__prop__srv__ids__info__t">rm_ble_mesh_model_server_generic_prop_srv_ids_info_t</a></td></tr>
+<tr class="separator:structrm__ble__mesh__model__server__generic__prop__srv__ids__info__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structrm__ble__mesh__model__server__callback__args__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#structrm__ble__mesh__model__server__callback__args__t">rm_ble_mesh_model_server_callback_args_t</a></td></tr>
+<tr class="separator:structrm__ble__mesh__model__server__callback__args__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structrm__ble__mesh__model__server__timeout__callback__args__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#structrm__ble__mesh__model__server__timeout__callback__args__t">rm_ble_mesh_model_server_timeout_callback_args_t</a></td></tr>
+<tr class="separator:structrm__ble__mesh__model__server__timeout__callback__args__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structrm__ble__mesh__model__server__cfg__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#structrm__ble__mesh__model__server__cfg__t">rm_ble_mesh_model_server_cfg_t</a></td></tr>
+<tr class="separator:structrm__ble__mesh__model__server__cfg__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structrm__ble__mesh__model__server__api__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#structrm__ble__mesh__model__server__api__t">rm_ble_mesh_model_server_api_t</a></td></tr>
+<tr class="separator:structrm__ble__mesh__model__server__api__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structrm__ble__mesh__model__server__instance__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#structrm__ble__mesh__model__server__instance__t">rm_ble_mesh_model_server_instance_t</a></td></tr>
+<tr class="separator:structrm__ble__mesh__model__server__instance__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga9fe17dcc3455be33ff6edb961e48c52e"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#ga9fe17dcc3455be33ff6edb961e48c52e">rm_ble_mesh_model_server_ctrl_t</a></td></tr>
+<tr class="separator:ga9fe17dcc3455be33ff6edb961e48c52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga83dc5e8939dce5ad56fe6f64b77a054a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#ga83dc5e8939dce5ad56fe6f64b77a054a">rm_ble_mesh_model_server_generic_server_property_t</a> </td></tr>
+<tr class="separator:ga83dc5e8939dce5ad56fe6f64b77a054a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa555423bf6315a6fca9c7ca91a004427"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#gaa555423bf6315a6fca9c7ca91a004427">rm_ble_mesh_model_server_user_access_t</a> </td></tr>
+<tr class="separator:gaa555423bf6315a6fca9c7ca91a004427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4a5da1b554e2f42a3d5bc8ef6dd90916"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#ga4a5da1b554e2f42a3d5bc8ef6dd90916">rm_ble_mesh_model_server_device_property_t</a> </td></tr>
+<tr class="separator:ga4a5da1b554e2f42a3d5bc8ef6dd90916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/><h2 class="groupheader">Data Structure Documentation</h2>
+<a name="structrm__ble__mesh__model__server__generic__prop__srv__state__info__t" id="structrm__ble__mesh__model__server__generic__prop__srv__state__info__t"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structrm__ble__mesh__model__server__generic__prop__srv__state__info__t">&#9670;&nbsp;</a></span>rm_ble_mesh_model_server_generic_prop_srv_state_info_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct rm_ble_mesh_model_server_generic_prop_srv_state_info_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Generic Property is a state representing a device property of an element. The properties can be one of the following</p><ul>
+<li>Manufacturer Properties</li>
+<li>Admin Properties</li>
+<li>User Properties </li>
+</ul>
+</div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="af9b905cd3586018e16e947f9516c2726"></a>uint16_t</td>
+<td class="fieldname">
+property_id</td>
+<td class="fielddoc">
+<p>User Property ID field is a 2-octet Assigned Number value referencing a property </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a id="ade20d75047aa46042f76e94c2c49ad49"></a>uint8_t</td>
+<td class="fieldname">
+property_type</td>
+<td class="fielddoc">
+<p>Property Type - Manufacturer/Admin/User </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a id="ac89e6ab752196334c30e441292b8b811"></a>uint8_t</td>
+<td class="fieldname">
+access</td>
+<td class="fielddoc">
+<p>User Access field is an enumeration indicating whether the device property can be read or written as a Generic Admin/User Property </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a578d7d5c31367393072eecee3b82164a"></a>uint8_t *</td>
+<td class="fieldname">
+property_value</td>
+<td class="fielddoc">
+<p>User Property Value field is a conditional field </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a18e79003db6a1fd965e80a207d3cf0ee"></a>uint16_t</td>
+<td class="fieldname">
+property_value_len</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structrm__ble__mesh__model__server__generic__prop__srv__id__info__t" id="structrm__ble__mesh__model__server__generic__prop__srv__id__info__t"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structrm__ble__mesh__model__server__generic__prop__srv__id__info__t">&#9670;&nbsp;</a></span>rm_ble_mesh_model_server_generic_prop_srv_id_info_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct rm_ble_mesh_model_server_generic_prop_srv_id_info_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Generic Property ID a read-only state representing a device property that an element supports </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="a83969750ff31aa60b5f2ed9a8f53ee0a"></a>uint16_t</td>
+<td class="fieldname">
+property_id</td>
+<td class="fielddoc">
+<p>Property ID field is a 2-octet Assigned Number value that references a device property </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structrm__ble__mesh__model__server__generic__prop__srv__ids__info__t" id="structrm__ble__mesh__model__server__generic__prop__srv__ids__info__t"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structrm__ble__mesh__model__server__generic__prop__srv__ids__info__t">&#9670;&nbsp;</a></span>rm_ble_mesh_model_server_generic_prop_srv_ids_info_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct rm_ble_mesh_model_server_generic_prop_srv_ids_info_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Generic Property IDs a state representing a set of device properties that an element supports </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="adf8302627280a08bb1b6274ad93b7a60"></a>uint16_t *</td>
+<td class="fieldname">
+property_ids</td>
+<td class="fielddoc">
+<p>Property IDs field is a set of 2-octet Assigned Number value that references a set of device properties </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a id="ab2b946e0e0a4225c128e73126657bfd2"></a>uint16_t</td>
+<td class="fieldname">
+property_ids_count</td>
+<td class="fielddoc">
+<p>Count of property_ids </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structrm__ble__mesh__model__server__callback__args__t" id="structrm__ble__mesh__model__server__callback__args__t"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structrm__ble__mesh__model__server__callback__args__t">&#9670;&nbsp;</a></span>rm_ble_mesh_model_server_callback_args_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct rm_ble_mesh_model_server_callback_args_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Mesh model server callback parameter definition </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="a11b6c1fbaf330765f004d21b7e0cbd71"></a>void *</td>
+<td class="fieldname">
+p_context</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="acab02fb95c6b7469bccbfadee4823f40"></a><a class="el" href="group___r_m___b_l_e___m_e_s_h___a_c_c_e_s_s___a_p_i.html#structrm__ble__mesh__access__model__req__msg__context__t">rm_ble_mesh_access_model_req_msg_context_t</a> *</td>
+<td class="fieldname">
+p_msg_context</td>
+<td class="fielddoc">
+Context of the message. </td></tr>
+<tr><td class="fieldtype">
+<a id="aaa55f93ca9c06f31751d5df5d394edee"></a><a class="el" href="group___r_m___b_l_e___m_e_s_h___a_c_c_e_s_s___a_p_i.html#structrm__ble__mesh__access__req__msg__raw__t">rm_ble_mesh_access_req_msg_raw_t</a> *</td>
+<td class="fieldname">
+p_msg_raw</td>
+<td class="fielddoc">
+Uninterpreted/raw received message for a specific model instance. </td></tr>
+<tr><td class="fieldtype">
+<a id="a5ff567a00d8754392278b318980441d9"></a><a class="el" href="group___r_m___b_l_e___m_e_s_h___a_c_c_e_s_s___a_p_i.html#structrm__ble__mesh__access__model__req__msg__t">rm_ble_mesh_access_model_req_msg_t</a> *</td>
+<td class="fieldname">
+p_req_type</td>
+<td class="fielddoc">
+Requested message type for a specific model instance. </td></tr>
+<tr><td class="fieldtype">
+<a id="a4f344b589ae119ec5f85b57f60d88b58"></a><a class="el" href="group___r_m___b_l_e___m_e_s_h___a_c_c_e_s_s___a_p_i.html#structrm__ble__mesh__access__model__state__parameter__t">rm_ble_mesh_access_model_state_parameter_t</a> *</td>
+<td class="fieldname">
+p_state_parameter</td>
+<td class="fielddoc">
+Model specific state parameters in a request or response message. </td></tr>
+<tr><td class="fieldtype">
+<a id="a5189e99579be7829cfe8603ccca2a0f5"></a><a class="el" href="group___r_m___b_l_e___m_e_s_h___a_c_c_e_s_s___a_p_i.html#structrm__ble__mesh__access__extended__parameter__t">rm_ble_mesh_access_extended_parameter_t</a> *</td>
+<td class="fieldname">
+p_extended_parameter</td>
+<td class="fielddoc">
+Additional parameters in a Model specific request or response message. </td></tr>
+</table>
+
+</div>
+</div>
+<a name="structrm__ble__mesh__model__server__timeout__callback__args__t" id="structrm__ble__mesh__model__server__timeout__callback__args__t"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structrm__ble__mesh__model__server__timeout__callback__args__t">&#9670;&nbsp;</a></span>rm_ble_mesh_model_server_timeout_callback_args_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct rm_ble_mesh_model_server_timeout_callback_args_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Access Layer Model Publication Timeout Callback.</p>
+<p>Access Layer calls the registered callback to indicate Publication Timeout for the associated model.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>Model Handle. </td></tr>
+    <tr><td class="paramname">blob</td><td>Blob if any or NULL. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="a03c98950a0906c3ca6527382015bcb0b"></a>void *</td>
+<td class="fieldname">
+p_context</td>
+<td class="fielddoc">
+Placeholder for user data. </td></tr>
+<tr><td class="fieldtype">
+<a id="a4c521ad8e2bfe3dc77a2a4e9f5beff88"></a><a class="el" href="group___r_m___b_l_e___m_e_s_h___a_c_c_e_s_s___a_p_i.html#gaf7d1dc3fd3f4fef93a42a4c2d28b2e2a">rm_ble_mesh_access_model_handle_t</a> *</td>
+<td class="fieldname">
+p_handle</td>
+<td class="fielddoc">
+Access Model handle. </td></tr>
+<tr><td class="fieldtype">
+<a id="a7a87731c144db85df0f59b2306792fea"></a>void *</td>
+<td class="fieldname">
+p_blob</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structrm__ble__mesh__model__server__cfg__t" id="structrm__ble__mesh__model__server__cfg__t"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structrm__ble__mesh__model__server__cfg__t">&#9670;&nbsp;</a></span>rm_ble_mesh_model_server_cfg_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct rm_ble_mesh_model_server_cfg_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>BLE mesh model health server configuration parameters. </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Data Fields</h3></td></tr>
+<tr class="memitem:aa6e267a29eef3d2734caff042aad8caa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_m___b_l_e___m_e_s_h___a_c_c_e_s_s___a_p_i.html#structrm__ble__mesh__access__instance__t">rm_ble_mesh_access_instance_t</a> const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#aa6e267a29eef3d2734caff042aad8caa">p_access_instance</a></td></tr>
+<tr class="separator:aa6e267a29eef3d2734caff042aad8caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a45303fb91bdef282d708bc4ab89d34"><td class="memItemLeft" align="right" valign="top"><a id="a3a45303fb91bdef282d708bc4ab89d34"></a>
+void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#a3a45303fb91bdef282d708bc4ab89d34">p_callback</a> )(<a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#structrm__ble__mesh__model__server__callback__args__t">rm_ble_mesh_model_server_callback_args_t</a> *p_args)</td></tr>
+<tr class="memdesc:a3a45303fb91bdef282d708bc4ab89d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mesh model server callback. <br /></td></tr>
+<tr class="separator:a3a45303fb91bdef282d708bc4ab89d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b1bcc200bc0c6b85853254caae41c6a"><td class="memItemLeft" align="right" valign="top"><a id="a1b1bcc200bc0c6b85853254caae41c6a"></a>
+void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#a1b1bcc200bc0c6b85853254caae41c6a">p_timeout_callback</a> )(<a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#structrm__ble__mesh__model__server__timeout__callback__args__t">rm_ble_mesh_model_server_timeout_callback_args_t</a> *p_args)</td></tr>
+<tr class="memdesc:a1b1bcc200bc0c6b85853254caae41c6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access Layer Model publication timeout callback. <br /></td></tr>
+<tr class="separator:a1b1bcc200bc0c6b85853254caae41c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cc7ed5350f7b82ac4aa61f9342cccd5"><td class="memItemLeft" align="right" valign="top"><a id="a5cc7ed5350f7b82ac4aa61f9342cccd5"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#a5cc7ed5350f7b82ac4aa61f9342cccd5">p_context</a></td></tr>
+<tr class="memdesc:a5cc7ed5350f7b82ac4aa61f9342cccd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Placeholder for user data. <br /></td></tr>
+<tr class="separator:a5cc7ed5350f7b82ac4aa61f9342cccd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10d8f14abd471ac5b64d8c771d64031a"><td class="memItemLeft" align="right" valign="top"><a id="a10d8f14abd471ac5b64d8c771d64031a"></a>
+void const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#a10d8f14abd471ac5b64d8c771d64031a">p_extend</a></td></tr>
+<tr class="memdesc:a10d8f14abd471ac5b64d8c771d64031a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Placeholder for user extension. <br /></td></tr>
+<tr class="separator:a10d8f14abd471ac5b64d8c771d64031a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Field Documentation</h4>
+<a id="aa6e267a29eef3d2734caff042aad8caa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6e267a29eef3d2734caff042aad8caa">&#9670;&nbsp;</a></span>p_access_instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_m___b_l_e___m_e_s_h___a_c_c_e_s_s___a_p_i.html#structrm__ble__mesh__access__instance__t">rm_ble_mesh_access_instance_t</a> const* rm_ble_mesh_model_server_cfg_t::p_access_instance</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>the parameters for initialization. </p>
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structrm__ble__mesh__model__server__api__t" id="structrm__ble__mesh__model__server__api__t"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structrm__ble__mesh__model__server__api__t">&#9670;&nbsp;</a></span>rm_ble_mesh_model_server_api_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct rm_ble_mesh_model_server_api_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Shared Interface definition for BLE MESH </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Data Fields</h3></td></tr>
+<tr class="memitem:aba6f5aa3c815b2bae26d853b1cecff39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#aba6f5aa3c815b2bae26d853b1cecff39">open</a> )(<a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#ga9fe17dcc3455be33ff6edb961e48c52e">rm_ble_mesh_model_server_ctrl_t</a> *const p_ctrl, <a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#structrm__ble__mesh__model__server__cfg__t">rm_ble_mesh_model_server_cfg_t</a> const *const p_cfg)</td></tr>
+<tr class="separator:aba6f5aa3c815b2bae26d853b1cecff39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae39c92fdf133bf5edbe885b57bfc97d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#ae39c92fdf133bf5edbe885b57bfc97d3">close</a> )(<a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#ga9fe17dcc3455be33ff6edb961e48c52e">rm_ble_mesh_model_server_ctrl_t</a> *const p_ctrl)</td></tr>
+<tr class="separator:ae39c92fdf133bf5edbe885b57bfc97d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac56d2c461f38e224ce9427705716592a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#ac56d2c461f38e224ce9427705716592a">stateUpdate</a> )(<a class="el" href="group___r_m___b_l_e___m_e_s_h___a_c_c_e_s_s___a_p_i.html#gacf0a54d93cb08abb816caf65f0d09fc2">rm_ble_mesh_access_ctrl_t</a> *const p_ctrl, <a class="el" href="group___r_m___b_l_e___m_e_s_h___a_c_c_e_s_s___a_p_i.html#structrm__ble__mesh__access__server__state__t">rm_ble_mesh_access_server_state_t</a> const *const p_state)</td></tr>
+<tr class="separator:ac56d2c461f38e224ce9427705716592a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Field Documentation</h4>
+<a id="aba6f5aa3c815b2bae26d853b1cecff39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba6f5aa3c815b2bae26d853b1cecff39">&#9670;&nbsp;</a></span>open</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>(*  rm_ble_mesh_model_server_api_t::open) (<a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#ga9fe17dcc3455be33ff6edb961e48c52e">rm_ble_mesh_model_server_ctrl_t</a> *const p_ctrl, <a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#structrm__ble__mesh__model__server__cfg__t">rm_ble_mesh_model_server_cfg_t</a> const *const p_cfg)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>API to open server model.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_ctrl</td><td>Pointer to control structure. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_cfg</td><td>Pointer to configuration structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae39c92fdf133bf5edbe885b57bfc97d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae39c92fdf133bf5edbe885b57bfc97d3">&#9670;&nbsp;</a></span>close</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>(*  rm_ble_mesh_model_server_api_t::close) (<a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#ga9fe17dcc3455be33ff6edb961e48c52e">rm_ble_mesh_model_server_ctrl_t</a> *const p_ctrl)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>API to close server model.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_ctrl</td><td>Pointer to control structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac56d2c461f38e224ce9427705716592a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac56d2c461f38e224ce9427705716592a">&#9670;&nbsp;</a></span>stateUpdate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>(*  rm_ble_mesh_model_server_api_t::stateUpdate) (<a class="el" href="group___r_m___b_l_e___m_e_s_h___a_c_c_e_s_s___a_p_i.html#gacf0a54d93cb08abb816caf65f0d09fc2">rm_ble_mesh_access_ctrl_t</a> *const p_ctrl, <a class="el" href="group___r_m___b_l_e___m_e_s_h___a_c_c_e_s_s___a_p_i.html#structrm__ble__mesh__access__server__state__t">rm_ble_mesh_access_server_state_t</a> const *const p_state)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>API to send reply or to update state change.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_ctrl</td><td>Pointer to control structure. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_state</td><td>Pointer to model specific current/target state parameters. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structrm__ble__mesh__model__server__instance__t" id="structrm__ble__mesh__model__server__instance__t"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structrm__ble__mesh__model__server__instance__t">&#9670;&nbsp;</a></span>rm_ble_mesh_model_server_instance_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct rm_ble_mesh_model_server_instance_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>This structure encompasses everything that is needed to use an instance of this interface. </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="a18b9fa61a9145ca451bfe105c37b08ab"></a><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#ga9fe17dcc3455be33ff6edb961e48c52e">rm_ble_mesh_model_server_ctrl_t</a> *</td>
+<td class="fieldname">
+p_ctrl</td>
+<td class="fielddoc">
+Pointer to the control structure for this instance. </td></tr>
+<tr><td class="fieldtype">
+<a id="a22e32683ae42eb1d98f5dd641d79c3eb"></a><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#structrm__ble__mesh__model__server__cfg__t">rm_ble_mesh_model_server_cfg_t</a> <br class="typebreak" />
+const  *</td>
+<td class="fieldname">
+p_cfg</td>
+<td class="fielddoc">
+Pointer to the configuration structure for this instance. </td></tr>
+<tr><td class="fieldtype">
+<a id="ae99ffeb9f13ba3e6da89bc6a879d8cee"></a><a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#structrm__ble__mesh__model__server__api__t">rm_ble_mesh_model_server_api_t</a> <br class="typebreak" />
+const  *</td>
+<td class="fieldname">
+p_api</td>
+<td class="fielddoc">
+Pointer to the API structure for this instance. </td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ga9fe17dcc3455be33ff6edb961e48c52e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9fe17dcc3455be33ff6edb961e48c52e">&#9670;&nbsp;</a></span>rm_ble_mesh_model_server_ctrl_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void <a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#ga9fe17dcc3455be33ff6edb961e48c52e">rm_ble_mesh_model_server_ctrl_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>BLE MESH MODEL SERVER control block. Allocate an instance specific control block to pass into the BLE mesh model server API calls. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga83dc5e8939dce5ad56fe6f64b77a054a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga83dc5e8939dce5ad56fe6f64b77a054a">&#9670;&nbsp;</a></span>rm_ble_mesh_model_server_generic_server_property_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#ga83dc5e8939dce5ad56fe6f64b77a054a">rm_ble_mesh_model_server_generic_server_property_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga83dc5e8939dce5ad56fe6f64b77a054aac99f0ff798c3c4f15a6d6a5601e15146"></a>RM_BLE_MESH_MODEL_SERVER_GENERIC_SERVER_PROPERTY_MANUFACTURER&#160;</td><td class="fielddoc"><p>Generic Manufacturer Properties </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga83dc5e8939dce5ad56fe6f64b77a054aae983496dadc22d5d426f2f439d1aab39"></a>RM_BLE_MESH_MODEL_SERVER_GENERIC_SERVER_PROPERTY_ADMIN&#160;</td><td class="fielddoc"><p>Generic Admin Properties </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga83dc5e8939dce5ad56fe6f64b77a054aaf85a450b7e2c37fc24d2f0bffbb5bd34"></a>RM_BLE_MESH_MODEL_SERVER_GENERIC_SERVER_PROPERTY_USER&#160;</td><td class="fielddoc"><p>Generic User Properties </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gaa555423bf6315a6fca9c7ca91a004427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa555423bf6315a6fca9c7ca91a004427">&#9670;&nbsp;</a></span>rm_ble_mesh_model_server_user_access_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#gaa555423bf6315a6fca9c7ca91a004427">rm_ble_mesh_model_server_user_access_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>User Access field values </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaa555423bf6315a6fca9c7ca91a004427ae19cb8df52b7e24f7c0cda51c8b0412a"></a>RM_BLE_MESH_MODEL_SERVER_USER_ACCESS_PROHIBITED&#160;</td><td class="fielddoc"><p>User Access - Prohibited </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa555423bf6315a6fca9c7ca91a004427a4ef16a71c27af0ab4e1e0985e1ff36f1"></a>RM_BLE_MESH_MODEL_SERVER_USER_ACCESS_READ&#160;</td><td class="fielddoc"><p>User Access - the device property can be read </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa555423bf6315a6fca9c7ca91a004427aa357528c6100b9c449bb9821e0854813"></a>RM_BLE_MESH_MODEL_SERVER_USER_ACCESS_WRITE&#160;</td><td class="fielddoc"><p>User Access - the device property can be written </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa555423bf6315a6fca9c7ca91a004427a18c8b8558bbecb7ad0819f417eef9908"></a>RM_BLE_MESH_MODEL_SERVER_USER_ACCESS_READ_WRITE&#160;</td><td class="fielddoc"><p>User Access - the device property can be read and written </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa555423bf6315a6fca9c7ca91a004427a09854418f79b4e1958c7dd18e693448e"></a>RM_BLE_MESH_MODEL_SERVER_USER_ACCESS_INVALID_PROPERTY_ID&#160;</td><td class="fielddoc"><p>User Access - the invalid device property id </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga4a5da1b554e2f42a3d5bc8ef6dd90916"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4a5da1b554e2f42a3d5bc8ef6dd90916">&#9670;&nbsp;</a></span>rm_ble_mesh_model_server_device_property_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___r_m___b_l_e___m_e_s_h___m_o_d_e_l___s_e_r_v_e_r___a_p_i.html#ga4a5da1b554e2f42a3d5bc8ef6dd90916">rm_ble_mesh_model_server_device_property_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916a840be902023efa2b471ce9aa86e1d5ed"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_LIGHT_CONTROL_TIME_OCCUPANCY_DELAY&#160;</td><td class="fielddoc"><p>Device Property - Light Control Time Occupancy Delay </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916ad79fa73fb5d230b0a537b7fbd01d44a5"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_LIGHT_CONTROL_TIME_FADE_ON&#160;</td><td class="fielddoc"><p>Device Property - Light Control Time Fade On </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916a1b8b47bf932aa7067af386d493c76fa9"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_LIGHT_CONTROL_TIME_RUN_ON&#160;</td><td class="fielddoc"><p>Device Property - Light Control Time Run On </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916aecc11cac97fa86ca67af3314b476a465"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_LIGHT_CONTROL_TIME_FADE&#160;</td><td class="fielddoc"><p>Device Property - Light Control Time Fade </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916aa43070b3d70c9dd127bc4da481bda360"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_LIGHT_CONTROL_TIME_PROLONG&#160;</td><td class="fielddoc"><p>Device Property - Light Control Time Prolong </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916ada100591146eb8c437328a4b6692c453"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_LIGHT_CONTROL_TIME_FADE_STANDBY_AUTO&#160;</td><td class="fielddoc"><p>Device Property - Light Control Time Fade Standby Auto </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916a6953a15cc4e3ec707382b26ff61bea39"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_LIGHT_CONTROL_TIME_FADE_STANDBY_MANUAL&#160;</td><td class="fielddoc"><p>Device Property - Light Control Time Fade Standby Manual </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916aea9f5584926689d98264a2db94ca9df0"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_LIGHT_CONTROL_LIGHTNESS_ON&#160;</td><td class="fielddoc"><p>Device Property - Light Control Lightness On </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916a7f23f9d74e936b7b572d058a01a6b41a"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_LIGHT_CONTROL_LIGHTNESS_PROLONG&#160;</td><td class="fielddoc"><p>Device Property - Light Control Lightness Prolong </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916a6f68f105e018c8c43ee8f642dfad5e6f"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_LIGHT_CONTROL_LIGHTNESS_STANDBY&#160;</td><td class="fielddoc"><p>Device Property - Light Control Lightness Standby </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916a06904ae6e3336edee38e849a08a7880d"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_LIGHT_CONTROL_AMBIENT_LUXLEVEL_ON&#160;</td><td class="fielddoc"><p>Device Property - Light Control Ambient LuxLevel On </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916a25220297896ca120e01742823196ed26"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_LIGHT_CONTROL_AMBIENT_LUXLEVEL_PROLONG&#160;</td><td class="fielddoc"><p>Device Property - Light Control Ambient LuxLevel Prolong </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916ac1154870010272c6ecaea41b6eb2d862"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_LIGHT_CONTROL_AMBIENT_LUXLEVEL_STANDBY&#160;</td><td class="fielddoc"><p>Device Property - Light Control Ambient LuxLevel Standby </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916a30288e62fcf2d2405e2e33a7227f2e1d"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_LIGHT_CONTROL_REGULATOR_KIU&#160;</td><td class="fielddoc"><p>Device Property - Light Control Regulator Kiu </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916a240287a931186487e785a7488f4868bc"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_LIGHT_CONTROL_REGULATOR_KID&#160;</td><td class="fielddoc"><p>Device Property - Light Control Regulator Kid </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916a621af922ee4d63d005209ca0b43fc086"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_LIGHT_CONTROL_REGULATOR_KPU&#160;</td><td class="fielddoc"><p>Device Property - Light Control Regulator Kpu </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916a0d668b2bb1d5a5ff29af29d8bce7e1f6"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_LIGHT_CONTROL_REGULATOR_KPD&#160;</td><td class="fielddoc"><p>Device Property - Light Control Regulator Kpd </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916a3607138ae5cebba0235d657114b7c87a"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_LIGHT_CONTROL_REGULATOR_ACCURACY&#160;</td><td class="fielddoc"><p>Device Property - Light Control Regulator Accuracy </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916a5a710925934934d8c1b4e409e3cf6579"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_MOTION_SENSED&#160;</td><td class="fielddoc"><p>Device Property - Motion Sensed </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916a57ec5881f2544a6ef4f307e281653af9"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_TIME_SINCE_MOTION_SENSED&#160;</td><td class="fielddoc"><p>Device Property - Time Since Motion Sensed </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916a71507b6306a5a05727ceb5e369954587"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_PEOPLE_COUNT&#160;</td><td class="fielddoc"><p>Device Property - People Count </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916a374bb7721b42f86668a6f0c7c95dd50a"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_PRESENCE_DETECTED&#160;</td><td class="fielddoc"><p>Device Property - Presence Detected </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4a5da1b554e2f42a3d5bc8ef6dd90916a48686236e2ea504937aaf959d7240d2f"></a>RM_BLE_MESH_MODEL_SERVER_DEVICE_PROPERTY_PRESENT_AMBIENT_LIGHT_LEVEL&#160;</td><td class="fielddoc"><p>Device Property - Present Ambient Light Level </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.7-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+        <li class="footer">FSP Release v6.4.0 User's Manual Copyright © (2026) Renesas Electronics Corporation. All Rights Reserved.</li>
+  </ul>
+</div>
+</body>
+</html>

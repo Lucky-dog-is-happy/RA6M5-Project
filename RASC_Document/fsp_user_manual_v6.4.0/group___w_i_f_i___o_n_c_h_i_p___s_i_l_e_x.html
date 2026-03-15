@@ -1,0 +1,1889 @@
+<!-- HTML header for doxygen 1.8.7-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<title>RA Flexible Software Package Documentation: WiFi Onchip Silex Driver using r_sci_uart (rm_wifi_onchip_silex)</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+    <script type="text/javascript" src="search/lunr.js"></script>
+    <link href="search/lunrsearch.css" rel="stylesheet" type="text/css">
+    <script src="search/lunr_index.js"></script>
+    <script src="search/lunrclient.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="fsp_customdoxygen.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("tr.tree_lvl_1").nextUntil("tr.tree_lvl_1,tr.tree_none").hide();
+		$("tr.tree_lvl_1").data("expanded","0");
+		$("tr.tree_lvl_2").data("expanded","0");
+		$("tr.tree_lvl_3").data("expanded","0");
+		$("tr.tree_lvl_4").data("expanded","0");
+		$("tr.tree_lvl_5").data("expanded","0");
+        $("tr.tree_lvl_1").click(function() {
+		    var lvl_1_is_open = $(this).data("expanded");
+		    if (lvl_1_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_2, tr.tree_lvl_1_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_1,tr.tree_none").hide();
+                $(this).nextUntil("tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_2,tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_2,tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_2").click(function() {
+		    var lvl_2_is_open = $(this).data("expanded");
+		    if (lvl_2_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_3, tr.tree_lvl_2_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+				$(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_3").click(function() {
+		    var lvl_3_is_open = $(this).data("expanded");
+		    if (lvl_3_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_4, tr.tree_lvl_3_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+                $(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_4, tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_4, tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_4").click(function() {
+		    var lvl_4_is_open = $(this).data("expanded");
+		    if (lvl_4_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3,tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5, tr.tree_lvl_4_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+                $(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_5").click(function() {
+		    var lvl_5_is_open = $(this).data("expanded");
+		    if (lvl_5_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_5,tr.tree_lvl_4,tr.tree_lvl_3,tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_5,tr.tree_lvl_4_item,tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+     });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo_scaled.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RA Flexible Software Package Documentation
+   &#160;<span id="projectnumber">Release v6.4.0</span>
+   </div>
+  </td>
+   <td>        <br /><div id="MSearchBox" class="MSearchBoxInactive">
+
+    <form id="lunrSearchForm" name="lunrSearchForm">
+      <span class="left" >
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               alt=""/>
+         <input class="search-input" id="MSearchField" name="q" placeholder="Search" type="text">
+      </span>
+      <span class="right">
+          &nbsp;
+      </span>
+        <!--<input type="submit" value="Search">-->
+    </form>
+</div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html','');});
+</script>
+
+<script src="search/mark.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    var options = {         // allows highlighting across element boundaries.
+      "acrossElements": true
+    };
+    var bodyText = $("div.contents").text(); // try contents instead of body.
+    // If using body: Problem may be that text inside <script> tags is included in .text() - but not in cheerio?
+    // If using div.contents - works
+    var fullURL = $(location).attr('href');
+    var splitURL = fullURL.split("?");  // Get param string: content after "?" in URL
+    if (splitURL.length > 1) {          // If any content after "?"
+      var paramStr = splitURL[1];
+      var params = paramStr.split("&"); // Split params on "&"
+      for (i = 0; i < params.length; i++) {
+        var paramPair = params[i].split("=");
+        if (paramPair[0] == "pos") {     // If any param starts "pos", get the content after "="
+          posStr = paramPair[1];
+          var splitPos = posStr.split(",");
+          var termArray = [];
+        // termArray will have the search terms
+            for (i=0; i < splitPos.length; i += 2) {
+            start = splitPos[i];
+            len = splitPos[i+1]; // Needs error detection! Vulnerable if non-even # of pos entries
+            term = bodyText.substr(start,len);
+            if (termArray.includes(term) == false) {     // List all unique terms
+                termArray.push(bodyText.substr(start,len));
+            }
+          }
+    //      console.log(termArray);
+          var context = document.querySelector("div.contents");
+          var instance = new Mark(context);
+          for(i=0;i<termArray.length; i+=1) {
+            instance.mark(termArray[i],options);  // Use Mark.js to mark all terms in termArray
+            }
+          var firstMark = document.querySelector("mark");
+          firstMark.scrollIntoView(true);
+          //      console.log($("mark").first().text()); // Trying to scroll to first Mark element.
+        }
+            }
+    }
+  });
+</script>
+
+<link href="fsp_customdoxygen.css" rel="stylesheet" type="text/css" />
+
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+<!-- Lunr search results -->
+<div id="lunrResultBox" style="
+        position: fixed;
+        border: 1px solid black;
+        background-color: WhiteSmoke;
+        padding: 10px;
+        width: 500px;
+        height: 500px;
+        top: 30;
+        right: 0;
+        overflow: auto;
+        display: none">
+    <button onclick="closeLunrResults()" style="float: right;">X</button>
+    <div class="resultCount" id="resultCount"></div>
+    <div id="searchResults"></div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
+  <div class="headertitle">
+<div class="title">WiFi Onchip Silex Driver using r_sci_uart (rm_wifi_onchip_silex)<div class="ingroups"><a class="el" href="group___r_e_n_e_s_a_s___m_o_d_u_l_e_s.html">Modules</a> &raquo; <a class="el" href="group___r_e_n_e_s_a_s___n_e_t_w_o_r_k_i_n_g___m_o_d_u_l_e_s.html">Networking</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga5ed6c586aeefcc7e02eeed86c50f01ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga5ed6c586aeefcc7e02eeed86c50f01ba">rm_wifi_onchip_silex_open</a> (<a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#structwifi__onchip__silex__cfg__t">wifi_onchip_silex_cfg_t</a> const *const p_cfg)</td></tr>
+<tr class="separator:ga5ed6c586aeefcc7e02eeed86c50f01ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga71ff05487a2b4e9dbcb26e4b3811ff2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga71ff05487a2b4e9dbcb26e4b3811ff2f">rm_wifi_onchip_silex_close</a> ()</td></tr>
+<tr class="separator:ga71ff05487a2b4e9dbcb26e4b3811ff2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa6664ce4e42dbbc1ca9e8b02b3804a42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#gaa6664ce4e42dbbc1ca9e8b02b3804a42">rm_wifi_onchip_silex_disconnect</a> ()</td></tr>
+<tr class="separator:gaa6664ce4e42dbbc1ca9e8b02b3804a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga86d5d55256dad8700d71cc3a00f3c520"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga86d5d55256dad8700d71cc3a00f3c520">rm_wifi_onchip_silex_socket_connected</a> (<a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> *p_status)</td></tr>
+<tr class="separator:ga86d5d55256dad8700d71cc3a00f3c520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4707c46e42da9f3da79b36758dbe04d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga4707c46e42da9f3da79b36758dbe04d5">rm_wifi_onchip_silex_network_info_get</a> (uint32_t *p_ip_addr, uint32_t *p_subnet_mask, uint32_t *p_gateway)</td></tr>
+<tr class="separator:ga4707c46e42da9f3da79b36758dbe04d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga93c9fcb172912cb7ba512e3dd9dd1c37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga93c9fcb172912cb7ba512e3dd9dd1c37">rm_wifi_onchip_silex_connect</a> (const char *p_ssid, <a class="el" href="group___w_i_f_i___a_p_i.html#ga827dc938c214035b938c5ebe7d7b6816">WIFISecurity_t</a> security, const char *p_passphrase)</td></tr>
+<tr class="separator:ga93c9fcb172912cb7ba512e3dd9dd1c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga688cee9512f449356a1127c3fe2b1608"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga688cee9512f449356a1127c3fe2b1608">rm_wifi_onchip_silex_mac_addr_get</a> (uint8_t *p_macaddr)</td></tr>
+<tr class="separator:ga688cee9512f449356a1127c3fe2b1608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga13d0978109d01cea1dc3355463944025"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga13d0978109d01cea1dc3355463944025">rm_wifi_onchip_silex_scan</a> (<a class="el" href="group___w_i_f_i___a_p_i.html#struct_w_i_f_i_scan_result__t">WIFIScanResult_t</a> *p_results, uint32_t maxNetworks)</td></tr>
+<tr class="separator:ga13d0978109d01cea1dc3355463944025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga64e66aa0bc9c6ad5a1b70902c2f2b188"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga64e66aa0bc9c6ad5a1b70902c2f2b188">rm_wifi_onchip_silex_ping</a> (uint8_t *p_ip_addr, uint32_t count, uint32_t interval_ms)</td></tr>
+<tr class="separator:ga64e66aa0bc9c6ad5a1b70902c2f2b188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3d79f8c9cda51232cc70871c0853990e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga3d79f8c9cda51232cc70871c0853990e">rm_wifi_onchip_silex_ip_addr_get</a> (uint32_t *p_ip_addr)</td></tr>
+<tr class="separator:ga3d79f8c9cda51232cc70871c0853990e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacff2df8e5e3ff5729128dd24c9799ac3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#gacff2df8e5e3ff5729128dd24c9799ac3">rm_wifi_onchip_silex_avail_socket_get</a> (uint32_t *p_socket_id)</td></tr>
+<tr class="separator:gacff2df8e5e3ff5729128dd24c9799ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab0d09c34642736159fc3c6ff30bc98dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#gab0d09c34642736159fc3c6ff30bc98dc">rm_wifi_onchip_silex_socket_status_get</a> (uint32_t socket_no, uint32_t *p_socket_status)</td></tr>
+<tr class="separator:gab0d09c34642736159fc3c6ff30bc98dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadbfc40d820d7bbdd9a8d178a58241366"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#gadbfc40d820d7bbdd9a8d178a58241366">rm_wifi_onchip_silex_tcp_shutdown</a> (uint32_t socket_no, uint32_t shutdown_channels)</td></tr>
+<tr class="separator:gadbfc40d820d7bbdd9a8d178a58241366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab6c4122ef5bf3a175323a6233391f21a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#gab6c4122ef5bf3a175323a6233391f21a">rm_wifi_onchip_silex_socket_create</a> (uint32_t socket_no, uint32_t type, uint32_t ipversion)</td></tr>
+<tr class="separator:gab6c4122ef5bf3a175323a6233391f21a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabdb2924344fe1ef785ffefd6671be6ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#gabdb2924344fe1ef785ffefd6671be6ba">rm_wifi_onchip_silex_tcp_connect</a> (uint32_t socket_no, uint32_t ipaddr, uint32_t port)</td></tr>
+<tr class="separator:gabdb2924344fe1ef785ffefd6671be6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga72dbfc589b6c946c281fa4755cb46261"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga72dbfc589b6c946c281fa4755cb46261">rm_wifi_onchip_silex_udp_connect</a> (uint32_t socket_no, uint32_t ipaddr, uint32_t port, uint32_t type)</td></tr>
+<tr class="separator:ga72dbfc589b6c946c281fa4755cb46261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4cb29546897bf9647af286675fe21bbb"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga4cb29546897bf9647af286675fe21bbb">rm_wifi_onchip_silex_send</a> (uint32_t socket_no, const uint8_t *p_data, uint32_t length, uint32_t timeout_ms)</td></tr>
+<tr class="separator:ga4cb29546897bf9647af286675fe21bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga83e8a444e3e8bfd60d90313c1c615ca3"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga83e8a444e3e8bfd60d90313c1c615ca3">rm_wifi_onchip_silex_recv</a> (uint32_t socket_no, uint8_t *p_data, uint32_t length, uint32_t timeout_ms)</td></tr>
+<tr class="separator:ga83e8a444e3e8bfd60d90313c1c615ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga673034dffdd57fd0db7a80ff72a997b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga673034dffdd57fd0db7a80ff72a997b3">rm_wifi_onchip_silex_socket_disconnect</a> (uint32_t socket_no)</td></tr>
+<tr class="separator:ga673034dffdd57fd0db7a80ff72a997b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11a768db2090478272979945e1b3c9dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga11a768db2090478272979945e1b3c9dc">rm_wifi_onchip_silex_dns_query</a> (const char *p_textstring, uint8_t *p_ip_addr)</td></tr>
+<tr class="separator:ga11a768db2090478272979945e1b3c9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga388791b21824a1bee7f32a51f6803138"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga388791b21824a1bee7f32a51f6803138">RM_WIFI_ONCHIP_SILEX_EpochTimeGet</a> (time_t *p_utc_time)</td></tr>
+<tr class="separator:ga388791b21824a1bee7f32a51f6803138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4f161eb801cdb2f85a6c15e4368cc7f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga4f161eb801cdb2f85a6c15e4368cc7f9">RM_WIFI_ONCHIP_SILEX_LocalTimeGet</a> (uint8_t *p_local_time, uint32_t size_string)</td></tr>
+<tr class="separator:ga4f161eb801cdb2f85a6c15e4368cc7f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga78e06bbafeadb0e9d0ca5a6dfae64add"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga78e06bbafeadb0e9d0ca5a6dfae64add">RM_WIFI_ONCHIP_SILEX_SntpEnableSet</a> (<a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga28cec0db63a7cfc3d0f2e85e8d06b25a">wifi_onchip_silex_sntp_enable_t</a> enable)</td></tr>
+<tr class="separator:ga78e06bbafeadb0e9d0ca5a6dfae64add"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga546f624c007993c8b0a97330bc7f9fbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga546f624c007993c8b0a97330bc7f9fbb">RM_WIFI_ONCHIP_SILEX_SntpServerIpAddressSet</a> (uint8_t *p_ip_address)</td></tr>
+<tr class="separator:ga546f624c007993c8b0a97330bc7f9fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3dd4b36863ac1013e57f3ad16ffa7bb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga3dd4b36863ac1013e57f3ad16ffa7bb1">RM_WIFI_ONCHIP_SILEX_SntpTimeZoneSet</a> (int32_t hours, uint32_t minutes, <a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#gaead8d483f1afd423d272960c4b3bea7c">wifi_onchip_silex_sntp_daylight_savings_enable_t</a> daylightSavingsEnable)</td></tr>
+<tr class="separator:ga3dd4b36863ac1013e57f3ad16ffa7bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Wifi and Socket implementation using the Silex SX-ULPGN WiFi module on RA MCUs. </p>
+<h1><a class="anchor" id="r-wifi-onchip-silex-overview"></a>
+Overview</h1>
+<p>This Middleware module supplies an implementation for the <a href="https://github.com/aws/amazon-freertos">FreeRTOS WiFi interface</a> and <a href="https://github.com/azure-rtos/netxduo">AzureRTOS NetxDuo WiFi interface</a> using the Silex SX-ULPGN module.</p>
+<p>You can find specifics about the WiFi and Secure Socket interface APIs supported by this module at these web sites: <a href="https://docs.aws.amazon.com/freertos/latest/lib-ref/html2/wifi/index.html">Wifi API</a>.</p>
+<p>The SX-ULPGN is a low-power, compact IEEE 802.11b/g/n 2.4GHz 1x1 Wireless LAN module equipped with the Qualcomm® QCA4010 Wireless SOC. The module comes readily equipped with radio certification for Japan, North America and Europe. More information about this module can be found at the <a href="https://www.silextechnology.com/connectivity-solutions/embedded-wireless/sx-ulpgn">Silex Web Site</a></p>
+<h2><a class="anchor" id="r-wifi-onchip-silex-features"></a>
+Features</h2>
+<p>The WiFi Onchip Silex Middleware driver supplies these features:</p>
+<ul>
+<li>Supports connect/disconnect to a b/g/n (2.4GHz) WiFi Access Point using Open, WPA, and WPA2 security. Encryption types can be either TKIP, or CCMP(AES).</li>
+<li>Supports retrieval of the module device MAC address.</li>
+<li>Once connected you can acquire the assigned module device IP.</li>
+<li>Supports a WiFi network scan capability to get a list of local Access Points.</li>
+<li>Supports a Ping function to test network connectivity.</li>
+<li>Supports a DNS Query call to retrieve the IPv4 address of a supplied URL.</li>
+<li>Supports both TCP and UDP client sockets.</li>
+<li>Drive supports 1 or 2 UARTs for interfacing with the SX-ULPGN module. The second UART is considered optional.</li>
+</ul>
+<h1><a class="anchor" id="r-wifi-onchip-silex-configuration"></a>
+Configuration</h1>
+<p><h2>Build Time Configurations for rm_wifi_onchip_silex</h2>
+The following build time configurations are defined in fsp_cfg/rm_wifi_onchip_silex_cfg.h:<br />
+</p><table class="doxtable">
+<tr>
+<th>Configuration</th><th>Options</th><th>Default</th><th>Description </th></tr>
+<tr class="tree_none">
+<td>Parameter Checking</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Default (BSP)</li>
+<li>
+Enabled</li>
+<li>
+Disabled</li>
+</ul>
+</td><td>Default (BSP) </td><td>If selected code for parameter checking is included in the build. </td></tr>
+<tr class="tree_none">
+<td>Number of supported socket instances</td><td>Refer to the RA Configuration tool for available options.</td><td>1 </td><td>Enable number of socket instances </td></tr>
+<tr class="tree_none">
+<td>Size of RX buffer for socket</td><td>Manual Entry</td><td>4096 </td><td></td></tr>
+<tr class="tree_none">
+<td>Size of TX buffer for CMD Port</td><td>Manual Entry</td><td>1500 </td><td></td></tr>
+<tr class="tree_none">
+<td>Size of RX buffer for CMD Port</td><td>Manual Entry</td><td>3000 </td><td></td></tr>
+<tr class="tree_none">
+<td>Semaphore maximum timeout</td><td>Manual Entry</td><td>10000 </td><td></td></tr>
+<tr class="tree_none">
+<td>Number of retries for AT commands</td><td>Manual Entry</td><td>10 </td><td></td></tr>
+<tr class="tree_none">
+<td>Module Reset Port</td><td>Refer to the RA Configuration tool for available options.</td><td>06 </td><td>Specify the module reset pin port for the MCU. </td></tr>
+<tr class="tree_none">
+<td>Module Reset Pin</td><td>Refer to the RA Configuration tool for available options.</td><td>03 </td><td>Specify the module reset pin for the MCU. </td></tr>
+<tr class="tree_none">
+<td>Enable SNTP Client</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Enabled</li>
+<li>
+Disabled</li>
+</ul>
+</td><td>Disabled </td><td>Should the SNTP client of the module be enabled </td></tr>
+</table>
+ <h2>Configurations for Networking &gt; WiFi Onchip Silex Driver using UART (rm_wifi_onchip_silex)</h2>
+<table class="doxtable">
+<tr>
+<th>Configuration</th><th>Options</th><th>Default</th><th>Description </th></tr>
+<tr class="tree_none">
+<td>SNTP server IPv4 address</td><td>Must be a valid IPv4 address</td><td>0.0.0.0 </td><td></td></tr>
+<tr class="tree_none">
+<td>SNTP Timezone Offset from UTC Hours</td><td>Must be between 12 and -12 hours</td><td>0 </td><td>Value in hours from 12 to -12 </td></tr>
+<tr class="tree_none">
+<td>SNTP Timezone Offset from UTC Minutes</td><td>Must be between 0 and 59 minutes</td><td>0 </td><td>Value in minutes from 0 to 59 </td></tr>
+<tr class="tree_none">
+<td>Use Daylight Savings Time</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Enabled</li>
+<li>
+Disabled</li>
+</ul>
+</td><td>Disabled </td><td>Specify if daytime savings should be used for local time calulation </td></tr>
+</table>
+</p>
+<p>Note: It is suggested that when using the Silex Module that DTC and FIFO are enabled in the UART configuration to facilitate a more reliable data transfer between module and MCU.</p>
+<p>Note: If you wish to use flow control then you must enable flow control in the RA Configuration editor. This can be found in the UART setting. It is advantageous to use flow control all the time since it allows the hardware to gate the flow of data across the serial bus. Without hardware flow control for faster data rate you will most likely see an overflow condition between MCU and the module device.</p>
+<p>Note: Higher baud rates are supported in the RA Configuration editor and should be changed in the first UART configuration. There is no need to change the second UART baud rate since it is only used as an AT command channel.</p>
+<p>Note: It is a good idea to also enable the FIFO in the UART configuration settings if you plan to use higher baud rates.</p>
+<h2><a class="anchor" id="r-wifi-onchip-silex-interrupt-configuration"></a>
+Interrupt Configuration</h2>
+<p>Refer to <a class="el" href="group___s_c_i___u_a_r_t.html">UART (r_sci_uart)</a>. <a class="el" href="group___s_c_i___u_a_r_t.html#gaef2636b50df00f5e888e833f0e6bbf6c">R_SCI_UART_Open()</a> is called by <a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html">WiFi Onchip Silex Driver using r_sci_uart (rm_wifi_onchip_silex)</a>.</p>
+<h2><a class="anchor" id="r-wifi-onchip-silex-clock-configuration"></a>
+Clock Configuration</h2>
+<p>Refer to <a class="el" href="group___s_c_i___u_a_r_t.html">UART (r_sci_uart)</a>.</p>
+<h2><a class="anchor" id="r-wifi-onchip-silex-pin-configuration"></a>
+Pin Configuration</h2>
+<p>Refer to <a class="el" href="group___s_c_i___u_a_r_t.html">UART (r_sci_uart)</a>. <a class="el" href="group___s_c_i___u_a_r_t.html#gaef2636b50df00f5e888e833f0e6bbf6c">R_SCI_UART_Open()</a> is called by <a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html">WiFi Onchip Silex Driver using r_sci_uart (rm_wifi_onchip_silex)</a></p>
+<h1><a class="anchor" id="r-wifi-onchip-silex-usage_notes"></a>
+Usage Notes</h1>
+<h2>Limitations</h2>
+<ul>
+<li>WiFi AP connections do not currently support WEP security.</li>
+<li>When operating with a single UART only single socket connections are possible. To support multiple sockets two UART channels must be connected to the module. When using the Renesas-provided SX-ULPGN PMOD board the second UART channel is on pins 9 and 10 of the PMOD header.</li>
+<li>Network connection parameters SSID and Passphrase for the Access Point can not contain any commas. This is a current limitation of the Silex module firmware. The <a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga93c9fcb172912cb7ba512e3dd9dd1c37">rm_wifi_onchip_silex_connect()</a> function will return an error if a comma is detected.</li>
+<li>When operating with a single UART and there is an active socket connection you cannot call <a class="el" href="group___w_i_f_i___a_p_i.html#ga4f1c2fb7ab3463f7d19afb506e945fd6" title="Perform a Wi-Fi network Scan. ">WIFI_Scan()</a>, <a class="el" href="group___w_i_f_i___a_p_i.html#ga8680ac4cdb4455a2c03919c2f5417f72" title="Ping an IP address in the network. ">WIFI_Ping()</a>, <a class="el" href="group___w_i_f_i___a_p_i.html#gaa1520e348462acd24433231d7846b733" title="Retrieves the Wi-Fi interface&#39;s MAC address. ">WIFI_GetMAC()</a>, or <a class="el" href="group___w_i_f_i___a_p_i.html#ga5bcf899f31c02c57fd7e9c45f390b2c6" title="Get IP configuration (IP address, NetworkMask, Gateway and DNS server addresses). ...">WIFI_GetIPInfo()</a>. Calling one of these function will return an error code in this situation. These commands are blocked in the one UART case during an active socket connection because they could cause data loss. To avoid this limitation please configure the hardware to use both UARTs.</li>
+<li>The Silex WiFi modules SNTP support requires all configuration changes to made when the WiFi is disconnected from an Access Point. This is a limitation of the Silex module firmware. If changes to the default SNTP settings are required then the application will have to close the current AP connection, make the necessary SNTP changes, and then re-establish the original connection.</li>
+</ul>
+<h1><a class="anchor" id="r-wifi-onchip-silex-examples"></a>
+Examples</h1>
+<h2>Basic Example</h2>
+<p>This is a basic example of minimal use of WiFi Middleware in an application.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> wifi_onchip_basic_example (<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">    <a class="code" href="group___w_i_f_i___a_p_i.html#gadfe3543e18f4b10860f77c2654903222">WIFIReturnCode_t</a> wifi_err;</div><div class="line"></div><div class="line">    <span class="comment">/* Setup Access Point connection parameters */</span></div><div class="line">    <a class="code" href="group___w_i_f_i___a_p_i.html#struct_w_i_f_i_network_params__t">WIFINetworkParams_t</a> net_params =</div><div class="line">    {</div><div class="line">        .<a class="code" href="group___w_i_f_i___a_p_i.html#a3cbd247faa28474c860d8e9dd31cfab5">ucChannel</a>                  = 0,</div><div class="line">        .xPassword.xWPA.cPassphrase = <span class="stringliteral">&quot;password&quot;</span>,</div><div class="line">        .ucSSID                     = <span class="stringliteral">&quot;access_point_ssid&quot;</span>,</div><div class="line">        .xPassword.xWPA.ucLength = 8,</div><div class="line">        .ucSSIDLength            = 17,</div><div class="line">        .xSecurity               = <a class="code" href="group___w_i_f_i___a_p_i.html#gga827dc938c214035b938c5ebe7d7b6816ac4775007ba0bfdb4e4ba754f219387df">eWiFiSecurityWPA2</a>,</div><div class="line">    };</div><div class="line"></div><div class="line">    memset(scan_data, 0, <span class="keyword">sizeof</span>(<a class="code" href="group___w_i_f_i___a_p_i.html#struct_w_i_f_i_scan_result__t">WIFIScanResult_t</a>) * MAX_WIFI_SCAN_RESULTS);</div><div class="line">    memset(g_socket_recv_buffer, 0, <span class="keyword">sizeof</span>(uint8_t) * SX_WIFI_SOCKET_RX_BUFFER_SIZE);</div><div class="line"></div><div class="line">    <span class="comment">/* Open connection to the Wifi Module */</span></div><div class="line">    wifi_err = <a class="code" href="group___w_i_f_i___a_p_i.html#ga2ee26776a00869c415da4a108031af1d">WIFI_On</a>();</div><div class="line">    assert(<a class="code" href="group___w_i_f_i___a_p_i.html#ggadfe3543e18f4b10860f77c2654903222a9329b10b8a89e4ef0676b3dec41d3e6f">eWiFiSuccess</a> == wifi_err);</div><div class="line"></div><div class="line">    <span class="comment">/* Connect to the Access Point */</span></div><div class="line">    wifi_err = <a class="code" href="group___w_i_f_i___a_p_i.html#ga430d72715054198b6ce0885410b027a5">WIFI_ConnectAP</a>(&amp;net_params);</div><div class="line">    assert(<a class="code" href="group___w_i_f_i___a_p_i.html#ggadfe3543e18f4b10860f77c2654903222a9329b10b8a89e4ef0676b3dec41d3e6f">eWiFiSuccess</a> == wifi_err);</div><div class="line"></div><div class="line">    <span class="comment">/* Get address assigned by AP */</span></div><div class="line">    <a class="code" href="group___w_i_f_i___a_p_i.html#struct_w_i_f_i_i_p_configuration__t">WIFIIPConfiguration_t</a> ipInfo;</div><div class="line">    wifi_err = <a class="code" href="group___w_i_f_i___a_p_i.html#ga5bcf899f31c02c57fd7e9c45f390b2c6">WIFI_GetIPInfo</a>(&amp;ipInfo);</div><div class="line">    assert(<a class="code" href="group___w_i_f_i___a_p_i.html#ggadfe3543e18f4b10860f77c2654903222a9329b10b8a89e4ef0676b3dec41d3e6f">eWiFiSuccess</a> == wifi_err);</div><div class="line"></div><div class="line">    <span class="comment">/* Ping an address accessible on the network */</span></div><div class="line">    uint8_t        ip_address[4] = {216, 58, 194, 174}; <span class="comment">// NOLINT</span></div><div class="line">    <span class="keyword">const</span> uint16_t ping_count    = 3;</div><div class="line">    <span class="keyword">const</span> uint32_t intervalMS    = 100;</div><div class="line">    wifi_err = <a class="code" href="group___w_i_f_i___a_p_i.html#ga8680ac4cdb4455a2c03919c2f5417f72">WIFI_Ping</a>(&amp;ip_address[0], ping_count, intervalMS);</div><div class="line">    assert(<a class="code" href="group___w_i_f_i___a_p_i.html#ggadfe3543e18f4b10860f77c2654903222a9329b10b8a89e4ef0676b3dec41d3e6f">eWiFiSuccess</a> == wifi_err);</div><div class="line"></div><div class="line">    <span class="comment">/* Scan the local Wifi network for other APs */</span></div><div class="line">    wifi_err = <a class="code" href="group___w_i_f_i___a_p_i.html#ga4f1c2fb7ab3463f7d19afb506e945fd6">WIFI_Scan</a>(&amp;scan_data[0], MAX_WIFI_SCAN_RESULTS);</div><div class="line">    assert(<a class="code" href="group___w_i_f_i___a_p_i.html#ggadfe3543e18f4b10860f77c2654903222a9329b10b8a89e4ef0676b3dec41d3e6f">eWiFiSuccess</a> == wifi_err);</div><div class="line"></div><div class="line">    <span class="comment">/* Shutdown the WIFI */</span></div><div class="line">    <a class="code" href="group___w_i_f_i___a_p_i.html#ga93265c46f46cb899f08adc56608b35d5">WIFI_Off</a>();</div><div class="line">}</div><div class="line"></div></div><!-- fragment --> <h2>SNTP example</h2>
+<p>An example of using Simple Network Time Protocol (SNTP) on WiFi in an application.</p>
+<div class="fragment"><div class="line"></div><div class="line"><span class="preprocessor">#define RM_WIFI_ONCHIP_SILEX_TEMP_BUFFER_SIZE    (64)</span></div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> * Example of the use of SNTP with Wifi. Example gets the epoch time and local</span></div><div class="line"><span class="comment"> * system time strings. It is also demonstrated how the user will need to disconnect</span></div><div class="line"><span class="comment"> * from the access point to make changes to the SNTP configuration during runtime.</span></div><div class="line"><span class="comment"> *</span></div><div class="line"><span class="comment"> * Function assumes that the SNTP has been enabled and configured with proper</span></div><div class="line"><span class="comment"> * SNTP server address. For brevity error checking has not been implemented.</span></div><div class="line"><span class="comment"> *</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keywordtype">void</span> wifi_onchip_sntp_example (<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">    <span class="comment">/* Setup Access Point connection parameters */</span></div><div class="line">    <a class="code" href="group___w_i_f_i___a_p_i.html#struct_w_i_f_i_network_params__t">WIFINetworkParams_t</a> net_params =</div><div class="line">    {</div><div class="line">        .<a class="code" href="group___w_i_f_i___a_p_i.html#ac686b2ee9ec1fe9ce9091b2284f14b27">ucSSID</a>                     = <span class="stringliteral">&quot;access_point_ssid&quot;</span>,</div><div class="line">        .ucSSIDLength               = 17,</div><div class="line">        .xPassword.xWPA.cPassphrase = <span class="stringliteral">&quot;password&quot;</span>,</div><div class="line">        .xPassword.xWPA.ucLength    = 8,</div><div class="line">        .ucChannel                  = 0,</div><div class="line">        .xSecurity                  = <a class="code" href="group___w_i_f_i___a_p_i.html#gga827dc938c214035b938c5ebe7d7b6816ac4775007ba0bfdb4e4ba754f219387df">eWiFiSecurityWPA2</a></div><div class="line">    };</div><div class="line"></div><div class="line">    uint8_t local_time[RM_WIFI_ONCHIP_SILEX_TEMP_BUFFER_SIZE];</div><div class="line">    time_t  current_sys_time = 0;</div><div class="line"></div><div class="line">    <span class="comment">// SNTP IP address</span></div><div class="line">    uint8_t ip_address_sntp_server_valid[4] = {216, 239, 35, 0}; <span class="comment">// NOLINT : Static IP address</span></div><div class="line"></div><div class="line">    memset(local_time, 0, <span class="keyword">sizeof</span>(local_time));</div><div class="line"></div><div class="line">    <span class="comment">/* Open connection to the Wifi Module */</span></div><div class="line">    <a class="code" href="group___w_i_f_i___a_p_i.html#ga2ee26776a00869c415da4a108031af1d">WIFI_On</a>();</div><div class="line"></div><div class="line">    <span class="comment">/* Connect to the Access Point */</span></div><div class="line">    <a class="code" href="group___w_i_f_i___a_p_i.html#ga430d72715054198b6ce0885410b027a5">WIFI_ConnectAP</a>(&amp;net_params);</div><div class="line"></div><div class="line">    <span class="comment">/* Get the Epoch time in seconds since Jan 1, 1970 UTC */</span></div><div class="line">    <a class="code" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga388791b21824a1bee7f32a51f6803138">RM_WIFI_ONCHIP_SILEX_EpochTimeGet</a>(&amp;current_sys_time);</div><div class="line"></div><div class="line">    <span class="comment">/* Get the local time string */</span></div><div class="line">    <a class="code" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga4f161eb801cdb2f85a6c15e4368cc7f9">RM_WIFI_ONCHIP_SILEX_LocalTimeGet</a>((uint8_t *) local_time, <span class="keyword">sizeof</span>(local_time));</div><div class="line"></div><div class="line">    <span class="comment">/* Disconnect from the access point to make changes to the SNTP configuration */</span></div><div class="line">    <a class="code" href="group___w_i_f_i___a_p_i.html#ga5e9032712c76c45fcc847eb637ac0902">WIFI_Disconnect</a>();</div><div class="line"></div><div class="line">    <span class="comment">/* Change the IP address of the server */</span></div><div class="line">    <a class="code" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga546f624c007993c8b0a97330bc7f9fbb">RM_WIFI_ONCHIP_SILEX_SntpServerIpAddressSet</a>((uint8_t *) ip_address_sntp_server_valid);</div><div class="line"></div><div class="line">    <span class="comment">/* Change the timezone to PST with daylight saving enabled */</span></div><div class="line">    <a class="code" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga3dd4b36863ac1013e57f3ad16ffa7bb1">RM_WIFI_ONCHIP_SILEX_SntpTimeZoneSet</a>(-7, 0, WIFI_ONCHIP_SILEX_SNTP_DAYLIGHT_SAVINGS_ENABLE);</div><div class="line"></div><div class="line">    <span class="comment">/* Connect back to the access point */</span></div><div class="line">    <a class="code" href="group___w_i_f_i___a_p_i.html#ga430d72715054198b6ce0885410b027a5">WIFI_ConnectAP</a>(&amp;net_params);</div><div class="line"></div><div class="line">    <span class="comment">/* Get the Epoch time in seconds since Jan 1, 1970 UTC */</span></div><div class="line">    <a class="code" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga388791b21824a1bee7f32a51f6803138">RM_WIFI_ONCHIP_SILEX_EpochTimeGet</a>(&amp;current_sys_time);</div><div class="line"></div><div class="line">    <span class="comment">/* Get the local time string in format [DayOfWeek Month DayOfMonth Year Hour:Minute:Second] */</span></div><div class="line">    <a class="code" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga4f161eb801cdb2f85a6c15e4368cc7f9">RM_WIFI_ONCHIP_SILEX_LocalTimeGet</a>((uint8_t *) local_time, <span class="keyword">sizeof</span>(local_time));</div><div class="line"></div><div class="line">    <span class="comment">/* Disconnect from the Access Point and shutdown the WIFI module*/</span></div><div class="line">    <a class="code" href="group___w_i_f_i___a_p_i.html#ga5e9032712c76c45fcc847eb637ac0902">WIFI_Disconnect</a>();</div><div class="line">    <a class="code" href="group___w_i_f_i___a_p_i.html#ga93265c46f46cb899f08adc56608b35d5">WIFI_Off</a>();</div><div class="line">}</div><div class="line"></div></div><!-- fragment --><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:structwifi__onchip__silex__cfg__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#structwifi__onchip__silex__cfg__t">wifi_onchip_silex_cfg_t</a></td></tr>
+<tr class="separator:structwifi__onchip__silex__cfg__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structulpgn__socket__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#structulpgn__socket__t">ulpgn_socket_t</a></td></tr>
+<tr class="separator:structulpgn__socket__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structwifi__onchip__silex__instance__ctrl__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#structwifi__onchip__silex__instance__ctrl__t">wifi_onchip_silex_instance_ctrl_t</a></td></tr>
+<tr class="separator:structwifi__onchip__silex__instance__ctrl__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga487798a94eaafdb1cb15cac5e9a3dfc1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga487798a94eaafdb1cb15cac5e9a3dfc1">sx_ulpgn_socket_status_t</a> </td></tr>
+<tr class="separator:ga487798a94eaafdb1cb15cac5e9a3dfc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b33cb8f4ffcfe2d73f101fa7709d5dc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga4b33cb8f4ffcfe2d73f101fa7709d5dc">sx_ulpgn_socket_rw</a> </td></tr>
+<tr class="separator:ga4b33cb8f4ffcfe2d73f101fa7709d5dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga28cec0db63a7cfc3d0f2e85e8d06b25a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga28cec0db63a7cfc3d0f2e85e8d06b25a">wifi_onchip_silex_sntp_enable_t</a> </td></tr>
+<tr class="separator:ga28cec0db63a7cfc3d0f2e85e8d06b25a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaead8d483f1afd423d272960c4b3bea7c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#gaead8d483f1afd423d272960c4b3bea7c">wifi_onchip_silex_sntp_daylight_savings_enable_t</a> </td></tr>
+<tr class="separator:gaead8d483f1afd423d272960c4b3bea7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/><h2 class="groupheader">Data Structure Documentation</h2>
+<a name="structwifi__onchip__silex__cfg__t" id="structwifi__onchip__silex__cfg__t"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structwifi__onchip__silex__cfg__t">&#9670;&nbsp;</a></span>wifi_onchip_silex_cfg_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct wifi_onchip_silex_cfg_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>User configuration structure, used in open function </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="a3f03a334cf6b137dc9233814d4d5d4ec"></a>const uint32_t</td>
+<td class="fieldname">
+num_uarts</td>
+<td class="fielddoc">
+Number of UART interfaces to use. </td></tr>
+<tr><td class="fieldtype">
+<a id="a0f20a4dc5690df1bda8bd0c99abad9a9"></a>const uint32_t</td>
+<td class="fieldname">
+num_sockets</td>
+<td class="fielddoc">
+Number of sockets to initialize. </td></tr>
+<tr><td class="fieldtype">
+<a id="ac478291577dfde9b59855e63c4079d3b"></a>const <a class="el" href="group___b_s_p___i_o.html#ga0adbfd4b7db319886d667acb4804d80a">bsp_io_port_pin_t</a></td>
+<td class="fieldname">
+reset_pin</td>
+<td class="fielddoc">
+Reset pin used for module. </td></tr>
+<tr><td class="fieldtype">
+<a id="a64c6d100c73279cb794db805b1ece673"></a>const <a class="el" href="group___u_a_r_t___a_p_i.html#structuart__instance__t">uart_instance_t</a> *</td>
+<td class="fieldname">
+uart_instances[WIFI_ONCHIP_SILEX_CFG_MAX_NUMBER_UART_PORTS]</td>
+<td class="fielddoc">
+SCI UART instances. </td></tr>
+<tr><td class="fieldtype">
+<a id="a48adc007109ac96d1039e3c9842024ab"></a>const <br class="typebreak" />
+<a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga28cec0db63a7cfc3d0f2e85e8d06b25a">wifi_onchip_silex_sntp_enable_t</a></td>
+<td class="fieldname">
+sntp_enabled</td>
+<td class="fielddoc">
+Enable/Disable the SNTP Client. </td></tr>
+<tr><td class="fieldtype">
+<a id="ab1c1e00a7de525a3669f6d90c2975b1a"></a>const uint8_t *</td>
+<td class="fieldname">
+sntp_server_ip</td>
+<td class="fielddoc">
+The SNTP server IP address string. </td></tr>
+<tr><td class="fieldtype">
+<a id="a9fac8543eaec6126fe4ee511ba687fd5"></a>const int32_t</td>
+<td class="fieldname">
+sntp_timezone_offset_from_utc_hours</td>
+<td class="fielddoc">
+Timezone offset from UTC in (+/-) hours. </td></tr>
+<tr><td class="fieldtype">
+<a id="a942a96557b9e6a0fb812b5db7d244920"></a>const uint32_t</td>
+<td class="fieldname">
+sntp_timezone_offset_from_utc_minutes</td>
+<td class="fielddoc">
+Timezone offset from UTC in minutes. </td></tr>
+<tr><td class="fieldtype">
+<a id="aa96429e5b5e4ab4bc1079cb0477bbcec"></a>const <br class="typebreak" />
+<a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#gaead8d483f1afd423d272960c4b3bea7c">wifi_onchip_silex_sntp_daylight_savings_enable_t</a></td>
+<td class="fieldname">
+sntp_timezone_use_daylight_savings</td>
+<td class="fielddoc">
+Enable/Disable use of daylight saving time. </td></tr>
+<tr><td class="fieldtype">
+<a id="a8ef5a8e34e903560d4ada8deb5168d9d"></a>void *</td>
+<td class="fieldname">
+p_context</td>
+<td class="fielddoc">
+User defined context passed into callback function. </td></tr>
+<tr><td class="fieldtype">
+<a id="ad95ea07f957b75d8bc63a7b1d8fc9eef"></a>void const  *</td>
+<td class="fieldname">
+p_extend</td>
+<td class="fielddoc">
+Pointer to extended configuration by instance of interface. </td></tr>
+</table>
+
+</div>
+</div>
+<a name="structulpgn__socket__t" id="structulpgn__socket__t"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structulpgn__socket__t">&#9670;&nbsp;</a></span>ulpgn_socket_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct ulpgn_socket_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Silex ULPGN Wifi internal socket instance structure </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="abd3d840ba6c6be048baf4a22fcc45357"></a>StreamBufferHandle_t</td>
+<td class="fieldname">
+socket_byteq_hdl</td>
+<td class="fielddoc">
+Socket stream buffer handle. </td></tr>
+<tr><td class="fieldtype">
+<a id="a30293464354426aad078179dee482cdf"></a>StaticStreamBuffer_t</td>
+<td class="fieldname">
+socket_byteq_struct</td>
+<td class="fielddoc">
+Structure to hold stream buffer info. </td></tr>
+<tr><td class="fieldtype">
+<a id="a739c60636512009b109b74b143138f59"></a>uint8_t</td>
+<td class="fieldname">
+socket_recv_buff[WIFI_ONCHIP_SILEX_CFG_MAX_SOCKET_RX_SIZE]</td>
+<td class="fielddoc">
+Socket receive buffer used by byte queue. </td></tr>
+<tr><td class="fieldtype">
+<a id="ae842b1711b145acd103cd981568ba945"></a>uint32_t</td>
+<td class="fieldname">
+socket_status</td>
+<td class="fielddoc">
+Current socket status. </td></tr>
+<tr><td class="fieldtype">
+<a id="aad909bdf74516963a00078219c323a56"></a>uint32_t</td>
+<td class="fieldname">
+socket_recv_error_count</td>
+<td class="fielddoc">
+Socket receive error count. </td></tr>
+<tr><td class="fieldtype">
+<a id="a9f3e7bc6af5e6d53dcedac0ad9eaa21e"></a>uint32_t</td>
+<td class="fieldname">
+socket_create_flag</td>
+<td class="fielddoc">
+Flag to determine in socket has been created. </td></tr>
+<tr><td class="fieldtype">
+<a id="af94dcc5d54a1fbb8ab1fb87d447415fe"></a>uint32_t</td>
+<td class="fieldname">
+socket_read_write_flag</td>
+<td class="fielddoc">
+flag to determine if read and/or write channels are active. </td></tr>
+</table>
+
+</div>
+</div>
+<a name="structwifi__onchip__silex__instance__ctrl__t" id="structwifi__onchip__silex__instance__ctrl__t"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structwifi__onchip__silex__instance__ctrl__t">&#9670;&nbsp;</a></span>wifi_onchip_silex_instance_ctrl_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct wifi_onchip_silex_instance_ctrl_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>WIFI_ONCHIP_SILEX private control block. DO NOT MODIFY. </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="a4ef8c252eeaeb4e2c512b4ec6ba31af2"></a>uint32_t</td>
+<td class="fieldname">
+open</td>
+<td class="fielddoc">
+Flag to indicate if wifi instance has been initialized. </td></tr>
+<tr><td class="fieldtype">
+<a id="a1c2d6d8773f312608dadb8282e878eb6"></a><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#structwifi__onchip__silex__cfg__t">wifi_onchip_silex_cfg_t</a> const  *</td>
+<td class="fieldname">
+p_wifi_onchip_silex_cfg</td>
+<td class="fielddoc">
+Pointer to initial configurations. </td></tr>
+<tr><td class="fieldtype">
+<a id="ac7db188f67804605045968df2e7c89a9"></a><a class="el" href="group___b_s_p___i_o.html#ga0adbfd4b7db319886d667acb4804d80a">bsp_io_port_pin_t</a></td>
+<td class="fieldname">
+reset_pin</td>
+<td class="fielddoc">
+Wifi module reset pin. </td></tr>
+<tr><td class="fieldtype">
+<a id="a37d2a47085b2445643b9d1ce75c34117"></a>uint32_t</td>
+<td class="fieldname">
+num_uarts</td>
+<td class="fielddoc">
+number of UARTS currently used for communication with module </td></tr>
+<tr><td class="fieldtype">
+<a id="a195c9813365244ae89127068f728b831"></a>uint32_t</td>
+<td class="fieldname">
+tx_data_size</td>
+<td class="fielddoc">
+Size of the data to send. </td></tr>
+<tr><td class="fieldtype">
+<a id="acfe7cadd1f2fb8d3461f50baa3e32389"></a>uint32_t</td>
+<td class="fieldname">
+num_creatable_sockets</td>
+<td class="fielddoc">
+Number of simultaneous sockets supported. </td></tr>
+<tr><td class="fieldtype">
+<a id="a03ece92cae4303a68400f326b42ea7d9"></a>uint32_t</td>
+<td class="fieldname">
+curr_cmd_port</td>
+<td class="fielddoc">
+Current UART instance index for AT commands. </td></tr>
+<tr><td class="fieldtype">
+<a id="ad143151fda242810e5422c97a6ef469b"></a>uint32_t</td>
+<td class="fieldname">
+curr_data_port</td>
+<td class="fielddoc">
+Current UART instance index for data. </td></tr>
+<tr><td class="fieldtype">
+<a id="a0e54def3d03ff026332f597cc33b1614"></a>uint8_t</td>
+<td class="fieldname">
+cmd_rx_queue_buf[WIFI_ONCHIP_SILEX_CFG_CMD_RX_BUF_SIZE]</td>
+<td class="fielddoc">
+Command port receive buffer used by byte queue // FreeRTOS. </td></tr>
+<tr><td class="fieldtype">
+<a id="a5aa3b639aae3b546bc943278aabb962d"></a>StreamBufferHandle_t</td>
+<td class="fieldname">
+socket_byteq_hdl</td>
+<td class="fielddoc">
+Socket stream buffer handle. </td></tr>
+<tr><td class="fieldtype">
+<a id="a89cc7a14bfe9096418ddad6707ac04a6"></a>StaticStreamBuffer_t</td>
+<td class="fieldname">
+socket_byteq_struct</td>
+<td class="fielddoc">
+Structure to hold stream buffer info. </td></tr>
+<tr><td class="fieldtype">
+<a id="a661d34b5a3132c96243fdf19fec96765"></a>volatile uint32_t</td>
+<td class="fieldname">
+curr_socket_index</td>
+<td class="fielddoc">
+Currently active socket instance. </td></tr>
+<tr><td class="fieldtype">
+<a id="ac777f2a1be99fe414c89441b5819704d"></a>uint8_t</td>
+<td class="fieldname">
+cmd_tx_buff[WIFI_ONCHIP_SILEX_CFG_CMD_TX_BUF_SIZE]</td>
+<td class="fielddoc">
+Command send buffer. </td></tr>
+<tr><td class="fieldtype">
+<a id="a1c53ae3f95beaa58702bac2c5d4e2f07"></a>uint8_t</td>
+<td class="fieldname">
+cmd_rx_buff[WIFI_ONCHIP_SILEX_CFG_CMD_RX_BUF_SIZE]</td>
+<td class="fielddoc">
+Command receive buffer. </td></tr>
+<tr><td class="fieldtype">
+<a id="a227024ff84efc50f6dc7b53ac073a23a"></a>uint32_t</td>
+<td class="fieldname">
+at_cmd_mode</td>
+<td class="fielddoc">
+Current command mode. </td></tr>
+<tr><td class="fieldtype">
+<a id="af9b17e10cf912b7ace3214e2023ebbe3"></a>uint8_t</td>
+<td class="fieldname">
+curr_ipaddr[4]</td>
+<td class="fielddoc">
+Current IP address of module. </td></tr>
+<tr><td class="fieldtype">
+<a id="a9ddb39ea027456866f30f369244ccf1e"></a>uint8_t</td>
+<td class="fieldname">
+curr_subnetmask[4]</td>
+<td class="fielddoc">
+Current Subnet Mask of module. </td></tr>
+<tr><td class="fieldtype">
+<a id="a76279465e71307e23b17eaa756d0551f"></a>uint8_t</td>
+<td class="fieldname">
+curr_gateway[4]</td>
+<td class="fielddoc">
+Current GAteway of module. </td></tr>
+<tr><td class="fieldtype">
+<a id="a7bbe64e64e068383f07e3e0b268c4f00"></a>SemaphoreHandle_t</td>
+<td class="fieldname">
+tx_sem</td>
+<td class="fielddoc">
+Transmit binary semaphore handle. </td></tr>
+<tr><td class="fieldtype">
+<a id="a4f1ab5a1756c561c591ec06a9eccfd37"></a>SemaphoreHandle_t</td>
+<td class="fieldname">
+rx_sem</td>
+<td class="fielddoc">
+Receive binary semaphore handle. </td></tr>
+<tr><td class="fieldtype">
+<a id="a3de60a0267cb49272d28d0dbfe9f80e8"></a>uint8_t</td>
+<td class="fieldname">
+last_data[WIFI_ONCHIP_SILEX_RETURN_TEXT_LENGTH]</td>
+<td class="fielddoc">
+Tailing buffer used for command parser. </td></tr>
+<tr><td class="fieldtype">
+<a id="a3238e2de584875a89203c412b7a7fa66"></a><a class="el" href="group___u_a_r_t___a_p_i.html#structuart__instance__t">uart_instance_t</a> *</td>
+<td class="fieldname">
+uart_instance_objects[WIFI_ONCHIP_SILEX_CFG_MAX_NUMBER_UART_PORTS]</td>
+<td class="fielddoc">
+UART instance objects. </td></tr>
+<tr><td class="fieldtype">
+<a id="a29219196deb30eaad489b7c46cd9df0d"></a>SemaphoreHandle_t</td>
+<td class="fieldname">
+uart_tei_sem[WIFI_ONCHIP_SILEX_CFG_MAX_NUMBER_UART_PORTS]</td>
+<td class="fielddoc">
+UART transmission end binary semaphore. </td></tr>
+<tr><td class="fieldtype">
+<a id="a4d214a2b237552a3c47e03ac2ee793e9"></a><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#structulpgn__socket__t">ulpgn_socket_t</a></td>
+<td class="fieldname">
+sockets[WIFI_ONCHIP_SILEX_CFG_NUM_CREATEABLE_SOCKETS]</td>
+<td class="fielddoc">
+Internal socket instances. </td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga487798a94eaafdb1cb15cac5e9a3dfc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga487798a94eaafdb1cb15cac5e9a3dfc1">&#9670;&nbsp;</a></span>sx_ulpgn_socket_status_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga487798a94eaafdb1cb15cac5e9a3dfc1">sx_ulpgn_socket_status_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Silex ULPGN Wifi socket status types </p>
+
+</div>
+</div>
+<a id="ga4b33cb8f4ffcfe2d73f101fa7709d5dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4b33cb8f4ffcfe2d73f101fa7709d5dc">&#9670;&nbsp;</a></span>sx_ulpgn_socket_rw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga4b33cb8f4ffcfe2d73f101fa7709d5dc">sx_ulpgn_socket_rw</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Silex socket shutdown channels </p>
+
+</div>
+</div>
+<a id="ga28cec0db63a7cfc3d0f2e85e8d06b25a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga28cec0db63a7cfc3d0f2e85e8d06b25a">&#9670;&nbsp;</a></span>wifi_onchip_silex_sntp_enable_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga28cec0db63a7cfc3d0f2e85e8d06b25a">wifi_onchip_silex_sntp_enable_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Silex WiFi module enable/disable for SNTP </p>
+
+</div>
+</div>
+<a id="gaead8d483f1afd423d272960c4b3bea7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaead8d483f1afd423d272960c4b3bea7c">&#9670;&nbsp;</a></span>wifi_onchip_silex_sntp_daylight_savings_enable_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#gaead8d483f1afd423d272960c4b3bea7c">wifi_onchip_silex_sntp_daylight_savings_enable_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Silex WiFi module enable/disable for SNTP </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga5ed6c586aeefcc7e02eeed86c50f01ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5ed6c586aeefcc7e02eeed86c50f01ba">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> rm_wifi_onchip_silex_open </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#structwifi__onchip__silex__cfg__t">wifi_onchip_silex_cfg_t</a> const *const&#160;</td>
+          <td class="paramname"><em>p_cfg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Opens and configures the WIFI_ONCHIP_SILEX Middleware module.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_cfg</td><td>Pointer to pin configuration structure.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>WIFI_ONCHIP_SILEX successfully configured. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>The parameter p_cfg or p_instance_ctrl is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_OUT_OF_MEMORY</td><td>There is no more heap memory available. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ALREADY_OPEN</td><td>Module is already open. This module can only be opened once. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga71ff05487a2b4e9dbcb26e4b3811ff2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga71ff05487a2b4e9dbcb26e4b3811ff2f">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> rm_wifi_onchip_silex_close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Disables WIFI_ONCHIP_SILEX.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>WIFI_ONCHIP_SILEX closed successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>Module is not open. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaa6664ce4e42dbbc1ca9e8b02b3804a42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa6664ce4e42dbbc1ca9e8b02b3804a42">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_disconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> rm_wifi_onchip_silex_disconnect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Disconnects from connected AP.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>WIFI_ONCHIP_SILEX disconnected successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>Module is not open. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga86d5d55256dad8700d71cc3a00f3c520"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga86d5d55256dad8700d71cc3a00f3c520">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_socket_connected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> rm_wifi_onchip_silex_socket_connected </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> *&#160;</td>
+          <td class="paramname"><em>p_status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if a specific socket instance is connected.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_status</td><td>Pointer to integer holding the socket connection status.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Function completed successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>The parameter p_status is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>The instance has not been opened. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga4707c46e42da9f3da79b36758dbe04d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4707c46e42da9f3da79b36758dbe04d5">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_network_info_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> rm_wifi_onchip_silex_network_info_get </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>p_ip_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>p_subnet_mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>p_gateway</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return the network information for the connection to the access point.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_ip_addr</td><td>Pointer to integer holding the IP address. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_subnet_mask</td><td>Pointer to integer holding the subnet mask. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_gateway</td><td>Pointer to integer holding the gateway.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Function completed successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>A parameter pointer is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>The instance has not been opened. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_AP_NOT_CONNECTED</td><td>No connection to access point has happened. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga93c9fcb172912cb7ba512e3dd9dd1c37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga93c9fcb172912cb7ba512e3dd9dd1c37">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_connect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> rm_wifi_onchip_silex_connect </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>p_ssid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___w_i_f_i___a_p_i.html#ga827dc938c214035b938c5ebe7d7b6816">WIFISecurity_t</a>&#160;</td>
+          <td class="paramname"><em>security</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>p_passphrase</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Connects to the specified Wifi Access Point.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_ssid</td><td>Pointer to SSID of Wifi Access Point. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">security</td><td>Security type to use for connection. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_passphrase</td><td>Pointer to the passphrase to use for connection.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Function completed successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>The parameter p_ssid or p_passphrase is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>The instance has not been opened. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_ARGUMENT</td><td>No commas are accepted in the SSID or Passphrase. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga688cee9512f449356a1127c3fe2b1608"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga688cee9512f449356a1127c3fe2b1608">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_mac_addr_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> rm_wifi_onchip_silex_mac_addr_get </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>p_macaddr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get MAC address.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_macaddr</td><td>Pointer array to hold mac address.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Function completed successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>The parameter p_macaddr is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>The instance has not been opened. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga13d0978109d01cea1dc3355463944025"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga13d0978109d01cea1dc3355463944025">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_scan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> rm_wifi_onchip_silex_scan </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___w_i_f_i___a_p_i.html#struct_w_i_f_i_scan_result__t">WIFIScanResult_t</a> *&#160;</td>
+          <td class="paramname"><em>p_results</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>maxNetworks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the information about local Wifi Access Points.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_results</td><td>Pointer to a structure array holding scanned Access Points. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">maxNetworks</td><td>Size of the structure array for holding APs.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Function completed successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>The parameter p_results or p_instance_ctrl is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>The instance has not been opened. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga64e66aa0bc9c6ad5a1b70902c2f2b188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga64e66aa0bc9c6ad5a1b70902c2f2b188">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_ping()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> rm_wifi_onchip_silex_ping </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>p_ip_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>interval_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ping an IP address on the network.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_ip_addr</td><td>Pointer to IP address array. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">count</td><td>Number of pings to attempt. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">interval_ms</td><td>Interval between ping attempts.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Function completed successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>The parameter p_ip_addr is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>The instance has not been opened. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3d79f8c9cda51232cc70871c0853990e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3d79f8c9cda51232cc70871c0853990e">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_ip_addr_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> rm_wifi_onchip_silex_ip_addr_get </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>p_ip_addr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the assigned module IP address.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_ip_addr</td><td>Pointer an array to hold the IP address.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Function completed successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>The parameter p_ip_addr is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>The instance has not been opened. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gacff2df8e5e3ff5729128dd24c9799ac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacff2df8e5e3ff5729128dd24c9799ac3">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_avail_socket_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> rm_wifi_onchip_silex_avail_socket_get </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>p_socket_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the next available socket ID.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_socket_id</td><td>Pointer to an integer to hold the socket ID.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Function completed successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>The parameter p_socket_id is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>The instance has not been opened. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred in the execution of this function </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gab0d09c34642736159fc3c6ff30bc98dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab0d09c34642736159fc3c6ff30bc98dc">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_socket_status_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> rm_wifi_onchip_silex_socket_status_get </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>socket_no</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>p_socket_status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the socket status.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">socket_no</td><td>Socket ID number. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_socket_status</td><td>Pointer to an integer to hold the socket status</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Function completed successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>The parameter p_instance_ctrl or p_socket_status is NULL. The value of socket_no is greater than/equal num_creatable_sockets. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>The instance has not been opened. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gadbfc40d820d7bbdd9a8d178a58241366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadbfc40d820d7bbdd9a8d178a58241366">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_tcp_shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t rm_wifi_onchip_silex_tcp_shutdown </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>socket_no</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>shutdown_channels</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Shutdown portion of a socket</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">socket_no</td><td>Socket ID number. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shutdown_channels</td><td>Specify if read or write channel is shutdown for socket</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Function completed successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>The parameter p_instance_ctrl is NULL. The value of socket_no is greater than/equal num_creatable_sockets. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>The instance has not been opened. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gab6c4122ef5bf3a175323a6233391f21a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab6c4122ef5bf3a175323a6233391f21a">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_socket_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> rm_wifi_onchip_silex_socket_create </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>socket_no</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ipversion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a new socket instance.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">socket_no</td><td>Socket ID number. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>Socket type. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ipversion</td><td>Socket IP type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Function completed successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>The p_instance_ctrl is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>The instance has not been opened. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gabdb2924344fe1ef785ffefd6671be6ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabdb2924344fe1ef785ffefd6671be6ba">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_tcp_connect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> rm_wifi_onchip_silex_tcp_connect </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>socket_no</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ipaddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Connect to a specific IP and Port using socket.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">socket_no</td><td>Socket ID number. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ipaddr</td><td>IP address for socket connection. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">port</td><td>Port number for socket connection.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Function completed successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>The instance has not been opened. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga72dbfc589b6c946c281fa4755cb46261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga72dbfc589b6c946c281fa4755cb46261">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_udp_connect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> rm_wifi_onchip_silex_udp_connect </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>socket_no</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ipaddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Connect to a specific IP and Port using UDP socket.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">socket_no</td><td>Socket ID number. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ipaddr</td><td>IP address for socket connection. 0 if type is server. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">port</td><td>Port number for socket connection. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>Type of UDP connection. Can be client or server.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Function completed successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>The instance has not been opened. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga4cb29546897bf9647af286675fe21bbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4cb29546897bf9647af286675fe21bbb">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t rm_wifi_onchip_silex_send </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>socket_no</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>p_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Send data over TCP to a server.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">socket_no</td><td>Socket ID number. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_data</td><td>Pointer to data to send. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>Length of data to send. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>Timeout to wait for transmit end event</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>The p_instance_ctrl or parameter p_data is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>The instance has not been opened. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga83e8a444e3e8bfd60d90313c1c615ca3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga83e8a444e3e8bfd60d90313c1c615ca3">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_recv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t rm_wifi_onchip_silex_recv </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>socket_no</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>p_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Receive data over TCP from a server.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">socket_no</td><td>Socket ID number. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_data</td><td>Pointer to data received from socket. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>Length of data array used for receive. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>Timeout to wait for data to be received from socket.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Function completed successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>The instance has not been opened. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>The p_instance_ctrl or parameter p_data is NULL. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga673034dffdd57fd0db7a80ff72a997b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga673034dffdd57fd0db7a80ff72a997b3">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_socket_disconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> rm_wifi_onchip_silex_socket_disconnect </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>socket_no</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Disconnect a specific socket connection.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">socket_no</td><td>Socket ID to disconnect</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Function completed successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>The instance has not been opened. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_ARGUMENT</td><td>Bad parameter value was passed into function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga11a768db2090478272979945e1b3c9dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga11a768db2090478272979945e1b3c9dc">&#9670;&nbsp;</a></span>rm_wifi_onchip_silex_dns_query()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> rm_wifi_onchip_silex_dns_query </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>p_textstring</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>p_ip_addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initiate a DNS lookup for a given URL.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_textstring</td><td>Pointer to array holding URL to query from DNS. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_ip_addr</td><td>Pointer to IP address returned from look up.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Function completed successfully. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>The p_instance_ctrl, p_textstring, p_ip_addr is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>The instance has not been opened. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_ARGUMENT</td><td>The URL passed in is to long. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga388791b21824a1bee7f32a51f6803138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga388791b21824a1bee7f32a51f6803138">&#9670;&nbsp;</a></span>RM_WIFI_ONCHIP_SILEX_EpochTimeGet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> RM_WIFI_ONCHIP_SILEX_EpochTimeGet </td>
+          <td>(</td>
+          <td class="paramtype">time_t *&#160;</td>
+          <td class="paramname"><em>p_utc_time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This will retrieve time info from an NTP server at the address entered via an during configuration. If the server isn’t set or the client isn’t enabled, then it will return an error. The date/time is retrieved as the number of seconds since 00:00:00 UTC January 1, 1970</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_utc_time</td><td>Returns the epoch time in seconds.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Successfully retrieved the system time from module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>The parameter utc_time or p_instance_ctrl is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>Module is not open.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Get the current system time as the number of seconds since epoch 1970-01-01 00:00:00 UTC </p>
+
+</div>
+</div>
+<a id="ga4f161eb801cdb2f85a6c15e4368cc7f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4f161eb801cdb2f85a6c15e4368cc7f9">&#9670;&nbsp;</a></span>RM_WIFI_ONCHIP_SILEX_LocalTimeGet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> RM_WIFI_ONCHIP_SILEX_LocalTimeGet </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>p_local_time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>size_string</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the current local time based on current timezone in a string . Exp: Wed Oct 15 1975 07:06:00</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_local_time</td><td>Returns local time in string format. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size_string</td><td>Size of p_local_time string buffer.The size of this string needs to be at least 25 bytes</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Successfully returned the local time string. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>The parameter local_time or p_instance_ctrl is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>Module is not open. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_SIZE</td><td>String size value passed in exceeds maximum.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Get the current local time based on current timezone in a string format </p>
+
+</div>
+</div>
+<a id="ga78e06bbafeadb0e9d0ca5a6dfae64add"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga78e06bbafeadb0e9d0ca5a6dfae64add">&#9670;&nbsp;</a></span>RM_WIFI_ONCHIP_SILEX_SntpEnableSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> RM_WIFI_ONCHIP_SILEX_SntpEnableSet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#ga28cec0db63a7cfc3d0f2e85e8d06b25a">wifi_onchip_silex_sntp_enable_t</a>&#160;</td>
+          <td class="paramname"><em>enable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the SNTP Client to Enable or Disable</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>Can be set to enable/disable for SNTP support.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Successfully set the value. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>Module is not open.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Enable or Disable the SNTP Client Service </p>
+
+</div>
+</div>
+<a id="ga546f624c007993c8b0a97330bc7f9fbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga546f624c007993c8b0a97330bc7f9fbb">&#9670;&nbsp;</a></span>RM_WIFI_ONCHIP_SILEX_SntpServerIpAddressSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> RM_WIFI_ONCHIP_SILEX_SntpServerIpAddressSet </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>p_ip_address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the SNTP Client Server IP Address</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_ip_address</td><td>Pointer to IP address of SNTP server in byte array format.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Successfully set the value. </td></tr>
+    <tr><td class="paramname">FSP_ERR_ASSERTION</td><td>The parameter p_ip_address or p_instance_ctrl is NULL. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>Module is not open.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Update the SNTP Server IP Address </p>
+
+</div>
+</div>
+<a id="ga3dd4b36863ac1013e57f3ad16ffa7bb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3dd4b36863ac1013e57f3ad16ffa7bb1">&#9670;&nbsp;</a></span>RM_WIFI_ONCHIP_SILEX_SntpTimeZoneSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_e_n_e_s_a_s___e_r_r_o_r___c_o_d_e_s.html#gadfb1288da0fcc7ae1dc88c58601374f8">fsp_err_t</a> RM_WIFI_ONCHIP_SILEX_SntpTimeZoneSet </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>hours</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>minutes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___w_i_f_i___o_n_c_h_i_p___s_i_l_e_x.html#gaead8d483f1afd423d272960c4b3bea7c">wifi_onchip_silex_sntp_daylight_savings_enable_t</a>&#160;</td>
+          <td class="paramname"><em>daylightSavingsEnable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the SNTP Client Timezone</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hours</td><td>Number of hours (+/-) used for timezone offset from GMT. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">minutes</td><td>Number of minutes used for timezone offset from GMT. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">daylightSavingsEnable</td><td>Enable/Disable daylight saving in the timezone calculation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">FSP_SUCCESS</td><td>Successfully set the value. </td></tr>
+    <tr><td class="paramname">FSP_ERR_WIFI_FAILED</td><td>Error occurred with command to Wifi module. </td></tr>
+    <tr><td class="paramname">FSP_ERR_NOT_OPEN</td><td>Module is not open. </td></tr>
+    <tr><td class="paramname">FSP_ERR_INVALID_ARGUMENT</td><td>Parameter passed into function was invalid.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Update the SNTP Timezone </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.7-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+        <li class="footer">FSP Release v6.4.0 User's Manual Copyright © (2026) Renesas Electronics Corporation. All Rights Reserved.</li>
+  </ul>
+</div>
+</body>
+</html>

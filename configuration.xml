@@ -263,6 +263,10 @@
       <description>A/D Converter</description>
       <originalPack>Renesas.RA.6.4.0.pack</originalPack>
     </component>
+    <component apiversion="" class="HAL Drivers" condition="" group="all" subgroup="r_gpt" variant="" vendor="Renesas" version="6.4.0">
+      <description>General PWM Timer</description>
+      <originalPack>Renesas.RA.6.4.0.pack</originalPack>
+    </component>
     <component apiversion="" class="CMSIS" condition="" group="Main" subgroup="DSP" variant="" vendor="Arm" version="1.16.2+fsp.6.4.0">
       <description>Arm DSP Library Source</description>
       <originalPack>Arm.CMSIS-DSP.1.16.2+fsp.6.4.0.pack</originalPack>

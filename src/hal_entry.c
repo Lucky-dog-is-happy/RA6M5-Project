@@ -9,6 +9,7 @@
 #include "drv_dispenser.h"
 #include "drv_vl53l0x.h"
 #include "drv_adc.h"
+#include "drv_audio.h"
 #include <stdio.h>
 
 #if (1 == BSP_MULTICORE_PROJECT) && BSP_TZ_SECURE_BUILD
@@ -140,6 +141,11 @@ void hal_entry(void)
     
     printf("ADC initialized: Water(ADC0), Mic(ADC1)\r\n");
     
+    audio_fft_init();
+    printf("Audio FFT initialized (256 points, 8kHz sample rate)\r\n");
+    
+    uint32_t sample_count = 0;
+    
     while(1)
     {
         uint16_t water_val = 0;
@@ -148,13 +154,29 @@ void hal_entry(void)
         ptWaterDev->Read(ptWaterDev, &water_val, 1);
         ptMicDev->Read(ptMicDev, &mic_val, 1);
         
-        uint32_t water_mv = ptWaterDev->ToVoltageMv(water_val);
-        uint32_t mic_mv = ptMicDev->ToVoltageMv(mic_val);
+        audio_fft_sample_isr(mic_val);
+        sample_count++;
         
-        printf("Water[ADC0]: %u (%umV) | Mic[ADC1]: %u (%umV)\r\n", 
-               water_val, water_mv, mic_val, mic_mv);
+        if (audio_fft_is_ready()) {
+            audio_fft_process();
+            float peak_freq = audio_fft_get_peak_frequency();
+            float peak_mag = audio_fft_get_peak_magnitude();
+            uint32_t freq_int = (uint32_t)(peak_freq * 10);
+            uint32_t mag_int = (uint32_t)(peak_mag * 100);
+            printf("[FFT] S:%u F:%u.%uHz M:%u.%02u\r\n", 
+                   sample_count, freq_int / 10, freq_int % 10, mag_int / 100, mag_int % 100);
+            audio_fft_reset();
+            sample_count = 0;
+        }
         
-        for(volatile int i = 0; i < 500000; i++);
+        if (sample_count % 1000 == 0) {
+            uint32_t water_mv = ptWaterDev->ToVoltageMv(water_val);
+            uint32_t mic_mv = ptMicDev->ToVoltageMv(mic_val);
+            printf("Water[ADC0]: %u (%umV) | Mic[ADC1]: %u (%umV)\r\n", 
+                   water_val, water_mv, mic_val, mic_mv);
+        }
+        
+        for(volatile int i = 0; i < 1000; i++);
     }
 
     IODev *ptKeyDev = IOGetDevice("UserKey");

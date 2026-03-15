@@ -1,0 +1,669 @@
+<!-- HTML header for doxygen 1.8.7-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<title>RA Flexible Software Package Documentation: MCUboot Port (rm_mcuboot_port)</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+    <script type="text/javascript" src="search/lunr.js"></script>
+    <link href="search/lunrsearch.css" rel="stylesheet" type="text/css">
+    <script src="search/lunr_index.js"></script>
+    <script src="search/lunrclient.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="fsp_customdoxygen.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("tr.tree_lvl_1").nextUntil("tr.tree_lvl_1,tr.tree_none").hide();
+		$("tr.tree_lvl_1").data("expanded","0");
+		$("tr.tree_lvl_2").data("expanded","0");
+		$("tr.tree_lvl_3").data("expanded","0");
+		$("tr.tree_lvl_4").data("expanded","0");
+		$("tr.tree_lvl_5").data("expanded","0");
+        $("tr.tree_lvl_1").click(function() {
+		    var lvl_1_is_open = $(this).data("expanded");
+		    if (lvl_1_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_2, tr.tree_lvl_1_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_1,tr.tree_none").hide();
+                $(this).nextUntil("tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_2,tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_2,tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_2").click(function() {
+		    var lvl_2_is_open = $(this).data("expanded");
+		    if (lvl_2_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_3, tr.tree_lvl_2_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+				$(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_3,tr.tree_lvl_4,tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_3").click(function() {
+		    var lvl_3_is_open = $(this).data("expanded");
+		    if (lvl_3_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_4, tr.tree_lvl_3_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+                $(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_4, tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_4, tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_4").click(function() {
+		    var lvl_4_is_open = $(this).data("expanded");
+		    if (lvl_4_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3,tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5, tr.tree_lvl_4_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+                $(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5").find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).nextUntil("tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5").data("expanded","0");
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+		$("tr.tree_lvl_5").click(function() {
+		    var lvl_5_is_open = $(this).data("expanded");
+		    if (lvl_5_is_open == "0") {
+                $(this).nextUntil("tr.tree_lvl_5,tr.tree_lvl_4,tr.tree_lvl_3,tr.tree_lvl_2,tr.tree_lvl_1,tr.tree_none", "tr.tree_lvl_5_item").show();
+                $(this).find("span").removeClass("chevron-collapsed").addClass("chevron-expanded");
+				$(this).data("expanded","1");
+			} else {
+			    $(this).nextUntil("tr.tree_lvl_5,tr.tree_lvl_4_item,tr.tree_lvl_4,tr.tree_lvl_3_item,tr.tree_lvl_3,tr.tree_lvl_2_item,tr.tree_lvl_2,tr.tree_lvl_1_item,tr.tree_lvl_1,tr.tree_none").hide();
+				$(this).find("span").removeClass("chevron-expanded").addClass("chevron-collapsed");
+				$(this).data("expanded","0");
+			    }
+        });
+     });
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo_scaled.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RA Flexible Software Package Documentation
+   &#160;<span id="projectnumber">Release v6.4.0</span>
+   </div>
+  </td>
+   <td>        <br /><div id="MSearchBox" class="MSearchBoxInactive">
+
+    <form id="lunrSearchForm" name="lunrSearchForm">
+      <span class="left" >
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               alt=""/>
+         <input class="search-input" id="MSearchField" name="q" placeholder="Search" type="text">
+      </span>
+      <span class="right">
+          &nbsp;
+      </span>
+        <!--<input type="submit" value="Search">-->
+    </form>
+</div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('group___r_m___m_c_u_b_o_o_t___p_o_r_t.html','');});
+</script>
+
+<script src="search/mark.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    var options = {         // allows highlighting across element boundaries.
+      "acrossElements": true
+    };
+    var bodyText = $("div.contents").text(); // try contents instead of body.
+    // If using body: Problem may be that text inside <script> tags is included in .text() - but not in cheerio?
+    // If using div.contents - works
+    var fullURL = $(location).attr('href');
+    var splitURL = fullURL.split("?");  // Get param string: content after "?" in URL
+    if (splitURL.length > 1) {          // If any content after "?"
+      var paramStr = splitURL[1];
+      var params = paramStr.split("&"); // Split params on "&"
+      for (i = 0; i < params.length; i++) {
+        var paramPair = params[i].split("=");
+        if (paramPair[0] == "pos") {     // If any param starts "pos", get the content after "="
+          posStr = paramPair[1];
+          var splitPos = posStr.split(",");
+          var termArray = [];
+        // termArray will have the search terms
+            for (i=0; i < splitPos.length; i += 2) {
+            start = splitPos[i];
+            len = splitPos[i+1]; // Needs error detection! Vulnerable if non-even # of pos entries
+            term = bodyText.substr(start,len);
+            if (termArray.includes(term) == false) {     // List all unique terms
+                termArray.push(bodyText.substr(start,len));
+            }
+          }
+    //      console.log(termArray);
+          var context = document.querySelector("div.contents");
+          var instance = new Mark(context);
+          for(i=0;i<termArray.length; i+=1) {
+            instance.mark(termArray[i],options);  // Use Mark.js to mark all terms in termArray
+            }
+          var firstMark = document.querySelector("mark");
+          firstMark.scrollIntoView(true);
+          //      console.log($("mark").first().text()); // Trying to scroll to first Mark element.
+        }
+            }
+    }
+  });
+</script>
+
+<link href="fsp_customdoxygen.css" rel="stylesheet" type="text/css" />
+
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+<!-- Lunr search results -->
+<div id="lunrResultBox" style="
+        position: fixed;
+        border: 1px solid black;
+        background-color: WhiteSmoke;
+        padding: 10px;
+        width: 500px;
+        height: 500px;
+        top: 30;
+        right: 0;
+        overflow: auto;
+        display: none">
+    <button onclick="closeLunrResults()" style="float: right;">X</button>
+    <div class="resultCount" id="resultCount"></div>
+    <div id="searchResults"></div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">MCUboot Port (rm_mcuboot_port)<div class="ingroups"><a class="el" href="group___r_e_n_e_s_a_s___m_o_d_u_l_e_s.html">Modules</a> &raquo; <a class="el" href="group___r_e_n_e_s_a_s___b_o_o_t_l_o_a_d_e_r___m_o_d_u_l_e_s.html">Bootloader</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<p>MCUboot Port for RA MCUs. </p>
+<h1><a class="anchor" id="r-mcuboot-port-overview"></a>
+Overview</h1>
+<dl class="section note"><dt>Note</dt><dd>The MCUboot Port does not provide any interfaces to the user. Consult the MCUboot documentation at <a href="https://mcu-tools.github.io/mcuboot/">https://mcu-tools.github.io/mcuboot/</a> for further information. </dd>
+<dd>
+FSP 6.0.0 changes the way linker scripts are handled which in turn will change how the user configures MCUboot. Where applicable, the documentation below will have a separate section if the usage is markedly different in 6.0.0.</dd></dl>
+<h1><a class="anchor" id="r-mcuboot-port-configuration"></a>
+Configuration</h1>
+<p><h2>Build Time Configurations for MCUboot</h2>
+The following build time configurations are defined in mcu-tools/include/mcuboot_config/mcuboot_config.h:<br />
+</p><table class="doxtable">
+<tr>
+<th>Configuration</th><th>Options</th><th>Default</th><th>Description </th></tr>
+<tr class="tree_lvl_1">
+<td class="tree_lvl_1" colspan="4"><span class="chevron-collapsed"></span> General  </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Custom mcuboot_config.h</td><td>Manual Entry</td><td></td><td>Add a path to your custom mcuboot_config.h file. It can be used to override some or all of the configurations defined here, and to define additional configurations. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Upgrade Mode</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Swap</li>
+<li>
+Overwrite Only</li>
+<li>
+Overwrite Only Fast</li>
+<li>
+Direct XIP</li>
+</ul>
+</td><td>Overwrite Only </td><td>Swap supports A/B image swapping with rollback. Other modes with simpler code path, which only supports overwriting the existing image with the update image (Overwrite Only) or running the newest image directly from its flash partition (Direct XIP), are also available. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Validate Primary Image</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Enabled</li>
+<li>
+Disabled</li>
+</ul>
+</td><td>Enabled </td><td>Always check the signature of the image in the primary slot before booting, even if no upgrade was performed. This is recommended if the boot time penalty is acceptable. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Downgrade Prevention (Overwrite Only)</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Enabled</li>
+<li>
+Disabled</li>
+</ul>
+</td><td>Disabled </td><td>Prevent downgrades by enforcing incrementing version numbers. When this option is set, any upgrade must have greater major version or greater minor version with equal major version. This mechanism only protects against some attacks against version downgrades (for example, a JTAG could be used to write an older version). </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Watchdog Feed</td><td>Manual Entry</td><td></td><td>This function might be implemented if the OS / HW watchdog is enabled while doing a swap upgrade and the time it takes for a swapping is long enough to cause an unwanted reset. If implementing this, the OS main.c must also enable the watchdog (if required)! </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Measured Boot</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Enabled</li>
+<li>
+Disabled</li>
+</ul>
+</td><td>Disabled </td><td>Copies the boot data into the secure RAM, intended to be used by the secure App. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Data Sharing</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+Enabled</li>
+<li>
+Disabled</li>
+</ul>
+</td><td>Disabled </td><td>Copies the user data into the secure RAM, intended to be used by the secure App. </td></tr>
+<tr class="tree_lvl_1">
+<td class="tree_lvl_1" colspan="4"><span class="chevron-collapsed"></span> Signing and Encryption Options  </td></tr>
+<tr class="tree_lvl_2">
+<td class="tree_lvl_2" colspan="4"><span class="chevron-collapsed"></span> Signing and Encryption Options &gt; TrustZone  </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Boot Record (Image 2)</td><td>String length must be 12 characters or less.</td><td></td><td>Create CBOR encoded boot record TLV for Image 2. Represents the role of the software component (e.g. CoFM for coprocessor firmware). [max. 12 characters] </td></tr>
+<tr class="tree_lvl_2_item">
+<td class="tree_lvl_2_cell">Custom (Image 2)</td><td>Manual Entry</td><td>--confirm </td><td>Add any custom options to pass to imgtool.py here. --pad places a trailer on the image that indicates that the image should be considered an upgrade. Writing this image in the secondary slot will then cause the bootloader to upgrade to it. --confirm marks the image as confirmed, which causes the upgrade to be permanent. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Signature Type</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+None</li>
+<li>
+ECDSA P-256</li>
+<li>
+ECDSA P-384</li>
+<li>
+RSA 2048</li>
+<li>
+RSA 3072</li>
+<li>
+ML-DSA 44</li>
+<li>
+ML-DSA 65</li>
+<li>
+ML-DSA 87</li>
+</ul>
+</td><td>ECDSA P-256 </td><td>Configure the signature type. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Boot Record</td><td>String length must be 12 characters or less.</td><td></td><td>Create CBOR encoded boot record TLV. Represents the role of the software component (e.g. CoFM for coprocessor firmware). [max. 12 characters] </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Custom</td><td>Manual Entry</td><td>--confirm </td><td>Add any custom options to pass to imgtool.py here. --pad places a trailer on the image that indicates that the image should be considered an upgrade. Writing this image in the secondary slot will then cause the bootloader to upgrade to it. --confirm marks the image as confirmed, which causes the upgrade to be permanent. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Python</td><td>Manual Entry</td><td>python </td><td>Name of the python command to use. Default is python, but can be updated to python3 for Linux or an absolute path if needed. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Encryption Scheme</td><td><ul style="margin-top:0;margin-bottom:0;">
+<li>
+ECIES-P256</li>
+<li>
+RSA-OAEP (RSA 2048 only)</li>
+<li>
+Encryption Disabled</li>
+</ul>
+</td><td>Encryption Disabled </td><td>Choose the encryption scheme. </td></tr>
+<tr class="tree_lvl_1">
+<td class="tree_lvl_1" colspan="4"><span class="chevron-collapsed"></span> Flash Configuration  </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Dual Bank Mode</td><td>MCU Specific Options</td><td></td><td>Enable dual bank mode for Direct XIP. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Memory Mirror Function (MMF) support</td><td>MCU Specific Options</td><td></td><td>Use MMF for MCUBoot dxip mode </td></tr>
+<tr class="tree_lvl_1">
+<td class="tree_lvl_1" colspan="4"><span class="chevron-collapsed"></span> Data Sharing  </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Maximum Measured Boot Record Size (Bytes)</td><td>Value must be an integer.</td><td>0x64 </td><td>Maximum size of the boot record. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Shared Data Size (Bytes)</td><td>Value must be an integer.</td><td>0x380 </td><td>Size of the shared RAM area. Required for Measured Boot. </td></tr>
+<tr class="tree_lvl_1_item">
+<td class="tree_lvl_1_cell">Shared Data Address</td><td>Value must be an integer</td><td>0x20000000 </td><td>Shared RAM start address. Required for Measured Boot. </td></tr>
+</table>
+</p>
+<h2><a class="anchor" id="r-mcuboot-port-clock-configuration"></a>
+Clock Configuration</h2>
+<ul>
+<li>This module does not use peripheral clocks.</li>
+<li>For best performance it is recommended to use the fastest clock settings supported by the device in order to reduce boot times.</li>
+<li><b>The bootloader must not disable the MOCO prior to calling the application. If the bootloader disables the MOCO, then operation cannot be guaranteed.</b></li>
+</ul>
+<h2><a class="anchor" id="r-mcuboot-port-pin-configuration"></a>
+Pin Configuration</h2>
+<p>This module does not use I/O pins.</p>
+<h1><a class="anchor" id="r-mcuboot-port-usage-notes"></a>
+Usage Notes</h1>
+<h2>Getting Started: Creating an MCUboot Project</h2>
+<p>Start by creating a new project in e&sup2; studio or RASC. Select 'Flat Project' template for single-image projects. For TrustZone based projects, select 'TrustZone Secure Project' template and set the clock circuit under the clocks tab to secure. On the Stacks tab, add New &gt; Bootloader &gt; MCUboot. Resolve any constraint errors and edit configurations as desired. Add either the example keys or generate your own key. The MCUboot key generation tool is provided at ra/mcu-tools/MCUboot/scripts/imgtool.py and documented at <a href="https://github.com/mcu-tools/mcuboot/blob/master/docs/imgtool.md">https://github.com/mcu-tools/mcuboot/blob/master/docs/imgtool.md</a>. Install the following required python packages to use imgtool.py: <a href="https://github.com/mcu-tools/mcuboot/blob/master/scripts/requirements.txt">https://github.com/mcu-tools/mcuboot/blob/master/scripts/requirements.txt</a>.</p>
+<p>In src/hal_entry.c, drag in Developer Assistance &gt; HAL/Common &gt; MCUboot &gt; Quick Setup &gt; Call Quick Setup. Add a call to mcuboot_quick_setup() in the application and make any desired updates.</p>
+<dl class="section note"><dt>Note</dt><dd>MCUboot will contain either the verification public key or its hash. During production it is necessary to permanently lock the flash region where MCUboot is programmed to prevent the keys or the code from being modified.</dd></dl>
+<h3>MCUboot Layout</h3>
+<div class="image">
+<img src="mcuboot_flat_imgtool.png" alt="mcuboot_flat_imgtool.png"/>
+<div class="caption">
+imgtool.py siging script adds header and trailer to user binary</div></div>
+ <h2>Getting Started: Signing Tool Prerequisite</h2>
+<p>To use the MCUboot signing tool, ensure you have Python 3.x installed on your system. Then install the Python packages required for the signing tool with the following command (modifying the path as needed depending on current directory):</p>
+<p><code>pip3 install --user -r ra/mcu-tools/MCUboot/scripts/requirements.txt</code></p>
+<h2><a class="anchor" id="r-mcuboot-solution-section-naming-dummy2"></a>
+Getting Started: Converting an Application Project to an MCUboot Image</h2>
+<p>MCUboot application images must execute from the image slot defined by the MCUboot project. They are also limited to a single downloadable flash region. All of this is configured in the MCUboot module and the information is added to the generated SecureBundle (.sbd) file in the MCUboot project.</p>
+<p>Any existing project can be converted to an MCUboot image.</p>
+<ol type="1">
+<li>If the project was created with a version prior to FSP v3.0.0, update the linker script to the v3.0.0 version before using it as an MCUboot application image.</li>
+<li>Right click the project to convert in e&sup2; studio or RASC and select Properties.</li>
+<li>Open C/C++ Build and select Build Variables.</li>
+<li>Click Add...</li>
+<li>For Variable Name, enter SmartBundle. For Type, select File. Browse to the *.sbd file created alongside the *.elf file for the associated MCUboot project. If the MCUboot project was specified as the Preceding Project during project creation, this step is done automatically.</li>
+<li>Click OK, then Apply and Close.</li>
+</ol>
+<p>To convert a TrustZone image, follow the steps above for the Secure project. The Non-Secure project will already use the SmartBundle from the Secure project which will inherit required data from the MCUboot SmartBundle.</p>
+<p>MCUboot application images must also be signed to work with MCUboot. At a minimum, this involves adding a SHA and MCUboot specific constant data called boot magic in the image trailer. The size of the image trailer is <code>(5 * BOOT_MAX_ALIGN) + (BOOT_MAX_IMG_SECTORS * min-write-size * 3)</code>.</p>
+<p>Signing can be done on the as a post-build step in e&sup2; studio. To sign the image as a post-build step:</p>
+<ol type="1">
+<li>If Linux is used to develop the application image, change the MCUboot property <code>Signing &gt; Python</code> to <code>python3</code>.</li>
+<li>Build the bootloader project to generate the *.bld file. Make sure to build the bootloader project on the same computer as the application image to ensure the path to the signing script is correct.</li>
+<li>Define environment variables in the Properties of the application image project in e&sup2; studio.<ol type="a">
+<li>Right click the application image project, and select <b>Properties</b>.</li>
+<li>Select <b>C/C++ Build &gt; Environment</b> on the left.</li>
+<li>Click <b>Add...</b></li>
+<li>Define the following environment variables one at a time:<ul>
+<li>MCUBOOT_IMAGE_VERSION: Set to the version of the application image.</li>
+<li>MCUBOOT_IMAGE_SIGNING_KEY: Set the path to the key used for signing. If signing is not required, do not set this variable. If example keys are used, set MCUBOOT_IMAGE_SIGNING_KEY as follows (replace &lt;boot_project&gt; with the bootloader project path):<ul>
+<li>ECC 256: &lt;boot_project&gt;/ra/mcu-tools/MCUboot/root-ec-p256.pem</li>
+<li>ECC 384: &lt;boot_project&gt;/ra/mcu-tools/MCUboot/root-ec-p384.pem</li>
+<li>ML-DSA-44: &lt;boot_project&gt;/ra/mcu-tools/MCUboot/root-mldsa-44.pem</li>
+<li>ML-DSA-65: &lt;boot_project&gt;/ra/mcu-tools/MCUboot/root-mldsa-65.pem</li>
+<li>ML-DSA-87: &lt;boot_project&gt;/ra/mcu-tools/MCUboot/root-mldsa-87.pem</li>
+<li>RSA 2K: &lt;boot_project&gt;/ra/mcu-tools/MCUboot/root-rsa-2048.pem</li>
+<li>RSA 3K: &lt;boot_project&gt;/ra/mcu-tools/MCUboot/root-rsa-3072.pem</li>
+</ul>
+</li>
+<li>MCUBOOT_IMAGE_ENC_KEY: Set the path to the key used for encryption. If encryption is not required, do not set this variable. If example keys are used, set MCUBOOT_IMAGE_ENC_KEY as follows (replace &lt;boot_project&gt; with the bootloader project path):<ul>
+<li>ECIES: &lt;boot_project&gt;/ra/mcu-tools/MCUboot/enc-ec256-pub.pem</li>
+<li>RSA 2K: &lt;boot_project&gt;/ra/mcu-tools/MCUboot/enc-rsa2048-pub.pem</li>
+</ul>
+</li>
+<li>MCUBOOT_APP_BIN_CONVERTER: Optional. Set to path to objcopy, arm-none-eabi-objcopy, fromelf, or ielftool. Not required if one of these tools is on the path.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Build the project.</li>
+<li>The signed image is output next to the application &lt;project&gt;.elf file with the name &lt;project&gt;bin.signed.</li>
+</ol>
+<h3><a class="anchor" id="r-mcuboot-solution-section-naming-dummy3"></a>
+FSP 6.0.0 and newer</h3>
+<p>An FSP Solution project must be created in order to set up the bootloader slots; the slot size and header information was previously in the MCUboot module.</p>
+<h4><a class="anchor" id="r-mcuboot-solution-section-naming"></a>
+Bootloader region encoding in FSP 6.0.0</h4>
+<p>The header and image regions have to be named in the manner described below in the Solution project:</p>
+<ul>
+<li><code>FLASH_&lt;core&gt;_(B|S| )</code> - Indicates bootloader area or primary area. These are created by default and cannot be renamed.</li>
+<li>Examples:<ul>
+<li><code>FLASH_CM85_B</code>: CM85 Bootloader area.</li>
+<li><code>FLASH_CM85_S</code>: CM85 Primary area.</li>
+<li><code>FLASH_CM23</code> : CM23 Primary area.</li>
+</ul>
+</li>
+<li><code>__BL</code>: Indicates this is a bootloader symbol.</li>
+<li><code>_</code>: delimiter between fields.</li>
+<li><code>([0-9])|S</code>: Image definitions field.<ul>
+<li><code>S</code> indicates the Scratch area.</li>
+<li><code>0-9</code> correspond to traditional image IDs (only using 0/1 in legacy).</li>
+</ul>
+</li>
+<li><code>_</code>: delimiter between fields.</li>
+<li><code>(P|S)</code>: Indicates Primary or Secondary area.<ul>
+<li><code>S</code> Secondary areas must have both Header (<code>H</code>) and Image (<code>I</code>) component.</li>
+<li><code>P</code> Primary areas must not have an <code>I</code> component (as the Image component is defined by the solution application region).</li>
+<li>Secondary header must be the same size as Primary header.</li>
+<li>Secondary images must be the same size as the area allocated for the project (Primary Image).</li>
+<li>Headers must immediately precede the Image/application space.</li>
+</ul>
+</li>
+<li><code>_</code>: delimiter between fields</li>
+<li><code>(H|I)</code>: Indicates bootloader Header or Image component (not used with Scratch).<ul>
+<li><code>H</code> indicates the MCUboot Header for Primary or Secondary (<code>P</code>/<code>S</code>) areas (use 0x200 for compatibility).</li>
+<li><code>I</code> indicates the MCUboot Secondary (<code>S</code>) Image allocation space (not used with Primary images).</li>
+</ul>
+</li>
+<li>Bootloader flash area size must be an integer multiple of the largest erase size on the mcu.</li>
+<li>Primary or Secondary area size (including header and trailer) must be an integer multiple of the largest erase size on the mcu.</li>
+<li>Examples:<ul>
+<li><code>__BL_0_P_H</code>: Image 0 Primary Header.</li>
+<li><code>__BL_0_S_H</code>: Image 0 Secondary Header.</li>
+<li><code>__BL_1_S_I</code>: Image 1 Secondary Image.</li>
+<li><code>__BL_S</code> : Scratch area.</li>
+</ul>
+</li>
+</ul>
+<h4><a class="anchor" id="r-mcuboot-solution-single-images-steps"></a>
+Single-Image Bootloader Setup</h4>
+<ul>
+<li>Create the bootloader and set up any required configurations.</li>
+<li>Build the bootloader project.</li>
+<li>Create the application project, selecting the bootloader project as the "Preceding project" in the e2 studio wizard. The SmartBundle (.sbd) will be automatically linked.</li>
+<li>Build the application project.</li>
+<li>Create an "FSP Solution Project (Advanced)" and chose the final project in the chain (typically the application project).</li>
+<li>Create the Header and Image regions according to the encoding described above.</li>
+<li>Build the Solution project.</li>
+</ul>
+<h4><a class="anchor" id="r-mcuboot-solution-multi-images-steps"></a>
+Multi-Image Bootloader Setup</h4>
+<ul>
+<li>Create the bootloader and set up any required configurations.</li>
+<li>Build the bootloader project.</li>
+<li>Repeat the following steps for each application image (Image 0, Image 1, ..., Image n):<ul>
+<li>Create an application project, selecting the bootloader project as the "Preceding project" in the e2 studio wizard. The SmartBundle (.sbd) will be automatically linked.</li>
+<li>Build the application project.</li>
+</ul>
+</li>
+<li>Create an "FSP Solution Project (Advanced)" and select the final project in the chain (typically the first application project). <code>&lt;raSmartBundles\&gt;</code> <code>&lt;bundle\&gt;${workspace_loc:/bootloader_project}/Debug/bootloader_project.sbd\&lt;/bundle\&gt;</code> <code>&lt;bundle\&gt;${workspace_loc:/app_image0}/Debug/app_image0.sbd\&lt;/bundle\&gt;</code> <code>&lt;/raSmartBundles\&gt;</code></li>
+<li>Create the Header and Image regions according to the encoding described in the previous section. Example for Image 0, 1, 2, 3: __BL_0_P_H 0x10000 0x200 __BL_0_P_I 0x10200 0xFE00 __BL_0_S_H 0x20000 0x200 __BL_0_S_I 0x20200 0xFE00 __BL_1_P_H 0x30000 0x200 __BL_1_P_I 0x30200 0xFE00 __BL_1_S_H 0x40000 0x200 __BL_1_S_I 0x40200 0xFE00 __BL_2_P_H 0x50000 0x200 __BL_2_P_I 0x50200 0xFE00 __BL_2_S_H 0x60000 0x200 __BL_2_S_I 0x60200 0xFE00 __BL_3_P_H 0x70000 0x200 __BL_3_P_I 0x70200 0xFE00 __BL_3_S_H 0x80000 0x200 __BL_3_S_I 0x80200 0xFE00</li>
+<li>Manually edit solution.xml to add the required primary image paths (Image 1, 2, 3). Then refresh the solution project. <code>&lt;raSmartBundles\&gt;</code> <code>&lt;bundle\&gt;${workspace_loc:/bootloader_project}/Debug/bootloader_project.sbd\&lt;/bundle\&gt;</code> <code>&lt;bundle\&gt;${workspace_loc:/app_image0}/Debug/app_image0.sbd\&lt;/bundle\&gt;</code> <code>&lt;bundle\&gt;${workspace_loc:/app_image1}/Debug/app_image1.sbd\&lt;/bundle\&gt;</code> <code>&lt;bundle\&gt;${workspace_loc:/app_image2}/Debug/app_image2.sbd\&lt;/bundle\&gt;</code> <code>&lt;bundle\&gt;${workspace_loc:/app_image3}/Debug/app_image3.sbd\&lt;/bundle\&gt;</code> <code>&lt;/raSmartBundles\&gt;</code></li>
+<li>Build the Solution project.</li>
+<li>Repeat the following steps for each application image (Image 0, Image 1, ..., Image n):<ul>
+<li>Create an alternate memory regions file with <code>FLASH_START</code> and <code>FLASH_LENGTH</code> values to match the corresponding <code>__BL_&lt;n&gt;_P_I</code> partition.<ul>
+<li>Create the alternate memory regions file (For example: <code>memory_regions_ext.lld</code> for LLVM) in the application project directory by making a copy of the generated memory regions file in the Debug folder.</li>
+<li>In that file, set <code>FLASH_START</code> to the start address of <code>__BL_&lt;n&gt;_P_I</code> and <code>FLASH_LENGTH</code> to the partition size. For example: FLASH_START = 0x10200; FLASH_LENGTH = 0xFE00;</li>
+<li>Save the file.</li>
+</ul>
+</li>
+<li>Add the alternate memory regions files to the linker script.<ul>
+<li>Edit the fsp.lld file to include the new memory regions file instead of the default.</li>
+</ul>
+</li>
+<li>Build the project.</li>
+</ul>
+</li>
+</ul>
+<h2>Getting Started: Download and Debug</h2>
+<p>For projects that do not use TrustZone, debug the MCUboot project using the default configuration. Before running, load the signed image to the address specified in the signing comment in ra_cfg/mcu-tools/include/mcuboot_config/mcuboot_config.h. This can be done with the Load Ancillary File button when debugging in e&sup2; studio. Upgrade images can be loaded to the upgrade image slots using the same method.</p>
+<dl class="section note"><dt>Note</dt><dd>e&sup2; studio projects targeting RA8 devices that do not use TrustZone must disable the "Set TrustZone secure/non-secure boundaries" setting (Debug Configurations &gt; Debugger &gt; Connection Settings &gt; TrustZone &gt; Set TrustZone secure/non-secure boundaries).</dd></dl>
+<p>For TrustZone projects, debug using the Secure project to ensure the IDAU is partitioned correctly when debugging in e&sup2; studio. Make the following modifications before debugging in e&sup2; studio:</p>
+<ol type="1">
+<li>In the Debug Configurations for your project, on the Startup tab, click Add... to add the MCUboot project *.elf file (Image and Symbols), and optionally the Non-Secure project *.elf file.</li>
+<li>For the Secure and Non-Secure project *.elf file, load Symbols Only.</li>
+<li>After starting to debug, load the signed Secure image and the signed Non-Secure image into the addresses specified in the signing comment in ra_cfg/mcu-tools/include/mcuboot_config/mcuboot_config.h. This can be done with the Load Ancillary File button when debugging in e&sup2; studio. Upgrade images can be loaded to the upgrade image slots using the same method.</li>
+</ol>
+<h2>Confirming Upgrade in Swap Mode</h2>
+<p>In Swap Mode operation, if the upgrade image is signed with the &ndash;pad option, MCUboot will install that image as a temporary update where if nothing else is done, a reboot will cause MCUboot to revert to the image version that was swapped out during the upgrade. In order for the updated image to prevent this reversion and make the update permanent, the boot_set_confirmed() must be called from the application.</p>
+<p>To avail this capability in the application image, from the Stacks tab, add New &gt; Bootloader &gt; MCUboot Image Utilities (Swap Mode). Resolve any constraint errors and edit configurations as desired.</p>
+<p>In src/hal_entry.c, drag in Developer Assistance &gt; HAL/Common &gt; MCUboot Image Utilities &gt; Quick Setup &gt; Confirm Primary Image. Add a call to boot_set_confirmed() in the application and confirm the image in the primary slot.</p>
+<h2>XIP Mode operation</h2>
+<p>XIP mode is enabled selecting "Direct XIP" as the Upgrade Mode option in the configurator or by defining "MCUBOOT_DIRECT_XIP" in the mcuboot config file. The linker script defines the symbol "XIP_SECONDARY_SLOT_IMAGE" by default to 0. To link an application to the secondar slot in XIP mode, set XIP_SECONDARY_SLOT_IMAGE to 1 in the application linker script. Direct XIP mode does not support TrustZone projects.</p>
+<h3>XIP Mode with Memory Mirror Function (MMF)</h3>
+<dl class="section note"><dt>Note</dt><dd>Memory Mirror Functions is available on some MCUs, please check the hardware user manual for the availability.</dd>
+<dd>
+This mode only available in linear memory mode.</dd></dl>
+<p>When "Memory Mirror Function (MMF) support" under Common &gt; Flash Layout is enabled, MCUBoot decides which image will be "mirrored". After the image is reflected on MMF region, the MCUBoot will start booting the application from start address of MMF.</p>
+<div class="image">
+<img src="mcuboot_with_mmf_primary_app.png" alt="mcuboot_with_mmf_primary_app.png"/>
+<div class="caption">
+Booting Primary Application with MMF</div></div>
+ <div class="image">
+<img src="mcuboot_with_mmf_secondary_app.png" alt="mcuboot_with_mmf_secondary_app.png"/>
+<div class="caption">
+Booting Secondary Application with MMF</div></div>
+ <h2>Dual Bank operation</h2>
+<p>MCUboot can be used with Dual bank mode (with Flash HP or Flash LP) to leverage the advantages of dual bank flash operation. When Dual Bank mode is enabled, only the XIP upgrade mode can be used.</p>
+<dl class="section note"><dt>Note</dt><dd>Unlike in normal XIP Mode operation, the linker script symbol "XIP_SECONDARY_SLOT_IMAGE" must be undefined in Dual Bank mode. An example flash layout in this configuration for a 1 MB is shown below. Note that there are 2 copies of the bootloader, one in Bank 0 and another in Bank 1.</dd></dl>
+<div class="image">
+<img src="rm_mcuboot_port_map_dualbank.png" alt="rm_mcuboot_port_map_dualbank.png"/>
+<div class="caption">
+MCUboot Dual Bank layout of Flash HP for 1 MB Memory</div></div>
+<p> For this example layout, the following files are generated when Dual Bank mode with XIP is enabled:</p>
+<ol type="1">
+<li>Bootloader Project: srec file linked to address 0 and includes the OFS region.</li>
+<li>Application Project (Primary): signed bin file linked to address 0x20000.</li>
+<li>Application Project (Secondary): signed bin file linked to address 0x20000.</li>
+</ol>
+<p>With Flash HP in Dual Bank mode, the available flash memory is split into two halves and referred to as Bank 0 and 1. In this example Bank 0 would span from address 0x0 - 0x7FFFF and Bank 1 from 0x200000 - 0x27FFFF. In Linear mode, it is possible to program the Bank 1 area by programming to 0x80000 - 0xFFFFF.</p>
+<div class="image">
+<img src="rm_mcuboot_port_map_dualbank_lp.png" alt="rm_mcuboot_port_map_dualbank_lp.png"/>
+<div class="caption">
+MCUboot Dual Bank layout of Flash LP for 512 KB Memory</div></div>
+<p> With Flash LP in Dual Bank mode, the available flash memory is also split into two bank areas and referred to as Bank 0 and 1. In this example Bank 0 would span from address 0x0 - 0x3FFFF and Bank 1 from 0x40000 - 0x7FFFF. In Linear mode, it is possible to program the Bank 1 area by programming to 0x40000 - 0x7FFFF.</p>
+<h3>Programming in Dual Bank Mode with Flash HP</h3>
+<p>The bootloader must be duplicated in Dual Bank mode. Bank 0 can be programmed using the srec file generated from the MCUboot project; this will also program the OFS region which contains the dual bank enable bit, so it must either be programmed last if each file is programmed independently. Another option is to combine all images: MCUboot in Bank 0, primary image, MCUboot in Bank 1 (no OFS), and secondary image (optional). To program MCUboot to Bank 1, offset MCUboot by half the flash size and cut off the OFS region (0x0100A100 to address 0x0100A2FF on CM33 MCUs that support dual bank). Using srec-cat for a 1 MB flash MCU (0x80000 flash per bank), an example command to create the bootloader image for Bank 1: "srec_cat MCUboot_dualbank.srec -crop 0 0x80000 -offset 0x80000 -o MCUboot_dualbank_offset.srec". The application project for Bank 1 can be similarly offset using srec_cat: "srec_cat app1.bin.signed -binary -offset 0xA0000 -o app1_offset.srec", where 0xA0000 is 0x80000 (half the flash) + 0x20000 (MCUboot size). The signed binary file for Bank 0 can be converted to srec format using srec_cat: "srec_cat app0.bin.signed -binary -offset 0x20000 -o app0.srec"</p>
+<p>To combine all the files into one srec file, use "srec_cat MCUboot_dualbank.srec MCUboot_dualbank_offset.srec app0.srec app1_offset.srec -o combined_srec".</p>
+<h3>Programming in Dual Bank Mode with Flash LP</h3>
+<p>To use Dual Bank Mode with Flash LP, enable Dual Bank Mode (Flash LP) in the MCUboot stack under Property &gt; Common &gt; General.</p>
+<p>Similar to Dual Bank Mode with Flash HP, the bootloader must also be duplicated in Dual Bank mode. But the MCUBoot project does not need to be programmed last, because Flash LP does not use the OFS region to enable/disable the dual bank mode.</p>
+<h3>Dual bank booting without reset</h3>
+<dl class="section note"><dt>Note</dt><dd>This feature only available on MCUs which support flash_lp and Instant Bank Swap.</dd></dl>
+<div class="image">
+<img src="rm_mcuboot_dualbank_wo_reset.png" alt="rm_mcuboot_dualbank_wo_reset.png"/>
+<div class="caption">
+Instant Bank Swap option under Flash stack</div></div>
+<p> The picture below shows the execution sequence with Reset and Without Reset (Instant Bank Swap).</p>
+<div class="image">
+<img src="rm_mcuboot_dualbank_w_n_wo_reset_differences.png" alt="rm_mcuboot_dualbank_w_n_wo_reset_differences.png"/>
+<div class="caption">
+Software flow differences between booting with and without reset</div></div>
+ <h2>External Memory Support</h2>
+<h1>QSPI</h1>
+<p>QSPI support for secondary image storage can be enabled in the configurator. The bootloader expects the QSPI memory to be pre-configured by user code in the bootloader for read/write operation. The bootloader code operates under the assumption that the user has configured the QSPI in Extended-SPI mode and that <a class="el" href="group___q_s_p_i.html#ga9126728f755c2b34939013218ab81b44">R_QSPI_Open()</a> has been called prior to invoking boot_go();. For example, on the EK_RA6M4 which has the MX25L25645G QSPI flash, after adding the QSPI module to the project, calling the following snippet will configure the QSPI for read/write operation:</p>
+<div class="fragment"><div class="line"><span class="comment">/* Status Register (SREG) payload size */</span></div><div class="line"><span class="preprocessor"># define SREG_SIZE                             0x03</span></div><div class="line"></div><div class="line"><span class="preprocessor"># define  QSPI_COMMAND_WRITE_STATUS_REGISTER   0x01</span></div><div class="line"></div><div class="line"><span class="preprocessor"># define  QSPI_DEFAULT_SR1                     0x40</span></div><div class="line"></div><div class="line"><span class="preprocessor"># define  QSPI_DEFAULT_SR2                     0x00</span></div><div class="line"></div><div class="line"><span class="comment">/* Status register payload */</span></div><div class="line">uint8_t   data_sreg[SREG_SIZE]                 = {QSPI_COMMAND_WRITE_STATUS_REGISTER, QSPI_DEFAULT_SR1, QSPI_DEFAULT_SR2};</div><div class="line"></div><div class="line"><a class="code" href="group___q_s_p_i.html#ga9126728f755c2b34939013218ab81b44">R_QSPI_Open</a>(&amp;g_qspi0_ctrl, &amp;g_qspi0_cfg);</div><div class="line"><span class="comment">/* Configure for Extended SPI Read/Write Mode */</span></div><div class="line"><a class="code" href="group___q_s_p_i.html#ga80ea8f11ac3c0f354d89a3e06fbf6a4c">R_QSPI_DirectWrite</a>(&amp;g_qspi0_ctrl, &amp;(g_qspi0_cfg.write_enable_command), 1, <span class="keyword">false</span>);</div><div class="line"><a class="code" href="group___q_s_p_i.html#ga80ea8f11ac3c0f354d89a3e06fbf6a4c">R_QSPI_DirectWrite</a>(&amp;g_qspi0_ctrl, data_sreg, SREG_SIZE, <span class="keyword">false</span>);</div></div><!-- fragment --><p>For a more detailed example on how to initialize the QSPI device, refer to the QSPI module. The QSPI sector size must be the same as that of the MCU internal flash (BSP_FEATURE_FLASH_HP_CF_REGION1_BLOCK_SIZE) for swap mode operation.</p>
+<h1>OSPI_B</h1>
+<p>OSPI_B support for secondary image storage can be enabled in the configurator for RA8: The bootloader expects the OSPI memory to be pre-configured by user code in the bootloader for read/write operation. The bootloader code operates under the assumption that the user has initialized the OSPI_B by calling <a class="el" href="group___o_s_p_i___b.html#ga9134500bd9ee50551e218a81868f5b1a">R_OSPI_B_Open()</a> prior to invoking boot_go();.</p>
+<p>The OSPI sector size must be the same as that of the MCU internal flash (BSP_FEATURE_FLASH_HP_CF_REGION1_BLOCK_SIZE) for swap mode operation.</p>
+<dl class="section note"><dt>Note</dt><dd>: The user can specify the OSPI erase block size for the area that will be erased/written to by MCUBoot. Do not use OSPI regions that span multiple block erase sizes or block erase sizes larger than the code flash erase size of 32K. <h2>MCUboot Memory Map</h2>
+</dd></dl>
+<p>For single image projects with no external memory support, the default memory map looks like:</p>
+<div class="image">
+<object type="image/svg+xml" data="rm_mcuboot_port_map.svg">rm_mcuboot_port_map.svg</object>
+<div class="caption">
+MCUboot Memory Map</div></div>
+<p> For projects with 2 separately updateable images (used for TrustZone applications where the Secure and Non-Secure images can be updated separately), the default memory map with no external memory support looks like:</p>
+<div class="image">
+<object type="image/svg+xml" data="rm_mcuboot_port_map_tz.svg">rm_mcuboot_port_map_tz.svg</object>
+<div class="caption">
+MCUboot Memory Map (TrustZone)</div></div>
+<p> For single image projects with QSPI, the default memory map looks like:</p>
+<div class="image">
+<img src="rm_mcuboot_port_map_qspi.png" alt="rm_mcuboot_port_map_qspi.png"/>
+<div class="caption">
+MCUboot Memory Map with QSPI</div></div>
+ <h2>MCUboot verification options</h2>
+<p>MCUboot in FSP supports the following secure image verification options</p><ol type="1">
+<li>Hash verification only (SHA256).</li>
+<li>Hash and signature verification (ECDSA-P256, ECDSA-P384, RSA-2048, RSA-3072, ML-DSA-44, ML-DSA-65, and ML-DSA-87).</li>
+<li>Hash, signature verification and image encryption (ECIES-P256 and RSA-OAEP-2048 with AES-128).</li>
+<li>Hash and image encryption only.</li>
+</ol>
+<p>MCUboot also supports signature verification using EdDSA-25519 and image encryption using AES-KW-128 and AES-KW-256 but those are currently not supported in FSP.</p>
+<h2><a class="anchor" id="rm-mcuboot-port-limitations"></a>
+Limitations</h2>
+<p>MCUboot swap mode is not functional with OSPI_B external storage.</p>
+<h3>Notes</h3>
+<p>When encryption is enabled, MCUboot requires the image in the primary slot to be unencrypted. Only the image loaded in the secondary slot can be encrypted.</p>
+<h2>MCUboot Crypto Stack Options</h2>
+<p>The following crypto stacks can be used with MCUboot in FSP:</p><ol type="1">
+<li>MbedTLS, which is hardware accelerated on all RA devices. On the RA2 which has an AES engine only, ECC/RSA/SHA operations are in software.<ol type="a">
+<li>Post Quantum Crypto (PQC) can optionally be used for ML-DSA operations</li>
+</ol>
+</li>
+<li>Ocrypto (TRNG Only) can be used with some devices. See <a class="el" href="_u_s_i_n_g__o_c_r_y_p_t_o.html#USING_OCRYPTO-limitations">Licensed Devices</a>.</li>
+<li>Ocrypto (H/W Accelerated) has AES operations accelerated for some devices. See <a class="el" href="group___r_m___o_c_r_y_p_t_o___p_o_r_t.html#rm-ocrypto-port-overview">Hardware acceleration summary</a>.</li>
+<li>TinyCrypt (S/W Only) can be used with all devices.</li>
+<li>TinyCrypt (H/W Accelerated) has AES operations accelerated for the RA2 family only. When using MCUboot without encryption there is no difference between using this or the S/W only version.</li>
+<li>SCE9 Protected Mode on devices that have the SCE9 (eg: RA6M4, RA4M3, RA4M2)</li>
+</ol>
+<p>MbedTLS provides the best performance for MCUBoot signature verification on the RA6 and RA4 devices but has a much larger code footprint compared to TinyCrypt. For RA2 devices TinyCrypt is the best option.</p>
+<h2>MCUboot boot time</h2>
+<p>The time from Reset to executing the application will depend on how quickly MCUboot finishes execution. This is dependent on a variety of factors including</p><ol type="1">
+<li>The crypto algorithms chosen for image verification and whether hardware acceleration is enabled. Hardware accelerated SHA256 will be the fastest while encryption enabled modes will be the slowest.</li>
+<li>The operating clock speeds.</li>
+<li>Whether flash programming was required.</li>
+</ol>
+<h2>Using SCE9 Protected Mode Crypto Stack</h2>
+<p>Using this crypto stack with MCUBoot provides additional security by ensuring that any keys that are used were securely provisioned for the specific device. The Application Note "Installing and Updating Secure Keys for RA Family" (R11AN0496) provides detailed steps on how to go about installing these keys. Since the section "Preparing Keys for Installation and Update Using RFP" document currently only provides information on how to install an AES key, this section will provide information on how to install an ECC public key. These steps can be used to install the public keys used for image verification or the keys used for image encryption.</p>
+<dl class="section note"><dt>Note</dt><dd>When using the SCE9 Protected Mode Stack with MCUboot it is required that the public keys in the format described in the "MCUboot Example Keys" module in the stack is also provided in the project.</dd></dl>
+<h3>Installing public keys used for signature verification</h3>
+<ol type="1">
+<li>Generate an ECC key pair. There are various ways to do this but you can use openSSL to do so: "openssl ecparam -name secp256k1 -genkey -noout -out my_ecc_secp256k1_key.pem".</li>
+<li>Once the key is generated, in order to install the public key using RFP (Renesas Flash Programmer) the user needs to have their own UFPK (User Factory Programming Key) and W-UFPK (Wrapped User Factory Programming Key). Refer to R11AN0496 on how to obtain these keys.</li>
+<li>Once the UFPK and W-UFPK are available, we need to extract the public key from the pem file. The public key can be viewed by using "openssl ec -noout -text -in my_ecc_secp256k1_key.pem". Note that when the ECC public key is printed out this way, it will contain a 0x04 ASN.1 prefix at the start, which should be discarded.</li>
+<li>Use the rfp-util.exe utility from the RFP installation folder to wrap the public key using the UFPK and W-UFPK into a format that can be installed by RFP and the factory bootloader on the MCU.</li>
+<li>Use RFP as described in R11AN0496 to install the key to the location of mcuboot_sce9_key section.</li>
+</ol>
+<p>These are examples that install the default keys provided with MCUboot in ra/mcu-tools/MCUboot/. The examples assume that UFPK and W-UFPK are already available.</p>
+<div class="fragment"><div class="line">  //Print out the EC-P256 Public Key using openSSL</div><div class="line">C:\ openssl ec -noout -text -in root-ec-p256.pem</div><div class="line"></div><div class="line">read EC key</div><div class="line">Private-Key: (256 bit)</div><div class="line">priv:</div><div class="line">    d7:98:d5:2f:83:01:24:3b:d3:54:2b:7e:55:ed:4c:</div><div class="line">    74:61:19:00:b0:f9:50:5a:82:4f:e1:e8:ec:06:3b:</div><div class="line">    cf:f1</div><div class="line">pub:</div><div class="line">    04:2a:cb:40:3c:e8:fe:ed:5b:a4:49:95:a1:a9:1d:</div><div class="line">    ae:e8:db:be:19:37:cd:14:fb:2f:24:57:37:e5:95:</div><div class="line">    39:88:d9:94:b9:d6:5a:eb:d7:cd:d5:30:8a:d6:fe:</div><div class="line">    48:b2:4a:6a:81:0e:e5:f0:7d:8b:68:34:cc:3a:6a:</div><div class="line">    fc:53:8e:fa:c1</div><div class="line">ASN1 OID: prime256v1</div><div class="line">NIST CURVE: P-256</div><div class="line"></div><div class="line">//Use the public key (ignore the 0x04 ASN.1 prefix) in the RFP command line to convert the public key into an installable format</div><div class="line">C:\ &quot;C:\Program Files (x86)\Renesas Electronics\Programming Tools\Renesas Flash Programmer V3.08\rfp-util.exe&quot; /genkey /ufpk &quot;C:\ufpk.key&quot; /wufpk &quot;C:\ufpk.key_enc.key&quot; /key &quot;2acb403ce8feed5ba44995a1a91daee8dbbe1937cd14fb2f245737e5953988d994b9d65aebd7cdd5308ad6fe48b24a6a810ee5f07d8b6834cc3a6afc538efac1&quot; /userkey &quot;16&quot; /output &quot;C:\ECC_pub_install.rkey&quot;</div><div class="line"></div><div class="line">// From the bootloader map file determine the address of mcuboot_sce9_key section</div><div class="line">Use RFP to install &quot;ECC_pub_install.rkey&quot; as described in &quot;Installing and Updating Secure Keys for RA Family&quot; (R11AN0496) to the address where the mcuboot_sce9_key section is located.</div></div><!-- fragment --><div class="fragment"><div class="line">  //Print out the RSA-2048 Public Key using openSSL</div><div class="line">C:\ openssl asn1parse -in root-rsa-2048.pem</div><div class="line"></div><div class="line">    0:d=0  hl=4 l=1187 cons: SEQUENCE</div><div class="line">    4:d=1  hl=2 l=   1 prim: INTEGER           :00</div><div class="line">    7:d=1  hl=4 l= 257 prim: INTEGER           :D106081A18442C18E8FBFDF70DA34F1FBBEE5EF9AAD24B18D35AE96D188019F9F09C341BCBF3BC74DB42E78C7F10537E435E0D572C44D167080F0DBB5CEEECB399DFE04D840BAA774160ED152849A701B43C10E6698C2F5FAC414D9E5C14DFF2F8CF3D1E6FE75BBAB4A9C8887E473C94C37767544BAA8D3835CA62617EB7E115DB7773D4BE7B7221896924FBF8656E643EC80ED785D55C4AE4530D2FFFB7FDF31339833FA3AED20FA76A9DF9FEB8CEFA2ABEAFB8E0FA823754F43EE12BD0D3085818F65E4CC8888131AD5FB08217F28A692723F3AB873E931A1DFEE8F81A246659F81CABDCCE681B666435ECFA0D119DAF5C3AA7D167C647EFB14B2C62E1D1C9</div><div class="line">  268:d=1  hl=2 l=   3 prim: INTEGER           :010001</div><div class="line">  273:d=1  hl=4 l= 256 prim: INTEGER           :46A11421C52B5BFF3AD2D37924999745F0D9D62BE505D42C5A56B0E39550CBF641D07667221E8502B38842F79D83E5C2977EF3610E6B5E9AC3055B2D8174967505BCB96D57FE1D26D8E7A894EA9D209A99CD6624856BC22240F17C09D3B1960EE2F61BFFE9EE3277BF4E539D9395FCA983F717EA4AFB2166E9FE2E0A25A87A9CAC06B57F8726B8FF42F68A9E9D9AF2963C9F8FBA626886462342513EB249E64226609A9170C80A4F21CFE0BF27C10E26A0C26BEB36DF6D6C716F94C2ECA559490F5429967E64BBB2FE991441EE06F17484D2BF91F6EE090A0F3B235BE01E19FC5894B1557D36ECE554AB91DF3B3836B244014DC131A61E55F41D9BA2737177C5</div><div class="line">  533:d=1  hl=3 l= 129 prim: INTEGER           :FF7D8F5BE67045C74A5CC8FE4159315D477AC645F2EE64D73C4690B8E2D665082B4AA0051F5978E7FE9DD3DF4A009AE333A911F29297B73EF6208C8C1D33E6DF7DA08729A32AF6849765CFF6C17E7FA16661445AAF8CBAF198777A2BCFF3AF90FD8CCE18AC2D452CE204CCEB01FA085E0B701FCA7020F60B3F7CC1578E38F59B</div><div class="line">  665:d=1  hl=3 l= 129 prim: INTEGER           :D170BF82EDAE6F933A1170678EAF4AD9DE0B953C803EC21B01C312C2484E507E182454B6DAA5CB610500F7333E0D4C8B0AB97F3CA3761B41D056031BE0321B787BFC917079A069B9CDF6D6A2B5AA3A899707702C23B5FC60332D7FF3EC655D9A9817A2A95B2498F250576D6A17278E707953F9D1EE45BD0ED2E9F774AF111E6B</div><div class="line">  797:d=1  hl=3 l= 129 prim: INTEGER           :A43087E1D27CD28B19A1F955549FC256A4EA24E3AD144160050F8050210F110CA7EDA45AC663D48C9B17C8A255C77FC2855FA0F617F9423D472571CD55B3162B086C1290D29878A68B3955E5C941C739ED36931C0877536891C82E8E5B6CCAA64E1BA013410B32CA7E52017301E9325965D65FC7D4398A857DFE69AE1FEB4103</div><div class="line">  929:d=1  hl=3 l= 128 prim: INTEGER           :5043C1614FED75DD1A77EC78037AB258E47BD3E9A7CC655F2C41B242BAAB28B5EA52A214A19EC05EA22848945EC781FA175617A9098C0DCE1F2597736B6C4892D811673B8FA126638AC77A6248F4C01252CB0AF61F8972FAFB2208D356595292188F964B091EF16E8BD3B59EDED8CE01D4BD96141A18A7E7B274EFDCCBEAE799</div><div class="line"> 1060:d=1  hl=3 l= 128 prim: INTEGER           :287481FC814FF38A3E47CABFE05BB7C1DCA318048FE4F21FEBD875E4DB3FD65227ACB9BAD31B3E0EF388B2DB27EF48712C0F0B0252988F88D0E9B8C44A7865B942AF3006EE15AF1B634DCF14239A838EAC000DC93BC947F6A937E524400E16ACC48A118C819514BF851F549F3DF5BCC73693D45ED2E91685687F424B101837C9</div><div class="line"></div><div class="line">//Use the public key in the RFP command line to convert the public key into an installable format. Note that for RSA, the public modulus has to be concatenated to the public exponent (typically 65537 in 32 bits 00010001 as shown in the asn1parse output above) and then padded with 4 words of 0.</div><div class="line">C:\ &quot;C:\Program Files (x86)\Renesas Electronics\Programming Tools\Renesas Flash Programmer V3.08\rfp-util.exe&quot; /genkey /ufpk &quot;C:\ufpk.key&quot; /wufpk &quot;C:\ufpk.key_enc.key&quot; /key &quot;D106081A18442C18E8FBFDF70DA34F1FBBEE5EF9AAD24B18D35AE96D188019F9F09C341BCBF3BC74DB42E78C7F10537E435E0D572C44D167080F0DBB5CEEECB399DFE04D840BAA774160ED152849A701B43C10E6698C2F5FAC414D9E5C14DFF2F8CF3D1E6FE75BBAB4A9C8887E473C94C37767544BAA8D3835CA62617EB7E115DB7773D4BE7B7221896924FBF8656E643EC80ED785D55C4AE4530D2FFFB7FDF31339833FA3AED20FA76A9DF9FEB8CEFA2ABEAFB8E0FA823754F43EE12BD0D3085818F65E4CC8888131AD5FB08217F28A692723F3AB873E931A1DFEE8F81A246659F81CABDCCE681B666435ECFA0D119DAF5C3AA7D167C647EFB14B2C62E1D1C900010001000000000000000000000000&quot; /userkey &quot;0C&quot; /output &quot;C:\RSA_pub_install.rkey&quot;</div><div class="line"></div><div class="line">// From the bootloader map file determine the address of mcuboot_sce9_key section</div><div class="line">Use RFP to install &quot;RSA_pub_install.rkey&quot; as described in &quot;Installing and Updating Secure Keys for RA Family&quot; (R11AN0496) to the address where the mcuboot_sce9_key section is located.</div></div><!-- fragment --><div class="fragment"><div class="line">  //Print out the RSA-3072 Public Key using openSSL</div><div class="line">C:\ openssl asn1parse -in root-rsa-3072.pem</div><div class="line"></div><div class="line">    0:d=0  hl=4 l=1764 cons: SEQUENCE</div><div class="line">    4:d=1  hl=2 l=   1 prim: INTEGER           :00</div><div class="line">    7:d=1  hl=4 l= 385 prim: INTEGER           :B42C0E985810A4A758997C01DD082A283433F8961A34205D45C8712625E5D296EA7BB115AAA68A63228B2D4E8173BF6E15688C1AF4EF2A8F8C229E71574BDE0F7E72D37AB8A71D44AD8700835CFD730572463F8BF91000D86ECC85EDF949DB783680493876DD5F5404DA8C34A72B13256FD1154FADC2E1A5D24E570C7E9C9BBA4E68B2E02502AA00D3B4CC2F78E5BE47671FC86E226C5E61B69ACDE5A8BA7A80131B172E96EDCFB39BE41CE8ADA7F63A51665E998E87EE6025F88DBECEA4A8CA936CD7BFD473338D4485CC7330089C4DB2AA5A6C6F7BABB7B37CC3FBE7CAC4F89A6FCBBB5B82E77AE819FD2F1122FB7F768C6B94A4094FA56A7751EBA77EDA8706EEDCBED1EA1A401D1BFF1AB1517C12B0F3F683019CE70C99BFAC685872A4B05985EE85AC2A22F4CF1508801F0DD01EA0A094C8F7FA65DD52E8963723305736E69DF40C4A05751FAD01CAB76D8C4374060A81F30162FFF7F55FAFE72B0EF881B565DD01D99F07178A18CF236E886591B57BD3B02DAF93666374AC5AE673DE3B</div><div class="line">  396:d=1  hl=2 l=   3 prim: INTEGER           :010001</div><div class="line">  401:d=1  hl=4 l= 385 prim: INTEGER           :98C34E30AF629528EABF605C781B671B257FF742D5BEE2BE12DFEBC80B93FC6547354F256EC6BC4967CD97C19B931779701F6FC39F6F75A7B68AD7CA83D8E8D43C4381B9E8FC909D5D803CD824AD24AC3683077857D9D0CDB1CC29B6678ACED1F36BFC292AE771DF5C2A2D7CAB4CA374378590CB392A2686A17518EB9822930B7955DE6C9C14D12DD852D05963E96FD73CC1BF005AA185B8D5CA15CFA6AB4E186F9AA5A2340838F631B44D2A9FAAECE3EF869BA9192779DEFDF2EBC41F938F249EABFFB1EB8DB49A9F61DF86242059E6D1E8D579C6D980CBFFF68AE36AAE6F5ED50AE29E3A35B5E1CFEB78731906E4F47CD7748CCC9B0F37BC73A9A459AD78E092C49231276878465B15967FFB3B93788C085DA6ABBFE405819561DE7C4B16BF17C653098176DC45D0CE29F99E6A188217FD6187C7E120F6AB0FD4D86732143C0C98C23CDCDE8FB766B221DC202B08FD227CE176F2E4A946F0E25BB184A9CF2778FCF0FBF3D5574932BF07020DDC866C5A1370D46EC039FCDC87CE9F5CDA42A1</div><div class="line">  790:d=1  hl=3 l= 193 prim: INTEGER           :E5BF240823A33C7AD9D931818534A0F1A5C45A86B178CE710D5B7203B26E35D38E28CBEAAFF1F47B34523EF3CC5C6E6FF3CD0FA8CF814601C4CD7D46B5240208FE1D68271ED0780172B651AAE357319C67D51927A69A910E819AB35959DE16767CB3FF35B2ADF9FCECE943EA4A81337C498823C9241B7F9A491021D5DE8697EA0FC365C114E899E0616C86E20028BC1A61FC45DA3E7DEC687528EEEEF9C83E879CBC5CC5AE02FFF66CF4D3879910F15B5005ABA73DAAA1E30308B0A16CFFD4F1</div><div class="line">  986:d=1  hl=3 l= 193 prim: INTEGER           :C8C2B1D568DC756EC05384E6328598EDDC1C8229E10731277BBCF98609DA6EC9C56AE751A408B1FC8053D06D3F9431015E36BE8FC579E89CBBC4254B9898B4E389E37F30A7D1B6ED387384DC1CED18FEDE59138337EDAEFD5F7193ABFBCB847B34E2F313BFB5FD2BA9698596E6E428F59D6F09A994ECCB885EAE9BF414B71C3F2F4BD22978340824A43D1B434844DF6768BC327CB934117043A84D159575AEB038BC07D5B9650D25F5D6365CB0B1F06C7B16873C500F3912F8AFB5FA42DDB5EB</div><div class="line"> 1182:d=1  hl=3 l= 192 prim: INTEGER           :0B2C1F6171F23737B62E54B4FAB853774CDB5E979C3BC6B642B306B95D4CF4BB23F7A1EAF8C1686531672A7E8A9A9818439FDE3A1455320555FFB42EE3122C3329C05E5740AD5C989D6E764C3C1FFA5EA3C1FE262A78EBC2EBD48D123447938A11886349C635A5A9820FD9E8A3D4E29F11A8582D28DF597634455F8FD9F16BA3CB3E724D5069FB49A91330FFFE87FC95BFDC17BD843A756BA2FEE9979F77F86A79D9C31D2DD82180674E04975C7F316D8257B4403EC47478E8A5DC890D16E7D1</div><div class="line"> 1377:d=1  hl=3 l= 192 prim: INTEGER           :543B63F3BF6868190CB6BE16FB7194459049A1CF426C0B129ED71DF6402216C3AF81F8060805E1EFA844023A2427E01BCBD4BA45863C6CFD7DC68143638606B7453E5F3A21DF5A99D34A9C9EE1C014F1B286BB2A1E082A9882381C1657B1FF26D67CB6323E08746DA249F4D3E89228214D69AE2B29A1E48F95F23ADAC0EA46FEB7B05F4028FFE3BEC3EE23872A46435996D70773CF1CEA8828CAEF74B3DDC96A849357D23354139D2EB52EDFDAFEFD79F676F04CBCE67632E086909AACFD6AFB</div><div class="line"> 1572:d=1  hl=3 l= 193 prim: INTEGER           :BD64D5B1F4FB1B37B0C423C57CA8E4261EE5F9A2D72F069EDD39922BE0BC66863CB21BDA51BC2517C885AB0ED380EBBF19D6E440626A9EACAED005F8C539E7F1235E7F7B7ECD53BC3470676FD22510800877A91675EB3CCCF574105EF081BBB3C022E564C3B956DBED3E3FF1FC12AEA027205EE84301C5C25A439C519424B64227FF87FE38DC9F64E04E718810D4F09522287E17164FE3AD1AD94B2D4E09EBE974EEF55FB9E1287E824C7EA5A30D4A4EAF71669CFF8AD9DAD95859F3BFFDD182</div><div class="line"></div><div class="line">//Use the public key in the RFP command line to convert the public key into an installable format. Note that for RSA, the public modulus has to be concatenated to the public exponent (typically 65537 in 32 bits 00010001 as shown in the asn1parse output above) and then padded with 4 words of 0.</div><div class="line">C:\ &quot;C:\Program Files (x86)\Renesas Electronics\Programming Tools\Renesas Flash Programmer V3.08\rfp-util.exe&quot; /genkey /ufpk &quot;C:\ufpk.key&quot; /wufpk &quot;C:\ufpk.key_enc.key&quot; /key &quot;B42C0E985810A4A758997C01DD082A283433F8961A34205D45C8712625E5D296EA7BB115AAA68A63228B2D4E8173BF6E15688C1AF4EF2A8F8C229E71574BDE0F7E72D37AB8A71D44AD8700835CFD730572463F8BF91000D86ECC85EDF949DB783680493876DD5F5404DA8C34A72B13256FD1154FADC2E1A5D24E570C7E9C9BBA4E68B2E02502AA00D3B4CC2F78E5BE47671FC86E226C5E61B69ACDE5A8BA7A80131B172E96EDCFB39BE41CE8ADA7F63A51665E998E87EE6025F88DBECEA4A8CA936CD7BFD473338D4485CC7330089C4DB2AA5A6C6F7BABB7B37CC3FBE7CAC4F89A6FCBBB5B82E77AE819FD2F1122FB7F768C6B94A4094FA56A7751EBA77EDA8706EEDCBED1EA1A401D1BFF1AB1517C12B0F3F683019CE70C99BFAC685872A4B05985EE85AC2A22F4CF1508801F0DD01EA0A094C8F7FA65DD52E8963723305736E69DF40C4A05751FAD01CAB76D8C4374060A81F30162FFF7F55FAFE72B0EF881B565DD01D99F07178A18CF236E886591B57BD3B02DAF93666374AC5AE673DE3B00010001000000000000000000000000&quot; /userkey &quot;0E&quot; /output &quot;C:\RSA_3072_pub_install.rkey&quot;</div><div class="line"></div><div class="line">// From the bootloader map file determine the address of mcuboot_sce9_key section</div><div class="line">Use RFP to install &quot;RSA_3072_pub_install.rkey&quot; as described in &quot;Installing and Updating Secure Keys for RA Family&quot; (R11AN0496) to the address where the mcuboot_sce9_key section is located.</div></div><!-- fragment --><h1><a class="anchor" id="r-mcuboot-port-examples"></a>
+Examples</h1>
+<h2>Basic Example</h2>
+<p>This is an example of using MCUboot in an application.</p>
+<div class="fragment"><div class="line"></div><div class="line"><span class="keywordtype">void</span> rm_mcuboot_port_example (<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line"><span class="preprocessor">#ifdef MCUBOOT_USE_MBED_TLS</span></div><div class="line"></div><div class="line">    <span class="comment">/* Initialize mbedtls. */</span></div><div class="line">    <a class="code" href="structmbedtls__platform__context.html">mbedtls_platform_context</a> ctx = {0};</div><div class="line">    assert(0 == <a class="code" href="group___r_m___p_s_a___c_r_y_p_t_o.html#gaf0f37c11be234650bec95ce37e9a4a6b">mbedtls_platform_setup</a>(&amp;ctx));</div><div class="line"><span class="preprocessor">#elif defined(MCUBOOT_USE_OCRYPTO)</span></div><div class="line"></div><div class="line">    <span class="comment">/* Initialize Ocrypto port. */</span></div><div class="line">    assert(FSP_SUCCESS == <a class="code" href="group___r_m___o_c_r_y_p_t_o___p_o_r_t.html#ga14e01509849f92d314bd4426669ec3b1">RM_OCRYPTO_PORT_Init</a>());</div><div class="line"><span class="preprocessor">#elif defined(MCUBOOT_USE_TINYCRYPT)</span></div><div class="line"></div><div class="line">    <span class="comment">/* Initialize TinyCrypt port. */</span></div><div class="line">    assert(FSP_SUCCESS == <a class="code" href="group___r_m___t_i_n_y_c_r_y_p_t___p_o_r_t.html#ga61682df07075c19ebb327063d5ba6e8b">RM_TINCYRYPT_PORT_Init</a>());</div><div class="line"><span class="preprocessor">#else</span></div><div class="line"></div><div class="line">    <span class="comment">/* Initialize SCE9 Protected Mode driver. */</span></div><div class="line">    <a class="code" href="group___s_c_e___p_r_o_t_e_c_t_e_d.html#structsce__instance__ctrl__t">sce_instance_ctrl_t</a> sce_ctrl;</div><div class="line">    <span class="keyword">const</span> <a class="code" href="group___s_c_e___p_r_o_t_e_c_t_e_d___a_p_i.html#structsce__cfg__t">sce_cfg_t</a>     sce_cfg =</div><div class="line">    {.lifecycle = SCE_SSD};</div><div class="line">    assert(FSP_SUCCESS == <a class="code" href="group___s_c_e___p_r_o_t_e_c_t_e_d.html#gae41c48db65491a6884039929b6734557">R_SCE_Open</a>(&amp;sce_ctrl, &amp;sce_cfg));</div><div class="line"><span class="preprocessor">#endif</span></div><div class="line"></div><div class="line">    <span class="comment">/* (Optional) To check for updates, call boot_set_pending. */</span></div><div class="line">    <span class="keywordtype">bool</span> update = 0;</div><div class="line">    <span class="keywordflow">if</span> (update)</div><div class="line">    {</div><div class="line">        boot_set_pending(0);</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="comment">/* Verify the boot image and get its location. */</span></div><div class="line">    <span class="keyword">struct </span>boot_rsp rsp;</div><div class="line">    assert(0 == boot_go(&amp;rsp));</div><div class="line"></div><div class="line">    <span class="comment">/* Enter the application. */</span></div><div class="line">    RM_MCUBOOT_PORT_BootApp(&amp;rsp);</div><div class="line">}</div><div class="line"></div></div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.7-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+        <li class="footer">FSP Release v6.4.0 User's Manual Copyright © (2026) Renesas Electronics Corporation. All Rights Reserved.</li>
+  </ul>
+</div>
+</body>
+</html>
